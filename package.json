@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "koliber",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "KoLiBer personal website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "KoLiBer <koliberr136a1@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/ckoliber/ckoliber.github.io/issues"
   },
   "dependencies": {
     "gatsby": "^3.2.1",
@@ -35,7 +35,7 @@
   "devDependencies": {
     "prettier": "2.2.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/ckoliber/ckoliber.github.io#readme",
   "keywords": [
     "gatsby"
   ],
@@ -43,7 +43,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/ckoliber/ckoliber.github.io.git"
   },
   "scripts": {
     "build": "gatsby build",
