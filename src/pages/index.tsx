@@ -15,7 +15,9 @@ export default () => {
             />
 
             <LoadingBars
-                // animator={{ activate }}
+                animator={{
+                    activate: true,
+                }}
                 size={2}
                 speed={4}
                 full
