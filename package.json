@@ -15,14 +15,23 @@
         "clean": "gatsby clean"
     },
     "dependencies": {
+        "@arwes/animation": "^1.0.0-alpha.19",
+        "@arwes/core": "^1.0.0-alpha.19",
+        "@arwes/design": "^1.0.0-alpha.19",
+        "@arwes/sounds": "^1.0.0-alpha.19",
+        "@emotion/css": "^11.1.3",
+        "@emotion/react": "^11.1.5",
         "@mdx-js/mdx": "^1.6.22",
         "@mdx-js/react": "^1.6.22",
+        "animejs": "^3.2.1",
         "gatsby": "^3.2.1",
         "gatsby-plugin-manifest": "^3.3.0",
         "gatsby-plugin-mdx": "^2.3.0",
         "gatsby-plugin-react-helmet": "^4.3.0",
         "gatsby-plugin-sitemap": "^3.3.0",
         "gatsby-source-filesystem": "^3.3.0",
+        "howler": "^2.2.1",
+        "polished": "^4.1.1",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-helmet": "^6.1.0"
