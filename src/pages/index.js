@@ -4,7 +4,7 @@ import { ArwesThemeProvider, StylesBaseline, LoadingBars } from "@arwes/core";
 const FONT_FAMILY_ROOT = '"Titillium Web", sans-serif';
 const FONT_FAMILY_CODE = '"Source Code Pro", monospace';
 
-export default () => {
+const Component = () => {
     return (
         <ArwesThemeProvider themeSettings={{}}>
             <StylesBaseline
@@ -25,3 +25,5 @@ export default () => {
         </ArwesThemeProvider>
     );
 };
+
+export default Component;
