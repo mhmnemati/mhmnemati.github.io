@@ -1,15 +1,17 @@
-name: Gatsby Publish
-
-on:
-    push:
-        branches:
-            - master
-
+name: Build and Deploy
+on: [push]
 jobs:
-    build:
+    build-and-deploy:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v1
-            - uses: enriikke/gatsby-gh-pages-action@v2
+            - name: Checkout
+              uses: actions/checkout@v2.3.1
+            - name: Build
+              run: |
+                  npm install
+                  npm run build
+            - name: Deploy
+              uses: JamesIves/github-pages-deploy-action@4.1.1
               with:
-                  access-token: ${{ secrets.ACCESS_TOKEN }}
+                  branch: gh-pages
+                  folder: public
