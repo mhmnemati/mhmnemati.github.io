@@ -15,12 +15,6 @@ import Layout from "../components/layout";
 import Content from "../components/content";
 
 const Component = (props) => {
-    const [loading, setLoading] = React.useState(false);
-
-    React.useEffect(() => {
-        setTimeout(() => setLoading(false), 3000);
-    }, []);
-
     return (
         <Layout>
             <Content>
