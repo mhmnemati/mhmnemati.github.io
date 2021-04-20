@@ -4,14 +4,14 @@ import { ArwesThemeProvider, StylesBaseline } from "@arwes/core";
 import { AnimatorGeneralProvider } from "@arwes/animation";
 import { BleepsProvider } from "@arwes/sounds";
 
-const Component: React.FC<any> = (props) => {
+import Header from "./header";
+
+const Component = (props) => {
     return (
         <ArwesThemeProvider themeSettings={{}}>
             <StylesBaseline
                 styles={{
                     "html, body": {
-                        width: "100%",
-                        height: "100%",
                         fontFamily: '"Titillium Web", sans-serif',
                     },
                     "code, pre": {
@@ -23,7 +23,7 @@ const Component: React.FC<any> = (props) => {
                 audioSettings={{ common: { volume: 0.25 } }}
                 playersSettings={{
                     type: {
-                        src: ["/type.mp3"],
+                        src: ["/sounds/type.mp3"],
                         loop: true,
                     },
                 }}
@@ -32,7 +32,17 @@ const Component: React.FC<any> = (props) => {
                 <AnimatorGeneralProvider
                     animator={{ duration: { enter: 200, exit: 200 } }}
                 >
-                    {props.children}
+                    <div
+                        style={{
+                            width: "100vw",
+                            height: "100vh",
+                            backgroundImage: "url(/images/background_3.jpg)",
+                            backgroundSize: "cover",
+                        }}
+                    >
+                        {/* <Header /> */}
+                        {props.children}
+                    </div>
                 </AnimatorGeneralProvider>
             </BleepsProvider>
         </ArwesThemeProvider>
