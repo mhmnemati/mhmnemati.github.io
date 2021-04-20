@@ -21,5 +21,6 @@ module.exports = {
             },
             __key: "pages",
         },
+        "gatsby-plugin-fontawesome-css",
     ],
 };
