@@ -1,28 +1,54 @@
-import * as React from "react";
-import { ArwesThemeProvider, StylesBaseline, LoadingBars } from "@arwes/core";
+import React from "react";
 
-const FONT_FAMILY_ROOT = '"Titillium Web", sans-serif';
-const FONT_FAMILY_CODE = '"Source Code Pro", monospace';
+import Layout from "../components/layout";
 
-const Component = () => {
+import { LoadingBars, FrameLines, Text } from "@arwes/core";
+import { Animator } from "@arwes/animation";
+
+const Component: React.FC<{}> = (props) => {
+    const [loading, setLoading] = React.useState(false);
+
+    React.useEffect(() => {
+        setTimeout(() => setLoading(false), 3000);
+    }, []);
+
     return (
-        <ArwesThemeProvider themeSettings={{}}>
-            <StylesBaseline
-                styles={{
-                    "html, body": { fontFamily: FONT_FAMILY_ROOT },
-                    "code, pre": { fontFamily: FONT_FAMILY_CODE },
+        <Layout>
+            <div
+                style={{
+                    width: "100vw",
+                    height: "100vh",
+                    backgroundImage:
+                        "url(https://images.unsplash.com/photo-1447433819943-74a20887a81e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=775&q=80)",
+                    backgroundSize: "cover",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                 }}
-            />
-
-            <LoadingBars
-                animator={{
-                    activate: true,
-                }}
-                size={2}
-                speed={4}
-                full
-            />
-        </ArwesThemeProvider>
+            >
+                <FrameLines
+                    style={{
+                        minWidth: 200,
+                        minHeight: 50,
+                    }}
+                    animator={{ activate: !loading }}
+                    palette="error"
+                    largeLineWidth={2}
+                    smallLineWidth={4}
+                    smallLineLength={20}
+                    hover
+                >
+                    <LoadingBars
+                        animator={{
+                            activate: loading,
+                        }}
+                        size={2}
+                        speed={4}
+                        full
+                    />
+                </FrameLines>
+            </div>
+        </Layout>
     );
 };
 
