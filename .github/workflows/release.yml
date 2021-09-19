@@ -46,7 +46,7 @@ jobs:
               with:
                   node-version: "14"
 
-            - run: cp .github/CNAME .
+            - run: cp .github/CNAME public
             - uses: peaceiris/actions-gh-pages@v3
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
