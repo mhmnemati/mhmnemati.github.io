@@ -1,0 +1,54 @@
+name: Release
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/cache@v2
+              with:
+                  path: node_modules/
+                  key: ${{ hashFiles('package-lock.json') }}
+            - uses: actions/cache@v2
+              with:
+                  path: public/
+                  key: ${{ github.sha }}
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "14"
+
+            - run: npm ci
+            - run: npm run build
+            - run: npm run test
+
+    test:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - run: echo Test
+
+    release:
+        needs: test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/cache@v2
+              with:
+                  path: public/
+                  key: ${{ github.sha }}
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "14"
+
+            - run: cp .github/CNAME .
+            - uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./public
