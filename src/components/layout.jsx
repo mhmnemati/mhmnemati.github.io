@@ -4,6 +4,8 @@ import { ArwesThemeProvider, StylesBaseline } from "@arwes/core";
 import { AnimatorGeneralProvider } from "@arwes/animation";
 import { BleepsProvider } from "@arwes/sounds";
 
+import { ScreenClassProvider } from "react-grid-system";
+
 import Header from "./header";
 
 const Component = (props) => {
@@ -22,27 +24,23 @@ const Component = (props) => {
             <BleepsProvider
                 audioSettings={{ common: { volume: 0.25 } }}
                 playersSettings={{
-                    type: {
-                        src: ["/sounds/type.mp3"],
-                        loop: true,
-                    },
+                    assemble: { src: ["/sounds/assemble.mp3"], loop: true },
+                    type: { src: ["/sounds/type.mp3"], loop: true },
+                    click: { src: ["/sounds/click.mp3"] },
                 }}
-                bleepsSettings={{ type: { player: "type" } }}
+                bleepsSettings={{
+                    assemble: { player: "assemble" },
+                    type: { player: "type" },
+                    click: { player: "click" },
+                }}
             >
                 <AnimatorGeneralProvider
                     animator={{ duration: { enter: 200, exit: 200 } }}
                 >
-                    <div
-                        style={{
-                            width: "100vw",
-                            height: "100vh",
-                            backgroundImage: "url(/images/background_3.jpg)",
-                            backgroundSize: "cover",
-                        }}
-                    >
-                        {/* <Header /> */}
+                    <ScreenClassProvider>
+                        <Header />
                         {props.children}
-                    </div>
+                    </ScreenClassProvider>
                 </AnimatorGeneralProvider>
             </BleepsProvider>
         </ArwesThemeProvider>

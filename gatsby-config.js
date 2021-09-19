@@ -4,7 +4,7 @@ module.exports = {
         title: "KoLiBer personal website",
     },
     plugins: [
-        "gatsby-plugin-sass",
+        "gatsby-plugin-styled-components",
         "gatsby-plugin-image",
         {
             resolve: "gatsby-plugin-google-analytics",
@@ -34,10 +34,10 @@ module.exports = {
         {
             resolve: "gatsby-source-filesystem",
             options: {
-                name: "pages",
-                path: "./src/pages/",
+                name: "posts",
+                path: "./static/posts/",
             },
-            __key: "pages",
+            __key: "posts",
         },
         "gatsby-plugin-fontawesome-css",
     ],

@@ -1,31 +1,32 @@
 import React from "react";
 
-import { FrameBox, Button, Text } from "@arwes/core";
+import { FrameUnderline, Button, Text } from "@arwes/core";
 
 const Component = (props) => {
     return (
         <header>
-            <FrameBox
+            <FrameUnderline
                 style={{
-                    width: "100vw",
+                    width: "100%",
                     padding: 16,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "left",
-                    backgroundColor: "rgba(1,1,1,0.5)",
+                    backgroundColor: "rgba(0.2,1,1,0.2)",
                     position: "fixed",
+                    zIndex: 5,
                 }}
             >
-                <Button palette="primary" active>
+                <Button palette="primary">
                     <Text>Home</Text>
                 </Button>
-                <Button palette="primary" active>
+                <Button palette="primary">
                     <Text>Blog</Text>
                 </Button>
-                <Button palette="primary" active>
+                <Button palette="primary">
                     <Text>About Me</Text>
                 </Button>
-            </FrameBox>
+            </FrameUnderline>
         </header>
     );
 };
