@@ -1,9 +1,17 @@
 module.exports = {
     siteMetadata: {
-        title: "KoLiBer personal website",
         siteUrl: "https://koliber.ir",
+        title: "KoLiBer personal website",
     },
     plugins: [
+        "gatsby-plugin-sass",
+        "gatsby-plugin-image",
+        {
+            resolve: "gatsby-plugin-google-analytics",
+            options: {
+                trackingId: "286937289",
+            },
+        },
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-sitemap",
         {
@@ -13,6 +21,16 @@ module.exports = {
             },
         },
         "gatsby-plugin-mdx",
+        "gatsby-plugin-sharp",
+        "gatsby-transformer-sharp",
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "images",
+                path: "./src/images/",
+            },
+            __key: "images",
+        },
         {
             resolve: "gatsby-source-filesystem",
             options: {
