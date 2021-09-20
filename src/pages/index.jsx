@@ -674,8 +674,8 @@ const Component = (props) => {
                 </div>
                 <br />
                 <Text>
-                    © Copyright 2021 KoLiBer <FontAwesomeIcon icon={faReact} />{" "}
-                    by Mohammad Hosein Nemati
+                    © Copyright 2021 KoLiBer •{" "}
+                    <FontAwesomeIcon icon={faReact} /> by Mohammad Hosein Nemati
                 </Text>
             </Row>
         </Layout>
