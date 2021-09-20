@@ -40,5 +40,12 @@ module.exports = {
             __key: "posts",
         },
         "gatsby-plugin-fontawesome-css",
+        {
+            resolve: "gatsby-plugin-nprogress",
+            options: {
+                color: "#2c3531",
+                showSpinner: true,
+            },
+        },
     ],
 };

@@ -8,12 +8,17 @@ import { ScreenClassProvider } from "react-grid-system";
 
 import Header from "../Header";
 
+if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]');
+}
+
 const Component = (props) => {
     return (
         <ArwesThemeProvider
             themeSettings={{
                 palette: {
-                    primary: { main: "#ffcb9a" },
+                    primary: { main: "#d9b08b" },
                     neutral: { main: "#2c3531" },
                 },
                 space: 4,
@@ -24,6 +29,8 @@ const Component = (props) => {
                 styles={{
                     "html, body": {
                         fontFamily: '"Titillium Web", sans-serif',
+                        overflowX: "hidden",
+                        lineHeight: 1.6,
                     },
                     "code, pre": {
                         fontFamily: '"Source Code Pro", monospace',
@@ -48,10 +55,8 @@ const Component = (props) => {
                     animator={{ duration: { enter: 200, exit: 200 } }}
                 >
                     <ScreenClassProvider>
-                        <div style={props.style}>
-                            <Header />
-                            {props.children}
-                        </div>
+                        <Header />
+                        {props.children}
                     </ScreenClassProvider>
                 </AnimatorGeneralProvider>
             </BleepsProvider>

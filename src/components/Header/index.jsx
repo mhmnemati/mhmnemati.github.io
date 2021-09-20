@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Link } from "gatsby";
-
 import { FrameUnderline, Button, FrameHexagon, Text } from "@arwes/core";
 
 const Component = (props) => {
@@ -16,28 +14,32 @@ const Component = (props) => {
                     position: "fixed",
                     zIndex: 5,
                 }}
-                // as="button"
             >
-                <Button palette="secondary" FrameComponent={FrameHexagon}>
-                    <Link to="/blog">
-                        <Text>Blog</Text>
-                    </Link>
-                </Button>
-                <Button palette="secondary" FrameComponent={FrameHexagon}>
-                    <Link to="/about">
+                <a href="/#home">
+                    <Button FrameComponent={FrameHexagon}>
+                        <Text>Home</Text>
+                    </Button>
+                </a>
+                <a href="/#about">
+                    <Button FrameComponent={FrameHexagon}>
                         <Text>About</Text>
-                    </Link>
-                </Button>
-                <Button palette="secondary" FrameComponent={FrameHexagon}>
-                    <Link to="/projects">
-                        <Text>Projects</Text>
-                    </Link>
-                </Button>
-                <Button palette="secondary" FrameComponent={FrameHexagon}>
-                    <Link to="/resume">
+                    </Button>
+                </a>
+                <a href="/#resume">
+                    <Button FrameComponent={FrameHexagon}>
                         <Text>Resume</Text>
-                    </Link>
-                </Button>
+                    </Button>
+                </a>
+                <a href="/#projects">
+                    <Button FrameComponent={FrameHexagon}>
+                        <Text>Projects</Text>
+                    </Button>
+                </a>
+                <a href="/blog">
+                    <Button FrameComponent={FrameHexagon}>
+                        <Text>Blog</Text>
+                    </Button>
+                </a>
             </FrameUnderline>
         </header>
     );
