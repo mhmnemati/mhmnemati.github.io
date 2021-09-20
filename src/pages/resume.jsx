@@ -18,23 +18,15 @@ import Content from "../components/Content";
 
 const Component = (props) => {
     return (
-        <Layout
-            style={{
-                height: "100vh",
-                // background: "re"d
-                backgroundImage:
-                    "https://unsplash.com/photos/79T37JljDZ4/download?force=true&w=640",
-                backgroundSize: "cover",
-            }}
-        >
+        <Layout>
             <Container>
                 <Row>
                     <Col
                         sm={6}
                         style={{
                             textAlign: "center",
-                            display: "flex",
                             height: "100vh",
+                            display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
                         }}
@@ -50,8 +42,8 @@ const Component = (props) => {
                         sm={6}
                         style={{
                             textAlign: "center",
-                            display: "flex",
                             height: "100vh",
+                            display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
                         }}

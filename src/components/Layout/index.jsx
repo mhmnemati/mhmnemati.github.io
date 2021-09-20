@@ -6,11 +6,20 @@ import { BleepsProvider } from "@arwes/sounds";
 
 import { ScreenClassProvider } from "react-grid-system";
 
-import Header from "./header";
+import Header from "../Header";
 
 const Component = (props) => {
     return (
-        <ArwesThemeProvider themeSettings={{}}>
+        <ArwesThemeProvider
+            themeSettings={{
+                palette: {
+                    primary: { main: "#ffcb9a" },
+                    neutral: { main: "#2c3531" },
+                },
+                space: 4,
+                outline: 2,
+            }}
+        >
             <StylesBaseline
                 styles={{
                     "html, body": {
@@ -19,6 +28,7 @@ const Component = (props) => {
                     "code, pre": {
                         fontFamily: '"Source Code Pro", monospace',
                     },
+                    button: { margin: "8px" },
                 }}
             />
             <BleepsProvider
@@ -38,8 +48,10 @@ const Component = (props) => {
                     animator={{ duration: { enter: 200, exit: 200 } }}
                 >
                     <ScreenClassProvider>
-                        <Header />
-                        {props.children}
+                        <div style={props.style}>
+                            <Header />
+                            {props.children}
+                        </div>
                     </ScreenClassProvider>
                 </AnimatorGeneralProvider>
             </BleepsProvider>
