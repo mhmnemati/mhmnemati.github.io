@@ -8,6 +8,9 @@ import { Row, Col } from "react-grid-system";
 
 import { Text, Figure, Button, FrameHexagon } from "@arwes/core";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 Modal.setAppElement("#___gatsby");
@@ -121,6 +124,33 @@ const Component = (props) => {
                 }}
                 contentLabel="Example Modal"
             >
+                <div
+                    style={{
+                        width: "100%",
+                        display: "flex",
+                        justifyContent: "end",
+                    }}
+                >
+                    <button
+                        style={{
+                            color: "white",
+                            backgroundColor: "rgba(0,0,0,0)",
+                        }}
+                        onClick={() =>
+                            setModal({
+                                open: false,
+                                data: modal.data,
+                            })
+                        }
+                    >
+                        <FontAwesomeIcon
+                            style={{ right: 0 }}
+                            icon={faTimes}
+                            size="2x"
+                        />
+                    </button>
+                </div>
+
                 {modal.data && <MDXRenderer>{modal.data.body}</MDXRenderer>}
             </Modal>
         </section>
