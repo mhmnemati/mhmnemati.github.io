@@ -102,6 +102,7 @@ const Component = (props) => {
                         left: 0,
                         right: 0,
                         bottom: 0,
+                        zIndex: 50,
                         backgroundColor: "rgba(0, 0, 0, 0.75)",
                     },
                     content: {
@@ -109,9 +110,9 @@ const Component = (props) => {
                         left: "50%",
                         right: "auto",
                         bottom: "auto",
-                        marginRight: "-50%",
+                        width: "100%",
+                        height: "90%",
                         transform: "translate(-50%, -50%)",
-
                         border: "none",
                         overflow: "auto",
                         WebkitOverflowScrolling: "touch",
