@@ -4,10 +4,7 @@ import { Container, Row, Col } from "react-grid-system";
 
 import { Text } from "@arwes/core";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import Layout from "../components/Layout";
-import Content from "../components/Content";
+import Layout from "../components/layout";
 
 const Component = (props) => {
     return (

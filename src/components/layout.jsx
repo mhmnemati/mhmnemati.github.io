@@ -6,7 +6,8 @@ import { BleepsProvider } from "@arwes/sounds";
 
 import { ScreenClassProvider } from "react-grid-system";
 
-import Header from "../Header";
+import Header from "./header";
+import Footer from "./footer";
 
 if (typeof window !== "undefined") {
     // eslint-disable-next-line global-require
@@ -52,11 +53,12 @@ const Component = (props) => {
                 }}
             >
                 <AnimatorGeneralProvider
-                    animator={{ duration: { enter: 200, exit: 200 } }}
+                    animator={{ duration: { enter: 1000, exit: 1000 } }}
                 >
                     <ScreenClassProvider>
                         <Header />
                         {props.children}
+                        <Footer />
                     </ScreenClassProvider>
                 </AnimatorGeneralProvider>
             </BleepsProvider>

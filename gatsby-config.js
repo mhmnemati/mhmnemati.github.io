@@ -4,7 +4,6 @@ module.exports = {
         title: "KoLiBer personal website",
     },
     plugins: [
-        "gatsby-plugin-styled-components",
         "gatsby-plugin-image",
         {
             resolve: "gatsby-plugin-google-analytics",
@@ -17,7 +16,7 @@ module.exports = {
         {
             resolve: "gatsby-plugin-manifest",
             options: {
-                icon: "src/images/icon.png",
+                icon: "static/images/icon.png",
             },
         },
         "gatsby-plugin-mdx",
@@ -26,18 +25,10 @@ module.exports = {
         {
             resolve: "gatsby-source-filesystem",
             options: {
-                name: "images",
-                path: "./src/images/",
+                name: "content",
+                path: "./content/",
             },
-            __key: "images",
-        },
-        {
-            resolve: "gatsby-source-filesystem",
-            options: {
-                name: "posts",
-                path: "./static/posts/",
-            },
-            __key: "posts",
+            __key: "content",
         },
         "gatsby-plugin-fontawesome-css",
         {
