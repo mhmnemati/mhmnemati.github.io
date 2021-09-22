@@ -4,7 +4,7 @@ import Modal from "react-modal";
 
 import { graphql, useStaticQuery } from "gatsby";
 
-import { Row, Col } from "react-grid-system";
+import { Container, Row, Col } from "react-grid-system";
 
 import { Text, Figure, Button, FrameHexagon } from "@arwes/core";
 
@@ -113,11 +113,14 @@ const Component = (props) => {
                         left: "50%",
                         right: "auto",
                         bottom: "auto",
-                        width: "100%",
-                        height: "90%",
+                        marginRight: "-50%",
                         transform: "translate(-50%, -50%)",
+                        width: "100%",
+                        minHeight: "50%",
+                        maxHeight: "100vh",
                         border: "none",
-                        overflow: "auto",
+                        overflowY: "scroll",
+                        position: "relative",
                         WebkitOverflowScrolling: "touch",
                         background: "#151917",
                     },
@@ -150,8 +153,9 @@ const Component = (props) => {
                         />
                     </button>
                 </div>
-
-                {modal.data && <MDXRenderer>{modal.data.body}</MDXRenderer>}
+                <Container>
+                    {modal.data && <MDXRenderer>{modal.data.body}</MDXRenderer>}
+                </Container>
             </Modal>
         </section>
     );
