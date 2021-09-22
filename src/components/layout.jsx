@@ -9,6 +9,8 @@ import { ScreenClassProvider } from "react-grid-system";
 import Header from "./header";
 import Footer from "./footer";
 
+import "./styles.css";
+
 if (typeof window !== "undefined") {
     // eslint-disable-next-line global-require
     require("smooth-scroll")('a[href*="#"]');
@@ -19,8 +21,15 @@ const Component = (props) => {
         <ArwesThemeProvider
             themeSettings={{
                 palette: {
-                    primary: { main: "#d9b08b" },
-                    neutral: { main: "#2c3531" },
+                    primary: { main: "#1ca6a9" },
+                    secondary: { main: "#2c3531" },
+                    neutral: { main: "#151917" },
+                    text: {
+                        headings: "#22c7cb",
+                        root: "#d1e8e2",
+                        link: "#d1e8e2",
+                        linkHover: "#d1e8e2",
+                    },
                 },
                 space: 4,
                 outline: 2,
@@ -45,6 +54,7 @@ const Component = (props) => {
                     assemble: { src: ["/sounds/assemble.mp3"], loop: true },
                     type: { src: ["/sounds/type.mp3"], loop: true },
                     click: { src: ["/sounds/click.mp3"] },
+                    warning: { src: ["/sounds/warning.mp3"] },
                 }}
                 bleepsSettings={{
                     assemble: { player: "assemble" },

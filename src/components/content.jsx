@@ -1,12 +1,23 @@
 import React from "react";
 
+import Modal from "react-modal";
+
 import { graphql, useStaticQuery } from "gatsby";
 
 import { Row, Col } from "react-grid-system";
 
-import { Text, Figure } from "@arwes/core";
+import { Text, Figure, Button, FrameHexagon } from "@arwes/core";
+
+import { MDXRenderer } from "gatsby-plugin-mdx";
+
+Modal.setAppElement("#___gatsby");
 
 const Component = (props) => {
+    const [modal, setModal] = React.useState({
+        open: false,
+        data: undefined,
+    });
+
     const data = useStaticQuery(graphql`
         query {
             allMdx(sort: { fields: frontmatter___date, order: DESC }) {
@@ -19,18 +30,16 @@ const Component = (props) => {
                         categories
                         description
                     }
+                    excerpt
+                    body
                 }
             }
         }
     `);
 
     return (
-        <>
-            <Row
-                style={{
-                    margin: 32,
-                }}
-            >
+        <section>
+            <Row style={{ margin: 32 }}>
                 <Text>
                     <h2>{props.title}</h2>
                 </Text>
@@ -40,7 +49,7 @@ const Component = (props) => {
                     (item.frontmatter.categories || []).includes(props.category)
                 )
                 .map((item) => (
-                    <Row key={item.id} style={{ margin: 8 }}>
+                    <Row key={item.id} style={{ margin: "8px 8px 32px 8px" }}>
                         <Col md={12} lg={4}>
                             {item.frontmatter.image && (
                                 <Figure
@@ -57,19 +66,63 @@ const Component = (props) => {
                                     {item.frontmatter.title}
                                 </h3>
                                 <b>{item.frontmatter.date}</b>
-                                <p
-                                    style={{
-                                        marginTop: 8,
-                                        color: "#ffcb9a",
-                                    }}
-                                >
+                                <p style={{ marginTop: 8 }}>
                                     {item.frontmatter.description}
                                 </p>
                             </Text>
+                            {item.excerpt && (
+                                <Button
+                                    FrameComponent={FrameHexagon}
+                                    onClick={() =>
+                                        setModal({
+                                            open: true,
+                                            data: item,
+                                        })
+                                    }
+                                >
+                                    Show More
+                                </Button>
+                            )}
                         </Col>
                     </Row>
                 ))}
-        </>
+            <Modal
+                closeTimeoutMS={500}
+                isOpen={modal.open}
+                onRequestClose={() =>
+                    setModal({
+                        open: false,
+                        data: modal.data,
+                    })
+                }
+                style={{
+                    overlay: {
+                        position: "fixed",
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: "rgba(0, 0, 0, 0.75)",
+                    },
+                    content: {
+                        top: "50%",
+                        left: "50%",
+                        right: "auto",
+                        bottom: "auto",
+                        marginRight: "-50%",
+                        transform: "translate(-50%, -50%)",
+
+                        border: "none",
+                        overflow: "auto",
+                        WebkitOverflowScrolling: "touch",
+                        background: "#151917",
+                    },
+                }}
+                contentLabel="Example Modal"
+            >
+                {modal.data && <MDXRenderer>{modal.data.body}</MDXRenderer>}
+            </Modal>
+        </section>
     );
 };
 

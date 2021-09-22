@@ -93,11 +93,7 @@ const About = () => (
                         <Text>
                             <h2>About Me</h2>
                         </Text>
-                        <Text
-                            style={{
-                                color: "#ffcb9a",
-                            }}
-                        >
+                        <Text>
                             Why do we use it? It is a long established fact that
                             a reader will be distracted by the readable content
                             of a page when looking at its layout. The point of
@@ -122,11 +118,7 @@ const About = () => (
                         <Container>
                             <Row>
                                 <Col sm={12} md={6}>
-                                    <Text
-                                        style={{
-                                            color: "#ffcb9a",
-                                        }}
-                                    >
+                                    <Text>
                                         <Icon
                                             margin={0}
                                             icon={faUser}
@@ -173,7 +165,10 @@ const Component = (props) => {
         <Layout>
             <Hero />
             <About />
-            <Break title="Resume" />
+            <Break
+                image="https://unsplash.com/photos/Q1p7bh3SHj8/download?force=true&w=1920"
+                title="Resume"
+            />
             <Row id="resume">
                 <Container>
                     <Content title="Educations" category="educations" />
@@ -183,7 +178,10 @@ const Component = (props) => {
                     <Content title="Works" category="works" />
                 </Container>
             </Row>
-            <Break title="Projects & Books" />
+            <Break
+                image="https://unsplash.com/photos/ImcUkZ72oUs/download?force=true&w=1920"
+                title="Projects & Books"
+            />
             <Row id="projects">
                 <Container>
                     <Content title="Projects" category="projects" />

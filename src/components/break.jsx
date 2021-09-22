@@ -1,27 +1,34 @@
 import React from "react";
 
-import { Text } from "@arwes/core";
+import { Text, FrameLines } from "@arwes/core";
 
 const Component = (props) => {
     return (
         <section
             style={{
                 height: "40vh",
-                padding: 16,
-                backgroundImage: "url(/images/background_4.jpg)",
+                backgroundImage: `url(${props.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundFlip: "flip",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
             }}
         >
-            <Text>
-                <h2>{props.title}</h2>
-            </Text>
+            <div
+                style={{
+                    width: "100%",
+                    height: "100%",
+                    padding: 16,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    textAlign: "center",
+                }}
+            >
+                <Text>
+                    <h2>{props.title}</h2>
+                </Text>
+            </div>
         </section>
     );
 };
