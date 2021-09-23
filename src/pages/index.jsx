@@ -180,7 +180,7 @@ const Component = (props) => {
                 </Container>
             </Row>
             <Break
-                image="https://unsplash.com/photos/ImcUkZ72oUs/download?force=true&w=1920"
+                image="https://unsplash.com/photos/LWnQ0IdzfjE/download?force=true&w=1920"
                 title="Projects & Books"
             />
             <Row id="projects">
