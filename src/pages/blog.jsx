@@ -6,42 +6,33 @@ import { Text } from "@arwes/core";
 
 import Layout from "../components/layout";
 
+const Hero = () => (
+    <Row
+        id="home"
+        style={{
+            height: "100vh",
+            padding: 16,
+            backgroundImage: "url(/images/background_4.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundFlip: "flip",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+        }}
+    >
+        <Text>
+            <h1>Sorry, this page is under construct!</h1>
+        </Text>
+    </Row>
+);
+
 const Component = (props) => {
     return (
         <Layout>
-            <Container>
-                <Row>
-                    <Col
-                        sm={6}
-                        style={{
-                            textAlign: "center",
-                            height: "100vh",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                        }}
-                    >
-                        <div style={{ alignItems: "start" }}>
-                            <Text>
-                                <h1>Welcome!</h1>
-                                <h4>I Am Full Stack Developer</h4>
-                            </Text>
-                        </div>
-                    </Col>
-                    <Col
-                        sm={6}
-                        style={{
-                            textAlign: "center",
-                            height: "100vh",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                        }}
-                    >
-                        KoLiBer
-                    </Col>
-                </Row>
-            </Container>
+            <Hero />
         </Layout>
     );
 };

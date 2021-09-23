@@ -12,6 +12,7 @@ const Component = (props) => {
                 backgroundPosition: "center",
                 backgroundFlip: "flip",
             }}
+            id={props.id}
         >
             <div
                 style={{

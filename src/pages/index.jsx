@@ -169,8 +169,9 @@ const Component = (props) => {
             <Break
                 image="https://unsplash.com/photos/Q1p7bh3SHj8/download?force=true&w=1920"
                 title="Resume"
+                id="resume"
             />
-            <Row id="resume">
+            <Row>
                 <Container>
                     <Content title="Educations" category="educations" />
                     <hr />
@@ -182,8 +183,9 @@ const Component = (props) => {
             <Break
                 image="https://unsplash.com/photos/LWnQ0IdzfjE/download?force=true&w=1920"
                 title="Projects & Books"
+                id="projects"
             />
-            <Row id="projects">
+            <Row>
                 <Container>
                     <Content title="Projects" category="projects" />
                     <hr />
