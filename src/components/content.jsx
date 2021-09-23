@@ -1,19 +1,14 @@
 import React from "react";
 
-import Modal from "react-modal";
-
 import { graphql, useStaticQuery } from "gatsby";
 
 import { Container, Row, Col } from "react-grid-system";
 
 import { Text, Figure, Button, FrameHexagon } from "@arwes/core";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-Modal.setAppElement("#___gatsby");
+import Modal from "./modal";
 
 const Component = (props) => {
     const [modal, setModal] = React.useState({
@@ -90,72 +85,19 @@ const Component = (props) => {
                     </Row>
                 ))}
             <Modal
-                closeTimeoutMS={500}
-                isOpen={modal.open}
-                onRequestClose={() =>
+                open={modal.open}
+                onClose={() =>
                     setModal({
                         open: false,
                         data: modal.data,
                     })
                 }
-                style={{
-                    overlay: {
-                        position: "fixed",
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        zIndex: 50,
-                        backgroundColor: "rgba(0, 0, 0, 0.75)",
-                    },
-                    content: {
-                        top: "50%",
-                        left: "50%",
-                        right: "auto",
-                        bottom: "auto",
-                        marginRight: "-50%",
-                        transform: "translate(-50%, -50%)",
-                        width: "100%",
-                        minHeight: "50%",
-                        maxHeight: "100vh",
-                        border: "none",
-                        overflowY: "scroll",
-                        position: "relative",
-                        WebkitOverflowScrolling: "touch",
-                        background: "#151917",
-                    },
-                }}
-                contentLabel="Example Modal"
             >
-                <div
-                    style={{
-                        width: "100%",
-                        display: "flex",
-                        justifyContent: "end",
-                    }}
-                >
-                    <button
-                        style={{
-                            color: "white",
-                            backgroundColor: "rgba(0,0,0,0)",
-                        }}
-                        onClick={() =>
-                            setModal({
-                                open: false,
-                                data: modal.data,
-                            })
-                        }
-                    >
-                        <FontAwesomeIcon
-                            style={{ right: 0 }}
-                            icon={faTimes}
-                            size="2x"
-                        />
-                    </button>
-                </div>
-                <Container>
-                    {modal.data && <MDXRenderer>{modal.data.body}</MDXRenderer>}
-                </Container>
+                {modal.data && (
+                    <Container>
+                        <MDXRenderer>{modal.data.body}</MDXRenderer>
+                    </Container>
+                )}
             </Modal>
         </section>
     );

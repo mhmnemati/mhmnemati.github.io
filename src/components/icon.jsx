@@ -9,6 +9,7 @@ const Component = (props) => (
         }}
         href={props.href}
         target="_blank"
+        rel="noreferrer"
     >
         {props.text ? (
             <FontAwesomeIcon style={{ marginRight: 8 }} icon={props.icon} />

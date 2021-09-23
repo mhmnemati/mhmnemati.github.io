@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Text, FrameLines } from "@arwes/core";
+import { Text } from "@arwes/core";
 
 const Component = (props) => {
     return (

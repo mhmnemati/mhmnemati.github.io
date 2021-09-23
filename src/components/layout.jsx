@@ -1,5 +1,7 @@
 import React from "react";
 
+import Modal from "react-modal";
+
 import { ArwesThemeProvider, StylesBaseline } from "@arwes/core";
 import { AnimatorGeneralProvider } from "@arwes/animation";
 import { BleepsProvider } from "@arwes/sounds";
@@ -10,6 +12,8 @@ import Header from "./header";
 import Footer from "./footer";
 
 import "./styles.css";
+
+Modal.setAppElement("#___gatsby");
 
 if (typeof window !== "undefined") {
     // eslint-disable-next-line global-require

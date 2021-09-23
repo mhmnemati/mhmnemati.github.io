@@ -146,6 +146,7 @@ const About = () => (
                                         <a
                                             href="/assets/cv.pdf"
                                             target="_blank"
+                                            rel="noreferrer"
                                         >
                                             <Text>Download CV</Text>
                                         </a>
