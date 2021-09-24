@@ -24,7 +24,7 @@ const Hero = () => (
         }}
     >
         <Text>
-            <h1>Sorry, this page is under construct!</h1>
+            <h1>Sorry, this page is under construction!</h1>
         </Text>
     </Row>
 );

@@ -39,19 +39,7 @@ const Component = (props) => {
                 outline: 2,
             }}
         >
-            <StylesBaseline
-                styles={{
-                    "html, body": {
-                        fontFamily: '"Titillium Web", sans-serif',
-                        overflowX: "hidden",
-                        lineHeight: 1.6,
-                    },
-                    "code, pre": {
-                        fontFamily: '"Source Code Pro", monospace',
-                    },
-                    button: { margin: "8px" },
-                }}
-            />
+            <StylesBaseline />
             <BleepsProvider
                 audioSettings={{ common: { volume: 0.25 } }}
                 playersSettings={{
