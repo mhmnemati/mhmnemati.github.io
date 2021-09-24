@@ -19,8 +19,7 @@ const Component = (props) => {
                 width: "100vw",
                 height: "40vh",
                 padding: 16,
-                backgroundImage:
-                    "url(https://www.roche.com/dam/jcr:d963dfee-877b-475b-b29e-47f421c99225/en/quantum-computing-1920.jpg)",
+                backgroundImage: "url(/images/footer.jpg)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundFlip: "flip",

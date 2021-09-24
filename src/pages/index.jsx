@@ -24,7 +24,7 @@ const Hero = () => (
         style={{
             height: "100vh",
             padding: 16,
-            backgroundImage: "url(/images/background_4.jpg)",
+            backgroundImage: "url(/images/hero.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundFlip: "flip",
@@ -167,7 +167,7 @@ const Component = (props) => {
             <Hero />
             <About />
             <Break
-                image="https://unsplash.com/photos/Q1p7bh3SHj8/download?force=true&w=1920"
+                image="/images/break_resume.jpg"
                 title="Resume"
                 id="resume"
             />
@@ -181,7 +181,7 @@ const Component = (props) => {
                 </Container>
             </Row>
             <Break
-                image="https://unsplash.com/photos/LWnQ0IdzfjE/download?force=true&w=1920"
+                image="/images/break_projects.jpg"
                 title="Projects & Books"
                 id="projects"
             />
