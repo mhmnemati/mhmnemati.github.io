@@ -10,9 +10,9 @@
 
 html,
 body {
-    font-family: Roboto;
+    font-family: Roboto !important;
     overflow-x: hidden;
-    line-height: 1.6;
+    line-height: 1.6 !important;
 }
 h1,
 h2,
@@ -20,12 +20,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Neuropolitical;
-    text-transform: none;
+    font-family: Neuropolitical !important;
+    text-transform: none !important;
 }
 code,
 pre {
-    font-family: "Source Code Pro", monospace;
+    font-family: "Source Code Pro", monospace !important;
 }
 button {
     margin: 8px;
