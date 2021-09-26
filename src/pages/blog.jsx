@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Row, Col } from "react-grid-system";
+import { Row } from "react-grid-system";
 
 import { Text } from "@arwes/core";
 

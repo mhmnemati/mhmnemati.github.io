@@ -34,7 +34,7 @@ const Component = (props) => {
                 <Icon
                     margin={16}
                     icon={faEnvelope}
-                    href="mailto:koliberr136s1@gmail.com"
+                    href="mailto:koliberr136a1@gmail.com"
                 />
                 <Icon
                     margin={16}
@@ -51,7 +51,7 @@ const Component = (props) => {
             <br />
             <Text>
                 © Copyright 2021 KoLiBer • <FontAwesomeIcon icon={faReact} /> by
-                Mohammad Hosein Nemati
+                KoLiBer
             </Text>
         </footer>
     );
