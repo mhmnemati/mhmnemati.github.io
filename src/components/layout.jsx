@@ -1,48 +1,67 @@
 import React from "react";
 
+import Modal from "react-modal";
+
 import { ArwesThemeProvider, StylesBaseline } from "@arwes/core";
 import { AnimatorGeneralProvider } from "@arwes/animation";
 import { BleepsProvider } from "@arwes/sounds";
 
+import { ScreenClassProvider } from "react-grid-system";
+
 import Header from "./header";
+import Footer from "./footer";
+
+import "./styles.css";
+
+Modal.setAppElement("#___gatsby");
+
+if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]');
+}
 
 const Component = (props) => {
     return (
-        <ArwesThemeProvider themeSettings={{}}>
-            <StylesBaseline
-                styles={{
-                    "html, body": {
-                        fontFamily: '"Titillium Web", sans-serif',
+        <ArwesThemeProvider
+            themeSettings={{
+                palette: {
+                    primary: { main: "#1ca6a9" },
+                    secondary: { main: "#2c3531" },
+                    neutral: { main: "#151917" },
+                    text: {
+                        headings: "#22c7cb",
+                        root: "#d1e8e2",
+                        link: "#d1e8e2",
+                        linkHover: "#d1e8e2",
                     },
-                    "code, pre": {
-                        fontFamily: '"Source Code Pro", monospace',
-                    },
-                }}
-            />
+                },
+                space: 4,
+                outline: 2,
+            }}
+        >
+            <StylesBaseline />
             <BleepsProvider
                 audioSettings={{ common: { volume: 0.25 } }}
                 playersSettings={{
-                    type: {
-                        src: ["/sounds/type.mp3"],
-                        loop: true,
-                    },
+                    assemble: { src: ["/sounds/assemble.mp3"], loop: true },
+                    type: { src: ["/sounds/type.mp3"], loop: true },
+                    click: { src: ["/sounds/click.mp3"] },
+                    warning: { src: ["/sounds/warning.mp3"] },
                 }}
-                bleepsSettings={{ type: { player: "type" } }}
+                bleepsSettings={{
+                    assemble: { player: "assemble" },
+                    type: { player: "type" },
+                    click: { player: "click" },
+                }}
             >
                 <AnimatorGeneralProvider
-                    animator={{ duration: { enter: 200, exit: 200 } }}
+                    animator={{ duration: { enter: 1000, exit: 1000 } }}
                 >
-                    <div
-                        style={{
-                            width: "100vw",
-                            height: "100vh",
-                            backgroundImage: "url(/images/background_3.jpg)",
-                            backgroundSize: "cover",
-                        }}
-                    >
-                        {/* <Header /> */}
+                    <ScreenClassProvider>
+                        <Header />
                         {props.children}
-                    </div>
+                        <Footer />
+                    </ScreenClassProvider>
                 </AnimatorGeneralProvider>
             </BleepsProvider>
         </ArwesThemeProvider>
