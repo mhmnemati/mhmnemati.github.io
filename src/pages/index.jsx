@@ -115,7 +115,7 @@ const About = () => (
                         منطق و ژنتیک صرف کنم.
                     </p> */}
                     <p style={{ marginTop: 8 }}>
-                        I am a Full-Stack programmer and computer science
+                        I am a Full-Stack developer and computer science
                         student, interested in cognitive science and genetics, a
                         true lover of learning who has always sought more
                         experience. <br />
@@ -131,9 +131,9 @@ const About = () => (
                         and LowCode and NoCode technologies, as well as the
                         concepts of cloud computing. <br />
                         Because in my view programming is merely a tool to serve
-                        humanity, I try to spend less time programming with
-                        NoCode tools and instead spend more time learning basic
-                        concepts like math, logic and genetics. To.
+                        humanity, I try to spend less time with programming by
+                        using NoCode tools and instead spend more time for
+                        learning basic concepts like math, logic and genetics.
                     </p>
                 </Text>
                 <div style={{ margin: "16px 0" }}>
