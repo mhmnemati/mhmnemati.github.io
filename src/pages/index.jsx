@@ -217,8 +217,8 @@ const Component = (props) => {
             />
             <Row>
                 <Container>
-                    <Projects />
-                    <hr />
+                    {/* <Projects />
+                    <hr /> */}
                     <Books />
                 </Container>
             </Row>
