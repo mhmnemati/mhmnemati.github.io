@@ -203,14 +203,14 @@ const Component = (props) => {
             <Row>
                 <Container>
                     <Educations />
-                    {/* <hr />
-                    <Courses /> */}
+                    <hr />
+                    <Courses />
                     <hr />
                     <Works />
                 </Container>
                 ~
             </Row>
-            {/* <Break
+            <Break
                 image="/images/break_projects.jpg"
                 title="Projects & Books"
                 id="projects"
@@ -221,7 +221,7 @@ const Component = (props) => {
                     <hr />
                     <Books />
                 </Container>
-            </Row> */}
+            </Row>
         </Layout>
     );
 };
