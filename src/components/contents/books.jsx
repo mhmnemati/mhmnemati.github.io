@@ -29,7 +29,7 @@ const Component = (props) => {
         }
     `);
     data.allMdx.nodes = data.allMdx.nodes.filter((item) =>
-        new RegExp(".*en").test(item.slug)
+        new RegExp(".*en$").test(item.slug)
     );
 
     return (

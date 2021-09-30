@@ -20,7 +20,6 @@ const Component = (props) => {
                     slug
                     body
                     frontmatter {
-                        image
                         title
                         date
                     }
@@ -29,7 +28,7 @@ const Component = (props) => {
         }
     `);
     data.allMdx.nodes = data.allMdx.nodes.filter((item) =>
-        new RegExp(".*en").test(item.slug)
+        new RegExp(".*en$").test(item.slug)
     );
 
     return (
@@ -41,15 +40,7 @@ const Component = (props) => {
             </Row>
             {data.allMdx.nodes.map((item) => (
                 <Row key={item.id} style={{ margin: "8px 8px 32px 8px" }}>
-                    <Col md={12} lg={4}>
-                        <Figure
-                            src={item.frontmatter.image}
-                            alt={item.frontmatter.title}
-                            preload
-                            fluid
-                        />
-                    </Col>
-                    <Col md={12} lg={8}>
+                    <Col md={12} lg={12}>
                         <Text>
                             <h3 style={{ marginBottom: 8 }}>
                                 {item.frontmatter.title}

@@ -31,7 +31,7 @@ const Component = (props) => {
                     text: {
                         headings: "#22c7cb",
                         root: "#d1e8e2",
-                        link: "#d1e8e2",
+                        link: "#22c7cb",
                         linkHover: "#d1e8e2",
                     },
                 },
