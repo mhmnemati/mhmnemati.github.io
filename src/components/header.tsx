@@ -50,6 +50,20 @@ const Component: React.FC<{}> = (props) => {
                         >
                             <Button
                                 FrameComponent={FrameBox}
+                                onClick={() =>
+                                    changeLanguage(
+                                        languages
+                                            .filter((lang) => lang !== language)
+                                            .toString()
+                                    )
+                                }
+                            >
+                                {languages
+                                    .filter((lang) => lang !== language)
+                                    .toString()}
+                            </Button>
+                            <Button
+                                FrameComponent={FrameBox}
                                 onClick={() => setOpen(true)}
                             >
                                 <FontAwesomeIcon icon={faHamburger} size="2x" />
