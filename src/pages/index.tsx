@@ -2,9 +2,7 @@ import React from "react";
 
 import { graphql } from "gatsby";
 
-import { Container, Row, Col } from "react-grid-system";
-
-import { Text, Figure, Button, FrameHexagon } from "@arwes/core";
+import { Text, Button, FrameHexagon } from "@arwes/core";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -15,59 +13,12 @@ import {
     faGitlab,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { MDXRenderer } from "gatsby-plugin-mdx";
-
 import Layout from "../components/layout";
 import Break from "../components/break";
-
-const Content: React.FC<{
-    title: string;
-    items: {
-        id: string;
-        body: string;
-        rawBody: string;
-        frontmatter: { image_src?: string; image_alt?: string };
-    }[];
-}> = (props) => {
-    return (
-        <section>
-            <Row style={{ margin: 32 }}>
-                <Text>
-                    <h2>{props.title}</h2>
-                </Text>
-            </Row>
-            {props.items.map((item) => (
-                <Row key={item.id} style={{ margin: "8px 8px 32px 8px" }}>
-                    {item.frontmatter.image_src && (
-                        <Col
-                            md={12}
-                            lg={item.rawBody.includes("\n---\n\n") ? 4 : 6}
-                        >
-                            <Figure
-                                src={item.frontmatter.image_src}
-                                alt={item.frontmatter.image_alt}
-                                preload
-                                fluid
-                            />
-                        </Col>
-                    )}
-                    {item.rawBody.includes("\n---\n\n") && (
-                        <Col
-                            md={12}
-                            lg={item.frontmatter.image_src ? 8 : 12}
-                            style={{ marginBottom: 8 }}
-                        >
-                            <MDXRenderer>{item.body}</MDXRenderer>
-                        </Col>
-                    )}
-                </Row>
-            ))}
-        </section>
-    );
-};
+import Content from "../components/content";
 
 const Hero: React.FC<{}> = (props) => (
-    <Row
+    <section
         id="home"
         style={{
             height: "100vh",
@@ -172,7 +123,7 @@ const Hero: React.FC<{}> = (props) => (
                 <Text>Goto Blog</Text>
             </Button>
         </a>
-    </Row>
+    </section>
 );
 
 const Component: React.FC<{ data: any }> = (props) => {
@@ -180,22 +131,18 @@ const Component: React.FC<{ data: any }> = (props) => {
         <Layout>
             <Hero />
             <section id="about">
-                <Container>
-                    <Content title="About Me" items={props.data.about.nodes} />
-                </Container>
+                <Content title="About Me" items={props.data.about.nodes} />
             </section>
             <section id="resume">
                 <Break image="/images/break_resume.jpg" title="Resume" />
-                <Container>
-                    <Content
-                        title="Educations"
-                        items={props.data.educations.nodes}
-                    />
-                    <hr />
-                    <Content title="Courses" items={props.data.courses.nodes} />
-                    <hr />
-                    <Content title="Works" items={props.data.works.nodes} />
-                </Container>
+                <Content
+                    title="Educations"
+                    items={props.data.educations.nodes}
+                />
+                <hr />
+                <Content title="Courses" items={props.data.courses.nodes} />
+                <hr />
+                <Content title="Works" items={props.data.works.nodes} />
             </section>
         </Layout>
     );
