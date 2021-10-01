@@ -7,7 +7,7 @@ import { Text, Figure } from "@arwes/core";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const Component: React.FC<{
-    title: string;
+    title?: string;
     items: {
         id: string;
         body: string;
@@ -18,9 +18,11 @@ const Component: React.FC<{
     return (
         <Container>
             <Row style={{ margin: 32 }}>
-                <Text>
-                    <h2>{props.title}</h2>
-                </Text>
+                {props.title && (
+                    <Text>
+                        <h2>{props.title}</h2>
+                    </Text>
+                )}
             </Row>
             {props.items.map((item) => (
                 <Row key={item.id} style={{ margin: "8px 8px 32px 8px" }}>

@@ -66,9 +66,14 @@ const Component: React.FC<{}> = (props) => {
                                 <Text>{t("resume")}</Text>
                             </Button>
                         </a>
-                        <a href="/#projects">
+                        <a href="/projects">
                             <Button FrameComponent={FrameHexagon}>
                                 <Text>{t("projects")}</Text>
+                            </Button>
+                        </a>
+                        <a href="/books">
+                            <Button FrameComponent={FrameHexagon}>
+                                <Text>{t("books")}</Text>
                             </Button>
                         </a>
                         <a href="/blog">
@@ -111,12 +116,20 @@ const Component: React.FC<{}> = (props) => {
                             <Text>{t("resume")}</Text>
                         </Button>
                     </a>
-                    <a href="/#projects" onClick={() => setOpen(false)}>
+                    <a href="/projects" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
                             <Text>{t("projects")}</Text>
+                        </Button>
+                    </a>
+                    <a href="/books" onClick={() => setOpen(false)}>
+                        <Button
+                            FrameComponent={FrameHexagon}
+                            style={{ width: "100%" }}
+                        >
+                            <Text>{t("books")}</Text>
                         </Button>
                     </a>
                     <a href="/blog" onClick={() => setOpen(false)}>
