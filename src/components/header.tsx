@@ -7,19 +7,20 @@ import Headroom from "react-headroom";
 import { Visible } from "react-grid-system";
 
 import {
-    FrameUnderline,
+    FrameUnderline as FrameUnderlineUnsafe,
     Button,
     FrameBox,
     FrameHexagon,
     Text,
 } from "@arwes/core";
+const FrameUnderline = FrameUnderlineUnsafe as any;
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 
 import Modal from "./modal";
 
-const Component = (props) => {
+const Component: React.FC<{}> = (props) => {
     const { t } = useTranslation("header");
 
     const [open, setOpen] = React.useState(false);

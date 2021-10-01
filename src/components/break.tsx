@@ -2,7 +2,10 @@ import React from "react";
 
 import { Text } from "@arwes/core";
 
-const Component = (props) => {
+const Component: React.FC<{
+    image: string;
+    title: string;
+}> = (props) => {
     return (
         <section
             style={{
@@ -10,9 +13,7 @@ const Component = (props) => {
                 backgroundImage: `url(${props.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                backgroundFlip: "flip",
             }}
-            id={props.id}
         >
             <div
                 style={{

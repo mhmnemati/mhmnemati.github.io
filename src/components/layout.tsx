@@ -22,7 +22,7 @@ if (typeof window !== "undefined") {
     require("smooth-scroll")('a[href*="#"]');
 }
 
-const Component = (props) => {
+const Component: React.FC<{}> = (props) => {
     const { language } = useI18next();
 
     return (
@@ -53,7 +53,7 @@ const Component = (props) => {
                     },
                     "h1, h2, h3, h4, h5, h6": {
                         fontFamily: "Neuropolitical !important",
-                        textTransform: "none !important",
+                        textTransform: "none",
                     },
                     "code, pre": {
                         fontFamily: "Source Code Pro, monospace !important",

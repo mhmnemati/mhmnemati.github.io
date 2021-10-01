@@ -7,7 +7,10 @@ import { Button, FrameBox } from "@arwes/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const Component = (props) => {
+const Component: React.FC<{
+    open: boolean;
+    onClose: () => void;
+}> = (props) => {
     return (
         <Modal
             closeTimeoutMS={500}

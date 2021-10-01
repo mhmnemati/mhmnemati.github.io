@@ -15,7 +15,6 @@ const Hero = () => (
             backgroundImage: "url(/images/background_4.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            backgroundFlip: "flip",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -29,7 +28,7 @@ const Hero = () => (
     </Row>
 );
 
-const Component = (props) => {
+const Component: React.FC<{}> = (props) => {
     return (
         <Layout>
             <Hero />

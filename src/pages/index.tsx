@@ -6,6 +6,7 @@ import { Container, Row, Col } from "react-grid-system";
 
 import { Text, Figure, Button, FrameHexagon } from "@arwes/core";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
     faLinkedin,
@@ -18,7 +19,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Layout from "../components/layout";
 import Break from "../components/break";
-import Icon from "../components/icon";
 
 const Content: React.FC<{
     title: string;
@@ -66,7 +66,7 @@ const Content: React.FC<{
     );
 };
 
-const Hero = () => (
+const Hero: React.FC<{}> = (props) => (
     <Row
         id="home"
         style={{
@@ -93,14 +93,66 @@ const Hero = () => (
         </Text>
         <br />
         <div style={{ marginTop: 16 }}>
-            <Icon icon={faEnvelope} href="mailto:koliberr136a1@gmail.com" />
-            <Icon
-                icon={faLinkedin}
+            <a
+                style={{ color: "inherit" }}
+                href="mailto:koliberr136a1@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <FontAwesomeIcon
+                    style={{ margin: 16 }}
+                    icon={faEnvelope}
+                    size="2x"
+                />
+            </a>
+            <a
+                style={{ color: "inherit" }}
                 href="https://www.linkedin.com/in/mohammad-hosein-nemati-665b1813b/"
-            />
-            <Icon icon={faTwitter} href="https://twitter.com/ckoliberr" />
-            <Icon icon={faGithub} href="https://github.com/ckoliber" />
-            <Icon icon={faGitlab} href="https://gitlab.com/ckoliber" />
+                target="_blank"
+                rel="noreferrer"
+            >
+                <FontAwesomeIcon
+                    style={{ margin: 16 }}
+                    icon={faLinkedin}
+                    size="2x"
+                />
+            </a>
+            <a
+                style={{ color: "inherit" }}
+                href="https://twitter.com/ckoliberr"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <FontAwesomeIcon
+                    style={{ margin: 16 }}
+                    icon={faTwitter}
+                    size="2x"
+                />
+            </a>
+            <a
+                style={{ color: "inherit" }}
+                href="https://github.com/ckoliber"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <FontAwesomeIcon
+                    style={{ margin: 16 }}
+                    icon={faGithub}
+                    size="2x"
+                />
+            </a>
+            <a
+                style={{ color: "inherit" }}
+                href="https://gitlab.com/ckoliber"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <FontAwesomeIcon
+                    style={{ margin: 16 }}
+                    icon={faGitlab}
+                    size="2x"
+                />
+            </a>
         </div>
         <br />
 
@@ -133,11 +185,7 @@ const Component: React.FC<{ data: any }> = (props) => {
                 </Container>
             </section>
             <section id="resume">
-                <Break
-                    image="/images/break_resume.jpg"
-                    title="Resume"
-                    id="resume"
-                />
+                <Break image="/images/break_resume.jpg" title="Resume" />
                 <Container>
                     <Content
                         title="Educations"
