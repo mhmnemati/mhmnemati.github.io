@@ -7,3 +7,8 @@
     font-family: Neuropolitical;
     src: url(/fonts/neuropolitical/neuropolitical.ttf);
 }
+
+@font-face {
+    font-family: BYekan;
+    src: url(/fonts/byekan/BYekan.ttf);
+}

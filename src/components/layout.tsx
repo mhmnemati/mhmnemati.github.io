@@ -46,13 +46,17 @@ const Component: React.FC<{}> = (props) => {
             <StylesBaseline
                 styles={{
                     "html, body": {
-                        fontFamily: "Roboto !important",
+                        fontFamily: `${
+                            language === "fa" ? "BYekan" : "Roboto"
+                        } !important`,
                         overflowX: "hidden",
                         lineHeight: "1.6 !important",
                         direction: language === "fa" ? "rtl" : "ltr",
                     },
                     "h1, h2, h3, h4, h5, h6": {
-                        fontFamily: "Neuropolitical !important",
+                        fontFamily: `${
+                            language === "fa" ? "BYekan" : "Neuropolitical"
+                        } !important`,
                         textTransform: "none",
                     },
                     "code, pre": {
