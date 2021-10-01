@@ -38,7 +38,7 @@ const Component: React.FC<{}> = (props) => {
                     style={{
                         width: "100%",
                         display: "flex",
-                        justifyContent: "right",
+                        justifyContent: "end",
                         backgroundColor: "#00000000",
                     }}
                 >

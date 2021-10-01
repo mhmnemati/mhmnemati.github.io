@@ -2,32 +2,38 @@ import React from "react";
 
 import { graphql } from "gatsby";
 
+import { useTranslation } from "gatsby-plugin-react-i18next";
+
 import { Text } from "@arwes/core";
 
 import Layout from "../components/layout";
 import Content from "../components/content";
 
-const Hero: React.FC<{}> = (props) => (
-    <section
-        id="home"
-        style={{
-            height: "70vh",
-            padding: 16,
-            backgroundImage: "url(/images/break_projects.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-        }}
-    >
-        <Text>
-            <h1>Projects</h1>
-        </Text>
-    </section>
-);
+const Hero: React.FC<{}> = (props) => {
+    const { t } = useTranslation();
+
+    return (
+        <section
+            id="home"
+            style={{
+                height: "70vh",
+                padding: 16,
+                backgroundImage: "url(/images/break_projects.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+            }}
+        >
+            <Text>
+                <h1>{t("projects")}</h1>
+            </Text>
+        </section>
+    );
+};
 
 const Component: React.FC<{ data: any }> = (props) => {
     return (

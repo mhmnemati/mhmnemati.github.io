@@ -2,6 +2,8 @@ import React from "react";
 
 import { graphql } from "gatsby";
 
+import { useTranslation } from "gatsby-plugin-react-i18next";
+
 import { Text, Button, FrameHexagon } from "@arwes/core";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,132 +19,138 @@ import Layout from "../components/layout";
 import Break from "../components/break";
 import Content from "../components/content";
 
-const Hero: React.FC<{}> = (props) => (
-    <section
-        id="home"
-        style={{
-            height: "100vh",
-            padding: 16,
-            backgroundImage: "url(/images/hero.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-        }}
-    >
-        <Text>
-            <h1>I'm Mohammad Hosein Nemati.</h1>
-        </Text>
-        <Text>
-            <b>
-                A computer science student and full stack developer who is
-                mainly interested in modeling nature rules with computers
-            </b>
-        </Text>
-        <br />
-        <div style={{ marginTop: 16 }}>
-            <a
-                style={{ color: "inherit" }}
-                href="mailto:koliberr136a1@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <FontAwesomeIcon
-                    style={{ margin: 16 }}
-                    icon={faEnvelope}
-                    size="2x"
-                />
-            </a>
-            <a
-                style={{ color: "inherit" }}
-                href="https://www.linkedin.com/in/mohammad-hosein-nemati-665b1813b/"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <FontAwesomeIcon
-                    style={{ margin: 16 }}
-                    icon={faLinkedin}
-                    size="2x"
-                />
-            </a>
-            <a
-                style={{ color: "inherit" }}
-                href="https://twitter.com/ckoliberr"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <FontAwesomeIcon
-                    style={{ margin: 16 }}
-                    icon={faTwitter}
-                    size="2x"
-                />
-            </a>
-            <a
-                style={{ color: "inherit" }}
-                href="https://github.com/ckoliber"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <FontAwesomeIcon
-                    style={{ margin: 16 }}
-                    icon={faGithub}
-                    size="2x"
-                />
-            </a>
-            <a
-                style={{ color: "inherit" }}
-                href="https://gitlab.com/ckoliber"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <FontAwesomeIcon
-                    style={{ margin: 16 }}
-                    icon={faGitlab}
-                    size="2x"
-                />
-            </a>
-        </div>
-        <br />
+const Hero: React.FC<{}> = (props) => {
+    const { t } = useTranslation();
 
-        <a
-            href="/blog"
+    return (
+        <section
+            id="home"
             style={{
-                marginTop: 32,
+                height: "100vh",
+                padding: 16,
+                backgroundImage: "url(/images/hero.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
             }}
         >
-            <Button
-                FrameComponent={FrameHexagon}
+            <Text>
+                <h1>{t("iam_title")}</h1>
+            </Text>
+            <Text>
+                <b>{t("iam_caption")}</b>
+            </Text>
+            <br />
+            <div style={{ marginTop: 16 }}>
+                <a
+                    style={{ color: "inherit" }}
+                    href="mailto:koliberr136a1@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon
+                        style={{ margin: 16 }}
+                        icon={faEnvelope}
+                        size="2x"
+                    />
+                </a>
+                <a
+                    style={{ color: "inherit" }}
+                    href="https://www.linkedin.com/in/mohammad-hosein-nemati-665b1813b/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon
+                        style={{ margin: 16 }}
+                        icon={faLinkedin}
+                        size="2x"
+                    />
+                </a>
+                <a
+                    style={{ color: "inherit" }}
+                    href="https://twitter.com/ckoliberr"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon
+                        style={{ margin: 16 }}
+                        icon={faTwitter}
+                        size="2x"
+                    />
+                </a>
+                <a
+                    style={{ color: "inherit" }}
+                    href="https://github.com/ckoliber"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon
+                        style={{ margin: 16 }}
+                        icon={faGithub}
+                        size="2x"
+                    />
+                </a>
+                <a
+                    style={{ color: "inherit" }}
+                    href="https://gitlab.com/ckoliber"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon
+                        style={{ margin: 16 }}
+                        icon={faGitlab}
+                        size="2x"
+                    />
+                </a>
+            </div>
+            <br />
+
+            <a
+                href="/blog"
                 style={{
-                    width: 150,
-                    height: 50,
+                    marginTop: 32,
                 }}
             >
-                <Text>Goto Blog</Text>
-            </Button>
-        </a>
-    </section>
-);
+                <Button
+                    FrameComponent={FrameHexagon}
+                    style={{
+                        width: 150,
+                        height: 50,
+                    }}
+                >
+                    <Text>{t("goto_blog")}</Text>
+                </Button>
+            </a>
+        </section>
+    );
+};
 
 const Component: React.FC<{ data: any }> = (props) => {
+    const { t } = useTranslation("home");
+
     return (
         <Layout>
             <Hero />
             <section id="about">
-                <Content title="About Me" items={props.data.about.nodes} />
+                <Content title={t("about")} items={props.data.about.nodes} />
             </section>
             <section id="resume">
-                <Break image="/images/break_resume.jpg" title="Resume" />
+                <Break title={t("resume")} image="/images/break_resume.jpg" />
                 <Content
-                    title="Educations"
+                    title={t("educations")}
                     items={props.data.educations.nodes}
                 />
                 <hr />
-                <Content title="Courses" items={props.data.courses.nodes} />
+                <Content
+                    title={t("courses")}
+                    items={props.data.courses.nodes}
+                />
                 <hr />
-                <Content title="Works" items={props.data.works.nodes} />
+                <Content title={t("works")} items={props.data.works.nodes} />
             </section>
         </Layout>
     );
