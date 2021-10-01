@@ -1,8 +1,13 @@
 import React from "react";
 
+import { useStaticQuery, graphql } from "gatsby";
+
 import { useI18next } from "gatsby-plugin-react-i18next";
 
 import Modal from "react-modal";
+
+import { Helmet as HelmetUnsafe } from "react-helmet";
+const Helmet = HelmetUnsafe as any;
 
 import { ArwesThemeProvider, StylesBaseline } from "@arwes/core";
 import { AnimatorGeneralProvider } from "@arwes/animation";
@@ -25,6 +30,19 @@ if (typeof window !== "undefined") {
 const Component: React.FC<{}> = (props) => {
     const { language } = useI18next();
 
+    const data = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    title
+                    description
+                    author
+                    keywords
+                }
+            }
+        }
+    `);
+
     return (
         <ArwesThemeProvider
             themeSettings={{
@@ -43,6 +61,51 @@ const Component: React.FC<{}> = (props) => {
                 outline: 2,
             }}
         >
+            <Helmet
+                htmlAttributes={{
+                    lang: language,
+                }}
+                title={data.site.siteMetadata.title}
+                defer={false}
+                meta={[
+                    {
+                        name: "description",
+                        content: data.site.siteMetadata.description,
+                    },
+                    {
+                        name: "keywords",
+                        content: data.site.siteMetadata.keywords,
+                    },
+                    {
+                        property: "og:title",
+                        content: data.site.siteMetadata.title,
+                    },
+                    {
+                        property: "og:description",
+                        content: data.site.siteMetadata.description,
+                    },
+                    {
+                        property: "og:type",
+                        content: "website",
+                    },
+                    {
+                        name: "twitter:card",
+                        content: "summary",
+                    },
+                    {
+                        name: "twitter:creator",
+                        content: data.site.siteMetadata.author,
+                    },
+                    {
+                        name: "twitter:title",
+                        content: data.site.siteMetadata.title,
+                    },
+                    {
+                        name: "twitter:description",
+                        content: data.site.siteMetadata.description,
+                    },
+                ]}
+            />
             <StylesBaseline
                 styles={{
                     "html, body": {

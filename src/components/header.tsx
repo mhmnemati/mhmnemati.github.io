@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation, useI18next, Link } from "gatsby-plugin-react-i18next";
 
 import Headroom from "react-headroom";
 
@@ -22,6 +22,7 @@ import Modal from "./modal";
 
 const Component: React.FC<{}> = (props) => {
     const { t } = useTranslation("header");
+    const { language, languages, changeLanguage } = useI18next();
 
     const [open, setOpen] = React.useState(false);
 
@@ -37,50 +38,78 @@ const Component: React.FC<{}> = (props) => {
                 <FrameUnderline
                     style={{
                         width: "100%",
-                        display: "flex",
-                        justifyContent: "end",
                         backgroundColor: "#00000000",
                     }}
                 >
                     <Visible xs sm md>
-                        <Button
-                            FrameComponent={FrameBox}
-                            onClick={() => setOpen(true)}
+                        <div
+                            style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                            }}
                         >
-                            <FontAwesomeIcon icon={faHamburger} size="2x" />
-                        </Button>
+                            <Button
+                                FrameComponent={FrameBox}
+                                onClick={() => setOpen(true)}
+                            >
+                                <FontAwesomeIcon icon={faHamburger} size="2x" />
+                            </Button>
+                        </div>
                     </Visible>
                     <Visible lg xl xxl>
-                        <a href="/#home">
-                            <Button FrameComponent={FrameHexagon}>
-                                <Text>{t("home")}</Text>
+                        <div
+                            style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                            }}
+                        >
+                            <Button
+                                FrameComponent={FrameBox}
+                                onClick={() =>
+                                    changeLanguage(
+                                        languages
+                                            .filter((lang) => lang !== language)
+                                            .toString()
+                                    )
+                                }
+                            >
+                                {languages
+                                    .filter((lang) => lang !== language)
+                                    .toString()}
                             </Button>
-                        </a>
-                        <a href="/#about">
-                            <Button FrameComponent={FrameHexagon}>
-                                <Text>{t("about")}</Text>
-                            </Button>
-                        </a>
-                        <a href="/#resume">
-                            <Button FrameComponent={FrameHexagon}>
-                                <Text>{t("resume")}</Text>
-                            </Button>
-                        </a>
-                        <a href="/projects">
-                            <Button FrameComponent={FrameHexagon}>
-                                <Text>{t("projects")}</Text>
-                            </Button>
-                        </a>
-                        <a href="/books">
-                            <Button FrameComponent={FrameHexagon}>
-                                <Text>{t("books")}</Text>
-                            </Button>
-                        </a>
-                        <a href="/blog">
-                            <Button FrameComponent={FrameHexagon}>
-                                <Text>{t("blog")}</Text>
-                            </Button>
-                        </a>
+                            <div>
+                                <Link to="/#home">
+                                    <Button FrameComponent={FrameHexagon}>
+                                        <Text>{t("home")}</Text>
+                                    </Button>
+                                </Link>
+                                <Link to="/#about">
+                                    <Button FrameComponent={FrameHexagon}>
+                                        <Text>{t("about")}</Text>
+                                    </Button>
+                                </Link>
+                                <Link to="/#resume">
+                                    <Button FrameComponent={FrameHexagon}>
+                                        <Text>{t("resume")}</Text>
+                                    </Button>
+                                </Link>
+                                <Link to="/projects">
+                                    <Button FrameComponent={FrameHexagon}>
+                                        <Text>{t("projects")}</Text>
+                                    </Button>
+                                </Link>
+                                <Link to="/books">
+                                    <Button FrameComponent={FrameHexagon}>
+                                        <Text>{t("books")}</Text>
+                                    </Button>
+                                </Link>
+                                <Link to="/blog">
+                                    <Button FrameComponent={FrameHexagon}>
+                                        <Text>{t("blog")}</Text>
+                                    </Button>
+                                </Link>
+                            </div>
+                        </div>
                     </Visible>
                 </FrameUnderline>
             </Headroom>
@@ -92,54 +121,54 @@ const Component: React.FC<{}> = (props) => {
                         justifyContent: "center",
                     }}
                 >
-                    <a href="/#home" onClick={() => setOpen(false)}>
+                    <Link to="/#home" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
                             <Text>{t("home")}</Text>
                         </Button>
-                    </a>
-                    <a href="/#about" onClick={() => setOpen(false)}>
+                    </Link>
+                    <Link to="/#about" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
                             <Text>{t("about")}</Text>
                         </Button>
-                    </a>
-                    <a href="/#resume" onClick={() => setOpen(false)}>
+                    </Link>
+                    <Link to="/#resume" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
                             <Text>{t("resume")}</Text>
                         </Button>
-                    </a>
-                    <a href="/projects" onClick={() => setOpen(false)}>
+                    </Link>
+                    <Link to="/projects" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
                             <Text>{t("projects")}</Text>
                         </Button>
-                    </a>
-                    <a href="/books" onClick={() => setOpen(false)}>
+                    </Link>
+                    <Link to="/books" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
                             <Text>{t("books")}</Text>
                         </Button>
-                    </a>
-                    <a href="/blog" onClick={() => setOpen(false)}>
+                    </Link>
+                    <Link to="/blog" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
                             <Text>{t("blog")}</Text>
                         </Button>
-                    </a>
+                    </Link>
                 </div>
             </Modal>
         </header>

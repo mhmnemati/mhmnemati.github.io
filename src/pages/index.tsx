@@ -2,7 +2,7 @@ import React from "react";
 
 import { graphql } from "gatsby";
 
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation, Link } from "gatsby-plugin-react-i18next";
 
 import { Text, Button, FrameHexagon } from "@arwes/core";
 
@@ -109,12 +109,7 @@ const Hero: React.FC<{}> = (props) => {
             </div>
             <br />
 
-            <a
-                href="/blog"
-                style={{
-                    marginTop: 32,
-                }}
-            >
+            <Link to="/blog" style={{ marginTop: 32 }}>
                 <Button
                     FrameComponent={FrameHexagon}
                     style={{
@@ -124,7 +119,7 @@ const Hero: React.FC<{}> = (props) => {
                 >
                     <Text>{t("goto_blog")}</Text>
                 </Button>
-            </a>
+            </Link>
         </section>
     );
 };
