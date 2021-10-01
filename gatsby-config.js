@@ -85,32 +85,39 @@ module.exports = {
         {
             resolve: "gatsby-plugin-sitemap",
             options: {
-                excludes: ["/**/404", "/**/404.html"],
+                excludes: [
+                    "/**/404",
+                    "/**/404.html",
+                    "/**/offline-plugin-app-shell-fallback",
+                ],
                 query: `
-                  {
-                    site {
-                      siteMetadata {
-                        siteUrl
-                      }
+                {
+                  site {
+                    siteMetadata {
+                      siteUrl
                     }
-                    allSitePage(filter: {context: {i18n: {routed: {eq: false}}}}) {
-                      edges {
-                        node {
-                          context {
-                            i18n {
-                              defaultLanguage
-                              languages
-                              originalPath
-                            }
+                  }
+         
+                  allSitePage(filter: {context: {i18n: {routed: {eq: false}}}}) {
+                    nodes {
+                      path
+                    }
+                    edges {
+                      node {
+                        context {
+                          i18n {
+                            defaultLanguage
+                            languages
+                            originalPath
                           }
-                          path
                         }
+                        path
                       }
                     }
                   }
-                `,
-                serialize: ({ site, allSitePage }) => {
-                    return allSitePage.edges.map((edge) => {
+                }`,
+                serialize: ({ site, allSitePage }) =>
+                    (allSitePage?.edges || []).map((edge) => {
                         const { languages, originalPath, defaultLanguage } =
                             edge.node.context.i18n;
                         const { siteUrl } = site.siteMetadata;
@@ -132,8 +139,7 @@ module.exports = {
                             priority: originalPath === "/" ? 1.0 : 0.7,
                             links,
                         };
-                    });
-                },
+                    }),
             },
         },
     ],

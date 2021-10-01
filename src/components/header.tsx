@@ -50,6 +50,12 @@ const Component: React.FC<{}> = (props) => {
                         >
                             <Button
                                 FrameComponent={FrameBox}
+                                onClick={() => setOpen(true)}
+                            >
+                                <FontAwesomeIcon icon={faHamburger} size="2x" />
+                            </Button>
+                            <Button
+                                FrameComponent={FrameBox}
                                 onClick={() =>
                                     changeLanguage(
                                         languages
@@ -61,12 +67,6 @@ const Component: React.FC<{}> = (props) => {
                                 {languages
                                     .filter((lang) => lang !== language)
                                     .toString()}
-                            </Button>
-                            <Button
-                                FrameComponent={FrameBox}
-                                onClick={() => setOpen(true)}
-                            >
-                                <FontAwesomeIcon icon={faHamburger} size="2x" />
                             </Button>
                         </div>
                     </Visible>
