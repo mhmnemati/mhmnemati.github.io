@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useTranslation } from "gatsby-plugin-react-i18next";
+
 import Headroom from "react-headroom";
 
 import { Visible } from "react-grid-system";
@@ -18,6 +20,8 @@ import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 import Modal from "./modal";
 
 const Component = (props) => {
+    const { t } = useTranslation("header");
+
     const [open, setOpen] = React.useState(false);
 
     return (
@@ -48,27 +52,27 @@ const Component = (props) => {
                     <Visible lg xl xxl>
                         <a href="/#home">
                             <Button FrameComponent={FrameHexagon}>
-                                <Text>Home</Text>
+                                <Text>{t("home")}</Text>
                             </Button>
                         </a>
                         <a href="/#about">
                             <Button FrameComponent={FrameHexagon}>
-                                <Text>About</Text>
+                                <Text>{t("about")}</Text>
                             </Button>
                         </a>
                         <a href="/#resume">
                             <Button FrameComponent={FrameHexagon}>
-                                <Text>Resume</Text>
+                                <Text>{t("resume")}</Text>
                             </Button>
                         </a>
                         <a href="/#projects">
                             <Button FrameComponent={FrameHexagon}>
-                                <Text>Projects</Text>
+                                <Text>{t("projects")}</Text>
                             </Button>
                         </a>
                         <a href="/blog">
                             <Button FrameComponent={FrameHexagon}>
-                                <Text>Blog</Text>
+                                <Text>{t("blog")}</Text>
                             </Button>
                         </a>
                     </Visible>
@@ -87,7 +91,7 @@ const Component = (props) => {
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
-                            <Text>Home</Text>
+                            <Text>{t("home")}</Text>
                         </Button>
                     </a>
                     <a href="/#about" onClick={() => setOpen(false)}>
@@ -95,7 +99,7 @@ const Component = (props) => {
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
-                            <Text>About</Text>
+                            <Text>{t("about")}</Text>
                         </Button>
                     </a>
                     <a href="/#resume" onClick={() => setOpen(false)}>
@@ -103,7 +107,7 @@ const Component = (props) => {
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
-                            <Text>Resume</Text>
+                            <Text>{t("resume")}</Text>
                         </Button>
                     </a>
                     <a href="/#projects" onClick={() => setOpen(false)}>
@@ -111,7 +115,7 @@ const Component = (props) => {
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
-                            <Text>Projects</Text>
+                            <Text>{t("projects")}</Text>
                         </Button>
                     </a>
                     <a href="/blog" onClick={() => setOpen(false)}>
@@ -119,7 +123,7 @@ const Component = (props) => {
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
                         >
-                            <Text>Blog</Text>
+                            <Text>{t("blog")}</Text>
                         </Button>
                     </a>
                 </div>

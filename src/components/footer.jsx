@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useTranslation } from "gatsby-plugin-react-i18next";
+
 import { Text } from "@arwes/core";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +15,8 @@ import {
 import Icon from "./icon";
 
 const Component = (props) => {
+    const { t } = useTranslation("footer");
+
     return (
         <footer
             style={{
@@ -50,8 +54,8 @@ const Component = (props) => {
             </div>
             <br />
             <Text>
-                © Copyright 2021 KoLiBer • <FontAwesomeIcon icon={faReact} /> by
-                KoLiBer
+                © {t("copyright")} • <FontAwesomeIcon icon={faReact} />{" "}
+                {t("author")}
             </Text>
         </footer>
     );

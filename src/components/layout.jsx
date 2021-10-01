@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useI18next } from "gatsby-plugin-react-i18next";
+
 import Modal from "react-modal";
 
 import { ArwesThemeProvider, StylesBaseline } from "@arwes/core";
@@ -21,6 +23,8 @@ if (typeof window !== "undefined") {
 }
 
 const Component = (props) => {
+    const { language } = useI18next();
+
     return (
         <ArwesThemeProvider
             themeSettings={{
@@ -39,7 +43,44 @@ const Component = (props) => {
                 outline: 2,
             }}
         >
-            <StylesBaseline />
+            <StylesBaseline
+                styles={{
+                    "html, body": {
+                        fontFamily: "Roboto !important",
+                        overflowX: "hidden",
+                        lineHeight: "1.6 !important",
+                        direction: language === "fa" ? "rtl" : "ltr",
+                    },
+                    "h1, h2, h3, h4, h5, h6": {
+                        fontFamily: "Neuropolitical !important",
+                        textTransform: "none !important",
+                    },
+                    "code, pre": {
+                        fontFamily: "Source Code Pro, monospace !important",
+                        direction: "ltr",
+                    },
+                    button: {
+                        margin: 8,
+                    },
+
+                    ".ReactModal__Overlay": {
+                        opacity: 0,
+                        transition: "opacity 500ms ease-in-out",
+                    },
+                    ".ReactModal__Overlay--after-open": {
+                        opacity: 1,
+                    },
+                    ".ReactModal__Overlay--before-close": {
+                        opacity: 0,
+                    },
+                    ".ReactModal__Body--open": {
+                        overflow: "hidden",
+                        /* position: fixed; */
+                        width: "100%",
+                        height: "100%",
+                    },
+                }}
+            />
             <BleepsProvider
                 audioSettings={{ common: { volume: 0.25 } }}
                 playersSettings={{

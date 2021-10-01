@@ -43,5 +43,40 @@ module.exports = {
                 showSpinner: true,
             },
         },
+        "gatsby-plugin-offline",
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                path: "./locale",
+                name: "locale",
+            },
+        },
+        {
+            resolve: "gatsby-plugin-react-i18next",
+            options: {
+                localeJsonSourceName: "locale",
+                languages: ["en", "fa"],
+                defaultLanguage: "en",
+                siteUrl: "https://koliber.ir/",
+                i18nextOptions: {
+                    interpolation: {
+                        escapeValue: false,
+                    },
+                    keySeparator: false,
+                    nsSeparator: false,
+                },
+                pages: [
+                    // {
+                    //     matchPath: "/:lang?/blog/:uid",
+                    //     getLanguageFromPath: true,
+                    //     excludeLanguages: ["es"],
+                    // },
+                    // {
+                    //     matchPath: "/preview",
+                    //     languages: ["en"],
+                    // },
+                ],
+            },
+        },
     ],
 };

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { graphql } from "gatsby";
+
 import { Container, Row, Col } from "react-grid-system";
 
 import { Text, Figure, Button, FrameHexagon } from "@arwes/core";
@@ -227,3 +229,17 @@ const Component = (props) => {
 };
 
 export default Component;
+
+// export const query = graphql`
+//     query ($language: String!) {
+//         locales: allLocale(filter: { language: { eq: $language } }) {
+//             edges {
+//                 node {
+//                     ns
+//                     data
+//                     language
+//                 }
+//             }
+//         }
+//     }
+// `;

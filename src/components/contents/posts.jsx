@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useI18next } from "gatsby-plugin-react-i18next";
+
 import { graphql, useStaticQuery } from "gatsby";
 
 import { Row, Col } from "react-grid-system";
@@ -9,6 +11,8 @@ import { Text, Figure } from "@arwes/core";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const Component = (props) => {
+    const { language } = useI18next();
+
     const data = useStaticQuery(graphql`
         query {
             allMdx(

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useI18next } from "gatsby-plugin-react-i18next";
+
 import { graphql, useStaticQuery } from "gatsby";
 
 import { Row, Col } from "react-grid-system";
@@ -7,6 +9,8 @@ import { Row, Col } from "react-grid-system";
 import { Text, Figure } from "@arwes/core";
 
 const Component = (props) => {
+    const { language } = useI18next();
+
     const data = useStaticQuery(graphql`
         query {
             allMdx(
@@ -25,7 +29,7 @@ const Component = (props) => {
         }
     `);
     data.allMdx.nodes = data.allMdx.nodes.filter((item) =>
-        new RegExp(".*en$").test(item.slug)
+        new RegExp(`.*${language}$`).test(item.slug)
     );
 
     return (
