@@ -22,11 +22,6 @@ import "./styles.css";
 
 Modal.setAppElement("#___gatsby");
 
-if (typeof window !== "undefined") {
-    // eslint-disable-next-line global-require
-    require("smooth-scroll")('a[href*="#"]');
-}
-
 const Component: React.FC<{}> = (props) => {
     const { language } = useI18next();
 
@@ -114,6 +109,7 @@ const Component: React.FC<{}> = (props) => {
                         } !important`,
                         overflowX: "hidden",
                         lineHeight: "1.6 !important",
+                        scrollBehavior: "smooth",
                         direction: language === "fa" ? "rtl" : "ltr",
                     },
                     "h1, h2, h3, h4, h5, h6": {
