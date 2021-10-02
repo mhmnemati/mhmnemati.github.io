@@ -1,55 +1,71 @@
-import * as React from "react";
-import { Link } from "gatsby";
+import React from "react";
 
-// styles
-const pageStyles = {
-    color: "#232129",
-    padding: "96px",
-    fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-    marginTop: 0,
-    marginBottom: 64,
-    maxWidth: 320,
-};
+import { graphql } from "gatsby";
 
-const paragraphStyles = {
-    marginBottom: 48,
-};
-const codeStyles = {
-    color: "#8A6534",
-    padding: 4,
-    backgroundColor: "#FFF4DB",
-    fontSize: "1.25rem",
-    borderRadius: 4,
-};
+import { useTranslation, Link } from "gatsby-plugin-react-i18next";
 
-// markup
-const NotFoundPage: React.FC<{}> = () => {
+import { Text, Button, FrameHexagon } from "@arwes/core";
+
+import Layout from "../components/layout";
+
+const Hero: React.FC<{}> = (props) => {
+    const { t } = useTranslation();
+
     return (
-        <main style={pageStyles}>
-            <title>Not found</title>
-            <h1 style={headingStyles}>Page not found</h1>
-            <p style={paragraphStyles}>
-                Sorry{" "}
-                <span role="img" aria-label="Pensive emoji">
-                    😔
-                </span>{" "}
-                we couldn’t find what you were looking for.
-                <br />
-                {process.env.NODE_ENV === "development" ? (
-                    <>
-                        <br />
-                        Try creating a page in{" "}
-                        <code style={codeStyles}>src/pages/</code>.
-                        <br />
-                    </>
-                ) : null}
-                <br />
-                <Link to="/">Go home</Link>.
-            </p>
-        </main>
+        <section
+            id="home"
+            style={{
+                height: "100vh",
+                padding: 16,
+                backgroundImage: "url(/images/hero.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+            }}
+        >
+            <Text>
+                <h1>{t("not_found")}</h1>
+            </Text>
+            <br />
+            <Link to="/" style={{ marginTop: 32 }}>
+                <Button
+                    FrameComponent={FrameHexagon}
+                    style={{
+                        width: 150,
+                        height: 50,
+                    }}
+                >
+                    <Text>{t("goto_home")}</Text>
+                </Button>
+            </Link>
+        </section>
     );
 };
 
-export default NotFoundPage;
+const Component: React.FC<{ data: any }> = (props) => {
+    return (
+        <Layout>
+            <Hero />
+        </Layout>
+    );
+};
+
+export default Component;
+
+export const query = graphql`
+    query ($language: String!) {
+        locales: allLocale(filter: { language: { eq: $language } }) {
+            edges {
+                node {
+                    ns
+                    data
+                    language
+                }
+            }
+        }
+    }
+`;
