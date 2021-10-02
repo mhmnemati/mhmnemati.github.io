@@ -44,11 +44,14 @@ const Hero: React.FC<{
 
 const Content: React.FC<{
     body: string;
-    frontmatter: { image_src?: string; image_alt?: string };
+    frontmatter: { image_src: string; image_alt: string; date: string };
 }> = (props) => {
     return (
         <Container style={{ padding: "32px 16px" }}>
             <MDXRenderer>{props.body}</MDXRenderer>
+            <Text>
+                <b>{props.frontmatter.date}</b>
+            </Text>
         </Container>
     );
 };
