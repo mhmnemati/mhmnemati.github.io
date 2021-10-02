@@ -4,7 +4,11 @@ import { graphql } from "gatsby";
 
 import { useTranslation, Link } from "gatsby-plugin-react-i18next";
 
-import { Text, Button, FrameHexagon } from "@arwes/core";
+import { Container, Row, Col } from "react-grid-system";
+
+import { Text, Button, Figure, FrameHexagon } from "@arwes/core";
+
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +21,6 @@ import {
 
 import Layout from "../components/layout";
 import Break from "../components/break";
-import Content from "../components/content";
 
 const Hero: React.FC<{}> = (props) => {
     const { t } = useTranslation();
@@ -121,6 +124,59 @@ const Hero: React.FC<{}> = (props) => {
                 </Button>
             </Link>
         </section>
+    );
+};
+
+const Content: React.FC<{
+    title: string;
+    items: {
+        id: string;
+        body: string;
+        rawBody: string;
+        frontmatter: { image_src?: string; image_alt?: string };
+    }[];
+}> = (props) => {
+    return (
+        <Container style={{ padding: "32px 16px" }}>
+            <Row>
+                {props.title && (
+                    <Text>
+                        <h2>{props.title}</h2>
+                    </Text>
+                )}
+            </Row>
+            {props.items.map((item, index) => (
+                <article key={item.id}>
+                    <Row>
+                        {item.frontmatter.image_src && (
+                            <Col
+                                md={12}
+                                lg={item.rawBody.includes("\n---\n\n") ? 4 : 6}
+                            >
+                                <Figure
+                                    src={item.frontmatter.image_src}
+                                    alt={item.frontmatter.image_alt}
+                                    preload
+                                    fluid
+                                />
+                            </Col>
+                        )}
+                        {item.rawBody.includes("\n---\n\n") && (
+                            <Col
+                                md={12}
+                                lg={item.frontmatter.image_src ? 8 : 12}
+                                style={{ marginBottom: 8 }}
+                            >
+                                <MDXRenderer>{item.body}</MDXRenderer>
+                            </Col>
+                        )}
+                    </Row>
+                    {index < props.items.length - 1 && (
+                        <hr style={{ margin: "32px 0" }} />
+                    )}
+                </article>
+            ))}
+        </Container>
     );
 };
 

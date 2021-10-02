@@ -2,15 +2,13 @@ import React from "react";
 
 import { graphql } from "gatsby";
 
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation, Link } from "gatsby-plugin-react-i18next";
 
 import { Container, Row, Col } from "react-grid-system";
 
-import { Text, Figure } from "@arwes/core";
+import { Text, Figure, Button, FrameHexagon } from "@arwes/core";
 
-import { MDXRenderer } from "gatsby-plugin-mdx";
-
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 
 const Hero: React.FC<{}> = (props) => {
     const { t } = useTranslation();
@@ -32,7 +30,7 @@ const Hero: React.FC<{}> = (props) => {
             }}
         >
             <Text>
-                <h1>{t("books")}</h1>
+                <h1>{t("blog")}</h1>
             </Text>
         </section>
     );
@@ -41,10 +39,17 @@ const Hero: React.FC<{}> = (props) => {
 const Content: React.FC<{
     items: {
         id: string;
-        body: string;
-        frontmatter: { image_src: string; image_alt: string };
+        frontmatter: {
+            image_src: string;
+            image_alt: string;
+            title: string;
+            date: string;
+            description: string;
+        };
     }[];
 }> = (props) => {
+    const { t } = useTranslation();
+
     return (
         <Container style={{ padding: "32px 16px" }}>
             {props.items.map((item, index) => (
@@ -59,7 +64,24 @@ const Content: React.FC<{
                             />
                         </Col>
                         <Col md={12} lg={8}>
-                            <MDXRenderer>{item.body}</MDXRenderer>
+                            <h3>{item.frontmatter.title}</h3>
+                            <p>
+                                <b>{item.frontmatter.date}</b>
+                            </p>
+                            <Text>{item.frontmatter.description}</Text>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "end",
+                                    marginTop: 8,
+                                }}
+                            >
+                                <Link to={`/blog/${item.id}`}>
+                                    <Button FrameComponent={FrameHexagon}>
+                                        {t("show_more")}
+                                    </Button>
+                                </Link>
+                            </div>
                         </Col>
                     </Row>
                     {index < props.items.length - 1 && (
@@ -75,7 +97,7 @@ const Component: React.FC<{ data: any }> = (props) => {
     return (
         <Layout>
             <Hero />
-            <Content items={props.data.books.nodes} />
+            <Content items={props.data.posts.nodes} />
         </Layout>
     );
 };
@@ -94,19 +116,21 @@ export const query = graphql`
             }
         }
 
-        books: allMdx(
+        posts: allMdx(
             sort: { fields: frontmatter___index, order: DESC }
             filter: {
-                slug: { regex: "/books/.*/" }
+                slug: { regex: "/posts/.*/" }
                 frontmatter: { language: { eq: $language } }
             }
         ) {
             nodes {
                 id
-                body
                 frontmatter {
                     image_src
                     image_alt
+                    title
+                    date
+                    description
                 }
             }
         }

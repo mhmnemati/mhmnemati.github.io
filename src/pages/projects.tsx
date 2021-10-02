@@ -4,10 +4,13 @@ import { graphql } from "gatsby";
 
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
+import { Container, Row, Col } from "react-grid-system";
+
 import { Text } from "@arwes/core";
 
+import { MDXRenderer } from "gatsby-plugin-mdx";
+
 import Layout from "../components/layout";
-import Content from "../components/content";
 
 const Hero: React.FC<{}> = (props) => {
     const { t } = useTranslation();
@@ -32,6 +35,31 @@ const Hero: React.FC<{}> = (props) => {
                 <h1>{t("projects")}</h1>
             </Text>
         </section>
+    );
+};
+
+const Content: React.FC<{
+    items: {
+        id: string;
+        body: string;
+        frontmatter: { image_src?: string; image_alt?: string };
+    }[];
+}> = (props) => {
+    return (
+        <Container style={{ padding: "32px 16px" }}>
+            {props.items.map((item, index) => (
+                <article key={item.id}>
+                    <Row>
+                        <Col md={12} lg={12}>
+                            <MDXRenderer>{item.body}</MDXRenderer>
+                        </Col>
+                    </Row>
+                    {index < props.items.length - 1 && (
+                        <hr style={{ margin: "32px 0" }} />
+                    )}
+                </article>
+            ))}
+        </Container>
     );
 };
 
@@ -68,7 +96,6 @@ export const query = graphql`
             nodes {
                 id
                 body
-                rawBody
                 frontmatter {
                     image_src
                     image_alt

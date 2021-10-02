@@ -159,7 +159,7 @@ const Component: React.FC<{}> = (props) => {
                 }}
             >
                 <AnimatorGeneralProvider
-                    animator={{ duration: { enter: 1000, exit: 1000 } }}
+                    animator={{ duration: { enter: 600, exit: 600 } }}
                 >
                     <ScreenClassProvider>
                         <Header />
