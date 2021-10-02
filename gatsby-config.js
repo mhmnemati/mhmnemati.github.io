@@ -69,17 +69,6 @@ module.exports = {
                     keySeparator: false,
                     nsSeparator: false,
                 },
-                pages: [
-                    // {
-                    //     matchPath: "/:lang?/blog/:uid",
-                    //     getLanguageFromPath: true,
-                    //     excludeLanguages: ["es"],
-                    // },
-                    // {
-                    //     matchPath: "/preview",
-                    //     languages: ["en"],
-                    // },
-                ],
             },
         },
         {
