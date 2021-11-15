@@ -138,7 +138,7 @@ const Content: React.FC<{
 }> = (props) => {
     return (
         <Container style={{ padding: "32px 16px" }}>
-            <Row>
+            <Row style={{ margin: "0 8px" }}>
                 {props.title && (
                     <Text>
                         <h2>{props.title}</h2>
