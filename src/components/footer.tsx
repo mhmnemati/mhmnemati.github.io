@@ -1,8 +1,8 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
-import { useTranslation } from "gatsby-plugin-react-i18next";
-
-import { Text } from "@arwes/core";
+import { Text as UnsafeText } from "@arwes/core";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -12,8 +12,13 @@ import {
     faReact,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Component: React.FC<{}> = (props) => {
-    const { t } = useTranslation("footer");
+const Text = UnsafeText as any;
+
+interface Props {}
+
+export default function Component(props: Props) {
+    const router = useRouter();
+    const { t } = useTranslation();
 
     return (
         <footer
@@ -88,6 +93,4 @@ const Component: React.FC<{}> = (props) => {
             </Text>
         </footer>
     );
-};
-
-export default Component;
+}

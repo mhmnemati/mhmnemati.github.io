@@ -1,16 +1,30 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+
+import {
+    Button as UnsafeButton,
+    FrameBox as UnsafeFrameBox,
+} from "@arwes/core";
 
 import Modal from "react-modal";
-
-import { Button, FrameBox } from "@arwes/core";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const Component: React.FC<{
+const Button = UnsafeButton as any;
+const FrameBox = UnsafeFrameBox as any;
+
+interface Props {
     open: boolean;
     onClose: () => void;
-}> = (props) => {
+    children: any;
+}
+
+export default function Component(props: Props) {
+    const router = useRouter();
+    const { t } = useTranslation();
+
     return (
         <Modal
             closeTimeoutMS={500}
@@ -58,6 +72,4 @@ const Component: React.FC<{
             {props.children}
         </Modal>
     );
-};
-
-export default Component;
+}

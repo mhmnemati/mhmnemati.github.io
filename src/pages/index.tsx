@@ -20,7 +20,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Layout from "../components/layout";
-import Break from "../components/break";
+import Break from "../components/Break";
 
 const Hero: React.FC<{}> = (props) => {
     const { t } = useTranslation();

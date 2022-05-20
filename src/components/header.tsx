@@ -1,28 +1,39 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
-import { useTranslation, useI18next, Link } from "gatsby-plugin-react-i18next";
+import Link from "next/link";
+
+import {
+    Text as UnsafeText,
+    Button as UnsafeButton,
+    FrameBox as UnsafeFrameBox,
+    FrameHexagon as UnsafeFrameHexagon,
+    FrameUnderline as UnsafeFrameUnderline,
+} from "@arwes/core";
 
 import Headroom from "react-headroom";
 
-import { Visible } from "react-grid-system";
-
-import {
-    FrameUnderline as FrameUnderlineUnsafe,
-    Button,
-    FrameBox,
-    FrameHexagon,
-    Text,
-} from "@arwes/core";
-const FrameUnderline = FrameUnderlineUnsafe as any;
+import { Visible as UnsafeVisible } from "react-grid-system";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 
-import Modal from "./modal";
+import Modal from "components/Modal";
 
-const Component: React.FC<{}> = (props) => {
-    const { t } = useTranslation("header");
-    const { language, languages, changeLanguage } = useI18next();
+const Text = UnsafeText as any;
+const Button = UnsafeButton as any;
+const FrameBox = UnsafeFrameBox as any;
+const FrameHexagon = UnsafeFrameHexagon as any;
+const FrameUnderline = UnsafeFrameUnderline as any;
+
+const Visible = UnsafeVisible as any;
+
+interface Props {}
+
+export default function Component(props: Props) {
+    const router = useRouter();
+    const { t } = useTranslation();
 
     const [open, setOpen] = React.useState(false);
 
@@ -54,20 +65,18 @@ const Component: React.FC<{}> = (props) => {
                             >
                                 <FontAwesomeIcon icon={faHamburger} size="2x" />
                             </Button>
-                            <Button
-                                FrameComponent={FrameBox}
-                                onClick={() =>
-                                    changeLanguage(
-                                        languages
-                                            .filter((lang) => lang !== language)
-                                            .toString()
-                                    )
+                            <Link
+                                href="/#home"
+                                locale={
+                                    (router.locales || []).filter(
+                                        (locale) => locale != router.locale
+                                    )[0]
                                 }
                             >
-                                {languages
-                                    .filter((lang) => lang !== language)
-                                    .toString()}
-                            </Button>
+                                <Button FrameComponent={FrameBox}>
+                                    {router.locale}
+                                </Button>
+                            </Link>
                         </div>
                     </Visible>
                     <Visible lg xl xxl>
@@ -77,47 +86,45 @@ const Component: React.FC<{}> = (props) => {
                                 justifyContent: "space-between",
                             }}
                         >
-                            <Button
-                                FrameComponent={FrameBox}
-                                onClick={() =>
-                                    changeLanguage(
-                                        languages
-                                            .filter((lang) => lang !== language)
-                                            .toString()
-                                    )
+                            <Link
+                                href="/#home"
+                                locale={
+                                    (router.locales || []).filter(
+                                        (locale) => locale != router.locale
+                                    )[0]
                                 }
                             >
-                                {languages
-                                    .filter((lang) => lang !== language)
-                                    .toString()}
-                            </Button>
+                                <Button FrameComponent={FrameBox}>
+                                    {router.locale}
+                                </Button>
+                            </Link>
                             <div>
-                                <Link to="/#home">
+                                <Link href="/#home">
                                     <Button FrameComponent={FrameHexagon}>
                                         <Text>{t("home")}</Text>
                                     </Button>
                                 </Link>
-                                <Link to="/#about">
+                                <Link href="/#about">
                                     <Button FrameComponent={FrameHexagon}>
                                         <Text>{t("about")}</Text>
                                     </Button>
                                 </Link>
-                                <Link to="/#resume">
+                                <Link href="/#resume">
                                     <Button FrameComponent={FrameHexagon}>
                                         <Text>{t("resume")}</Text>
                                     </Button>
                                 </Link>
-                                <Link to="/projects">
+                                <Link href="/projects">
                                     <Button FrameComponent={FrameHexagon}>
                                         <Text>{t("projects")}</Text>
                                     </Button>
                                 </Link>
-                                <Link to="/books">
+                                <Link href="/books">
                                     <Button FrameComponent={FrameHexagon}>
                                         <Text>{t("books")}</Text>
                                     </Button>
                                 </Link>
-                                <Link to="/blog">
+                                <Link href="/blog">
                                     <Button FrameComponent={FrameHexagon}>
                                         <Text>{t("blog")}</Text>
                                     </Button>
@@ -135,7 +142,7 @@ const Component: React.FC<{}> = (props) => {
                         justifyContent: "center",
                     }}
                 >
-                    <Link to="/#home" onClick={() => setOpen(false)}>
+                    <Link href="/#home" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
@@ -143,7 +150,7 @@ const Component: React.FC<{}> = (props) => {
                             <Text>{t("home")}</Text>
                         </Button>
                     </Link>
-                    <Link to="/#about" onClick={() => setOpen(false)}>
+                    <Link href="/#about" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
@@ -151,7 +158,7 @@ const Component: React.FC<{}> = (props) => {
                             <Text>{t("about")}</Text>
                         </Button>
                     </Link>
-                    <Link to="/#resume" onClick={() => setOpen(false)}>
+                    <Link href="/#resume" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
@@ -159,7 +166,7 @@ const Component: React.FC<{}> = (props) => {
                             <Text>{t("resume")}</Text>
                         </Button>
                     </Link>
-                    <Link to="/projects" onClick={() => setOpen(false)}>
+                    <Link href="/projects" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
@@ -167,7 +174,7 @@ const Component: React.FC<{}> = (props) => {
                             <Text>{t("projects")}</Text>
                         </Button>
                     </Link>
-                    <Link to="/books" onClick={() => setOpen(false)}>
+                    <Link href="/books" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
@@ -175,7 +182,7 @@ const Component: React.FC<{}> = (props) => {
                             <Text>{t("books")}</Text>
                         </Button>
                     </Link>
-                    <Link to="/blog" onClick={() => setOpen(false)}>
+                    <Link href="/blog" onClick={() => setOpen(false)}>
                         <Button
                             FrameComponent={FrameHexagon}
                             style={{ width: "100%" }}
@@ -187,6 +194,4 @@ const Component: React.FC<{}> = (props) => {
             </Modal>
         </header>
     );
-};
-
-export default Component;
+}
