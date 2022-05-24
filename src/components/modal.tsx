@@ -2,18 +2,12 @@ import React from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 
-import {
-    Button as UnsafeButton,
-    FrameBox as UnsafeFrameBox,
-} from "@arwes/core";
+import { Button, FrameBox } from "@arwes/core";
 
 import Modal from "react-modal";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-
-const Button = UnsafeButton as any;
-const FrameBox = UnsafeFrameBox as any;
 
 interface Props {
     open: boolean;

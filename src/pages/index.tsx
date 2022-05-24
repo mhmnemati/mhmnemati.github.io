@@ -1,14 +1,16 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
-import { graphql } from "gatsby";
+import type { GetStaticPropsContext } from "next";
 
-import { useTranslation, Link } from "gatsby-plugin-react-i18next";
-
-import { Container, Row, Col } from "react-grid-system";
+import Link from "next/link";
 
 import { Text, Button, Figure, FrameHexagon } from "@arwes/core";
 
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { Container, Row, Col } from "react-grid-system";
+
+import MDRenderer from "react-markdown";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -19,11 +21,12 @@ import {
     faGitlab,
 } from "@fortawesome/free-brands-svg-icons";
 
-import Layout from "../components/layout";
-import Break from "../components/Break";
+import Default from "layouts/Default";
+import Break from "components/Break";
+import getContents from "providers/contents";
 
-const Hero: React.FC<{}> = (props) => {
-    const { t } = useTranslation();
+function Hero(props: {}) {
+    const { t } = useTranslation("common");
 
     return (
         <section
@@ -112,7 +115,7 @@ const Hero: React.FC<{}> = (props) => {
             </div>
             <br />
 
-            <Link to="/blog" style={{ marginTop: 32 }}>
+            <Link href="/blog" style={{ marginTop: 32 }}>
                 <Button
                     FrameComponent={FrameHexagon}
                     style={{
@@ -125,17 +128,24 @@ const Hero: React.FC<{}> = (props) => {
             </Link>
         </section>
     );
-};
+}
 
-const Content: React.FC<{
+interface ContentProps {
     title: string;
     items: {
-        id: string;
-        body: string;
-        rawBody: string;
-        frontmatter: { image_src?: string; image_alt?: string };
+        slug: string;
+        data: {
+            index: number;
+            language: string;
+            image_src?: string;
+            image_alt?: string;
+        };
+        content: string;
     }[];
-}> = (props) => {
+}
+
+function Content(props: ContentProps) {
+    console.log(props);
     return (
         <Container style={{ padding: "32px 16px" }}>
             <Row style={{ margin: "0 8px" }}>
@@ -146,30 +156,25 @@ const Content: React.FC<{
                 )}
             </Row>
             {props.items.map((item, index) => (
-                <article key={item.id}>
+                <article key={item.slug}>
                     <Row>
-                        {item.frontmatter.image_src && (
-                            <Col
-                                md={12}
-                                lg={item.rawBody.includes("\n---\n\n") ? 4 : 6}
-                            >
+                        {item.data.image_src && (
+                            <Col md={12} lg={4}>
                                 <Figure
-                                    src={item.frontmatter.image_src}
-                                    alt={item.frontmatter.image_alt}
+                                    src={item.data.image_src}
+                                    alt={item.data.image_alt}
                                     preload
                                     fluid
                                 />
                             </Col>
                         )}
-                        {item.rawBody.includes("\n---\n\n") && (
-                            <Col
-                                md={12}
-                                lg={item.frontmatter.image_src ? 8 : 12}
-                                style={{ marginBottom: 8 }}
-                            >
-                                <MDXRenderer>{item.body}</MDXRenderer>
-                            </Col>
-                        )}
+                        <Col
+                            md={12}
+                            lg={item.data.image_src ? 8 : 12}
+                            style={{ marginBottom: 8 }}
+                        >
+                            <MDRenderer>{item.content}</MDRenderer>
+                        </Col>
                     </Row>
                     {index < props.items.length - 1 && (
                         <hr style={{ margin: "32px 0" }} />
@@ -178,119 +183,45 @@ const Content: React.FC<{
             ))}
         </Container>
     );
-};
+}
 
-const Component: React.FC<{ data: any }> = (props) => {
-    const { t } = useTranslation("home");
+interface ComponentProps {
+    about: any;
+    educations: any;
+    courses: any;
+    works: any;
+}
+
+export default function Component(props: ComponentProps) {
+    const { t } = useTranslation();
+
+    console.log(props);
 
     return (
-        <Layout>
+        <Default>
             <Hero />
             <section id="about">
-                <Content title={t("about")} items={props.data.about.nodes} />
+                <Content title={t("about")} items={props.about} />
             </section>
             <section id="resume">
                 <Break title={t("resume")} image="/images/break_resume.jpg" />
-                <Content
-                    title={t("educations")}
-                    items={props.data.educations.nodes}
-                />
+                <Content title={t("educations")} items={props.educations} />
                 <hr />
-                <Content
-                    title={t("courses")}
-                    items={props.data.courses.nodes}
-                />
+                <Content title={t("courses")} items={props.courses} />
                 <hr />
-                <Content title={t("works")} items={props.data.works.nodes} />
+                <Content title={t("works")} items={props.works} />
             </section>
-        </Layout>
+        </Default>
     );
-};
+}
 
-export default Component;
-
-export const query = graphql`
-    query ($language: String!) {
-        locales: allLocale(filter: { language: { eq: $language } }) {
-            edges {
-                node {
-                    ns
-                    data
-                    language
-                }
-            }
-        }
-
-        about: allMdx(
-            sort: { fields: frontmatter___index, order: DESC }
-            filter: {
-                slug: { regex: "/about/.*/" }
-                frontmatter: { language: { eq: $language } }
-            }
-        ) {
-            nodes {
-                id
-                body
-                rawBody
-                frontmatter {
-                    image_src
-                    image_alt
-                }
-            }
-        }
-
-        educations: allMdx(
-            sort: { fields: frontmatter___index, order: DESC }
-            filter: {
-                slug: { regex: "/educations/.*/" }
-                frontmatter: { language: { eq: $language } }
-            }
-        ) {
-            nodes {
-                id
-                body
-                rawBody
-                frontmatter {
-                    image_src
-                    image_alt
-                }
-            }
-        }
-
-        courses: allMdx(
-            sort: { fields: frontmatter___index, order: DESC }
-            filter: {
-                slug: { regex: "/courses/.*/" }
-                frontmatter: { language: { eq: $language } }
-            }
-        ) {
-            nodes {
-                id
-                body
-                rawBody
-                frontmatter {
-                    image_src
-                    image_alt
-                }
-            }
-        }
-
-        works: allMdx(
-            sort: { fields: frontmatter___index, order: DESC }
-            filter: {
-                slug: { regex: "/works/.*/" }
-                frontmatter: { language: { eq: $language } }
-            }
-        ) {
-            nodes {
-                id
-                body
-                rawBody
-                frontmatter {
-                    image_src
-                    image_alt
-                }
-            }
-        }
-    }
-`;
+export async function getStaticProps(ctx: GetStaticPropsContext) {
+    return {
+        props: {
+            about: getContents(true, "about", ctx.locale || ""),
+            educations: getContents(false, "educations", ctx.locale || ""),
+            courses: getContents(false, "courses", ctx.locale || ""),
+            works: getContents(false, "works", ctx.locale || ""),
+        },
+    };
+}

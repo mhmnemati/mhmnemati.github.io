@@ -8,18 +8,14 @@ import { appWithTranslation } from "next-i18next";
 
 import theme from "app/theme";
 
-const UnsafeArwesThemeProvider = ArwesThemeProvider as any;
-const UnsafeBleepsProvider = BleepsProvider as any;
-
 export default appWithTranslation(function Component(props: AppProps) {
     const { Component, pageProps, router, ...rest } = props;
 
-    const getLayout = (Component as any).getLayout || ((page: any) => page);
     const isRTL = ["fa"].includes(router.locale || "");
 
     return (
-        <UnsafeArwesThemeProvider
-            themeSettings={(rest as any).theme || theme(isRTL)}
+        <ArwesThemeProvider
+        // themeSettings={(rest as any).theme || theme(isRTL)}
         >
             <StylesBaseline
                 styles={{
@@ -62,26 +58,26 @@ export default appWithTranslation(function Component(props: AppProps) {
                     },
                 }}
             />
-            <UnsafeBleepsProvider
+            <BleepsProvider
                 audioSettings={{ common: { volume: 0.25 } }}
-                playersSettings={{
-                    assemble: { src: ["/sounds/assemble.mp3"], loop: true },
-                    type: { src: ["/sounds/type.mp3"], loop: true },
-                    click: { src: ["/sounds/click.mp3"] },
-                    warning: { src: ["/sounds/warning.mp3"] },
-                }}
-                bleepsSettings={{
-                    assemble: { player: "assemble" },
-                    type: { player: "type" },
-                    click: { player: "click" },
-                }}
+                // playersSettings={{
+                //     assemble: { src: ["/sounds/assemble.mp3"], loop: true },
+                //     type: { src: ["/sounds/type.mp3"], loop: true },
+                //     click: { src: ["/sounds/click.mp3"] },
+                //     warning: { src: ["/sounds/warning.mp3"] },
+                // }}
+                // bleepsSettings={{
+                //     assemble: { player: "assemble" },
+                //     type: { player: "type" },
+                //     click: { player: "click" },
+                // }}
             >
                 <AnimatorGeneralProvider
                     animator={{ duration: { enter: 600, exit: 600 } }}
                 >
                     <Component {...pageProps} />
                 </AnimatorGeneralProvider>
-            </UnsafeBleepsProvider>
-        </UnsafeArwesThemeProvider>
+            </BleepsProvider>
+        </ArwesThemeProvider>
     );
 });

@@ -2,9 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 
-import { Text as UnsafeText } from "@arwes/core";
-
-const Text = UnsafeText as any;
+import { Text } from "@arwes/core";
 
 interface Props {
     image: string;

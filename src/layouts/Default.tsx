@@ -5,33 +5,32 @@ import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
 import {
-    Text as UnsafeText,
-    Button as UnsafeButton,
-    FrameBox as UnsafeFrameBox,
-    FrameHexagon as UnsafeFrameHexagon,
-    FrameUnderline as UnsafeFrameUnderline,
+    Text,
+    Button,
+    FrameBox,
+    FrameHexagon,
+    FrameUnderline,
 } from "@arwes/core";
 
 import Headroom from "react-headroom";
 
-import { Visible as UnsafeVisible } from "react-grid-system";
+import { Visible } from "react-grid-system";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHamburger } from "@fortawesome/free-solid-svg-icons";
+import {
+    faHamburger,
+    faEnvelope,
+    faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+    faLinkedin,
+    faTwitter,
+    faReact,
+} from "@fortawesome/free-brands-svg-icons";
 
 import Modal from "components/Modal";
 
-const Text = UnsafeText as any;
-const Button = UnsafeButton as any;
-const FrameBox = UnsafeFrameBox as any;
-const FrameHexagon = UnsafeFrameHexagon as any;
-const FrameUnderline = UnsafeFrameUnderline as any;
-
-const Visible = UnsafeVisible as any;
-
-interface Props {}
-
-export default function Component(props: Props) {
+function Header(props: {}) {
     const router = useRouter();
     const { t } = useTranslation();
 
@@ -193,5 +192,101 @@ export default function Component(props: Props) {
                 </div>
             </Modal>
         </header>
+    );
+}
+
+function Footer(props: {}) {
+    const router = useRouter();
+    const { t } = useTranslation();
+
+    return (
+        <footer
+            style={{
+                width: "100vw",
+                height: "40vh",
+                padding: 16,
+                backgroundImage: "url(/images/footer.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+            }}
+        >
+            <div>
+                <a
+                    style={{ color: "inherit" }}
+                    href="mailto:koliberr136a1@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon
+                        style={{ margin: 16 }}
+                        icon={faEnvelope}
+                        size="2x"
+                    />
+                </a>
+                <a
+                    style={{ color: "inherit" }}
+                    href="https://www.linkedin.com/in/mohammad-hosein-nemati-665b1813b/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon
+                        style={{ margin: 16 }}
+                        icon={faLinkedin}
+                        size="2x"
+                    />
+                </a>
+                <a
+                    style={{ color: "inherit" }}
+                    href="https://twitter.com/ckoliberr"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon
+                        style={{ margin: 16 }}
+                        icon={faTwitter}
+                        size="2x"
+                    />
+                </a>
+                <a
+                    style={{ color: "inherit" }}
+                    href="tel:+989377588105"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon
+                        style={{ margin: 16 }}
+                        icon={faPhone}
+                        size="2x"
+                    />
+                </a>
+            </div>
+            <br />
+            <Text>
+                © {t("copyright")} • <FontAwesomeIcon icon={faReact} />{" "}
+                {t("author")}
+            </Text>
+        </footer>
+    );
+}
+
+interface Props {
+    children: any;
+}
+
+export default function Component(props: Props) {
+    const router = useRouter();
+    const { t } = useTranslation();
+
+    return (
+        <main>
+            <Header />
+            {props.children}
+            <Footer />
+        </main>
     );
 }
