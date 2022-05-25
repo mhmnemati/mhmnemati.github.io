@@ -14,9 +14,7 @@ export default appWithTranslation(function Component(props: AppProps) {
     const isRTL = ["fa"].includes(router.locale || "");
 
     return (
-        <ArwesThemeProvider
-        // themeSettings={(rest as any).theme || theme(isRTL)}
-        >
+        <ArwesThemeProvider themeSettings={(rest as any).theme || theme(isRTL)}>
             <StylesBaseline
                 styles={{
                     "html, body": {
