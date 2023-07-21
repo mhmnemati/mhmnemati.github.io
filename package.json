@@ -1,5 +1,5 @@
 {
-    "name": "koliber",
+    "name": "ckoliber",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -9,35 +9,23 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@arwes/animation": "^1.0.0-alpha.19",
-        "@arwes/core": "^1.0.0-alpha.19",
-        "@arwes/design": "^1.0.0-alpha.19",
-        "@arwes/sounds": "^1.0.0-alpha.19",
-        "@fortawesome/fontawesome-svg-core": "^6.1.1",
-        "@fortawesome/free-brands-svg-icons": "^6.1.1",
-        "@fortawesome/free-solid-svg-icons": "^6.1.1",
-        "@fortawesome/react-fontawesome": "^0.1.18",
-        "animejs": "^3.2.1",
-        "gray-matter": "^4.0.3",
-        "howler": "2.2",
-        "next": "12.1.6",
-        "next-i18next": "^11.0.0",
-        "polished": "^4.2.2",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-grid-system": "^8.1.4",
-        "react-headroom": "^3.2.0",
-        "react-markdown": "^8.0.3",
-        "react-modal": "^3.15.1"
-    },
-    "devDependencies": {
-        "@types/node": "17.0.34",
-        "@types/react": "^17.0.45",
-        "@types/react-dom": "^17.0.17",
-        "@types/react-headroom": "^2.2.2",
-        "@types/react-modal": "^3.13.1",
-        "eslint": "8.15.0",
-        "eslint-config-next": "12.1.6",
-        "typescript": "4.6.4"
+        "@arwes/react": "^1.0.0-alpha.22",
+        "@emotion/react": "^11.11.1",
+        "@mdx-js/loader": "^2.3.0",
+        "@mdx-js/react": "^2.3.0",
+        "@next/mdx": "^13.4.10",
+        "@types/mdx": "^2.0.5",
+        "@types/node": "20.4.2",
+        "@types/react": "18.2.15",
+        "@types/react-dom": "18.2.7",
+        "autoprefixer": "^10.4.14",
+        "eslint": "8.45.0",
+        "eslint-config-next": "13.4.10",
+        "next": "13.4.10",
+        "postcss": "^8.4.26",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "tailwindcss": "^3.3.3",
+        "typescript": "5.1.6"
     }
 }

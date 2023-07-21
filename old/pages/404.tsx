@@ -10,7 +10,7 @@ import {
     FrameHexagon as UnsafeFrameHexagon,
 } from "@arwes/core";
 
-import Default from "layouts/Default";
+import Default from "../layouts/Default";
 
 const Text = UnsafeText as any;
 const Button = UnsafeButton as any;

@@ -1,12 +1,12 @@
 import type { AppProps } from "next/app";
 
-import { ArwesThemeProvider, StylesBaseline } from "@arwes/core";
+import { ArwesThemeProvider, StylesBaseline } from "@arwes/react";
 import { AnimatorGeneralProvider } from "@arwes/animation";
-import { BleepsProvider } from "@arwes/sounds";
+import { BleepsProvider } from "@arwes/react-bleeps";
 
 import { appWithTranslation } from "next-i18next";
 
-import theme from "app/theme";
+import theme from "../app/theme";
 
 export default appWithTranslation(function Component(props: AppProps) {
     const { Component, pageProps, router, ...rest } = props;
@@ -57,7 +57,8 @@ export default appWithTranslation(function Component(props: AppProps) {
                 }}
             />
             <BleepsProvider
-                audioSettings={{ common: { volume: 0.25 } }}
+                common={{ volume: 0.25 }}
+                audioSettings={{ common: {} }}
                 // playersSettings={{
                 //     assemble: { src: ["/sounds/assemble.mp3"], loop: true },
                 //     type: { src: ["/sounds/type.mp3"], loop: true },

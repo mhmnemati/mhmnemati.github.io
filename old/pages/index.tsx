@@ -21,9 +21,9 @@ import {
     faGitlab,
 } from "@fortawesome/free-brands-svg-icons";
 
-import Default from "layouts/Default";
+import Default from "../layouts/Default";
 import Break from "components/Break";
-import getContents from "providers/contents";
+import getContents from "../providers/contents";
 
 function Hero(props: {}) {
     const { t } = useTranslation("common");
