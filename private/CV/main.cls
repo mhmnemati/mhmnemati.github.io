@@ -156,6 +156,17 @@
     \vspace{0.5em}
 }
 
+% Define command for resume subsections with bullets
+% All arguments are compulsory
+\newenvironment{subsectionbullet}[0]{
+    \vspace{1em}
+    \begin{list}{$\vbullet$}{
+            \leftmargin=1em
+        }
+        \itemsep -0.2em \vspace{-0.5em}
+        }{
+    \end{list}
+}
 
 % Define command for resume subsections with no bullets
 % All arguments are compulsory
