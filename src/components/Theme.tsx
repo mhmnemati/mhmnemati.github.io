@@ -10,14 +10,13 @@ import {
     BleepsProvider,
 } from "@arwes/react";
 
-const theme = createAppTheme();
+export const theme = createAppTheme();
 const stylesBaseline = createAppStylesBaseline(theme);
 
 const animatorsSettings: AnimatorGeneralProviderSettings = {
     duration: {
         enter: 0.2,
         exit: 0.2,
-        stagger: 0.04,
     },
 };
 

@@ -1,4 +1,5 @@
-import Button from "@/components/Button";
+import Link from "next/link";
+import Text from "@/components/Text";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -20,84 +21,50 @@ export default function Page(props: { children: React.ReactNode }) {
                 backgroundPosition: "center",
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
                 justifyContent: "center",
+                alignItems: "center",
                 textAlign: "center",
             }}
         >
-            <div>
-                <a
-                    style={{ color: "inherit" }}
+            <span>
+                <Link
+                    style={{ color: "inherit", margin: 16 }}
                     href="mailto:koliberr136a1@gmail.com"
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <FontAwesomeIcon
-                        style={{ margin: 16 }}
-                        icon={faEnvelope}
-                        size="2x"
-                    />
-                </a>
-                <a
-                    style={{ color: "inherit" }}
+                    <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                </Link>
+                <Link
+                    style={{ color: "inherit", margin: 16 }}
                     href="https://www.linkedin.com/in/mohammad-hosein-nemati-665b1813b/"
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <FontAwesomeIcon
-                        style={{ margin: 16 }}
-                        icon={faLinkedin}
-                        size="2x"
-                    />
-                </a>
-                <a
-                    style={{ color: "inherit" }}
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                </Link>
+                <Link
+                    style={{ color: "inherit", margin: 16 }}
                     href="https://twitter.com/ckoliberr"
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <FontAwesomeIcon
-                        style={{ margin: 16 }}
-                        icon={faTwitter}
-                        size="2x"
-                    />
-                </a>
-                <a
-                    style={{ color: "inherit" }}
+                    <FontAwesomeIcon icon={faTwitter} size="2x" />
+                </Link>
+                <Link
+                    style={{ color: "inherit", margin: 16 }}
                     href="tel:+989377588105"
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <FontAwesomeIcon
-                        style={{ margin: 16 }}
-                        icon={faPhone}
-                        size="2x"
-                    />
-                </a>
-            </div>
+                    <FontAwesomeIcon icon={faPhone} size="2x" />
+                </Link>
+            </span>
             <br />
-            <Animator duration={{ stagger: 2 }}>
-                <Text manager="decipher" easing="outSine" fixed>
-                    © Copyright 2021 KoLiBer •{" "}
-                    <FontAwesomeIcon icon={faReact} /> by KoLiBer
-                </Text>
-            </Animator>
-            <Animated as="button">
-                <div>
-                    <Illuminator
-                        className={classes.frameHexagonIlluminator}
-                        color="hsl(60 50% 90% / 8%)"
-                        size={200}
-                    />
-                    <FrameSVGNefrex
-                        squareSize={12}
-                        leftBottom={false}
-                        rightTop={false}
-                    />
-                </div>
-                <FrameSVGNefrex style={{ width: 100, height: 100 }} />
-                click
-            </Animated>
+            <Text manager="decipher" easing="outSine" fixed>
+                © Copyright 2021 KoLiBer • <FontAwesomeIcon icon={faReact} /> by
+                KoLiBer
+            </Text>
         </footer>
     );
 }

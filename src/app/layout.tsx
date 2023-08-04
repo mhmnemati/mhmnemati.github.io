@@ -4,6 +4,10 @@ import { Inter } from "next/font/google";
 
 import Theme from "@/components/Theme";
 
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -38,6 +42,7 @@ export default function Layout(props: {
     children: React.ReactNode;
     header: React.ReactNode;
     footer: React.ReactNode;
+    menu: React.ReactNode;
 }) {
     return (
         <html lang="en">
@@ -46,6 +51,7 @@ export default function Layout(props: {
                     {props.header}
                     {props.children}
                     {props.footer}
+                    {props.menu}
                 </Theme>
             </body>
         </html>
