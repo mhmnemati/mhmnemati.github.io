@@ -17,22 +17,22 @@ export default function Page(props: { children: React.ReactNode }) {
             }}
         >
             <Link href="/#home">
-                <Button>Home</Button>
+                <Button fullWidth>Home</Button>
             </Link>
             <Link href="/#about">
-                <Button>About</Button>
+                <Button fullWidth>About</Button>
             </Link>
             <Link href="/#resume">
-                <Button>Resume</Button>
+                <Button fullWidth>Resume</Button>
             </Link>
             <Link href="/projects">
-                <Button>Projects</Button>
+                <Button fullWidth>Projects</Button>
             </Link>
             <Link href="/books">
-                <Button>Books</Button>
+                <Button fullWidth>Books</Button>
             </Link>
             <Link href="/blog">
-                <Button>Blog</Button>
+                <Button fullWidth>Blog</Button>
             </Link>
         </Modal>
     );
