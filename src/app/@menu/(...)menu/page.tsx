@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Text from "@/components/Text";
+import Frame from "@/components/Frame";
 import Modal from "@/components/Modal";
-import Button from "@/components/Button";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHamburger } from "@fortawesome/free-solid-svg-icons";
@@ -17,22 +17,34 @@ export default function Page(props: { children: React.ReactNode }) {
             }}
         >
             <Link href="/#home">
-                <Button fullWidth>Home</Button>
+                <Frame as="button" frame="octagon" className="w-full">
+                    Home
+                </Frame>
             </Link>
             <Link href="/#about">
-                <Button fullWidth>About</Button>
+                <Frame as="button" frame="octagon" className="w-full">
+                    About
+                </Frame>
             </Link>
             <Link href="/#resume">
-                <Button fullWidth>Resume</Button>
+                <Frame as="button" frame="octagon" className="w-full">
+                    Resume
+                </Frame>
             </Link>
             <Link href="/projects">
-                <Button fullWidth>Projects</Button>
+                <Frame as="button" frame="octagon" className="w-full">
+                    Projects
+                </Frame>
             </Link>
             <Link href="/books">
-                <Button fullWidth>Books</Button>
+                <Frame as="button" frame="octagon" className="w-full">
+                    Books
+                </Frame>
             </Link>
             <Link href="/blog">
-                <Button fullWidth>Blog</Button>
+                <Frame as="button" frame="octagon" className="w-full">
+                    Blog
+                </Frame>
             </Link>
         </Modal>
     );

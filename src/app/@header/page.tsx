@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Frame from "@/components/Frame";
-import Button from "@/components/Button";
 import Headroom from "@/components/Headroom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,29 +18,46 @@ export default function Page(props: { children: React.ReactNode }) {
                 >
                     <div>
                         <Link href="/menu" prefetch>
-                            <Button>
+                            <Frame as="button" frame="octagon">
                                 <FontAwesomeIcon icon={faHamburger} size="2x" />
-                            </Button>
+                            </Frame>
                         </Link>
                     </div>
                     <div>
                         <Link href="/#home">
-                            <Button>Home</Button>
+                            <Frame as="button" frame="corners">
+                                Home
+                            </Frame>
                         </Link>
                         <Link href="/#about">
-                            <Button>About</Button>
+                            <Frame as="button" frame="octagon">
+                                About
+                            </Frame>
                         </Link>
                         <Link href="/#resume">
-                            <Button>Resume</Button>
+                            <Frame as="button" frame="octagon">
+                                Resume
+                            </Frame>
                         </Link>
                         <Link href="/projects">
-                            <Button>Projects</Button>
+                            <Frame
+                                as="button"
+                                frame="nefrex"
+                                className="m-2"
+                                squareSize={12}
+                            >
+                                Projects
+                            </Frame>
                         </Link>
                         <Link href="/books">
-                            <Button>Books</Button>
+                            <Frame as="button" frame="octagon">
+                                Books
+                            </Frame>
                         </Link>
                         <Link href="/blog">
-                            <Button>Blog</Button>
+                            <Frame as="button" frame="octagon">
+                                Blog
+                            </Frame>
                         </Link>
                     </div>
                 </Frame>

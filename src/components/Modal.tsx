@@ -10,7 +10,6 @@ import {
 import { useRouter, usePathname } from "next/navigation";
 
 import Frame from "./Frame";
-import Button from "./Button";
 
 interface Props {
     children: React.ReactNode;
@@ -64,7 +63,9 @@ export default function Component(props: Props) {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full sm:w-10/12 md:w-8/12 lg:w-1/2 p-6"
             >
                 <Frame frame="kranox" style={props.style}>
-                    <Button>Close</Button>
+                    <Frame as="button" frame="octagon">
+                        Close
+                    </Frame>
                     <hr />
                     <div>{props.children}</div>
                 </Frame>
