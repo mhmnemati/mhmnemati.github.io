@@ -42,7 +42,6 @@ export default function Layout(props: {
     children: React.ReactNode;
     header: React.ReactNode;
     footer: React.ReactNode;
-    menu: React.ReactNode;
 }) {
     return (
         <html lang="en">
@@ -51,7 +50,7 @@ export default function Layout(props: {
                     {props.header}
                     {props.children}
                     {props.footer}
-                    {props.menu}
+                    <div id="modal" />
                 </Theme>
             </body>
         </html>

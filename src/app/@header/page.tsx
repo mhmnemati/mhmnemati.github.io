@@ -1,66 +1,69 @@
 import Link from "next/link";
-import Frame from "@/components/Frame";
+import Modal from "@/components/Modal";
+import Button from "@/components/Button";
 import Headroom from "@/components/Headroom";
+import Animator from "@/components/Animator";
+import Animated from "@/components/Animated";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHamburger } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Page(props: { children: React.ReactNode }) {
     return (
-        <header style={{ width: "100%", position: "fixed", zIndex: 5 }}>
+        <header className="w-full fixed z-50">
             <Headroom>
-                <Frame
-                    frame="octagon"
-                    style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                    }}
+                <Animated
+                    frame="underline"
+                    color="primary"
+                    contentClass="flex justify-between"
                 >
                     <div>
-                        <Link href="/menu" prefetch>
-                            <Frame as="button" frame="octagon">
-                                <FontAwesomeIcon icon={faHamburger} size="2x" />
-                            </Frame>
-                        </Link>
+                        <Modal
+                            button={<FontAwesomeIcon icon={faBars} size="2x" />}
+                        >
+                            <Animator manager="stagger">
+                                <Link href="/#home">
+                                    <Button className="w-full">Home</Button>
+                                </Link>
+                                <Link href="/#about">
+                                    <Button className="w-full">About</Button>
+                                </Link>
+                                <Link href="/#resume">
+                                    <Button className="w-full">Resume</Button>
+                                </Link>
+                                <Link href="/projects">
+                                    <Button className="w-full">Projects</Button>
+                                </Link>
+                                <Link href="/books">
+                                    <Button className="w-full">Books</Button>
+                                </Link>
+                                <Link href="/blog">
+                                    <Button className="w-full">Blog</Button>
+                                </Link>
+                            </Animator>
+                        </Modal>
                     </div>
                     <div>
                         <Link href="/#home">
-                            <Frame as="button" frame="corners">
-                                Home
-                            </Frame>
+                            <Button>Home</Button>
                         </Link>
                         <Link href="/#about">
-                            <Frame as="button" frame="octagon">
-                                About
-                            </Frame>
+                            <Button>About</Button>
                         </Link>
                         <Link href="/#resume">
-                            <Frame as="button" frame="octagon">
-                                Resume
-                            </Frame>
+                            <Button>Resume</Button>
                         </Link>
                         <Link href="/projects">
-                            <Frame
-                                as="button"
-                                frame="nefrex"
-                                className="m-2"
-                                squareSize={12}
-                            >
-                                Projects
-                            </Frame>
+                            <Button>Projects</Button>
                         </Link>
                         <Link href="/books">
-                            <Frame as="button" frame="octagon">
-                                Books
-                            </Frame>
+                            <Button>Books</Button>
                         </Link>
                         <Link href="/blog">
-                            <Frame as="button" frame="octagon">
-                                Blog
-                            </Frame>
+                            <Button>Blog</Button>
                         </Link>
                     </div>
-                </Frame>
+                </Animated>
             </Headroom>
         </header>
     );

@@ -12,23 +12,18 @@ import {
 export default function Page(props: { children: React.ReactNode }) {
     return (
         <footer
+            className="flex flex-col justify-center text-center align-middle"
             style={{
                 width: "100vw",
                 height: "40vh",
-                padding: 16,
                 backgroundImage: "url(/images/footer.jpg)",
-                backgroundSize: "cover",
                 backgroundPosition: "center",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                textAlign: "center",
+                backgroundSize: "cover",
             }}
         >
             <span>
                 <Link
-                    style={{ color: "inherit", margin: 16 }}
+                    className="text-inherit m-4"
                     href="mailto:koliberr136a1@gmail.com"
                     target="_blank"
                     rel="noreferrer"
@@ -36,7 +31,7 @@ export default function Page(props: { children: React.ReactNode }) {
                     <FontAwesomeIcon icon={faEnvelope} size="2x" />
                 </Link>
                 <Link
-                    style={{ color: "inherit", margin: 16 }}
+                    className="text-inherit m-4"
                     href="https://www.linkedin.com/in/mohammad-hosein-nemati-665b1813b/"
                     target="_blank"
                     rel="noreferrer"
@@ -44,7 +39,7 @@ export default function Page(props: { children: React.ReactNode }) {
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </Link>
                 <Link
-                    style={{ color: "inherit", margin: 16 }}
+                    className="text-inherit m-4"
                     href="https://twitter.com/ckoliberr"
                     target="_blank"
                     rel="noreferrer"
@@ -52,7 +47,7 @@ export default function Page(props: { children: React.ReactNode }) {
                     <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </Link>
                 <Link
-                    style={{ color: "inherit", margin: 16 }}
+                    className="text-inherit m-4"
                     href="tel:+989377588105"
                     target="_blank"
                     rel="noreferrer"

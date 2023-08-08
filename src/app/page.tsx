@@ -1,8 +1,11 @@
+import Animated from "@/components/Animated";
+
 export default function Page(props: { children: React.ReactNode }) {
     return (
-        <figure style={{ paddingTop: 200 }}>
-            <div>
+        <div className="pt-32">
+            <Animated frame="lines" color="primary">
                 <blockquote>
+                    <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
                         “Tailwind CSS is the only framework that I've seen scale
                         on large teams. It’s easy to customize, adapts to any
@@ -10,16 +13,13 @@ export default function Page(props: { children: React.ReactNode }) {
                     </p>
                 </blockquote>
                 <figcaption className="font-medium">
-                    <div className="text-sky-500 dark:text-sky-400">
-                        Sarah Dayan
-                    </div>
-                    <div className="text-slate-700 dark:text-slate-500">
-                        Staff Engineer, Algolia
-                    </div>
+                    <div>Sarah Dayan</div>
+                    <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </div>
-            <div>
+            </Animated>
+            <Animated frame="lines" color="secondary">
                 <blockquote>
+                    <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
                         “Tailwind CSS is the only framework that I've seen scale
                         on large teams. It’s easy to customize, adapts to any
@@ -27,16 +27,13 @@ export default function Page(props: { children: React.ReactNode }) {
                     </p>
                 </blockquote>
                 <figcaption className="font-medium">
-                    <div className="text-sky-500 dark:text-sky-400">
-                        Sarah Dayan
-                    </div>
-                    <div className="text-slate-700 dark:text-slate-500">
-                        Staff Engineer, Algolia
-                    </div>
+                    <div>Sarah Dayan</div>
+                    <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </div>
-            <div>
+            </Animated>
+            <Animated frame="lines" color="success">
                 <blockquote>
+                    <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
                         “Tailwind CSS is the only framework that I've seen scale
                         on large teams. It’s easy to customize, adapts to any
@@ -44,16 +41,13 @@ export default function Page(props: { children: React.ReactNode }) {
                     </p>
                 </blockquote>
                 <figcaption className="font-medium">
-                    <div className="text-sky-500 dark:text-sky-400">
-                        Sarah Dayan
-                    </div>
-                    <div className="text-slate-700 dark:text-slate-500">
-                        Staff Engineer, Algolia
-                    </div>
+                    <div>Sarah Dayan</div>
+                    <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </div>
-            <div>
+            </Animated>
+            <Animated frame="lines" color="warning">
                 <blockquote>
+                    <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
                         “Tailwind CSS is the only framework that I've seen scale
                         on large teams. It’s easy to customize, adapts to any
@@ -61,16 +55,13 @@ export default function Page(props: { children: React.ReactNode }) {
                     </p>
                 </blockquote>
                 <figcaption className="font-medium">
-                    <div className="text-sky-500 dark:text-sky-400">
-                        Sarah Dayan
-                    </div>
-                    <div className="text-slate-700 dark:text-slate-500">
-                        Staff Engineer, Algolia
-                    </div>
+                    <div>Sarah Dayan</div>
+                    <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </div>
-            <div>
+            </Animated>
+            <Animated frame="lines" color="error">
                 <blockquote>
+                    <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
                         “Tailwind CSS is the only framework that I've seen scale
                         on large teams. It’s easy to customize, adapts to any
@@ -78,16 +69,13 @@ export default function Page(props: { children: React.ReactNode }) {
                     </p>
                 </blockquote>
                 <figcaption className="font-medium">
-                    <div className="text-sky-500 dark:text-sky-400">
-                        Sarah Dayan
-                    </div>
-                    <div className="text-slate-700 dark:text-slate-500">
-                        Staff Engineer, Algolia
-                    </div>
+                    <div>Sarah Dayan</div>
+                    <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </div>
-            <div>
+            </Animated>
+            <Animated frame="lines" color="info">
                 <blockquote>
+                    <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
                         “Tailwind CSS is the only framework that I've seen scale
                         on large teams. It’s easy to customize, adapts to any
@@ -95,16 +83,13 @@ export default function Page(props: { children: React.ReactNode }) {
                     </p>
                 </blockquote>
                 <figcaption className="font-medium">
-                    <div className="text-sky-500 dark:text-sky-400">
-                        Sarah Dayan
-                    </div>
-                    <div className="text-slate-700 dark:text-slate-500">
-                        Staff Engineer, Algolia
-                    </div>
+                    <div>Sarah Dayan</div>
+                    <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </div>
-            <div>
+            </Animated>
+            <Animated frame="lines" color="info">
                 <blockquote>
+                    <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
                         “Tailwind CSS is the only framework that I've seen scale
                         on large teams. It’s easy to customize, adapts to any
@@ -112,16 +97,13 @@ export default function Page(props: { children: React.ReactNode }) {
                     </p>
                 </blockquote>
                 <figcaption className="font-medium">
-                    <div className="text-sky-500 dark:text-sky-400">
-                        Sarah Dayan
-                    </div>
-                    <div className="text-slate-700 dark:text-slate-500">
-                        Staff Engineer, Algolia
-                    </div>
+                    <div>Sarah Dayan</div>
+                    <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </div>
-            <div>
+            </Animated>
+            <Animated frame="lines" color="info">
                 <blockquote>
+                    <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
                         “Tailwind CSS is the only framework that I've seen scale
                         on large teams. It’s easy to customize, adapts to any
@@ -129,14 +111,10 @@ export default function Page(props: { children: React.ReactNode }) {
                     </p>
                 </blockquote>
                 <figcaption className="font-medium">
-                    <div className="text-sky-500 dark:text-sky-400">
-                        Sarah Dayan
-                    </div>
-                    <div className="text-slate-700 dark:text-slate-500">
-                        Staff Engineer, Algolia
-                    </div>
+                    <div>Sarah Dayan</div>
+                    <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </div>
-        </figure>
+            </Animated>
+        </div>
     );
 }
