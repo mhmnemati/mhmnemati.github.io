@@ -22,8 +22,8 @@ const stylesBaseline = createAppStylesBaseline(theme);
 
 const animatorsSettings: AnimatorGeneralProviderSettings = {
     duration: {
-        enter: 0.2,
-        exit: 0.2,
+        enter: 0.3,
+        exit: 0.3,
     },
 };
 
@@ -57,40 +57,6 @@ export default function Component(props: { children: React.ReactNode }) {
             <Global
                 styles={{
                     ...(stylesBaseline as Record<string, CSSObject>),
-                    // button: {
-                    //     color: "hsl(60deg 100% 75%)",
-                    //     textShadow: "0px 0px 2px hsl(60deg 100% 75% / 50%)",
-                    //     transitionProperty: "color",
-                    //     transitionDuration: "200ms",
-                    //     transitionTimingFunction: "ease-out",
-
-                    //     path: {
-                    //         transitionProperty: "color",
-                    //         transitionDuration: "200ms",
-                    //         transitionTimingFunction: "ease-out",
-                    //     },
-
-                    //     "[data-name=bg]": {
-                    //         color: "hsla(180, 100%, 10%, 0.5)", //theme.colors.primary.bg(2),
-                    //     },
-                    //     "[data-name=line]": {
-                    //         color: "hsla(180, 100%, 10%, 0.9)", //theme.colors.primary.deco(2),
-                    //     },
-
-                    //     ":hover": {
-                    //         color: "hsl(60deg 100% 85%)",
-                    //         "[data-name=bg]": {
-                    //             color: "hsl(60deg 100% 40% / 16%)",
-                    //         },
-                    //         "[data-name=line]": {
-                    //             color: "hsl(60deg 100% 40% / 22%)",
-                    //         },
-                    //     },
-                    //     ":focus": {
-                    //         outline: "1px dotted hsl(60deg 100% 40% / 50%)",
-                    //     },
-                    // },
-
                     ...Object.fromEntries(
                         [
                             "primary",
@@ -103,8 +69,16 @@ export default function Component(props: { children: React.ReactNode }) {
                             `.${color}`,
                             {
                                 color: (theme.colors as any)[color].text(2),
+                                hr: {
+                                    backgroundColor: (theme.colors as any)[
+                                        color
+                                    ].main(5),
+                                    boxShadow: `0 0 2px ${(theme.colors as any)[
+                                        color
+                                    ].main(5)}`,
+                                },
                                 "h1,h2,h3,h4,h5,h6": {
-                                    color: (theme.colors as any)[color].main(4),
+                                    color: (theme.colors as any)[color].main(5),
                                     textShadow: `0 0 2px ${(
                                         theme.colors as any
                                     )[color].main(5)}`,

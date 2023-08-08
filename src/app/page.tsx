@@ -1,4 +1,4 @@
-import Animated from "@/components/Animated";
+import Animated from "@/components/Frame";
 
 export default function Page(props: { children: React.ReactNode }) {
     return (

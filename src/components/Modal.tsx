@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 import Button from "./Button";
-import Animated from "./Animated";
+import Animated from "./Frame";
 
 export interface ModalProps {
     children: React.ReactNode;
@@ -71,9 +71,9 @@ export default function Component(props: ModalProps) {
                                 <Animated
                                     frame="kranox"
                                     color="info"
-                                    contentClass="px-8 py-4"
+                                    contentClass="px-8 py-4 spacing-4"
                                 >
-                                    <div className="flex float-right">
+                                    <div className="w-full flex justify-end">
                                         <Animated as="button" onClick={onClose}>
                                             <FontAwesomeIcon
                                                 icon={faClose}
@@ -81,8 +81,12 @@ export default function Component(props: ModalProps) {
                                             />
                                         </Animated>
                                     </div>
-                                    <hr className="my-4 h-0.5" />
-                                    <div>{props.children}</div>
+                                    <hr className="mt-2 mb-4" />
+                                    <div>
+                                        <Animator manager="stagger">
+                                            {props.children}
+                                        </Animator>
+                                    </div>
                                 </Animated>
                             </div>
                         </div>,

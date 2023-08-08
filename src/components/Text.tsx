@@ -1,5 +1,11 @@
 "use client";
 
-import { Text } from "@arwes/react";
+import { Animator, Text, type TextProps } from "@arwes/react";
 
-export default Text;
+export default function Component(props: TextProps) {
+    return (
+        <Animator>
+            <Text {...props} />
+        </Animator>
+    );
+}

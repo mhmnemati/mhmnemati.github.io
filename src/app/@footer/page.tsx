@@ -14,7 +14,7 @@ export default function Page(props: { children: React.ReactNode }) {
         <footer
             className="flex flex-col justify-center text-center align-middle"
             style={{
-                width: "100vw",
+                width: "100%",
                 height: "40vh",
                 backgroundImage: "url(/images/footer.jpg)",
                 backgroundPosition: "center",
