@@ -1,8 +1,8 @@
-import Link from "next/link";
-import Modal from "@/components/Modal";
-import Button from "@/components/Button";
+import Animated from "@/components/Animated";
 import Headroom from "@/components/Headroom";
-import Animated from "@/components/Frame";
+import Button from "@/components/Button";
+import Modal from "@/components/Modal";
+import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -21,6 +21,7 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div>
                         <Modal
                             button={<FontAwesomeIcon icon={faBars} size="2x" />}
+                            className="flex flex-col gap-y-2"
                         >
                             <Link href="/#home">
                                 <Button className="w-full">Home</Button>
@@ -59,9 +60,7 @@ export default function Page(props: { children: React.ReactNode }) {
                             <Button type="octagon">Books</Button>
                         </Link>
                         <Link href="/blog">
-                            <Button type="octagon" illuminator={80}>
-                                Blog
-                            </Button>
+                            <Button type="octagon">Blog</Button>
                         </Link>
                     </div>
                 </Animated>

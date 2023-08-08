@@ -1,14 +1,17 @@
 "use client";
 
-import { Animator } from "@arwes/react";
-import Frame, { type FrameProps } from "./Frame";
+import Animator from "./Animator";
+import Animated, { type AnimatedProps } from "./Animated";
 
-export default function Component(props: FrameProps) {
+export default function Component(props: AnimatedProps) {
     return (
         <Animator>
-            <Frame
+            <Animated
                 {...props}
                 as="button"
+                size="small"
+                type="corners"
+                illuminator={80}
                 contentClass={`${props.contentClass} p-4`}
             />
             {/* <style jsx global>{`

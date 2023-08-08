@@ -2,7 +2,7 @@
 
 import {
     Animated,
-    type AnimatedProps,
+    type AnimatedProps as Props,
     Illuminator,
     FrameSVGLines,
     type FrameSVGLinesProps,
@@ -35,7 +35,7 @@ type Type =
     | "hftagon"
     | "corners"
     | "underline";
-export interface FrameProps extends AnimatedProps {
+export interface AnimatedProps extends Props {
     contentClass?: string;
     illuminator?: number;
     onClick?: any;
@@ -196,7 +196,7 @@ const createFrame = (type?: Type, size?: Size) => {
     return {};
 };
 
-export default function Component(props: FrameProps) {
+export default function Component(props: AnimatedProps) {
     const { contentClass, illuminator, color, type, size, ...rest } = props;
     const { FrameComponent, frameProps, frameClip } = createFrame(type, size);
 

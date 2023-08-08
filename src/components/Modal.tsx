@@ -1,28 +1,19 @@
 "use client";
 
-import {
-    CSSProperties,
-    useCallback,
-    useEffect,
-    useState,
-    useRef,
-    useId,
-} from "react";
+import { useCallback, useEffect, useState, useRef, useId } from "react";
 import { createPortal } from "react-dom";
-
-import { Animator } from "@arwes/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
+import Animator from "./Animator";
+import Animated from "./Animated";
 import Button from "./Button";
-import Animated from "./Frame";
 
 export interface ModalProps {
+    className?: string;
     children: React.ReactNode;
     button: React.ReactNode;
-    style?: CSSProperties;
-    className?: string;
 }
 
 export default function Component(props: ModalProps) {
@@ -69,11 +60,12 @@ export default function Component(props: ModalProps) {
                                 ref={wrapper}
                             >
                                 <Animated
-                                    frame="kranox"
+                                    size="small"
+                                    type="kranox"
                                     color="info"
                                     contentClass="px-8 py-4 spacing-4"
                                 >
-                                    <div className="w-full flex justify-end">
+                                    <div className="w-full flex justify-end pe-2">
                                         <Animated as="button" onClick={onClose}>
                                             <FontAwesomeIcon
                                                 icon={faClose}
@@ -82,7 +74,7 @@ export default function Component(props: ModalProps) {
                                         </Animated>
                                     </div>
                                     <hr className="mt-2 mb-4" />
-                                    <div>
+                                    <div className={props.className}>
                                         <Animator manager="stagger">
                                             {props.children}
                                         </Animator>

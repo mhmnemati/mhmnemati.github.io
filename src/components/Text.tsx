@@ -1,6 +1,7 @@
 "use client";
 
-import { Animator, Text, type TextProps } from "@arwes/react";
+import Animator from "./Animator";
+import { Text, type TextProps } from "@arwes/react";
 
 export default function Component(props: TextProps) {
     return (

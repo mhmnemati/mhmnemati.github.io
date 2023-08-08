@@ -1,9 +1,9 @@
-import Animated from "@/components/Frame";
+import Frame from "@/components/Animated";
 
 export default function Page(props: { children: React.ReactNode }) {
     return (
         <div className="pt-32">
-            <Animated frame="lines" color="primary">
+            <Frame size="small" type="lines" color="primary">
                 <blockquote>
                     <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
@@ -16,8 +16,8 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div>Sarah Dayan</div>
                     <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </Animated>
-            <Animated frame="lines" color="secondary">
+            </Frame>
+            <Frame size="small" type="lines" color="secondary">
                 <blockquote>
                     <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
@@ -30,8 +30,8 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div>Sarah Dayan</div>
                     <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </Animated>
-            <Animated frame="lines" color="success">
+            </Frame>
+            <Frame size="small" type="lines" color="success">
                 <blockquote>
                     <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
@@ -44,8 +44,8 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div>Sarah Dayan</div>
                     <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </Animated>
-            <Animated frame="lines" color="warning">
+            </Frame>
+            <Frame size="small" type="lines" color="warning">
                 <blockquote>
                     <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
@@ -58,8 +58,8 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div>Sarah Dayan</div>
                     <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </Animated>
-            <Animated frame="lines" color="error">
+            </Frame>
+            <Frame size="small" type="lines" color="error">
                 <blockquote>
                     <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
@@ -72,8 +72,8 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div>Sarah Dayan</div>
                     <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </Animated>
-            <Animated frame="lines" color="info">
+            </Frame>
+            <Frame size="small" type="lines" color="info">
                 <blockquote>
                     <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
@@ -86,8 +86,8 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div>Sarah Dayan</div>
                     <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </Animated>
-            <Animated frame="lines" color="info">
+            </Frame>
+            <Frame size="small" type="lines" color="info">
                 <blockquote>
                     <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
@@ -100,8 +100,8 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div>Sarah Dayan</div>
                     <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </Animated>
-            <Animated frame="lines" color="info">
+            </Frame>
+            <Frame size="small" type="lines" color="info">
                 <blockquote>
                     <h1>Hello Guys</h1>
                     <p className="text-lg font-medium">
@@ -114,7 +114,7 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div>Sarah Dayan</div>
                     <div>Staff Engineer, Algolia</div>
                 </figcaption>
-            </Animated>
+            </Frame>
         </div>
     );
 }
