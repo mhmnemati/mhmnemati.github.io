@@ -1,11 +1,20 @@
+import Animator from "@/components/Animator";
 import Animated from "@/components/Animated";
 import Headroom from "@/components/Headroom";
-import Button from "@/components/Button";
 import Modal from "@/components/Modal";
 import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+
+const links = [
+    ["Home", "/#home"],
+    ["About", "/#about"],
+    ["Resume", "/#resume"],
+    ["Projects", "/projects"],
+    ["Books", "/books"],
+    ["Blog", "/blog"],
+];
 
 export default function Page(props: { children: React.ReactNode }) {
     return (
@@ -15,53 +24,44 @@ export default function Page(props: { children: React.ReactNode }) {
                     size="small"
                     type="underline"
                     color="primary"
-                    illuminator={200}
-                    contentClass="flex justify-between"
+                    contentClass="flex justify-start md:justify-end"
                 >
-                    <div>
+                    <div className="block md:hidden">
                         <Modal
                             button={<FontAwesomeIcon icon={faBars} size="2x" />}
                             className="flex flex-col gap-y-2"
                         >
-                            <Link href="/#home">
-                                <Button className="w-full">Home</Button>
-                            </Link>
-                            <Link href="/#about">
-                                <Button className="w-full">About</Button>
-                            </Link>
-                            <Link href="/#resume">
-                                <Button className="w-full">Resume</Button>
-                            </Link>
-                            <Link href="/projects">
-                                <Button className="w-full">Projects</Button>
-                            </Link>
-                            <Link href="/books">
-                                <Button className="w-full">Books</Button>
-                            </Link>
-                            <Link href="/blog">
-                                <Button className="w-full">Blog</Button>
-                            </Link>
+                            {links.map(([title, href]) => (
+                                <Link key={title} href={href}>
+                                    <Animator>
+                                        <Animated
+                                            as="button"
+                                            size="small"
+                                            type="corners"
+                                            className="w-full"
+                                            contentClass="p-4"
+                                        >
+                                            {title}
+                                        </Animated>
+                                    </Animator>
+                                </Link>
+                            ))}
                         </Modal>
                     </div>
-                    <div>
-                        <Link href="/#home">
-                            <Button type="octagon">Home</Button>
-                        </Link>
-                        <Link href="/#about">
-                            <Button type="octagon">About</Button>
-                        </Link>
-                        <Link href="/#resume">
-                            <Button type="octagon">Resume</Button>
-                        </Link>
-                        <Link href="/projects">
-                            <Button type="octagon">Projects</Button>
-                        </Link>
-                        <Link href="/books">
-                            <Button type="octagon">Books</Button>
-                        </Link>
-                        <Link href="/blog">
-                            <Button type="octagon">Blog</Button>
-                        </Link>
+                    <div className="hidden md:block">
+                        {links.map(([title, href]) => (
+                            <Link key={title} href={href}>
+                                <Animated
+                                    as="button"
+                                    size="small"
+                                    type="hftagon"
+                                    className="m-2"
+                                    contentClass="px-4 py-2"
+                                >
+                                    {title}
+                                </Animated>
+                            </Link>
+                        ))}
                     </div>
                 </Animated>
             </Headroom>

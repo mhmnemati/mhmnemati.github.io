@@ -8,7 +8,6 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 import Animator from "./Animator";
 import Animated from "./Animated";
-import Button from "./Button";
 
 export interface ModalProps {
     className?: string;
@@ -38,14 +37,16 @@ export default function Component(props: ModalProps) {
 
     return (
         <>
-            <Button
+            <Animated
+                as="button"
+                className="m-4"
                 onClick={() => {
                     setOpen(true);
                     setShow(true);
                 }}
             >
                 {props.button}
-            </Button>
+            </Animated>
 
             <Animator root active={show}>
                 {open &&

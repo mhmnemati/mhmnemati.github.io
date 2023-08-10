@@ -69,6 +69,14 @@ export default function Component(props: { children: React.ReactNode }) {
                             `.${color}`,
                             {
                                 color: (theme.colors as any)[color].text(2),
+                                transitionProperty: "color",
+                                transitionDuration: "200ms",
+                                transitionTimingFunction: "ease-out",
+                                path: {
+                                    transitionProperty: "color",
+                                    transitionDuration: "200ms",
+                                    transitionTimingFunction: "ease-out",
+                                },
                                 hr: {
                                     backgroundColor: (theme.colors as any)[
                                         color
@@ -82,6 +90,39 @@ export default function Component(props: { children: React.ReactNode }) {
                                     textShadow: `0 0 2px ${(
                                         theme.colors as any
                                     )[color].main(5)}`,
+                                },
+                                button: {
+                                    color: (theme.colors as any)[color].text(2),
+                                    textShadow: `0 0 2px ${(
+                                        theme.colors as any
+                                    )[color].text(2)}`,
+                                },
+                                "button:hover": {
+                                    color: (theme.colors as any)[color].text(1),
+                                    textShadow: `0 0 2px ${(
+                                        theme.colors as any
+                                    )[color].text(1)}`,
+                                    "[data-name=bg]": {
+                                        color: (theme.colors as any)[color].bg(
+                                            1,
+                                            {
+                                                alpha: 0.5,
+                                            }
+                                        ),
+                                        filter: `drop-shadow(0 0 4px ${(
+                                            theme.colors as any
+                                        )[color].bg(1, {
+                                            alpha: 0.5,
+                                        })})`,
+                                    },
+                                    "[data-name=line]": {
+                                        color: (theme.colors as any)[
+                                            color
+                                        ].main(1),
+                                        filter: `drop-shadow(0 0 4px ${(
+                                            theme.colors as any
+                                        )[color].main(1)})`,
+                                    },
                                 },
 
                                 "[data-name=bg]": {
