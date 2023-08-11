@@ -1,5 +1,6 @@
 import Frame from "@/components/Frame";
 import Text from "@/components/Text";
+import Hero from "@/components/Hero";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,77 +11,6 @@ import {
     faGithub,
     faGitlab,
 } from "@fortawesome/free-brands-svg-icons";
-
-function Hero() {
-    return (
-        <section
-            className="w-full h-screen flex flex-col justify-center text-center align-middle gap-8"
-            style={{
-                backgroundImage: "url(/images/hero.jpg)",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-            }}
-        >
-            <Text as="h1">I'm Mohammad Hosein Nemati</Text>
-            <Text as="b">
-                A computer science student and full stack developer who is
-                mainly interested in modeling nature rules with computers
-            </Text>
-            <span>
-                <Link
-                    className="text-inherit m-4"
-                    href="mailto:koliberr136a1@gmail.com"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <FontAwesomeIcon icon={faEnvelope} size="2x" />
-                </Link>
-                <Link
-                    className="text-inherit m-4"
-                    href="https://www.linkedin.com/in/mohammad-hosein-nemati-665b1813b/"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                </Link>
-                <Link
-                    className="text-inherit m-4"
-                    href="https://github.com/ckoliber"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <FontAwesomeIcon icon={faGithub} size="2x" />
-                </Link>
-                <Link
-                    className="text-inherit m-4"
-                    href="https://gitlab.com/ckoliber"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <FontAwesomeIcon icon={faGitlab} size="2x" />
-                </Link>
-                <Link
-                    className="text-inherit m-4"
-                    href="tel:+989377588105"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <FontAwesomeIcon icon={faPhone} size="2x" />
-                </Link>
-            </span>
-            <span>
-                <Frame
-                    as="button"
-                    size="small"
-                    type="hftagon"
-                    className="mt-8 px-8 py-4"
-                >
-                    Goto Blog
-                </Frame>
-            </span>
-        </section>
-    );
-}
 
 function About() {
     return (
@@ -108,7 +38,7 @@ function About() {
                     </div>
                     <div className="col-span-3 md:col-span-2">
                         <Text as="h3">Who Am I</Text>
-                        <Text as="p">
+                        <Text as="p" className="mb-2">
                             I am a Full-Stack programmer and computer science
                             student, interested in cognitive science and
                             genetics, a true lover of learning who has always
@@ -129,7 +59,6 @@ function About() {
                             more time learning basic concepts like math, logic
                             and genetics. To.
                         </Text>
-                        <Frame as="hr" />
                         <Text as="h3">Contact Me</Text>
                         <div className="flex flwx-row justify-between">
                             <div>
@@ -187,28 +116,72 @@ function About() {
     );
 }
 
-function SkillsHero() {
-    return (
-        <section
-            className="w-full flex flex-col justify-center text-center align-middle gap-8"
-            style={{
-                backgroundImage: "url(/images/break_resume.jpg)",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                height: "40vh",
-            }}
-        >
-            <Text as="h1">Resume</Text>
-        </section>
-    );
-}
-
-export default function Page(props: { children: React.ReactNode }) {
+export default function Page() {
     return (
         <>
-            <Hero />
+            <Hero image="/images/hero.jpg">
+                <Text as="h1">I'm Mohammad Hosein Nemati</Text>
+                <Text as="b">
+                    A computer science student and full stack developer who is
+                    mainly interested in modeling nature rules with computers
+                </Text>
+                <span>
+                    <Link
+                        className="text-inherit m-4"
+                        href="mailto:koliberr136a1@gmail.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                    </Link>
+                    <Link
+                        className="text-inherit m-4"
+                        href="https://www.linkedin.com/in/mohammad-hosein-nemati-665b1813b/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </Link>
+                    <Link
+                        className="text-inherit m-4"
+                        href="https://github.com/ckoliber"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FontAwesomeIcon icon={faGithub} size="2x" />
+                    </Link>
+                    <Link
+                        className="text-inherit m-4"
+                        href="https://gitlab.com/ckoliber"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FontAwesomeIcon icon={faGitlab} size="2x" />
+                    </Link>
+                    <Link
+                        className="text-inherit m-4"
+                        href="tel:+989377588105"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FontAwesomeIcon icon={faPhone} size="2x" />
+                    </Link>
+                </span>
+                <span>
+                    <Frame
+                        as="button"
+                        size="small"
+                        type="hftagon"
+                        className="mt-8 px-8 py-4"
+                    >
+                        Goto Blog
+                    </Frame>
+                </span>
+            </Hero>
             <About />
-            <SkillsHero />
+            <Hero image="/images/break_resume.jpg" height="40vh">
+                <Text as="h1">Resume</Text>
+            </Hero>
         </>
     );
 }

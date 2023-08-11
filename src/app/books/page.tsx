@@ -6,7 +6,7 @@ export default function Page() {
     return (
         <>
             <Hero image="/images/break_projects.jpg" height="70vh">
-                <Text as="h1">Projects</Text>
+                <Text as="h1">Books</Text>
             </Hero>
         </>
     );
