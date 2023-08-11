@@ -213,7 +213,7 @@ export default function Component(props: AnimatedProps) {
         <Animated
             {...rest}
             style={{ clipPath: frameClip }}
-            className={`${props.className} relative ${color}`}
+            className={`${props.className} ${color} relative`}
             onClick={() => {
                 if (props.as === "button") {
                     bleeps.click?.play();
