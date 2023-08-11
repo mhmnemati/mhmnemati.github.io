@@ -1,9 +1,11 @@
 "use client";
 
+import dynamic from "next/dynamic";
+
 import {
     Animated,
     type AnimatedProps as Props,
-    Illuminator,
+    IlluminatorSVG,
     FrameSVGLines,
     type FrameSVGLinesProps,
     FrameSVGNefrex,
@@ -36,7 +38,6 @@ type Type =
     | "corners"
     | "underline";
 export interface AnimatedProps extends Props {
-    contentClass?: string;
     illuminator?: number;
     onClick?: any;
     color?: Color;
@@ -196,8 +197,12 @@ const createFrame = (type?: Type, size?: Size) => {
     return {};
 };
 
+const XIlluminatorSVG = dynamic(() => Promise.resolve(IlluminatorSVG), {
+    ssr: false,
+});
+
 export default function Component(props: AnimatedProps) {
-    const { contentClass, illuminator, color, type, size, ...rest } = props;
+    const { illuminator, color = "primary", type, size, ...rest } = props;
     const { FrameComponent, frameProps, frameClip } = createFrame(type, size);
 
     const bleeps = useBleeps();
@@ -208,7 +213,7 @@ export default function Component(props: AnimatedProps) {
         <Animated
             {...rest}
             style={{ clipPath: frameClip }}
-            className={`${props.className} relative root ${color}`}
+            className={`${props.className} relative ${color}`}
             onClick={() => {
                 if (props.as === "button") {
                     bleeps.click?.play();
@@ -216,22 +221,22 @@ export default function Component(props: AnimatedProps) {
                 }
             }}
         >
-            {illuminator && (
-                <Illuminator
-                    color="hsl(180 50% 50% / 20%)"
-                    size={illuminator}
-                />
-            )}
             {FrameComponent && (
                 <FrameComponent
                     {...frameProps}
                     elementRef={svgRef}
                     onRender={onRender}
-                />
+                    style={{ zIndex: -1 }}
+                >
+                    {illuminator && (
+                        <XIlluminatorSVG
+                            color="hsl(180 50% 50% / 20%)"
+                            size={illuminator}
+                        />
+                    )}
+                </FrameComponent>
             )}
-            <div className={`${contentClass} relative content`}>
-                {props.children}
-            </div>
+            {props.children}
         </Animated>
     );
 }
