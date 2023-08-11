@@ -74,7 +74,7 @@ export default function Component(props: ModalProps) {
                                             />
                                         </Frame>
                                     </div>
-                                    <hr className="mt-2 mb-4" />
+                                    <Frame as="hr" className="mt-2 mb-4" />
                                     <div className={props.className}>
                                         <Animator manager="stagger">
                                             {props.children}

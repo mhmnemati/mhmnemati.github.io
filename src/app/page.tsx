@@ -21,11 +21,11 @@ function Hero() {
                 backgroundSize: "cover",
             }}
         >
-            <h1>I'm Mohammad Hosein Nemati</h1>
-            <b>
+            <Text as="h1">I'm Mohammad Hosein Nemati</Text>
+            <Text as="b">
                 A computer science student and full stack developer who is
                 mainly interested in modeling nature rules with computers
-            </b>
+            </Text>
             <span>
                 <Link
                     className="text-inherit m-4"
@@ -88,7 +88,7 @@ function About() {
             <div className="container max-w-screen-lg">
                 <div className="grid grid-cols-3 gap-8">
                     <div className="col-span-3">
-                        <h2>About</h2>
+                        <Text as="h2">About</Text>
                     </div>
                     <div className="col-span-3 md:col-span-1">
                         <Frame
@@ -107,8 +107,8 @@ function About() {
                         </Frame>
                     </div>
                     <div className="col-span-3 md:col-span-2">
-                        <h3>Who Am I</h3>
-                        <p>
+                        <Text as="h3">Who Am I</Text>
+                        <Text as="p">
                             I am a Full-Stack programmer and computer science
                             student, interested in cognitive science and
                             genetics, a true lover of learning who has always
@@ -128,9 +128,9 @@ function About() {
                             time programming with NoCode tools and instead spend
                             more time learning basic concepts like math, logic
                             and genetics. To.
-                        </p>
-                        <br />
-                        <h3>Contact Me</h3>
+                        </Text>
+                        <Frame as="hr" />
+                        <Text as="h3">Contact Me</Text>
                         <div className="flex flwx-row justify-between">
                             <div>
                                 <Link

@@ -22,8 +22,8 @@ const stylesBaseline = createAppStylesBaseline(theme);
 
 const animatorsSettings: AnimatorGeneralProviderSettings = {
     duration: {
-        enter: 1,
-        exit: 1,
+        enter: 0.3,
+        exit: 0.3,
     },
 };
 

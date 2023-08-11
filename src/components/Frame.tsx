@@ -208,11 +208,27 @@ function Frame(props: FrameProps) {
     const svgRef = useRef<SVGSVGElement | null>(null);
     const { onRender } = useFrameSVGAssemblingAnimation(svgRef);
 
+    if (!!!props.children) {
+        return (
+            <Animated
+                {...rest}
+                style={{ clipPath: frameClip }}
+                className={`relative ${props.className}`}
+                onClick={() => {
+                    if (props.as === "button") {
+                        bleeps.click?.play();
+                        props.onClick?.();
+                    }
+                }}
+            />
+        );
+    }
+
     return (
         <Animated
             {...rest}
             style={{ clipPath: frameClip }}
-            className={`relative primary ${props.className}`}
+            className={`relative ${props.className}`}
             onClick={() => {
                 if (props.as === "button") {
                     bleeps.click?.play();
@@ -243,7 +259,7 @@ function Frame(props: FrameProps) {
 export default function Component(props: FrameProps) {
     return (
         <Animator>
-            <Frame {...props} />
+            <Frame {...props} className={`primary ${props.className}`} />
         </Animator>
     );
 }
