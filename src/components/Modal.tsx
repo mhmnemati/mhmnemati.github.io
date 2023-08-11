@@ -64,7 +64,7 @@ export default function Component(props: ModalProps) {
                                     size="small"
                                     type="kranox"
                                     color="info"
-                                    contentClass="px-8 py-4 spacing-4"
+                                    className="px-8 py-4 spacing-4"
                                 >
                                     <div className="w-full flex justify-end pe-2">
                                         <Animated as="button" onClick={onClose}>

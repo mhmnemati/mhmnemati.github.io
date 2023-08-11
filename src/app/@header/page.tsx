@@ -24,7 +24,7 @@ export default function Page(props: { children: React.ReactNode }) {
                     size="small"
                     type="underline"
                     color="primary"
-                    contentClass="flex justify-start md:justify-end"
+                    className="flex justify-start md:justify-end"
                 >
                     <div className="block md:hidden">
                         <Modal
@@ -38,8 +38,7 @@ export default function Page(props: { children: React.ReactNode }) {
                                             as="button"
                                             size="small"
                                             type="corners"
-                                            className="w-full"
-                                            contentClass="p-4"
+                                            className="w-full p-4"
                                         >
                                             {title}
                                         </Animated>
@@ -51,15 +50,16 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div className="hidden md:block">
                         {links.map(([title, href]) => (
                             <Link key={title} href={href}>
-                                <Animated
-                                    as="button"
-                                    size="small"
-                                    type="hftagon"
-                                    className="m-2"
-                                    contentClass="px-4 py-2"
-                                >
-                                    {title}
-                                </Animated>
+                                <Animator>
+                                    <Animated
+                                        as="button"
+                                        size="small"
+                                        type="hftagon"
+                                        className="m-2 px-4 py-2"
+                                    >
+                                        {title}
+                                    </Animated>
+                                </Animator>
                             </Link>
                         ))}
                     </div>
