@@ -87,7 +87,7 @@ function Hero() {
 
 function About() {
     return (
-        <div className="flex flex-col items-center p-8">
+        <section className="flex flex-col items-center p-8">
             <div className="container max-w-screen-lg">
                 <div className="grid grid-cols-3 gap-8">
                     <div className="col-span-3">
@@ -183,7 +183,7 @@ function About() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
