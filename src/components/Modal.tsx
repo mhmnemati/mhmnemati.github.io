@@ -6,8 +6,9 @@ import { createPortal } from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-import Animator from "./Animator";
-import Animated from "./Animated";
+import { Animator } from "@arwes/react";
+
+import Frame from "./Frame";
 
 export interface ModalProps {
     className?: string;
@@ -37,7 +38,7 @@ export default function Component(props: ModalProps) {
 
     return (
         <>
-            <Animated
+            <Frame
                 as="button"
                 className="m-4"
                 onClick={() => {
@@ -46,7 +47,7 @@ export default function Component(props: ModalProps) {
                 }}
             >
                 {props.button}
-            </Animated>
+            </Frame>
 
             <Animator root active={show}>
                 {open &&
@@ -60,18 +61,18 @@ export default function Component(props: ModalProps) {
                                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full sm:w-10/12 md:w-8/12 lg:w-1/2 p-6"
                                 ref={wrapper}
                             >
-                                <Animated
+                                <Frame
                                     size="small"
                                     type="kranox"
                                     className="info px-8 py-4 spacing-4"
                                 >
                                     <div className="w-full flex justify-end pe-2">
-                                        <Animated as="button" onClick={onClose}>
+                                        <Frame as="button" onClick={onClose}>
                                             <FontAwesomeIcon
                                                 icon={faClose}
                                                 size="2x"
                                             />
-                                        </Animated>
+                                        </Frame>
                                     </div>
                                     <hr className="mt-2 mb-4" />
                                     <div className={props.className}>
@@ -79,7 +80,7 @@ export default function Component(props: ModalProps) {
                                             {props.children}
                                         </Animator>
                                     </div>
-                                </Animated>
+                                </Frame>
                             </div>
                         </div>,
                         window.document.querySelector("#modal") as any,

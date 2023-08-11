@@ -1,4 +1,3 @@
-import Animator from "@/components/Animator";
 import Text from "@/components/Text";
 import Link from "next/link";
 
@@ -57,12 +56,10 @@ export default function Page(props: { children: React.ReactNode }) {
                 </Link>
             </span>
             <br />
-            <Animator>
-                <Text manager="decipher" easing="outSine" fixed>
-                    © Copyright 2021 KoLiBer •{" "}
-                    <FontAwesomeIcon icon={faReact} /> by KoLiBer
-                </Text>
-            </Animator>
+            <Text manager="decipher" easing="outSine">
+                © Copyright 2021 KoLiBer • <FontAwesomeIcon icon={faReact} /> by
+                KoLiBer
+            </Text>
         </footer>
     );
 }

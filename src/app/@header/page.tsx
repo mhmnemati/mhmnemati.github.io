@@ -1,6 +1,5 @@
-import Animator from "@/components/Animator";
-import Animated from "@/components/Animated";
 import Headroom from "@/components/Headroom";
+import Frame from "@/components/Frame";
 import Modal from "@/components/Modal";
 import Link from "next/link";
 
@@ -20,7 +19,7 @@ export default function Page(props: { children: React.ReactNode }) {
     return (
         <header className="w-full fixed z-10">
             <Headroom>
-                <Animated
+                <Frame
                     size="small"
                     type="underline"
                     className="flex justify-start md:justify-end"
@@ -32,16 +31,14 @@ export default function Page(props: { children: React.ReactNode }) {
                         >
                             {links.map(([title, href]) => (
                                 <Link key={title} href={href}>
-                                    <Animator>
-                                        <Animated
-                                            as="button"
-                                            size="small"
-                                            type="corners"
-                                            className="w-full p-4"
-                                        >
-                                            {title}
-                                        </Animated>
-                                    </Animator>
+                                    <Frame
+                                        as="button"
+                                        size="small"
+                                        type="corners"
+                                        className="w-full p-4"
+                                    >
+                                        {title}
+                                    </Frame>
                                 </Link>
                             ))}
                         </Modal>
@@ -49,20 +46,18 @@ export default function Page(props: { children: React.ReactNode }) {
                     <div className="hidden md:block">
                         {links.map(([title, href]) => (
                             <Link key={title} href={href}>
-                                <Animator>
-                                    <Animated
-                                        as="button"
-                                        size="small"
-                                        type="hftagon"
-                                        className="m-2 px-4 py-2"
-                                    >
-                                        {title}
-                                    </Animated>
-                                </Animator>
+                                <Frame
+                                    as="button"
+                                    size="small"
+                                    type="hftagon"
+                                    className="m-2 px-4 py-2"
+                                >
+                                    {title}
+                                </Frame>
                             </Link>
                         ))}
                     </div>
-                </Animated>
+                </Frame>
             </Headroom>
         </header>
     );

@@ -1,16 +1,21 @@
 import type { MDXComponents } from "mdx/types";
 
-// This file allows you to provide custom React components
-// to be used in MDX files. You can import and use any
-// React component you want, including components from
-// other libraries.
+import Frame from "@/components/Frame";
+import Text from "@/components/Text";
+import Image from "next/image";
+import Link from "next/link";
 
-// This file is required to use MDX in `app` directory.
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
-        // Allows customizing built-in components, e.g. to add styling.
-        // h1: ({ children }) => <h1 style={{ fontSize: "100px" }}>{children}</h1>,
-        mybutton: ({ children }) => <p>aa</p>,
         ...components,
+        ...Object.assign(
+            {},
+            ...["h1", "h2", "h3", "h4", "h5", "h6"].map((hx) => ({
+                [hx]: (props: any) => <Text {...props} as={hx} />,
+            }))
+        ),
+        button: (props: any) => <Frame {...props} as="button" />,
+        figure: (props: any) => <Frame {...props} as="button" />,
+        a: (props: any) => <Link {...props} />,
     };
 }

@@ -3,8 +3,9 @@
 import dynamic from "next/dynamic";
 
 import {
+    Animator,
     Animated,
-    type AnimatedProps as Props,
+    type AnimatedProps,
     IlluminatorSVG,
     FrameSVGLines,
     type FrameSVGLinesProps,
@@ -26,6 +27,10 @@ import {
 
 import { useRef } from "react";
 
+const XIlluminatorSVG = dynamic(() => Promise.resolve(IlluminatorSVG), {
+    ssr: false,
+});
+
 type Size = "small" | "medium" | "large";
 type Type =
     | "lines"
@@ -36,7 +41,7 @@ type Type =
     | "hftagon"
     | "corners"
     | "underline";
-export interface AnimatedProps extends Props {
+export interface FrameProps extends AnimatedProps {
     illuminator?: number;
     onClick?: any;
     type?: Type;
@@ -195,11 +200,7 @@ const createFrame = (type?: Type, size?: Size) => {
     return {};
 };
 
-const XIlluminatorSVG = dynamic(() => Promise.resolve(IlluminatorSVG), {
-    ssr: false,
-});
-
-export default function Component(props: AnimatedProps) {
+function Frame(props: FrameProps) {
     const { illuminator, type, size, ...rest } = props;
     const { FrameComponent, frameProps, frameClip } = createFrame(type, size);
 
@@ -236,5 +237,13 @@ export default function Component(props: AnimatedProps) {
             )}
             {props.children}
         </Animated>
+    );
+}
+
+export default function Component(props: FrameProps) {
+    return (
+        <Animator>
+            <Frame {...props} />
+        </Animator>
     );
 }

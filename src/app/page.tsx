@@ -1,6 +1,6 @@
-import Animator from "@/components/Animator";
-import Animated from "@/components/Animated";
+import Frame from "@/components/Frame";
 import Text from "@/components/Text";
+import Image from "next/image";
 import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -69,16 +69,14 @@ function Hero() {
                 </Link>
             </span>
             <span>
-                <Animator>
-                    <Animated
-                        as="button"
-                        size="small"
-                        type="hftagon"
-                        className="mt-8 px-8 py-4"
-                    >
-                        Goto Blog
-                    </Animated>
-                </Animator>
+                <Frame
+                    as="button"
+                    size="small"
+                    type="hftagon"
+                    className="mt-8 px-8 py-4"
+                >
+                    Goto Blog
+                </Frame>
             </span>
         </section>
     );
@@ -93,17 +91,20 @@ function About() {
                         <h2>About</h2>
                     </div>
                     <div className="col-span-3 md:col-span-1">
-                        <Animated
+                        <Frame
                             as="figure"
                             size="medium"
                             type="corners"
                             className="w-100 h-100 p-2"
                         >
-                            <img
+                            <Image
+                                alt="Personal"
                                 src="/images/personal.jpg"
-                                className="relative w-full h-full -z-10"
+                                width={400}
+                                height={400}
+                                className="relative -z-10"
                             />
-                        </Animated>
+                        </Frame>
                     </div>
                     <div className="col-span-3 md:col-span-2">
                         <h3>Who Am I</h3>
@@ -169,14 +170,14 @@ function About() {
                                 </Link>
                             </div>
                             <div>
-                                <Animated
+                                <Frame
                                     as="button"
                                     size="small"
                                     type="hftagon"
                                     className="m-2 px-4 py-2"
                                 >
                                     Download CV
-                                </Animated>
+                                </Frame>
                             </div>
                         </div>
                     </div>
@@ -197,9 +198,7 @@ function SkillsHero() {
                 height: "40vh",
             }}
         >
-            <Animator>
-                <Text as="h1">Resume</Text>
-            </Animator>
+            <Text as="h1">Resume</Text>
         </section>
     );
 }
