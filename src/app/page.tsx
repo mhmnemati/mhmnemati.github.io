@@ -168,14 +168,16 @@ export default function Page() {
                     </Link>
                 </span>
                 <span>
-                    <Frame
-                        as="button"
-                        size="small"
-                        type="hftagon"
-                        className="mt-8 px-8 py-4"
-                    >
-                        Goto Blog
-                    </Frame>
+                    <Link href="/blog">
+                        <Frame
+                            as="button"
+                            size="small"
+                            type="hftagon"
+                            className="mt-8 px-8 py-4"
+                        >
+                            Goto Blog
+                        </Frame>
+                    </Link>
                 </span>
             </Hero>
             <About />
