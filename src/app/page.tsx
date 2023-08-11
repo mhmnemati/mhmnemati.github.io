@@ -74,7 +74,6 @@ function Hero() {
                         as="button"
                         size="small"
                         type="hftagon"
-                        color="primary"
                         className="mt-8 px-8 py-4"
                     >
                         Goto Blog
@@ -187,11 +186,30 @@ function About() {
     );
 }
 
+function SkillsHero() {
+    return (
+        <section
+            className="w-full flex flex-col justify-center text-center align-middle gap-8"
+            style={{
+                backgroundImage: "url(/images/break_resume.jpg)",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                height: "40vh",
+            }}
+        >
+            <Animator>
+                <Text as="h1">Resume</Text>
+            </Animator>
+        </section>
+    );
+}
+
 export default function Page(props: { children: React.ReactNode }) {
     return (
         <>
             <Hero />
             <About />
+            <SkillsHero />
         </>
     );
 }

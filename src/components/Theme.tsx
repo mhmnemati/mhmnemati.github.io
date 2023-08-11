@@ -57,21 +57,26 @@ export default function Component(props: { children: React.ReactNode }) {
             <Global
                 styles={{
                     ...(stylesBaseline as Record<string, CSSObject>),
-                    ...Object.fromEntries(
-                        [
+                    ...Object.assign(
+                        {},
+                        ...[
                             "primary",
                             "secondary",
                             "success",
                             "warning",
                             "error",
                             "info",
-                        ].map((color) => [
-                            `.${color}`,
-                            {
+                        ].map((color) => ({
+                            [`.${color}`]: {
                                 color: (theme.colors as any)[color].text(2),
                                 transitionProperty: "color",
                                 transitionDuration: "200ms",
                                 transitionTimingFunction: "ease-out",
+                                path: {
+                                    transitionProperty: "color",
+                                    transitionDuration: "200ms",
+                                    transitionTimingFunction: "ease-out",
+                                },
                                 "[data-name=bg]": {
                                     color: (theme.colors as any)[color].bg(5, {
                                         alpha: 0.5,
@@ -88,40 +93,14 @@ export default function Component(props: { children: React.ReactNode }) {
                                         theme.colors as any
                                     )[color].main(5)})`,
                                 },
-
-                                path: {
-                                    transitionProperty: "color",
-                                    transitionDuration: "200ms",
-                                    transitionTimingFunction: "ease-out",
-                                },
-                                hr: {
-                                    backgroundColor: (theme.colors as any)[
-                                        color
-                                    ].main(5),
-                                    boxShadow: `0 0 2px ${(theme.colors as any)[
-                                        color
-                                    ].main(5)}`,
-                                },
-                                "h1,h2,h3,h4,h5,h6": {
-                                    color: (theme.colors as any)[color].main(5),
-                                    textShadow: `0 0 2px ${(
-                                        theme.colors as any
-                                    )[color].main(5)}`,
-                                },
                             },
-                        ])
-                    ),
-                    ...Object.fromEntries(
-                        [
-                            "primary",
-                            "secondary",
-                            "success",
-                            "warning",
-                            "error",
-                            "info",
-                        ].map((color) => [
-                            `button.${color}`,
-                            {
+                            [`.${color}:is(h1,h2,h3,h4,h5,h6)`]: {
+                                color: (theme.colors as any)[color].main(5),
+                                textShadow: `0 0 2px ${(theme.colors as any)[
+                                    color
+                                ].main(5)}`,
+                            },
+                            [`.${color}:is(button)`]: {
                                 color: (theme.colors as any)[color].text(2),
                                 textShadow: `0 0 2px ${(theme.colors as any)[
                                     color
@@ -155,19 +134,7 @@ export default function Component(props: { children: React.ReactNode }) {
                                     },
                                 },
                             },
-                        ])
-                    ),
-                    ...Object.fromEntries(
-                        [
-                            "primary",
-                            "secondary",
-                            "success",
-                            "warning",
-                            "error",
-                            "info",
-                        ].map((color) => [
-                            `figure.${color}`,
-                            {
+                            [`.${color}:is(figure)`]: {
                                 "[data-name=bg]": {
                                     color: (theme.colors as any)[color].bg(5, {
                                         alpha: 0.1,
@@ -179,7 +146,15 @@ export default function Component(props: { children: React.ReactNode }) {
                                     })})`,
                                 },
                             },
-                        ])
+                            [`.${color}:is(hr)`]: {
+                                backgroundColor: (theme.colors as any)[
+                                    color
+                                ].main(5),
+                                boxShadow: `0 0 2px ${(theme.colors as any)[
+                                    color
+                                ].main(5)}`,
+                            },
+                        }))
                     ),
                 }}
             />

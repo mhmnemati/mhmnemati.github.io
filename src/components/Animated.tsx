@@ -26,7 +26,6 @@ import {
 
 import { useRef } from "react";
 
-type Color = "primary" | "secondary" | "success" | "warning" | "error" | "info";
 type Size = "small" | "medium" | "large";
 type Type =
     | "lines"
@@ -40,7 +39,6 @@ type Type =
 export interface AnimatedProps extends Props {
     illuminator?: number;
     onClick?: any;
-    color?: Color;
     type?: Type;
     size?: Size;
 }
@@ -202,7 +200,7 @@ const XIlluminatorSVG = dynamic(() => Promise.resolve(IlluminatorSVG), {
 });
 
 export default function Component(props: AnimatedProps) {
-    const { illuminator, color = "primary", type, size, ...rest } = props;
+    const { illuminator, type, size, ...rest } = props;
     const { FrameComponent, frameProps, frameClip } = createFrame(type, size);
 
     const bleeps = useBleeps();
@@ -213,7 +211,7 @@ export default function Component(props: AnimatedProps) {
         <Animated
             {...rest}
             style={{ clipPath: frameClip }}
-            className={`${props.className} ${color} relative`}
+            className={`relative primary ${props.className}`}
             onClick={() => {
                 if (props.as === "button") {
                     bleeps.click?.play();

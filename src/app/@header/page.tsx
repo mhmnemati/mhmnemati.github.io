@@ -23,7 +23,6 @@ export default function Page(props: { children: React.ReactNode }) {
                 <Animated
                     size="small"
                     type="underline"
-                    color="primary"
                     className="flex justify-start md:justify-end"
                 >
                     <div className="block md:hidden">
