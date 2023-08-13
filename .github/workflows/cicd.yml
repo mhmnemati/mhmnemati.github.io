@@ -2,55 +2,52 @@ name: CI/CD
 
 on:
     push:
-        branches:
-            - master
+        branches: [master]
     pull_request:
-        branches:
-            - master
+        branches: [master]
+
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
-            - uses: actions/cache@v2
+            - uses: actions/checkout@v3
+            - uses: actions/cache@v3
               with:
                   path: node_modules/
                   key: ${{ hashFiles('package-lock.json') }}
-            - uses: actions/cache@v2
+            - uses: actions/setup-node@v3
               with:
-                  path: public/
-                  key: ${{ github.sha }}
-            - uses: actions/setup-node@v2
-              with:
-                  node-version: "14"
-
+                  node-version: "18"
             - run: npm ci
             - run: npm run build
+            - uses: actions/upload-artifact@v3
+              with:
+                  name: public
+                  path: out
 
     test:
         needs: build
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
-
+            - uses: actions/checkout@v3
             - run: echo Test
 
-    release:
-        needs: test
-        runs-on: ubuntu-latest
-        if: github.event_name == 'push'
-        steps:
-            - uses: actions/checkout@v2
-            - uses: actions/cache@v2
-              with:
-                  path: public/
-                  key: ${{ github.sha }}
-            - uses: actions/setup-node@v2
-              with:
-                  node-version: "14"
+    # release:
+    #     needs: test
+    #     runs-on: ubuntu-latest
+    #     if: github.event_name == 'push'
+    #     steps:
+    #         - uses: actions/checkout@v2
+    #         - uses: actions/cache@v2
+    #           with:
+    #               path: public/
+    #               key: ${{ github.sha }}
+    #         - uses: actions/setup-node@v2
+    #           with:
+    #               node-version: "14"
 
-            - run: cp .github/CNAME public
-            - uses: peaceiris/actions-gh-pages@v3
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./public
+    #         - run: cp .github/CNAME public
+    #         - uses: peaceiris/actions-gh-pages@v3
+    #           with:
+    #               github_token: ${{ secrets.GITHUB_TOKEN }}
+    #               publish_dir: ./public

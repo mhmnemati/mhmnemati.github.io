@@ -120,7 +120,7 @@ export default function Page() {
     return (
         <>
             <Hero image="/images/hero.jpg">
-                <Text as="h1">I'm Mohammad Hosein Nemati</Text>
+                <Text as="h1">I&apos;m Mohammad Hosein Nemati</Text>
                 <Text as="b">
                     A computer science student and full stack developer who is
                     mainly interested in modeling nature rules with computers
