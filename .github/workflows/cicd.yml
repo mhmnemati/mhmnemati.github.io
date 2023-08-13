@@ -20,6 +20,7 @@ jobs:
                   node-version: "18"
             - run: npm ci
             - run: npm run build
+            - run: cp .github/CNAME out
             - uses: actions/upload-artifact@v3
               with:
                   name: public
@@ -32,22 +33,17 @@ jobs:
             - uses: actions/checkout@v3
             - run: echo Test
 
-    # release:
-    #     needs: test
-    #     runs-on: ubuntu-latest
-    #     if: github.event_name == 'push'
-    #     steps:
-    #         - uses: actions/checkout@v2
-    #         - uses: actions/cache@v2
-    #           with:
-    #               path: public/
-    #               key: ${{ github.sha }}
-    #         - uses: actions/setup-node@v2
-    #           with:
-    #               node-version: "14"
-
-    #         - run: cp .github/CNAME public
-    #         - uses: peaceiris/actions-gh-pages@v3
-    #           with:
-    #               github_token: ${{ secrets.GITHUB_TOKEN }}
-    #               publish_dir: ./public
+    release:
+        needs: test
+        runs-on: ubuntu-latest
+        if: github.event_name == 'push'
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/download-artifact@v3
+              with:
+                  name: public
+                  path: out
+            # - uses: peaceiris/actions-gh-pages@v3
+            #   with:
+            #       github_token: ${{ secrets.GITHUB_TOKEN }}
+            #       publish_dir: ./out
