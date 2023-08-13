@@ -38,6 +38,9 @@
 % Adjust bullet size
 \RequirePackage{scalerel}
 
+% Multiple columns
+\RequirePackage{multicol}
+
 % Remove page numbers
 \pagestyle{empty}
 
