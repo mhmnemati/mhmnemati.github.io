@@ -9,7 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@arwes/react": "^1.0.0-alpha.22",
+        "@arwes/react": "^1.0.0-alpha.23",
         "@emotion/react": "^11.11.1",
         "@fortawesome/fontawesome-svg-core": "^6.4.0",
         "@fortawesome/free-brands-svg-icons": "^6.4.0",

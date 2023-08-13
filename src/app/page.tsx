@@ -32,7 +32,7 @@ function About() {
                                 src="/images/personal.jpg"
                                 width={400}
                                 height={400}
-                                className="relative -z-10"
+                                className="relative"
                             />
                         </Frame>
                     </div>

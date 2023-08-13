@@ -241,7 +241,6 @@ function Frame(props: FrameProps) {
                     {...frameProps}
                     elementRef={svgRef}
                     onRender={onRender}
-                    style={{ zIndex: -1 }}
                 >
                     {illuminator && (
                         <XIlluminatorSVG
