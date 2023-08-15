@@ -16,7 +16,7 @@ export interface CardProps {
     subtitle: string;
     location: string;
     date: string;
-    tasks: [{ text: string; link?: string }];
+    items: [{ text: string; link?: string }];
 }
 
 export default function Component(props: CardProps) {
@@ -48,11 +48,11 @@ export default function Component(props: CardProps) {
             <Frame as="hr" className="my-2" />
             <ul>
                 <Animator manager="stagger">
-                    {props.tasks.map((task: any, task_idx: number) => (
-                        <Text key={task_idx} as="li">
-                            {task.text}{" "}
-                            {task.link && (
-                                <Link href={task.link}>
+                    {props.items.map((item_: any, item_idx: number) => (
+                        <Text key={item_idx} as="li">
+                            {item_.text}{" "}
+                            {item_.link && (
+                                <Link target="_blank" href={item_.link}>
                                     <FontAwesomeIcon icon={faExternalLink} />
                                 </Link>
                             )}

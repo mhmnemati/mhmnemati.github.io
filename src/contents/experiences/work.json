@@ -4,7 +4,7 @@
         "subtitle": "DevOps Engineer",
         "location": "Tehran, Iran",
         "date": "May 2022 -- Present (Full-time)",
-        "tasks": [
+        "items": [
             {
                 "text": "Maintaining and refactoring old bare-metal infrastructure"
             },
@@ -42,7 +42,7 @@
         "subtitle": "HPC Engineer",
         "location": "Tehran, Iran",
         "date": "Jul 2022 -- Jun 2023 (Part-time)",
-        "tasks": [
+        "items": [
             {
                 "text": "Setting up HPC cluster using Slurm Workload Manager & Pyxis"
             },
@@ -62,7 +62,7 @@
         "subtitle": "DevOps Engineer",
         "location": "Tehran, Iran",
         "date": "Mar 2022 -- Jun 2022 (Part-time)",
-        "tasks": [
+        "items": [
             {
                 "text": "Implementing CI/CD for projects using GitHub Actions & Docker"
             },
@@ -79,7 +79,7 @@
         "subtitle": "Full-stack Developer & DevOps Engineer",
         "location": "Tehran, Iran",
         "date": "Nov 2019 -- Jun 2022 (Full-time)",
-        "tasks": [
+        "items": [
             {
                 "text": "Maintaining and developing CCS project (Container Control System)"
             },
@@ -114,7 +114,7 @@
         "subtitle": "Software Developer",
         "location": "Tehran, Iran",
         "date": "Mar 2019 -- Oct 2019 (Part-time)",
-        "tasks": [
+        "items": [
             {
                 "text": "Maintaining and refactoring MFD project (Managed-Funds System)"
             },
@@ -134,7 +134,7 @@
         "subtitle": "React Developer",
         "location": "Tehran, Iran",
         "date": "Jun 2019 -- Sep 2019 (Part-time)",
-        "tasks": [
+        "items": [
             {
                 "text": "Implementing food-shopping UI using React.js and TypeScript"
             },
@@ -151,7 +151,7 @@
         "subtitle": "Full-stack Developer",
         "location": "Tehran, Iran",
         "date": "Dec 2013 -- Aug 2018",
-        "tasks": [
+        "items": [
             {
                 "text": "Socket programming in C & Erlang, implementing hole punching for P2P direct connections"
             },

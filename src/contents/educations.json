@@ -1,0 +1,44 @@
+[
+    {
+        "logo": "",
+        "title": "Master of Computer Science",
+        "subtitle": "University of Tehran",
+        "location": "Teharn, Iran",
+        "date": "Sep 2021 -- Aug 2024 (Expected)",
+        "items": [
+            {
+                "text": "Thesis: Automatic speech recognition in the air traffic control domain"
+            },
+            {
+                "text": "Total GPA: 3.80/4"
+            }
+        ]
+    },
+    {
+        "logo": "",
+        "title": "Bachelor of Computer Science",
+        "subtitle": "Kharazmi University",
+        "location": "Tehran, Iran",
+        "date": "Sep 2016 -- Jan 2021",
+        "items": [
+            {
+                "text": "Last two years GPA: 3.46/4"
+            },
+            {
+                "text": "Total GPA: 3.12/4"
+            }
+        ]
+    },
+    {
+        "logo": "",
+        "title": "Diploma of Mathematics",
+        "subtitle": "Mandegar Alborz High School",
+        "location": "Tehran, Iran",
+        "date": "Sep 2012 -- Aug 2016",
+        "items": [
+            {
+                "text": "Total GPA: 4/4"
+            }
+        ]
+    }
+]

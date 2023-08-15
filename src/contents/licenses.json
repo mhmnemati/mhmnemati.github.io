@@ -1,0 +1,32 @@
+[
+    {
+        "logo": "",
+        "title": "Brain Mapping Spring School",
+        "institute": "National Brain Mapping Laboratory",
+        "date": "Apr 2023"
+    },
+    {
+        "logo": "",
+        "title": "Certified Kubernetes Administrator (CKA)",
+        "institute": "Udemy",
+        "date": "Oct 2020"
+    },
+    {
+        "logo": "",
+        "title": "Kubernetes Certified Application Developer (CKAD)",
+        "institute": "Udemy",
+        "date": "Aug 2020"
+    },
+    {
+        "logo": "",
+        "title": "Docker - SWARM - Hands-on - DevOps",
+        "institute": "Udemy",
+        "date": "Jun 2020"
+    },
+    {
+        "logo": "",
+        "title": "Cisco Certified Network Associate (CCNA)",
+        "institute": "Tehran Institute of Technology",
+        "date": "Nov 2016"
+    }
+]

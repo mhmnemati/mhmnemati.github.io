@@ -5,7 +5,7 @@
         "subtitle": "Prof. Bagher Babaali",
         "location": "",
         "date": "Fall 2022",
-        "tasks": [
+        "items": [
             {
                 "text": "Training N-Gram Language Model on Hamshahri v2 dataset (Persian Newspaper) and computing perplexity using NLTK",
                 "link": "https://github.com/ckoliber/nlpexercises/blob/main/src/exercise1.ipynb"
@@ -38,7 +38,7 @@
         "subtitle": "Prof. Hedieh Sajedi",
         "location": "",
         "date": "Fall 2022",
-        "tasks": [
+        "items": [
             {
                 "text": "Applying Geometrical Operation, Histogram Equalization, Filtering in Spacial and Frequency domain, and Morphological Operation using OpenCV",
                 "link": "https://github.com/ckoliber/dipexercises/blob/main/src/exercise1.ipynb"
@@ -59,7 +59,7 @@
         "subtitle": "Prof. Bagher Babaali & Prof. Hedieh Sajedi",
         "location": "",
         "date": "Fall 2022",
-        "tasks": [
+        "items": [
             {
                 "text": "Implementation of perceptron from scratch using Python and NumPy and applying it on Polynomial Regression problem",
                 "link": "https://github.com/ckoliber/mlexercises/blob/master/src/exercise1.ipynb"
@@ -104,7 +104,7 @@
         "subtitle": "Prof. Majid Alizadeh",
         "location": "",
         "date": "Fall 2022",
-        "tasks": [
+        "items": [
             {
                 "text": "Implementation of Davis Language interpreter in python",
                 "link": "https://github.com/ckoliber/actexercises/blob/master/projects/interpreter.py"
@@ -120,7 +120,7 @@
         "subtitle": "Prof. Saeed Reza Kheradpisheh",
         "location": "",
         "date": "Fall 2020",
-        "tasks": [
+        "items": [
             {
                 "text": "Implementation of Cross Platform Async Socket Server (TCP, UDP) in C",
                 "link": "https://github.com/ckoliber/Knet"
@@ -140,7 +140,7 @@
         "subtitle": "Prof. Somaye Arabi",
         "location": "",
         "date": "Fall 2020",
-        "tasks": [
+        "items": [
             {
                 "text": "C Language JSON parser and packer library",
                 "link": "https://github.com/ckoliber/Kson"
@@ -156,7 +156,7 @@
         "subtitle": "Prof. Somaye Arabi",
         "location": "",
         "date": "Fall 2020",
-        "tasks": [
+        "items": [
             {
                 "text": "Postfix and Prefix parser using Java",
                 "link": "https://github.com/ckoliber/XFixToYFix"
@@ -180,7 +180,7 @@
         "subtitle": "Prof. Keivan Borna",
         "location": "",
         "date": "Fall 2020",
-        "tasks": [
+        "items": [
             {
                 "text": "Implementation of 2048 Game in Java",
                 "link": "https://github.com/ckoliber/2048"

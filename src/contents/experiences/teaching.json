@@ -4,7 +4,7 @@
         "subtitle": "Prof. Arash Ahadi",
         "location": "Kharazmi University",
         "date": "Feb 2019 -- Jun 2019",
-        "tasks": [
+        "items": [
             {
                 "text": "Teaching memory management in C, Object-Oriented paradigm in C (OOC)",
                 "link": "https://github.com/ckoliber/ooc_lecture"
@@ -23,7 +23,7 @@
         "subtitle": "Prof. Saeed Reza Kheradpisheh",
         "location": "Kharazmi University",
         "date": "Sep 2018 -- Jan 2019",
-        "tasks": [
+        "items": [
             {
                 "text": "Teaching basic data-structures and algorithms in Java"
             },
