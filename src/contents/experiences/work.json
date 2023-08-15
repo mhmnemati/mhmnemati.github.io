@@ -1,0 +1,169 @@
+[
+    {
+        "title": "Shipup.net",
+        "subtitle": "DevOps Engineer",
+        "location": "Tehran, Iran",
+        "date": "May 2022 -- Present (Full-time)",
+        "tasks": [
+            {
+                "text": "Maintaining and refactoring old bare-metal infrastructure"
+            },
+            {
+                "text": "Designing and architecting new cloud-based infrastructure"
+            },
+            {
+                "text": "Automating full and differential and incremental backups (pgbackrest)"
+            },
+            {
+                "text": "Setting up Grafana monitoring stack (LGTM - Loki, Grafana, Tempo, Mimir, Agent)"
+            },
+            {
+                "text": "Writing Grafana dashboards and alerts using promQL, logQL"
+            },
+            {
+                "text": "Provisioning entire new infrastructure using Terraform (IaC)"
+            },
+            {
+                "text": "Managing multi-cloud resources for reducing the costs (Hetzner, AWS)"
+            },
+            {
+                "text": "Using GitOps principle for CD (Continuous Deployment)"
+            },
+            {
+                "text": "Writing Docker Swarm compose manifests"
+            },
+            {
+                "text": "Setting up CI/CD using GitlabCI, Docker"
+            }
+        ]
+    },
+    {
+        "title": "University of Tehran",
+        "subtitle": "HPC Engineer",
+        "location": "Tehran, Iran",
+        "date": "Jul 2022 -- Jun 2023 (Part-time)",
+        "tasks": [
+            {
+                "text": "Setting up HPC cluster using Slurm Workload Manager & Pyxis"
+            },
+            {
+                "text": "Setting up Slurm accounting and quota management"
+            },
+            {
+                "text": "Provisioning entire cluster using Terraform (IaC)"
+            },
+            {
+                "text": "Working with HPC containers (Nvidia Enroot, Nvidia Pyxis)"
+            }
+        ]
+    },
+    {
+        "title": "Pishgam Vira",
+        "subtitle": "DevOps Engineer",
+        "location": "Tehran, Iran",
+        "date": "Mar 2022 -- Jun 2022 (Part-time)",
+        "tasks": [
+            {
+                "text": "Implementing CI/CD for projects using GitHub Actions & Docker"
+            },
+            {
+                "text": "Provisioning deployment servers using Docker Swarm"
+            },
+            {
+                "text": "Automate release process using semantic-release"
+            }
+        ]
+    },
+    {
+        "title": "Mobtaker Darya",
+        "subtitle": "Full-stack Developer & DevOps Engineer",
+        "location": "Tehran, Iran",
+        "date": "Nov 2019 -- Jun 2022 (Full-time)",
+        "tasks": [
+            {
+                "text": "Maintaining and developing CCS project (Container Control System)"
+            },
+            {
+                "text": "Implementing CCS reports using Crystal Reports and SQL Server"
+            },
+            {
+                "text": "Developing Shaahin project (Cargo trucks traffic control)"
+            },
+            {
+                "text": "Implementing Shaahin web client using React.js"
+            },
+            {
+                "text": "Implementing Shaahin backend using Loopback.io, NodeJs, TypeScript, PostgreSQL"
+            },
+            {
+                "text": "Implementing CI/CD for projects using GitlabCI & Docker"
+            },
+            {
+                "text": "Provisioning deployment servers using Kubernetes"
+            },
+            {
+                "text": "Writing Kubernetes manifests and packaging the in Helm Charts"
+            },
+            {
+                "text": "Managing and coding entire infrastructure using Terraform (IaC)"
+            }
+        ]
+    },
+    {
+        "title": "TIS",
+        "subtitle": "Software Developer",
+        "location": "Tehran, Iran",
+        "date": "Mar 2019 -- Oct 2019 (Part-time)",
+        "tasks": [
+            {
+                "text": "Maintaining and refactoring MFD project (Managed-Funds System)"
+            },
+            {
+                "text": "Replacing Process360 with ProcessMaker as BPMS core"
+            },
+            {
+                "text": "Implementing new UI using React.js and TypeScript"
+            },
+            {
+                "text": "Implementing dynamic forms in client (Forms schema loaded from BPMS)"
+            }
+        ]
+    },
+    {
+        "title": "Farmeal",
+        "subtitle": "React Developer",
+        "location": "Tehran, Iran",
+        "date": "Jun 2019 -- Sep 2019 (Part-time)",
+        "tasks": [
+            {
+                "text": "Implementing food-shopping UI using React.js and TypeScript"
+            },
+            {
+                "text": "Interacting with backend GraphQL API's using Apollo Client"
+            },
+            {
+                "text": "Implementing CI/CD for project using GitlabCI & Docker"
+            }
+        ]
+    },
+    {
+        "title": "Self Employed",
+        "subtitle": "Full-stack Developer",
+        "location": "Tehran, Iran",
+        "date": "Dec 2013 -- Aug 2018",
+        "tasks": [
+            {
+                "text": "Socket programming in C & Erlang, implementing hole punching for P2P direct connections"
+            },
+            {
+                "text": "Implementing Desktop Chat Application using Qt, C++, QML"
+            },
+            {
+                "text": "Implementing Android Chat Application using Java, C (JNI), AndroidStudio"
+            },
+            {
+                "text": "Using FFMPEG to implement audio & video streaming using native API's and raw sockets"
+            }
+        ]
+    }
+]
