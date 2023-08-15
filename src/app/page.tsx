@@ -15,7 +15,7 @@ import {
 function About() {
     return (
         <section className="flex flex-col items-center p-8">
-            <div className="container max-w-screen-lg">
+            <div className="container max-w-screen-xl">
                 <div className="grid grid-cols-3 gap-8">
                     <div className="col-span-3">
                         <Text as="h2">About</Text>
