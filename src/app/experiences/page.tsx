@@ -4,22 +4,23 @@ import Text from "@/components/Text";
 import Hero from "@/components/Hero";
 import Card from "@/components/Card";
 
-import notable from "@/contents/projects/notable.json";
-import published from "@/contents/projects/published.json";
+import research from "@/contents/experiences/research.json";
+import teaching from "@/contents/experiences/teaching.json";
+import work from "@/contents/experiences/work.json";
 
 export default function Page() {
     return (
         <>
             <Hero image="/images/break_projects.jpg" height="70vh">
-                <Text as="h1">Projects</Text>
+                <Text as="h1">Experiences</Text>
             </Hero>
             <section className="flex flex-col items-center p-8">
                 <div className="container max-w-screen-xl">
                     <Text as="h2" className="warning">
-                        Notable Projects
+                        Research Experiences
                     </Text>
                     <Animator manager="sequence">
-                        {notable.map((item, idx) => (
+                        {research.map((item, idx) => (
                             <Card key={idx} {...(item as any)} />
                         ))}
                     </Animator>
@@ -29,10 +30,23 @@ export default function Page() {
             <section className="flex flex-col items-center p-8">
                 <div className="container max-w-screen-xl">
                     <Text as="h2" className="warning">
-                        Published Projects
+                        Teaching Experiences
                     </Text>
                     <Animator manager="sequence">
-                        {published.map((item, idx) => (
+                        {teaching.map((item, idx) => (
+                            <Card key={idx} {...(item as any)} />
+                        ))}
+                    </Animator>
+                </div>
+            </section>
+            <Frame as="hr" />
+            <section className="flex flex-col items-center p-8">
+                <div className="container max-w-screen-xl">
+                    <Text as="h2" className="warning">
+                        Work Experiences
+                    </Text>
+                    <Animator manager="sequence">
+                        {work.map((item, idx) => (
                             <Card key={idx} {...(item as any)} />
                         ))}
                     </Animator>

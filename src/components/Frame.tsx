@@ -242,12 +242,7 @@ function Frame(props: FrameProps) {
                     elementRef={svgRef}
                     onRender={onRender}
                 >
-                    {illuminator && (
-                        <XIlluminatorSVG
-                            color="hsl(180 50% 50% / 20%)"
-                            size={illuminator}
-                        />
-                    )}
+                    {illuminator && <XIlluminatorSVG size={illuminator} />}
                 </FrameComponent>
             )}
             {props.children}
