@@ -71,14 +71,16 @@ function PHero() {
                 </Link>
             </span>
             <span>
-                <Frame
-                    as="button"
-                    size="small"
-                    type="hftagon"
-                    className="mt-8 px-8 py-4"
-                >
-                    Download CV
-                </Frame>
+                <Link href="/assets/cv.pdf" target="_blank">
+                    <Frame
+                        as="button"
+                        size="small"
+                        type="hftagon"
+                        className="mt-8 px-8 py-4"
+                    >
+                        Download CV
+                    </Frame>
+                </Link>
             </span>
         </Hero>
     );
@@ -174,14 +176,16 @@ function About() {
                                 </Link>
                             </div>
                             <div>
-                                <Frame
-                                    as="button"
-                                    size="small"
-                                    type="hftagon"
-                                    className="m-2 px-4 py-2"
-                                >
-                                    Download CV
-                                </Frame>
+                                <Link href="/assets/cv.pdf" target="_blank">
+                                    <Frame
+                                        as="button"
+                                        size="small"
+                                        type="hftagon"
+                                        className="m-2 px-4 py-2"
+                                    >
+                                        Download CV
+                                    </Frame>
+                                </Link>
                             </div>
                         </div>
                     </div>
