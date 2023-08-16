@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
     faLinkedin,
     faGithub,
@@ -71,16 +71,14 @@ function PHero() {
                 </Link>
             </span>
             <span>
-                <Link href="/blog">
-                    <Frame
-                        as="button"
-                        size="small"
-                        type="hftagon"
-                        className="mt-8 px-8 py-4"
-                    >
-                        Goto Blog
-                    </Frame>
-                </Link>
+                <Frame
+                    as="button"
+                    size="small"
+                    type="hftagon"
+                    className="mt-8 px-8 py-4"
+                >
+                    Download CV
+                </Frame>
             </span>
         </Hero>
     );
@@ -93,7 +91,7 @@ function About() {
                 <div className="grid grid-cols-3 gap-8">
                     <div className="col-span-3">
                         <Text as="h2">About</Text>
-                        <span className="mb-2">
+                        <span className="mb-4">
                             {about.summary.split("\n").map((text, idx) => (
                                 <Text key={idx} as="p">
                                     {text}
@@ -117,10 +115,8 @@ function About() {
                         </Frame>
                     </div>
                     <div className="col-span-3 md:col-span-2">
-                        <Text as="h3">Who Am I</Text>
-
-                        <Text as="h3">Areas of Interest</Text>
-                        <ul>
+                        <Text as="h3">Interests</Text>
+                        <ul className="mb-4">
                             {interests.map((item, index) => (
                                 <Text key={index} as="li">
                                     {item}
@@ -129,10 +125,11 @@ function About() {
                         </ul>
 
                         <Text as="h3">Languages</Text>
-                        <ul>
+                        <ul className="mb-4">
                             {languages.map((item, index) => (
                                 <Text key={index} as="li">
-                                    {item.title} {item.description}
+                                    <b>{`${item.title}: `}</b>
+                                    {item.description}
                                 </Text>
                             ))}
                         </ul>
@@ -147,7 +144,7 @@ function About() {
                                 >
                                     <FontAwesomeIcon
                                         className="mr-2"
-                                        icon={faUser}
+                                        icon={faLinkedin}
                                     />
                                     {about.name}
                                 </Link>
@@ -194,34 +191,20 @@ function About() {
     );
 }
 
-function Education() {
+function Resume() {
     return (
-        <section className="flex flex-col items-center p-8">
+        <section id="about" className="flex flex-col items-center p-8">
             <div className="container max-w-screen-xl">
-                <Text as="h2" className="warning">
+                <Text as="h2" className="warning mb-4">
                     Educations
                 </Text>
                 {educations.map((item, index) => (
                     <Card key={index} {...(item as any)} />
                 ))}
-            </div>
-        </section>
-    );
-}
 
-function Interests() {
-    return (
-        <section className="flex flex-col items-center p-8">
-            <div className="container max-w-screen-xl"></div>
-        </section>
-    );
-}
+                <Frame as="hr" className="my-8" />
 
-function Honors() {
-    return (
-        <section className="flex flex-col items-center p-8">
-            <div className="container max-w-screen-xl">
-                <Text as="h2" className="warning">
+                <Text as="h2" className="warning mb-4">
                     Honors & Awards
                 </Text>
                 <ul>
@@ -231,16 +214,10 @@ function Honors() {
                         </Text>
                     ))}
                 </ul>
-            </div>
-        </section>
-    );
-}
 
-function Skills() {
-    return (
-        <section className="flex flex-col items-center p-8">
-            <div className="container max-w-screen-xl">
-                <Text as="h2" className="warning">
+                <Frame as="hr" className="my-8" />
+
+                <Text as="h2" className="warning mb-4">
                     Technical Skills
                 </Text>
                 <ul>
@@ -250,16 +227,10 @@ function Skills() {
                         </Text>
                     ))}
                 </ul>
-            </div>
-        </section>
-    );
-}
 
-function Courses() {
-    return (
-        <section className="flex flex-col items-center p-8">
-            <div className="container max-w-screen-xl">
-                <Text as="h2" className="warning">
+                <Frame as="hr" className="my-8" />
+
+                <Text as="h2" className="warning mb-4">
                     Relevant Courses
                 </Text>
                 <ul>
@@ -269,40 +240,15 @@ function Courses() {
                         </Text>
                     ))}
                 </ul>
-            </div>
-        </section>
-    );
-}
 
-function Licenses() {
-    return (
-        <section className="flex flex-col items-center p-8">
-            <div className="container max-w-screen-xl">
-                <Text as="h2" className="warning">
+                <Frame as="hr" className="my-8" />
+
+                <Text as="h2" className="warning mb-4">
                     Licenses & Certifications
                 </Text>
                 {licenses.map((item, index) => (
                     <Card key={index} {...(item as any)} />
                 ))}
-            </div>
-        </section>
-    );
-}
-
-function Languages() {
-    return (
-        <section className="flex flex-col items-center p-8">
-            <div className="container max-w-screen-xl">
-                <Text as="h2" className="warning">
-                    Languages
-                </Text>
-                <ul>
-                    {languages.map((item, index) => (
-                        <Text key={index} as="li">
-                            {item.title} {item.description}
-                        </Text>
-                    ))}
-                </ul>
             </div>
         </section>
     );
@@ -316,19 +262,7 @@ export default function Page() {
             <Hero id="resume" image="/images/break_resume.jpg" height="40vh">
                 <Text as="h1">Resume</Text>
             </Hero>
-            <Education />
-            <Frame as="hr" />
-            <Interests />
-            <Frame as="hr" />
-            <Honors />
-            <Frame as="hr" />
-            <Skills />
-            <Frame as="hr" />
-            <Courses />
-            <Frame as="hr" />
-            <Licenses />
-            <Frame as="hr" />
-            <Languages />
+            <Resume />
         </>
     );
 }

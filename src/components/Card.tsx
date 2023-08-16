@@ -24,7 +24,7 @@ export interface CardProps {
 export default function Component(props: CardProps) {
     return (
         <Frame
-            className="p-4 my-4 grid grid-cols-3 gap-8"
+            className="my-4 grid grid-cols-3"
             illuminator={500}
             type="hftagon"
             size="small"
@@ -39,7 +39,7 @@ export default function Component(props: CardProps) {
                     />
                 </div>
             )}
-            <div className={`col-span-3 ${props.logo && "md:col-span-2"}`}>
+            <div className={`p-4 col-span-3 ${props.logo && "md:col-span-2"}`}>
                 <div className="flex justify-between align-middle">
                     {props.link ? (
                         <Link href={props.link}>
@@ -58,7 +58,7 @@ export default function Component(props: CardProps) {
                         {props.location}
                     </Text>
                 </div>
-                <Frame as="hr" className="my-2" />
+                {props.items && <Frame as="hr" className="my-2" />}
                 <ul>
                     <Animator manager="stagger">
                         {props.items?.map((item_: any, item_idx: number) => (
