@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import {
     Animator,
     Animated,
+    BleepsOnAnimator,
     type AnimatedProps,
     IlluminatorSVG,
     FrameSVGLines,
@@ -254,6 +255,12 @@ export default function Component(props: FrameProps) {
     return (
         <Animator>
             <Frame {...props} className={`primary ${props.className}`} />
+            <BleepsOnAnimator
+                transitions={{
+                    entering: "assemble",
+                    exiting: "assemble",
+                }}
+            />
         </Animator>
     );
 }

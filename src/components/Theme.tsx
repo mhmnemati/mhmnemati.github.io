@@ -40,21 +40,21 @@ const bleepsSettings: BleepsProviderSettings = {
         volume: 0.9,
     },
     bleeps: {
-        intro: {
-            sources: [
-                {
-                    src: "https://next.arwes.dev/assets/sounds/intro.mp3",
-                    type: "audio/mpeg",
-                },
-            ],
+        type: {
+            sources: [{ src: "/sounds/type.mp3", type: "audio/mpeg" }],
         },
         click: {
-            sources: [
-                {
-                    src: "https://next.arwes.dev/assets/sounds/click.mp3",
-                    type: "audio/mpeg",
-                },
-            ],
+            sources: [{ src: "/sounds/click.mp3", type: "audio/mpeg" }],
+        },
+        intro: {
+            sources: [{ src: "/sounds/intro.mp3", type: "audio/mpeg" }],
+        },
+        warning: {
+            sources: [{ src: "/sounds/warning.mp3", type: "audio/mpeg" }],
+        },
+        assemble: {
+            sources: [{ src: "/sounds/assemble.mp3", type: "audio/mpeg" }],
+            loop: true,
         },
     },
 };
