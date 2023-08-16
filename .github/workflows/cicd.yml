@@ -23,7 +23,7 @@ jobs:
             - run: cp .github/CNAME out
             - uses: xu-cheng/latex-action@v2
               with:
-                  latexmk_use_lualatex: true
+                  latexmk_use_xelatex: true
                   working_directory: private/CV
                   root_file: main.tex
             - run: cp private/CV/main.pdf out
