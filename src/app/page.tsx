@@ -93,6 +93,13 @@ function About() {
                 <div className="grid grid-cols-3 gap-8">
                     <div className="col-span-3">
                         <Text as="h2">About</Text>
+                        <span className="mb-2">
+                            {about.summary.split("\n").map((text, idx) => (
+                                <Text key={idx} as="p">
+                                    {text}
+                                </Text>
+                            ))}
+                        </span>
                     </div>
                     <div className="col-span-3 md:col-span-1">
                         <Frame
@@ -111,13 +118,25 @@ function About() {
                     </div>
                     <div className="col-span-3 md:col-span-2">
                         <Text as="h3">Who Am I</Text>
-                        <span className="mb-2">
-                            {about.summary.split("\n").map((text, idx) => (
-                                <Text key={idx} as="p">
-                                    {text}
+
+                        <Text as="h3">Areas of Interest</Text>
+                        <ul>
+                            {interests.map((item, index) => (
+                                <Text key={index} as="li">
+                                    {item}
                                 </Text>
                             ))}
-                        </span>
+                        </ul>
+
+                        <Text as="h3">Languages</Text>
+                        <ul>
+                            {languages.map((item, index) => (
+                                <Text key={index} as="li">
+                                    {item.title} {item.description}
+                                </Text>
+                            ))}
+                        </ul>
+
                         <Text as="h3">Contact Me</Text>
                         <div className="flex flwx-row justify-between">
                             <div>
@@ -180,7 +199,7 @@ function Education() {
         <section className="flex flex-col items-center p-8">
             <div className="container max-w-screen-xl">
                 <Text as="h2" className="warning">
-                    Research Experiences
+                    Educations
                 </Text>
                 {educations.map((item, index) => (
                     <Card key={index} {...(item as any)} />
@@ -193,18 +212,7 @@ function Education() {
 function Interests() {
     return (
         <section className="flex flex-col items-center p-8">
-            <div className="container max-w-screen-xl">
-                <Text as="h2" className="warning">
-                    Areas of Interest
-                </Text>
-                <ul>
-                    {interests.map((item, index) => (
-                        <Text key={index} as="li">
-                            {item}
-                        </Text>
-                    ))}
-                </ul>
-            </div>
+            <div className="container max-w-screen-xl"></div>
         </section>
     );
 }

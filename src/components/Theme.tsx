@@ -16,8 +16,16 @@ export const theme = createAppTheme({
             primary: 200,
             secondary: 80,
         },
+        fontFamilies: {
+            // title: undefined,
+            // input: undefined,
+            // body: undefined,
+            // code: undefined,
+            // cta: undefined,
+        },
     },
 });
+
 const stylesBaseline = createAppStylesBaseline(theme);
 
 const animatorsSettings: AnimatorGeneralProviderSettings = {

@@ -10,8 +10,8 @@ const links = [
     ["Home", "/#home"],
     ["About", "/#about"],
     ["Resume", "/#resume"],
-    ["Projects", "/projects"],
     ["Experiences", "/experiences"],
+    ["Projects", "/projects"],
     ["Blog", "/blog"],
 ];
 
