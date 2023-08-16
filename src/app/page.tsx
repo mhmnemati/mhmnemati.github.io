@@ -240,7 +240,7 @@ function Resume() {
                 <ul>
                     {courses.map((item, index) => (
                         <Text key={index} as="li">
-                            {item.title} {item.grade}
+                            <b>{`${item.title}: `}</b> <i>{item.grade}</i>
                         </Text>
                     ))}
                 </ul>
