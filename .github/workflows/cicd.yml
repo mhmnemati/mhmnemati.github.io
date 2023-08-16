@@ -23,7 +23,8 @@ jobs:
             - run: cp .github/CNAME out
             - uses: xu-cheng/latex-action@v2
               with:
-                  root_file: private/CV/main.tex
+                  working_directory: private/CV
+                  root_file: main.tex
             - run: cp private/CV/main.pdf out
             - uses: actions/upload-artifact@v3
               with:
