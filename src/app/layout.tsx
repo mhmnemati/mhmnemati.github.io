@@ -44,7 +44,7 @@ export default function Layout(props: {
     footer: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html lang="en" className="scroll-smooth">
             <body dir="ltr" className={inter.className}>
                 <Theme>
                     {props.header}

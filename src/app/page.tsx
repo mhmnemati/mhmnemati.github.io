@@ -1,20 +1,94 @@
 import Frame from "@/components/Frame";
 import Text from "@/components/Text";
 import Hero from "@/components/Hero";
+import Card from "@/components/Card";
 import Image from "next/image";
 import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
 import {
     faLinkedin,
     faGithub,
     faGitlab,
+    faSkype,
 } from "@fortawesome/free-brands-svg-icons";
+
+import about from "@/contents/about.json";
+import educations from "@/contents/educations.json";
+import interests from "@/contents/interests.json";
+import honors from "@/contents/honors.json";
+import skills from "@/contents/skills.json";
+import courses from "@/contents/courses.json";
+import licenses from "@/contents/licenses.json";
+import languages from "@/contents/languages.json";
+
+function PHero() {
+    return (
+        <Hero id="home" image="/images/hero.jpg">
+            <Text as="h1">I&apos;m {about.name}</Text>
+            <Text as="b">{about.desc}</Text>
+            <span>
+                <Link
+                    className="text-inherit m-4"
+                    href={`mailto:${about.email}`}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                </Link>
+                <Link
+                    className="text-inherit m-4"
+                    href={`https://www.linkedin.com/in/${about.linkedin}/`}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                </Link>
+                <Link
+                    className="text-inherit m-4"
+                    href={`https://github.com/${about.github}`}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon icon={faGithub} size="2x" />
+                </Link>
+                <Link
+                    className="text-inherit m-4"
+                    href={`https://gitlab.com/${about.gitlab}`}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon icon={faGitlab} size="2x" />
+                </Link>
+                <Link
+                    className="text-inherit m-4"
+                    href={about.skype}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon icon={faSkype} size="2x" />
+                </Link>
+            </span>
+            <span>
+                <Link href="/blog">
+                    <Frame
+                        as="button"
+                        size="small"
+                        type="hftagon"
+                        className="mt-8 px-8 py-4"
+                    >
+                        Goto Blog
+                    </Frame>
+                </Link>
+            </span>
+        </Hero>
+    );
+}
 
 function About() {
     return (
-        <section className="flex flex-col items-center p-8">
+        <section id="about" className="flex flex-col items-center p-8">
             <div className="container max-w-screen-xl">
                 <div className="grid grid-cols-3 gap-8">
                     <div className="col-span-3">
@@ -25,45 +99,30 @@ function About() {
                             as="figure"
                             size="medium"
                             type="corners"
-                            className="w-100 h-100 p-2"
+                            className="w-100 h-100 p-2 aspect-square"
                         >
                             <Image
                                 alt="Personal"
                                 src="/images/personal.jpg"
-                                width={400}
-                                height={400}
-                                className="relative"
+                                width={1000}
+                                height={1000}
                             />
                         </Frame>
                     </div>
                     <div className="col-span-3 md:col-span-2">
                         <Text as="h3">Who Am I</Text>
-                        <Text as="p" className="mb-2">
-                            I am a Full-Stack programmer and computer science
-                            student, interested in cognitive science and
-                            genetics, a true lover of learning who has always
-                            sought more experience. I entered the field of
-                            programming in 2012, initially with the aim of
-                            implementing an audio and video messaging software,
-                            I started to learn the concepts of network and
-                            server and programming languages, the result of this
-                            goal was the ChaM project and a world of new
-                            experiences that It helped me find my career path
-                            and focus on the Backend field. After learning and
-                            doing a few Full-Stack projects, I gradually became
-                            familiar with Serverless architecture and LowCode
-                            and NoCode technologies, as well as the concepts of
-                            cloud computing. Because in my view programming is
-                            merely a tool to serve humanity, I try to spend less
-                            time programming with NoCode tools and instead spend
-                            more time learning basic concepts like math, logic
-                            and genetics. To.
-                        </Text>
+                        <span className="mb-2">
+                            {about.summary.split("\n").map((text, idx) => (
+                                <Text key={idx} as="p">
+                                    {text}
+                                </Text>
+                            ))}
+                        </span>
                         <Text as="h3">Contact Me</Text>
                         <div className="flex flwx-row justify-between">
                             <div>
                                 <Link
-                                    href="https://www.linkedin.com/in/ckoliber/"
+                                    href={`https://www.linkedin.com/in/${about.linkedin}/`}
                                     target="_blank"
                                     rel="noreferrer"
                                 >
@@ -71,11 +130,11 @@ function About() {
                                         className="mr-2"
                                         icon={faUser}
                                     />
-                                    Mohammad Hosein Nemati
+                                    {about.name}
                                 </Link>
                                 <br />
                                 <Link
-                                    href="mailto:koliberr136a1@gmail.com"
+                                    href={`mailto:${about.email}`}
                                     target="_blank"
                                     rel="noreferrer"
                                 >
@@ -83,19 +142,19 @@ function About() {
                                         className="mr-2"
                                         icon={faEnvelope}
                                     />
-                                    koliberr136a1@gmail.com
+                                    {about.email}
                                 </Link>
                                 <br />
                                 <Link
-                                    href="mailto:koliberr136a1@gmail.com"
+                                    href={about.skype}
                                     target="_blank"
                                     rel="noreferrer"
                                 >
                                     <FontAwesomeIcon
                                         className="mr-2"
-                                        icon={faPhone}
+                                        icon={faSkype}
                                     />
-                                    +98-937-758-8105
+                                    skype
                                 </Link>
                             </div>
                             <div>
@@ -116,74 +175,152 @@ function About() {
     );
 }
 
+function Education() {
+    return (
+        <section className="flex flex-col items-center p-8">
+            <div className="container max-w-screen-xl">
+                <Text as="h2" className="warning">
+                    Research Experiences
+                </Text>
+                {educations.map((item, index) => (
+                    <Card key={index} {...(item as any)} />
+                ))}
+            </div>
+        </section>
+    );
+}
+
+function Interests() {
+    return (
+        <section className="flex flex-col items-center p-8">
+            <div className="container max-w-screen-xl">
+                <Text as="h2" className="warning">
+                    Areas of Interest
+                </Text>
+                <ul>
+                    {interests.map((item, index) => (
+                        <Text key={index} as="li">
+                            {item}
+                        </Text>
+                    ))}
+                </ul>
+            </div>
+        </section>
+    );
+}
+
+function Honors() {
+    return (
+        <section className="flex flex-col items-center p-8">
+            <div className="container max-w-screen-xl">
+                <Text as="h2" className="warning">
+                    Honors & Awards
+                </Text>
+                <ul>
+                    {honors.map((item, index) => (
+                        <Text key={index} as="li">
+                            {item.title} {item.date}
+                        </Text>
+                    ))}
+                </ul>
+            </div>
+        </section>
+    );
+}
+
+function Skills() {
+    return (
+        <section className="flex flex-col items-center p-8">
+            <div className="container max-w-screen-xl">
+                <Text as="h2" className="warning">
+                    Technical Skills
+                </Text>
+                <ul>
+                    {skills.map((item, index) => (
+                        <Text key={index} as="li">
+                            {item.title} {item.skills.join(" ")}
+                        </Text>
+                    ))}
+                </ul>
+            </div>
+        </section>
+    );
+}
+
+function Courses() {
+    return (
+        <section className="flex flex-col items-center p-8">
+            <div className="container max-w-screen-xl">
+                <Text as="h2" className="warning">
+                    Relevant Courses
+                </Text>
+                <ul>
+                    {courses.map((item, index) => (
+                        <Text key={index} as="li">
+                            {item.title} {item.grade}
+                        </Text>
+                    ))}
+                </ul>
+            </div>
+        </section>
+    );
+}
+
+function Licenses() {
+    return (
+        <section className="flex flex-col items-center p-8">
+            <div className="container max-w-screen-xl">
+                <Text as="h2" className="warning">
+                    Licenses & Certifications
+                </Text>
+                {licenses.map((item, index) => (
+                    <Card key={index} {...(item as any)} />
+                ))}
+            </div>
+        </section>
+    );
+}
+
+function Languages() {
+    return (
+        <section className="flex flex-col items-center p-8">
+            <div className="container max-w-screen-xl">
+                <Text as="h2" className="warning">
+                    Languages
+                </Text>
+                <ul>
+                    {languages.map((item, index) => (
+                        <Text key={index} as="li">
+                            {item.title} {item.description}
+                        </Text>
+                    ))}
+                </ul>
+            </div>
+        </section>
+    );
+}
+
 export default function Page() {
     return (
         <>
-            <Hero image="/images/hero.jpg">
-                <Text as="h1">I&apos;m Mohammad Hosein Nemati</Text>
-                <Text as="b">
-                    A computer science student and full stack developer who is
-                    mainly interested in modeling nature rules with computers
-                </Text>
-                <span>
-                    <Link
-                        className="text-inherit m-4"
-                        href="mailto:koliberr136a1@gmail.com"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <FontAwesomeIcon icon={faEnvelope} size="2x" />
-                    </Link>
-                    <Link
-                        className="text-inherit m-4"
-                        href="https://www.linkedin.com/in/mohammad-hosein-nemati-665b1813b/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                    </Link>
-                    <Link
-                        className="text-inherit m-4"
-                        href="https://github.com/ckoliber"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <FontAwesomeIcon icon={faGithub} size="2x" />
-                    </Link>
-                    <Link
-                        className="text-inherit m-4"
-                        href="https://gitlab.com/ckoliber"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <FontAwesomeIcon icon={faGitlab} size="2x" />
-                    </Link>
-                    <Link
-                        className="text-inherit m-4"
-                        href="tel:+989377588105"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <FontAwesomeIcon icon={faPhone} size="2x" />
-                    </Link>
-                </span>
-                <span>
-                    <Link href="/blog">
-                        <Frame
-                            as="button"
-                            size="small"
-                            type="hftagon"
-                            className="mt-8 px-8 py-4"
-                        >
-                            Goto Blog
-                        </Frame>
-                    </Link>
-                </span>
-            </Hero>
+            <PHero />
             <About />
-            <Hero image="/images/break_resume.jpg" height="40vh">
+            <Hero id="resume" image="/images/break_resume.jpg" height="40vh">
                 <Text as="h1">Resume</Text>
             </Hero>
+            <Education />
+            <Frame as="hr" />
+            <Interests />
+            <Frame as="hr" />
+            <Honors />
+            <Frame as="hr" />
+            <Skills />
+            <Frame as="hr" />
+            <Courses />
+            <Frame as="hr" />
+            <Licenses />
+            <Frame as="hr" />
+            <Languages />
         </>
     );
 }

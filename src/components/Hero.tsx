@@ -4,11 +4,13 @@ export interface HeroProps {
     children?: React.ReactNode;
     height?: string;
     image: string;
+    id?: string;
 }
 
 export default function Component(props: HeroProps) {
     return (
         <section
+            id={props.id}
             className="w-full flex flex-col justify-center text-center align-middle gap-8"
             style={{
                 backgroundImage: `url(${props.image})`,

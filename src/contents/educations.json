@@ -1,6 +1,6 @@
 [
     {
-        "logo": "",
+        "logo": "/images/tehran_university.jpg",
         "title": "Master of Computer Science",
         "subtitle": "University of Tehran",
         "location": "Teharn, Iran",
@@ -15,7 +15,7 @@
         ]
     },
     {
-        "logo": "",
+        "logo": "/images/kharazmi_university.jpg",
         "title": "Bachelor of Computer Science",
         "subtitle": "Kharazmi University",
         "location": "Tehran, Iran",
@@ -30,7 +30,7 @@
         ]
     },
     {
-        "logo": "",
+        "logo": "/images/mandegar_alborz_highschool.jpg",
         "title": "Diploma of Mathematics",
         "subtitle": "Mandegar Alborz High School",
         "location": "Tehran, Iran",

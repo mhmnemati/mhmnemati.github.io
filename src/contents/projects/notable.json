@@ -7,7 +7,7 @@
         "date": "Fall 2022",
         "items": [
             {
-                "text": "Training N-Gram Language Model on Hamshahri v2 dataset (Persian Newspaper) and computing perplexity using NLTK",
+                "text": "Training N-Gram Language Model on Hamshahri v2 dataset (Persian Newspaper) using NLTK",
                 "link": "https://github.com/ckoliber/nlpexercises/blob/main/src/exercise1.ipynb"
             },
             {
