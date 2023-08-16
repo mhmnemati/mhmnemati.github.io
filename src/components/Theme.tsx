@@ -17,11 +17,11 @@ export const theme = createAppTheme({
             secondary: 80,
         },
         fontFamilies: {
-            // title: undefined,
-            // input: undefined,
-            // body: undefined,
-            // code: undefined,
-            // cta: undefined,
+            title: undefined,
+            input: undefined,
+            body: undefined,
+            code: undefined,
+            cta: undefined,
         },
     },
 });

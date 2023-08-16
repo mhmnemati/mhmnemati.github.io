@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: Neuropolitical;
+    src: url(/fonts/neuropolitical/neuropolitical.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(/fonts/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: BYekan;
+    src: url(/fonts/byekan/BYekan.ttf);
+}
