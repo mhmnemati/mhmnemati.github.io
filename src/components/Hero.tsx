@@ -11,7 +11,7 @@ export default function Component(props: HeroProps) {
     return (
         <section
             id={props.id}
-            className="w-full flex flex-col justify-center text-center align-middle gap-8"
+            className="w-full flex flex-col justify-center text-center align-middle gap-8 p-4"
             style={{
                 backgroundImage: `url(${props.image})`,
                 backgroundPosition: "center",
