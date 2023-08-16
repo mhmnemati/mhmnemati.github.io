@@ -21,6 +21,10 @@ jobs:
             - run: npm ci
             - run: npm run build
             - run: cp .github/CNAME out
+            - uses: xu-cheng/latex-action@v2
+              with:
+                  root_file: private/CV/main.tex
+            - run: cp private/CV/main.pdf out
             - uses: actions/upload-artifact@v3
               with:
                   name: public
