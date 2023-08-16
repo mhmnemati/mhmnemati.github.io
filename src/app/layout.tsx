@@ -10,6 +10,9 @@ config.autoAddCss = false;
 export const metadata: Metadata = {
     title: "KoLiBer",
     description: "KoLiBer personal website",
+    icons: {
+        icon: "/images/icon.jpg",
+    },
     keywords: [
         "KoLiBer",
         "koliber",
