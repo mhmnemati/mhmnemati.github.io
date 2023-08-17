@@ -5,9 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import {
     faLinkedin,
-    faTwitter,
+    faGithub,
+    faSkype,
     faReact,
 } from "@fortawesome/free-brands-svg-icons";
+
+import about from "@/contents/about.json";
 
 export default function Page(props: { children: React.ReactNode }) {
     return (
@@ -24,7 +27,7 @@ export default function Page(props: { children: React.ReactNode }) {
             <span>
                 <Link
                     className="text-inherit m-4"
-                    href="mailto:koliberr136a1@gmail.com"
+                    href={`mailto:${about.email}`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -32,7 +35,7 @@ export default function Page(props: { children: React.ReactNode }) {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href="https://www.linkedin.com/in/mohammad-hosein-nemati-665b1813b/"
+                    href={`https://www.linkedin.com/in/${about.linkedin}/`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -40,19 +43,19 @@ export default function Page(props: { children: React.ReactNode }) {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href="https://twitter.com/ckoliberr"
+                    href={`https://github.com/${about.github}`}
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <FontAwesomeIcon icon={faTwitter} size="2x" />
+                    <FontAwesomeIcon icon={faGithub} size="2x" />
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href="tel:+989377588105"
+                    href={about.skype}
                     target="_blank"
                     rel="noreferrer"
                 >
-                    <FontAwesomeIcon icon={faPhone} size="2x" />
+                    <FontAwesomeIcon icon={faSkype} size="2x" />
                 </Link>
             </span>
             <br />
