@@ -1,0 +1,21 @@
+inputFiles:
+    - src/private/CV/main.tex.tpl
+outputFiles:
+    - src/private/CV/main.tex
+
+datasources:
+    about: { url: src/contents/about.json }
+    interests: { url: src/contents/interests.json }
+    languages: { url: src/contents/languages.json }
+    educations: { url: src/contents/educations.json }
+    licenses: { url: src/contents/licenses.json }
+    courses: { url: src/contents/courses.json }
+    honors: { url: src/contents/honors.json }
+    skills: { url: src/contents/skills.json }
+
+    experiences_research: { url: src/contents/experiences/research.json }
+    experiences_teaching: { url: src/contents/experiences/teaching.json }
+    experiences_work: { url: src/contents/experiences/work.json }
+
+    projects_notable: { url: src/contents/projects/notable.json }
+    projects_published: { url: src/contents/projects/published.json }

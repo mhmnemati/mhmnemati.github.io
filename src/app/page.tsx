@@ -15,13 +15,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import about from "@/contents/about.json";
-import educations from "@/contents/educations.json";
 import interests from "@/contents/interests.json";
+import languages from "@/contents/languages.json";
+
+import educations from "@/contents/educations.json";
+import licenses from "@/contents/licenses.json";
+import courses from "@/contents/courses.json";
 import honors from "@/contents/honors.json";
 import skills from "@/contents/skills.json";
-import courses from "@/contents/courses.json";
-import licenses from "@/contents/licenses.json";
-import languages from "@/contents/languages.json";
 
 function PHero() {
     return (
