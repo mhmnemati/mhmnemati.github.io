@@ -13,7 +13,7 @@
 
 \begin{section}{Education}
     {{ range $i, $item := (ds "educations") -}}
-    \begin{subsectionnobullet}{ {{ $item.title }} }{ {{ $item.subtitle }} }{ {{ $item.date }} }{ {{ $item.date }} }
+    \begin{subsectionnobullet}{ {{ $item.title }} }{ {{ $item.subtitle }} }{ {{ $item.date }} }{ {{ $item.location }} }
         {{ range $j, $_item := $item.items -}}
         \italicitem{ {{ $_item.text }} }
         {{ end -}}
