@@ -11,14 +11,28 @@
 {\website{koliber.ir}}
 {\nationality{Iran}}
 
-\begin{section}{Education}
-    {{ range $i, $item := (ds "educations") -}}
-    \begin{subsectionnobullet}{ {{ $item.title }} }{ {{ $item.subtitle }} }{ {{ $item.date }} }{ {{ $item.location }} }
+{{ define "subsections" -}}
+{{ range $i, $item := . -}}
+    \begin{subsection}{ {{- $item.title -}} }{ {{- $item.subtitle | strings.ReplaceAll "&" "\\&" -}} }{ {{- $item.date -}} }{ {{- $item.location -}} }
         {{ range $j, $_item := $item.items -}}
-        \italicitem{ {{ $_item.text }} }
+        \item {{ $_item.text | strings.ReplaceAll "&" "\\&" }}
+        {{ end -}}
+    \end{subsection}
+{{ end -}}
+{{ end -}}
+
+{{ define "subsectionsnobullet" -}}
+{{ range $i, $item := . -}}
+    \begin{subsectionnobullet}{ {{- $item.title -}} }{ {{- $item.subtitle | strings.ReplaceAll "&" "\\&" -}} }{ {{- $item.date -}} }{ {{- $item.location -}} }
+        {{ range $j, $_item := $item.items -}}
+        \item {{ $_item.text | strings.ReplaceAll "&" "\\&" }}
         {{ end -}}
     \end{subsectionnobullet}
-    {{ end -}}
+{{ end -}}
+{{ end -}}
+
+\begin{section}{Education}
+    {{ template "subsectionsnobullet" (ds "educations") }}
 \end{section}
 
 \begin{section}{Areas of Interest}
@@ -33,7 +47,7 @@
     \begin{multicols}{2}
         \begin{subsectionbullet}
             {{ range $i, $item := (ds "courses") -}}
-            \item {{ $item.title }} \hfill \textit{ {{ $item.grade }} }
+            \item {{ $item.title }} \hfill \textit{ {{- $item.grade -}} }
             {{ end -}}
         \end{subsectionbullet}
     \end{multicols}
@@ -41,77 +55,47 @@
 
 \sectiontable{Licenses \& Certifications}{
     {{ range $i, $item := (ds "licenses") -}}
-    \entry{ {{ $item.title }} }{ {{ $item.subtitle }} \hfill \textit{ {{ $item.date }} }}
+    \entry{ {{- $item.title -}} }{ {{- $item.subtitle -}} \hfill \textit{ {{- $item.date -}} }}
     {{ end -}}
 }
 
 \begin{section}{Honors and Awards}
     \begin{subsectionbullet}
         {{ range $i, $item := (ds "honors") -}}
-        \item {{ $item.title | strings.ReplaceAll "%" "\\%" }} \hfill \textit{ {{ $item.date }} }
+        \item {{ $item.title | strings.ReplaceAll "%" "\\%" }} \hfill \textit{ {{- $item.date -}} }
         {{ end -}}
     \end{subsectionbullet}
 \end{section}
 
 \sectiontable{Technical Skills}{
     {{ range $i, $item := (ds "skills") -}}
-    \entry{ {{ $item.title }} }{ {{ conv.Join $item.skills ", " | strings.ReplaceAll "#" "\\#" }} }
+    \entry{ {{- $item.title -}} }{ {{- conv.Join $item.skills ", " | strings.ReplaceAll "#" "\\#" -}} }
     {{ end -}}
 }
 
 \begin{section}{Research Experience}
-    {{ range $i, $item := (ds "experiences_research") -}}
-        \begin{subsection}{ {{ $item.title }} }{ {{ $item.subtitle | strings.ReplaceAll "&" "\\&" }} }{ {{ $item.date }} }{ {{ $item.location }} }
-            {{ range $j, $_item := $item.items -}}
-            \item {{ $_item.text | strings.ReplaceAll "&" "\\&" }} {{ if coll.Has $_item "link" }}\;\href{ {{ $_item.link }} }{\faExternalLink*}{{ end }}
-            {{ end -}}
-        \end{subsection}
-    {{ end -}}
+    {{ template "subsections" (ds "experiences_research") }}
 \end{section}
 
 \begin{section}{Teaching Experience}
-    {{ range $i, $item := (ds "experiences_teaching") -}}
-        \begin{subsection}{ {{ $item.title }} }{ {{ $item.subtitle | strings.ReplaceAll "&" "\\&" }} }{ {{ $item.date }} }{ {{ $item.location }} }
-            {{ range $j, $_item := $item.items -}}
-            \item {{ $_item.text | strings.ReplaceAll "&" "\\&" }} {{ if coll.Has $_item "link" }}\;\href{ {{ $_item.link }} }{\faExternalLink*}{{ end }}
-            {{ end -}}
-        \end{subsection}
-    {{ end -}}
+    {{ template "subsections" (ds "experiences_teaching") }}
 \end{section}
 
 \begin{section}{Work Experience}
-    {{ range $i, $item := (ds "experiences_work") -}}
-        \begin{subsection}{ {{ $item.title }} }{ {{ $item.subtitle | strings.ReplaceAll "&" "\\&" }} }{ {{ $item.date }} }{ {{ $item.location }} }
-            {{ range $j, $_item := $item.items -}}
-            \item {{ $_item.text | strings.ReplaceAll "&" "\\&" }} {{ if coll.Has $_item "link" }}\;\href{ {{ $_item.link }} }{\faExternalLink*}{{ end }}
-            {{ end -}}
-        \end{subsection}
-    {{ end -}}
+    {{ template "subsections" (ds "experiences_work") }}
 \end{section}
 
 \begin{section}{Notable Projects}
-    {{ range $i, $item := (ds "projects_notable") -}}
-        \begin{subsection}{ {{ $item.title }} }{ {{ $item.subtitle | strings.ReplaceAll "&" "\\&" }} }{ {{ $item.date }} }{ {{ $item.location }} }
-            {{ range $j, $_item := $item.items -}}
-            \item {{ $_item.text | strings.ReplaceAll "&" "\\&" }} {{ if coll.Has $_item "link" }}\;\href{ {{ $_item.link }} }{\faExternalLink*}{{ end }}
-            {{ end -}}
-        \end{subsection}
-    {{ end -}}
+    {{ template "subsections" (ds "projects_notable") }}
 \end{section}
 
 \begin{section}{Published Projects}
-    {{ range $i, $item := (ds "projects_published") -}}
-        \begin{subsection}{ {{ $item.title }} }{ {{ $item.subtitle | strings.ReplaceAll "&" "\\&" }} }{ {{ $item.date }} }{ {{ $item.location }} }
-            {{ range $j, $_item := $item.items -}}
-            \item {{ $_item.text | strings.ReplaceAll "&" "\\&" }} {{ if coll.Has $_item "link" }}\;\href{ {{ $_item.link }} }{\faExternalLink*}{{ end }}
-            {{ end -}}
-        \end{subsection}
-    {{ end -}}
+    {{ template "subsections" (ds "projects_published") }}
 \end{section}
 
 \sectiontable{Languages}{
     {{ range $i, $item := (ds "languages") -}}
-    \entry{ {{ $item.title }} }{ {{ $item.description }} }
+    \entry{ {{- $item.title -}} }{ {{- $item.description -}} }
     {{ end -}}
 }
 
