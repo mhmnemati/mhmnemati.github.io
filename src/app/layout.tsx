@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "KoLiBer",
     description: "KoLiBer personal website",
     icons: {
-        icon: "/images/icon.jpg",
+        icon: "/images/favicon.ico",
     },
     keywords: [
         "KoLiBer",

@@ -71,7 +71,7 @@ function PHero() {
                 </Link>
             </span>
             <span>
-                <Link href="/main.pdf" target="_blank">
+                <Link href="/CV.pdf" target="_blank">
                     <Frame
                         as="button"
                         size="small"
@@ -176,7 +176,7 @@ function About() {
                                 </Link>
                             </div>
                             <div>
-                                <Link href="/main.pdf" target="_blank">
+                                <Link href="/CV.pdf" target="_blank">
                                     <Frame
                                         as="button"
                                         size="small"

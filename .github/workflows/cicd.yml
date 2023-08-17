@@ -26,7 +26,7 @@ jobs:
                   latexmk_use_xelatex: true
                   working_directory: private/CV
                   root_file: main.tex
-            - run: cp private/CV/main.pdf out
+            - run: cp private/CV/main.pdf out/CV.pdf
             - uses: actions/upload-artifact@v3
               with:
                   name: public
