@@ -255,7 +255,7 @@ function Resume() {
                         <Text
                             key={index}
                             as="li"
-                            contentClassName="w-full pr-8"
+                            contentClassName="w-full md:pr-8"
                         >
                             <div className="flex justify-between">
                                 <b>{`${item.title}: `}</b>
