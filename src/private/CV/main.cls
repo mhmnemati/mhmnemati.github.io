@@ -86,7 +86,7 @@
         {\faGlobeAmericas}\hspace{0.5em}#1}
 }
 \newcommand{\phone}[1]{
-    \textcolor{black}{\faPhone*}\hspace{0.5em}#1
+    \href{tel:#1}{\textcolor{black}{\faPhone*}\hspace{0.5em}#1}
 }
 \newcommand{\nationality}[1]{
     \textcolor{black}{\faFlagUsa}\hspace{0.5em}#1

@@ -1,15 +1,15 @@
 \documentclass[]{main}
-\fullname{Mohammad Hosein Nemati}
+\fullname{ {{- (ds "about").name -}} }
 \jobtitle{DevOps Engineer}
 
 \begin{document}
 \resumeheader
-{\email{ckoliber@gmail.com}}
-{\linkedin{ckoliber}}
-{\github{ckoliber}}
+{\email{ {{- (ds "about").email -}} }}
+{\linkedin{ {{- (ds "about").linkedin -}} }}
+{\github{ {{- (ds "about").github -}} }}
 {\phone{+98 937-758-8105}}
-{\website{koliber.ir}}
-{\nationality{Iran}}
+{\website{ {{- (ds "about").website -}} }}
+{\nationality{Iran, Tehran}}
 
 {{ define "markdown" }}
 {{- . | strings.ReplaceAll "&" "\\&" | strings.ReplaceAll "#" "\\#" | strings.ReplaceAll "%" "\\%" | regexp.Replace "[*][*](.*?)[*][*]" "\\textbf{$1}" | regexp.Replace "[*](.*?)[*]" "\\textit{$1}" -}}
