@@ -19,7 +19,7 @@
 {{ range $i, $item := . -}}
     \begin{subsection}{ {{- $item.title -}} }{ {{- $item.subtitle | tmpl.Exec "markdown" -}} }{ {{- $item.date -}} }{ {{- $item.location -}} }
         {{ range $j, $_item := $item.items -}}
-        \item {{ $_item.text | tmpl.Exec "markdown" }}
+        \item {{ $_item.text | tmpl.Exec "markdown" }} {{ if has $_item "link" -}} \;\href{ {{- $_item.link -}} }{\faExternalLink*} {{- end }}
         {{ end -}}
     \end{subsection}
 {{ end -}}
@@ -29,7 +29,7 @@
 {{ range $i, $item := . -}}
     \begin{subsectionnobullet}{ {{- $item.title -}} }{ {{- $item.subtitle | tmpl.Exec "markdown" -}} }{ {{- $item.date -}} }{ {{- $item.location -}} }
         {{ range $j, $_item := $item.items -}}
-        \item {{ $_item.text | tmpl.Exec "markdown" }}
+        \item {{ $_item.text | tmpl.Exec "markdown" }} {{ if has $_item "link" -}} \;\href{ {{- $_item.link -}} }{\faExternalLink*} {{- end }}
         {{ end -}}
     \end{subsectionnobullet}
 {{ end -}}
