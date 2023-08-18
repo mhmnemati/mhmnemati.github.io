@@ -65,6 +65,10 @@ export default function Component(props: { children: React.ReactNode }) {
             <Global
                 styles={{
                     ...(stylesBaseline as Record<string, CSSObject>),
+                    body: {
+                        lineHeight: 1.8,
+                    },
+
                     ...Object.assign(
                         {},
                         ...[
