@@ -89,7 +89,7 @@ function Home() {
 
 function About() {
     return (
-        <section id="about" className="flex flex-col items-center p-8">
+        <section id="about" className="flex flex-col items-center p-4 md:p-8">
             <div className="container max-w-screen-xl">
                 <div className="grid grid-cols-3 gap-8">
                     <div className="col-span-3">
@@ -200,7 +200,7 @@ function About() {
 
 function Resume() {
     return (
-        <section id="about" className="flex flex-col items-center p-8">
+        <section id="about" className="flex flex-col items-center p-4 md:p-8">
             <div className="container max-w-screen-xl">
                 <Text as="h2" className="warning mb-4">
                     Educations

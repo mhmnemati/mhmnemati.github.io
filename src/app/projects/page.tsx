@@ -13,7 +13,7 @@ export default function Page() {
             <Hero image="/images/break_projects.jpg" height="70vh">
                 <Text as="h1">Projects</Text>
             </Hero>
-            <section className="flex flex-col items-center p-8">
+            <section className="flex flex-col items-center p-4 md:p-8">
                 <div className="container max-w-screen-xl">
                     <Text as="h2" className="warning">
                         Notable Projects
@@ -26,7 +26,7 @@ export default function Page() {
                 </div>
             </section>
             <Frame as="hr" />
-            <section className="flex flex-col items-center p-8">
+            <section className="flex flex-col items-center p-4 md:p-8">
                 <div className="container max-w-screen-xl">
                     <Text as="h2" className="warning">
                         Published Projects
