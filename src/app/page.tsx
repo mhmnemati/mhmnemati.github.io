@@ -140,8 +140,8 @@ function About() {
                         </ul>
 
                         <Text as="h3">Contact Me</Text>
-                        <div className="flex flex-col md:flex-row justify-between">
-                            <div className="mb-4">
+                        <div className="flex flex-col md:flex-row justify-between md:items-center">
+                            <div className="mb-4 md:mb-0">
                                 <Link
                                     href={`https://www.linkedin.com/in/${about.linkedin}/`}
                                     target="_blank"
