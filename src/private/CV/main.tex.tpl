@@ -11,11 +11,15 @@
 {\website{koliber.ir}}
 {\nationality{Iran}}
 
+{{ define "markdown" }}
+{{- . | strings.ReplaceAll "&" "\\&" | strings.ReplaceAll "#" "\\#" | strings.ReplaceAll "%" "\\%" | regexp.Replace "[*][*](.*?)[*][*]" "\\textbf{$1}" | regexp.Replace "[*](.*?)[*]" "\\textit{$1}" -}}
+{{ end }}
+
 {{ define "subsections" -}}
 {{ range $i, $item := . -}}
-    \begin{subsection}{ {{- $item.title -}} }{ {{- $item.subtitle | strings.ReplaceAll "&" "\\&" -}} }{ {{- $item.date -}} }{ {{- $item.location -}} }
+    \begin{subsection}{ {{- $item.title -}} }{ {{- $item.subtitle | tmpl.Exec "markdown" -}} }{ {{- $item.date -}} }{ {{- $item.location -}} }
         {{ range $j, $_item := $item.items -}}
-        \item {{ $_item.text | strings.ReplaceAll "&" "\\&" }}
+        \item {{ $_item.text | tmpl.Exec "markdown" }}
         {{ end -}}
     \end{subsection}
 {{ end -}}
@@ -23,16 +27,16 @@
 
 {{ define "subsectionsnobullet" -}}
 {{ range $i, $item := . -}}
-    \begin{subsectionnobullet}{ {{- $item.title -}} }{ {{- $item.subtitle | strings.ReplaceAll "&" "\\&" -}} }{ {{- $item.date -}} }{ {{- $item.location -}} }
+    \begin{subsectionnobullet}{ {{- $item.title -}} }{ {{- $item.subtitle | tmpl.Exec "markdown" -}} }{ {{- $item.date -}} }{ {{- $item.location -}} }
         {{ range $j, $_item := $item.items -}}
-        \item {{ $_item.text | strings.ReplaceAll "&" "\\&" }}
+        \item {{ $_item.text | tmpl.Exec "markdown" }}
         {{ end -}}
     \end{subsectionnobullet}
 {{ end -}}
 {{ end -}}
 
 \begin{section}{Education}
-    {{ template "subsectionsnobullet" (ds "educations") }}
+    {{ (ds "educations") | tmpl.Exec "subsectionsnobullet" }}
 \end{section}
 
 \begin{section}{Areas of Interest}
@@ -62,35 +66,35 @@
 \begin{section}{Honors and Awards}
     \begin{subsectionbullet}
         {{ range $i, $item := (ds "honors") -}}
-        \item {{ $item.title | strings.ReplaceAll "%" "\\%" }} \hfill \textit{ {{- $item.date -}} }
+        \item {{ $item.title | tmpl.Exec "markdown" }} \hfill \textit{ {{- $item.date -}} }
         {{ end -}}
     \end{subsectionbullet}
 \end{section}
 
 \sectiontable{Technical Skills}{
     {{ range $i, $item := (ds "skills") -}}
-    \entry{ {{- $item.title -}} }{ {{- conv.Join $item.skills ", " | strings.ReplaceAll "#" "\\#" -}} }
+    \entry{ {{- $item.title -}} }{ {{- conv.Join $item.skills ", " | tmpl.Exec "markdown" -}} }
     {{ end -}}
 }
 
 \begin{section}{Research Experience}
-    {{ template "subsections" (ds "experiences_research") }}
+    {{ (ds "experiences_research") | tmpl.Exec "subsections" }}
 \end{section}
 
 \begin{section}{Teaching Experience}
-    {{ template "subsections" (ds "experiences_teaching") }}
+    {{ (ds "experiences_teaching") | tmpl.Exec "subsections" }}
 \end{section}
 
 \begin{section}{Work Experience}
-    {{ template "subsections" (ds "experiences_work") }}
+    {{ (ds "experiences_work") | tmpl.Exec "subsections" }}
 \end{section}
 
 \begin{section}{Notable Projects}
-    {{ template "subsections" (ds "projects_notable") }}
+    {{ (ds "projects_notable") | tmpl.Exec "subsections" }}
 \end{section}
 
 \begin{section}{Published Projects}
-    {{ template "subsections" (ds "projects_published") }}
+    {{ (ds "projects_published") | tmpl.Exec "subsections" }}
 \end{section}
 
 \sectiontable{Languages}{
