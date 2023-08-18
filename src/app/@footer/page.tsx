@@ -10,7 +10,7 @@ import {
     faReact,
 } from "@fortawesome/free-brands-svg-icons";
 
-import about from "@/contents/about.json";
+import about from "@/contents/about.yaml";
 
 export default function Page(props: { children: React.ReactNode }) {
     return (

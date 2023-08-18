@@ -4,8 +4,8 @@ import Text from "@/components/Text";
 import Hero from "@/components/Hero";
 import Card from "@/components/Card";
 
-import notable from "@/contents/projects/notable.json";
-import published from "@/contents/projects/published.json";
+import notable from "@/contents/projects/notable.yaml";
+import published from "@/contents/projects/published.yaml";
 
 export default function Page() {
     return (
@@ -19,8 +19,8 @@ export default function Page() {
                         Notable Projects
                     </Text>
                     <Animator manager="sequence">
-                        {notable.map((item, idx) => (
-                            <Card key={idx} {...(item as any)} />
+                        {notable.map((item: any, idx: number) => (
+                            <Card key={idx} {...item} />
                         ))}
                     </Animator>
                 </div>
@@ -32,8 +32,8 @@ export default function Page() {
                         Published Projects
                     </Text>
                     <Animator manager="sequence">
-                        {published.map((item, idx) => (
-                            <Card key={idx} {...(item as any)} />
+                        {published.map((item: any, idx: number) => (
+                            <Card key={idx} {...item} />
                         ))}
                     </Animator>
                 </div>

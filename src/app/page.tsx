@@ -14,15 +14,15 @@ import {
     faSkype,
 } from "@fortawesome/free-brands-svg-icons";
 
-import about from "@/contents/about.json";
-import interests from "@/contents/interests.json";
-import languages from "@/contents/languages.json";
+import about from "@/contents/about.yaml";
+import interests from "@/contents/interests.yaml";
+import languages from "@/contents/languages.yaml";
 
-import educations from "@/contents/educations.json";
-import licenses from "@/contents/licenses.json";
-import courses from "@/contents/courses.json";
-import honors from "@/contents/honors.json";
-import skills from "@/contents/skills.json";
+import educations from "@/contents/educations.yaml";
+import licenses from "@/contents/licenses.yaml";
+import courses from "@/contents/courses.yaml";
+import honors from "@/contents/honors.yaml";
+import skills from "@/contents/skills.yaml";
 
 function PHero() {
     return (
@@ -95,11 +95,13 @@ function About() {
                     <div className="col-span-3">
                         <Text as="h2">About</Text>
                         <span className="mb-4">
-                            {about.summary.split("\n").map((text, idx) => (
-                                <Text key={idx} as="p">
-                                    {text}
-                                </Text>
-                            ))}
+                            {about.summary
+                                .split("\n")
+                                .map((text: any, idx: number) => (
+                                    <Text key={idx} as="p">
+                                        {text}
+                                    </Text>
+                                ))}
                         </span>
                     </div>
                     <div className="col-span-3 md:col-span-1">
@@ -120,7 +122,7 @@ function About() {
                     <div className="col-span-3 md:col-span-2">
                         <Text as="h3">Interests</Text>
                         <ul className="mb-4">
-                            {interests.map((item, index) => (
+                            {interests.map((item: any, index: number) => (
                                 <Text key={index} as="li">
                                     {item}
                                 </Text>
@@ -129,7 +131,7 @@ function About() {
 
                         <Text as="h3">Languages</Text>
                         <ul className="mb-4">
-                            {languages.map((item, index) => (
+                            {languages.map((item: any, index: number) => (
                                 <Text key={index} as="li">
                                     <b>{`${item.title}: `}</b>
                                     {item.description}
@@ -203,8 +205,8 @@ function Resume() {
                 <Text as="h2" className="warning mb-4">
                     Educations
                 </Text>
-                {educations.map((item, index) => (
-                    <Card key={index} {...(item as any)} />
+                {educations.map((item: any, index: number) => (
+                    <Card key={index} {...item} />
                 ))}
 
                 <Frame as="hr" className="my-8" />
@@ -213,7 +215,7 @@ function Resume() {
                     Honors & Awards
                 </Text>
                 <ul>
-                    {honors.map((item, index) => (
+                    {honors.map((item: any, index: number) => (
                         <Text key={index} as="li">
                             {item.title} {item.date}
                         </Text>
@@ -226,7 +228,7 @@ function Resume() {
                     Technical Skills
                 </Text>
                 <ul>
-                    {skills.map((item, index) => (
+                    {skills.map((item: any, index: number) => (
                         <Text key={index} as="li">
                             {item.title} {item.skills.join(" ")}
                         </Text>
@@ -239,7 +241,7 @@ function Resume() {
                     Relevant Courses
                 </Text>
                 <ul>
-                    {courses.map((item, index) => (
+                    {courses.map((item: any, index: number) => (
                         <Text key={index} as="li">
                             <b>{`${item.title}: `}</b> <i>{item.grade}</i>
                         </Text>
@@ -251,8 +253,8 @@ function Resume() {
                 <Text as="h2" className="warning mb-4">
                     Licenses & Certifications
                 </Text>
-                {licenses.map((item, index) => (
-                    <Card key={index} {...(item as any)} />
+                {licenses.map((item: any, index: number) => (
+                    <Card key={index} {...item} />
                 ))}
             </div>
         </section>

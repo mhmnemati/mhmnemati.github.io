@@ -4,9 +4,9 @@ import Text from "@/components/Text";
 import Hero from "@/components/Hero";
 import Card from "@/components/Card";
 
-import research from "@/contents/experiences/research.json";
-import teaching from "@/contents/experiences/teaching.json";
-import work from "@/contents/experiences/work.json";
+import research from "@/contents/experiences/research.yaml";
+import teaching from "@/contents/experiences/teaching.yaml";
+import work from "@/contents/experiences/work.yaml";
 
 export default function Page() {
     return (
@@ -20,8 +20,8 @@ export default function Page() {
                         Research Experiences
                     </Text>
                     <Animator manager="sequence">
-                        {research.map((item, idx) => (
-                            <Card key={idx} {...(item as any)} />
+                        {research.map((item: any, idx: number) => (
+                            <Card key={idx} {...item} />
                         ))}
                     </Animator>
                 </div>
@@ -33,8 +33,8 @@ export default function Page() {
                         Teaching Experiences
                     </Text>
                     <Animator manager="sequence">
-                        {teaching.map((item, idx) => (
-                            <Card key={idx} {...(item as any)} />
+                        {teaching.map((item: any, idx: number) => (
+                            <Card key={idx} {...item} />
                         ))}
                     </Animator>
                 </div>
@@ -46,8 +46,8 @@ export default function Page() {
                         Work Experiences
                     </Text>
                     <Animator manager="sequence">
-                        {work.map((item, idx) => (
-                            <Card key={idx} {...(item as any)} />
+                        {work.map((item: any, idx: number) => (
+                            <Card key={idx} {...item} />
                         ))}
                     </Animator>
                 </div>

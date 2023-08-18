@@ -10,6 +10,13 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+    webpack: function (config) {
+        config.module.rules.push({
+            test: /\.ya?ml$/,
+            use: "yaml-loader",
+        });
+        return config;
+    },
 };
 
 const withMDX = require("@next/mdx")();
