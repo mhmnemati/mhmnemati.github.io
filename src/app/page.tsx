@@ -229,21 +229,38 @@ function Resume() {
                 </Text>
                 <ul>
                     {skills.map((item: any, index: number) => (
-                        <Text key={index} as="li">
-                            {item.title} {item.skills.join(" ")}
+                        <Text
+                            key={index}
+                            as="li"
+                            contentClassName="w-full pr-8"
+                        >
+                            <div className="flex justify-between">
+                                <b>{`${item.title}: `}</b>
+                                <i>{item.skills.join(", ")}</i>
+                            </div>
                         </Text>
                     ))}
                 </ul>
 
                 <Frame as="hr" className="my-8" />
 
-                <Text as="h2" className="warning mb-4">
+                <Text as="h2" className="warning">
                     Relevant Courses
                 </Text>
-                <ul>
+                <Text as="blockquote" className="mb-4">
+                    Graduate courses are indicated by *
+                </Text>
+                <ul className="grid grid-cols-1 md:grid-cols-2">
                     {courses.map((item: any, index: number) => (
-                        <Text key={index} as="li">
-                            <b>{`${item.title}: `}</b> <i>{item.grade}</i>
+                        <Text
+                            key={index}
+                            as="li"
+                            contentClassName="w-full pr-8"
+                        >
+                            <div className="flex justify-between">
+                                <b>{`${item.title}: `}</b>
+                                <i>{item.grade}</i>
+                            </div>
                         </Text>
                     ))}
                 </ul>
