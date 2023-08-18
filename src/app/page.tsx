@@ -24,7 +24,7 @@ import courses from "@/contents/courses.yaml";
 import honors from "@/contents/honors.yaml";
 import skills from "@/contents/skills.yaml";
 
-function PHero() {
+function Home() {
     return (
         <Hero id="home" image="/images/hero.jpg">
             <Text as="h1">I&apos;m {about.name}</Text>
@@ -264,7 +264,7 @@ function Resume() {
 export default function Page() {
     return (
         <>
-            <PHero />
+            <Home />
             <About />
             <Hero id="resume" image="/images/break_resume.jpg" height="40vh">
                 <Text as="h1">Resume</Text>
