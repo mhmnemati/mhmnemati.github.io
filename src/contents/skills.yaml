@@ -8,7 +8,16 @@
       - Python
       - MATLAB
       - Erlang
-- title: Cluster Orchestrators
+- title: Client Development
+  skills:
+      - HTML/CSS
+      - TailwindCSS
+      - React.JS
+      - ReactNative
+      - Android Studio
+      - Electron.JS
+      - Qt/QML (C++)
+- title: Workload Managers
   skills:
       - Docker
       - Kubernetes

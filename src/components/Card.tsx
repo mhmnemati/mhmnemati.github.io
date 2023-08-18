@@ -40,7 +40,7 @@ export default function Component(props: CardProps) {
                 </div>
             )}
             <div className={`p-4 col-span-3 ${props.logo && "md:col-span-2"}`}>
-                <div className="flex justify-between align-middle">
+                <div className="flex flex-col md:flex-row justify-between align-middle">
                     {props.link ? (
                         <Link href={props.link}>
                             <Text as="h3">{props.title}</Text>
@@ -50,13 +50,15 @@ export default function Component(props: CardProps) {
                     )}
                     <Text as="h6">{props.date}</Text>
                 </div>
-                <div className="flex justify-between align-middle">
+                <div className="flex flex-col md:flex-row justify-between align-middle">
                     <Text as="h5" className="secondary">
                         {props.subtitle}
                     </Text>
-                    <Text as="h6" className="secondary">
-                        {props.location}
-                    </Text>
+                    {props.location && (
+                        <Text as="h6" className="secondary">
+                            {props.location}
+                        </Text>
+                    )}
                 </div>
                 {props.items && <Frame as="hr" className="my-2" />}
                 <ul>
