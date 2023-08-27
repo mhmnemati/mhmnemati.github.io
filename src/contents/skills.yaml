@@ -23,12 +23,13 @@
       - PostgreSQL
       - MySQL
       - SQLite
-      - Redis
-      - RabbitMQ
-      - Minio
+      - MongoDB
       - CouchBase
       - Aerospike
-      - Cassandra/SkyllaDB
+      - Cassandra/ScyllaDB
+      - RabbitMQ
+      - Redis
+      - Minio
 - title: Container Orchestration
   skills:
       - Docker

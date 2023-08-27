@@ -1,18 +1,70 @@
-- link: https://github.com/ckoliber/nlpexercises
-  title: Natural Language Processing
-  subtitle: Prof. Bagher Babaali
+- link: https://github.com/cktf
+  title: Terraform Community Modules
+  subtitle: Open Source
   location: ""
-  date: Fall 2022
+  date: ""
   items:
-      - text: Training N-Gram Language Model on Hamshahri v2 dataset (Persian Newspaper) using NLTK
-        link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise1.ipynb
-      - text: Implementation of Hidden-Markov-Model from scratch in python (Baum Welch Algorithm, Viterbi Algorithm)
-        link: https://github.com/ckoliber/nlpexercises/blob/main/src/hmm/hmm.py
-      - text: Part-of-Speech Tagging using Hidden-Markov-Model
-        link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise3.ipynb
-      - text: Applying TF-IDF and LSA for Text Classification on Persica dataset
-        link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise4.ipynb
-      - text: Text Classification on Persica dataset using ParsBERT
-        link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise5.ipynb
-      - text: Part-of-Speech Tagging on Persian dataset using ParsBERT
-        link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise6.ipynb
+      - text: "[**terraform-module-rke**](https://github.com/cktf/terraform-module-rke): Terraform module for Provisioning HA Kubernetes clusters using K3s and RKE2 on hosts using SSH, WinRM"
+        link: https://github.com/cktf/terraform-module-rke
+      - text: "[**terraform-aws-wireguard**](https://github.com/cktf/terraform-aws-wireguard): Terraform module for Provisioning Wireguard VPN instance and manage users on AWS cloud"
+        link: https://github.com/cktf/terraform-aws-wireguard
+      - text: "[**terraform-hcloud-rke**](https://github.com/cktf/terraform-hcloud-rke): Terraform module for Provisioning HA Kubernetes clusters using K3s and RKE2 on Hetzner cloud"
+        link: https://github.com/cktf/terraform-hcloud-rke
+      - text: "[**terraform-hcloud-network**](https://github.com/cktf/terraform-hcloud-network): Terraform module for Creating and Managing Network, Subnet on Hetzner cloud"
+        link: https://github.com/cktf/terraform-hcloud-network
+      - text: "[**terraform-hcloud-wireguard**](https://github.com/cktf/terraform-hcloud-wireguard): Terraform module for Provisioning Wireguard VPN instance and manage Users on Hetzner cloud"
+        link: https://github.com/cktf/terraform-hcloud-wireguard
+      - text: "[**terraform-openstack-rke**](https://github.com/cktf/terraform-openstack-rke): Terraform module for Provisioning HA Kubernetes clusters using K3s and RKE2 on OpenStack cloud"
+        link: https://github.com/cktf/terraform-openstack-rke
+      - text: "[**terraform-openstack-network**](https://github.com/cktf/terraform-openstack-network): Terraform module for Creating and Managing Network, Subnet, Routes on OpenStack cloud"
+        link: https://github.com/cktf/terraform-openstack-network
+      - text: "[**terraform-kubernetes-x509**](https://github.com/cktf/terraform-kubernetes-x509): Terraform module for Creating and Managing X.509 Certificate and RoleBinding on Kubernetes"
+        link: https://github.com/cktf/terraform-kubernetes-x509
+      - text: "[**terraform-kubernetes-environment**](https://github.com/cktf/terraform-kubernetes-environment): Terraform module for Creating and Managing isolated environments on Kubernetes"
+        link: https://github.com/cktf/terraform-kubernetes-environment
+      - text: "[**terraform-gitlab-application**](https://github.com/cktf/terraform-gitlab-application): Terraform module for Creating and Managing Groups, Projects and default organization policies on Gitlab"
+        link: https://github.com/cktf/terraform-gitlab-application
+      - text: "[**terraform-gitlab-environment**](https://github.com/cktf/terraform-gitlab-environment): Terraform module for Creating and Managing Environments for Projects on Gitlab"
+        link: https://github.com/cktf/terraform-gitlab-environment
+      - text: "[**windows-cloud-image**](https://github.com/ckoliber/windows-cloud-image): Packer configs to create Windows Cloud Image uisng VirtualBox and QEMU"
+        link: https://github.com/ckoliber/windows-cloud-image
+
+- link: https://github.com/loopback4
+  title: Loopback4 Community Components
+  subtitle: Open Source
+  location: ""
+  date: ""
+  items:
+      - text: "[**loopback-component-crud**](https://github.com/loopback4/loopback-component-crud): Generating CRUD endpoints from Model supports AuthZ, Nested-Create, Nested-Update"
+        link: https://github.com/loopback4/loopback-component-crud
+      - text: "[**loopback-component-filter**](https://github.com/loopback4/loopback-component-filter): Filtering Model records based on user permissions in ORM Repository level"
+        link: https://github.com/loopback4/loopback-component-filter
+      - text: "[**loopback-component-history**](https://github.com/loopback4/loopback-component-history): Adding Soft-Delete and Soft-Update functionality in ORM Repository level"
+        link: https://github.com/loopback4/loopback-component-history
+      - text: "[**loopback-component-cascade**](https://github.com/loopback4/loopback-component-cascade): Adding Cascade functionality to models in ORM Repository level"
+        link: https://github.com/loopback4/loopback-component-cascade
+      - text: "[**loopback-component-authorization**](https://github.com/loopback4/loopback-component-authorization): Supporting HRBAC (Hierarchical Role Based Access Control) authorization"
+        link: https://github.com/loopback4/loopback-component-authorization
+
+- title: ReactAdmin Data Providers
+  subtitle: Open Source
+  location: ""
+  date: ""
+  items:
+      - text: "[**ra-data-lb4**](https://github.com/loopback4/ra-data-lb4): Loopback4 auto-generated CRUD endpoints data-provider library"
+        link: https://github.com/loopback4/ra-data-lb4
+      - text: "[**ra-data-mixer**](https://github.com/ckoliber/ra-data-mixer): Mixing multiple data-providers into one data-provider library"
+        link: https://github.com/ckoliber/ra-data-mixer
+      - text: "[**ra-data-processmaker3**](https://github.com/ckoliber/ra-data-processmaker3): ProcessMaker3 BPMS CRUD endpoints data-provider library"
+        link: https://github.com/ckoliber/ra-data-processmaker3
+
+- link: https://github.com/ckoliber/cham
+  title: Chapar Messenger (ChaM)
+  subtitle: Open Source
+  location: ""
+  date: ""
+  items:
+      - text: Socket programming in C & Erlang, implementing hole punching for P2P direct connections
+      - text: Implementing Desktop Chat Application using Qt, C++, QML
+      - text: Implementing Android Chat Application using Java, C (JNI), AndroidStudio
+      - text: Using FFMPEG to implement audio & video streaming using native API's and raw sockets

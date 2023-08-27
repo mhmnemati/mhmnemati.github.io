@@ -16,6 +16,7 @@
         link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise5.ipynb
       - text: Part-of-Speech Tagging on Persian dataset using ParsBERT
         link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise6.ipynb
+
 - link: https://github.com/ckoliber/dipexercises
   title: Digital Image Processing
   subtitle: Prof. Hedieh Sajedi
@@ -28,6 +29,7 @@
         link: https://github.com/ckoliber/dipexercises/blob/main/src/exercise2.ipynb
       - text: CIFAR10 Classification using a Nested-Hierarchical Transformer (NesT)
         link: https://github.com/ckoliber/dipexercises/blob/main/src/project.ipynb
+
 - link: https://github.com/ckoliber/mlexercises
   title: Machine Learning
   subtitle: Prof. Bagher Babaali & Prof. Hedieh Sajedi
@@ -52,6 +54,7 @@
         link: https://github.com/ckoliber/mlexercises/blob/master/src/exercise2_1.ipynb
       - text: Heart Disease Prediction from Health Indicators using Decision Tree, Random Forest, XGBoost, SVM, MLP, ELM, and Autoencoder
         link: https://github.com/ckoliber/mlexercises/blob/master/src/project.ipynb
+
 - link: https://github.com/ckoliber/actexercises
   title: Advanced Computation Theory
   subtitle: Prof. Majid Alizadeh
@@ -62,6 +65,7 @@
         link: https://github.com/ckoliber/actexercises/blob/master/projects/interpreter.py
       - text: Implementation of Davis Language encoder and decoder for Universal Programs
         link: https://github.com/ckoliber/actexercises/blob/master/projects/encoder.py
+
 - title: Operation Systems
   subtitle: Prof. Saeed Reza Kheradpisheh
   location: ""
@@ -73,6 +77,7 @@
         link: https://github.com/ckoliber/Kprocessor
       - text: Implementation of Cross Platform IPC Tools (Semaphores, Shared Memories, Message Queues) in C
         link: https://github.com/ckoliber/Kipc
+
 - title: Compiler Design
   subtitle: Prof. Somaye Arabi
   location: ""
@@ -82,6 +87,7 @@
         link: https://github.com/ckoliber/Kson
       - text: Mini C Language compiler using Lex and Yacc
         link: https://github.com/ckoliber/minicc
+
 - title: Data Structures and Algorithms
   subtitle: Prof. Somaye Arabi
   location: ""
@@ -95,6 +101,7 @@
         link: https://github.com/ckoliber/kuffman
       - text: Implementation of Basic Data Structures (ArrayList, LinkedList, Stack, Queue, Deque) in C
         link: https://github.com/ckoliber/kstd
+
 - title: Advanced Programming
   subtitle: Prof. Keivan Borna
   location: ""

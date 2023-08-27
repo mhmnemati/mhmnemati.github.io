@@ -13,6 +13,7 @@
       - text: Using GitOps principle for CD (Continuous Deployment)
       - text: Writing Docker Swarm compose manifests
       - text: Setting up CI/CD using GitlabCI, Docker
+
 - title: University of Tehran
   subtitle: HPC Engineer
   location: Tehran, Iran
@@ -22,6 +23,7 @@
       - text: Setting up Slurm accounting and quota management
       - text: Provisioning entire cluster using Terraform (IaC)
       - text: Working with HPC containers (Nvidia Enroot, Nvidia Pyxis)
+
 - title: Pishgam Vira
   subtitle: DevOps Engineer
   location: Tehran, Iran
@@ -30,6 +32,7 @@
       - text: Implementing CI/CD for projects using GitHub Actions & Docker
       - text: Provisioning deployment servers using Docker Swarm
       - text: Automate release process using semantic-release
+
 - title: Mobtaker Darya
   subtitle: Full-stack Developer & DevOps Engineer
   location: Tehran, Iran
@@ -44,6 +47,7 @@
       - text: Provisioning deployment servers using Kubernetes
       - text: Writing Kubernetes manifests and packaging the in Helm Charts
       - text: Managing and coding entire infrastructure using Terraform (IaC)
+
 - title: TIS
   subtitle: Software Developer
   location: Tehran, Iran
@@ -53,6 +57,7 @@
       - text: Replacing Process360 with ProcessMaker as BPMS core
       - text: Implementing new UI using React.js and TypeScript
       - text: Implementing dynamic forms in client (Forms schema loaded from BPMS)
+
 - title: Farmeal
   subtitle: React Developer
   location: Tehran, Iran
@@ -61,6 +66,7 @@
       - text: Implementing food-shopping UI using React.js and TypeScript
       - text: Interacting with backend GraphQL API's using Apollo Client
       - text: Implementing CI/CD for project using GitlabCI & Docker
+
 - title: Self Employed
   subtitle: Full-stack Developer
   location: Tehran, Iran
