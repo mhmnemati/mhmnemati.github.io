@@ -12,7 +12,7 @@
 {\nationality{Iran, Tehran}}
 
 {{ define "markdown" }}
-{{- . | strings.ReplaceAll "&" "\\&" | strings.ReplaceAll "#" "\\#" | strings.ReplaceAll "%" "\\%" | strings.ReplaceAll "  \n" " \\newline " | regexp.Replace "[*][*](.*?)[*][*]" "\\textbf{$1}" | regexp.Replace "[*](.*?)[*]" "\\textit{$1}" -}}
+{{- . | strings.ReplaceAll "&" "\\&" | strings.ReplaceAll "#" "\\#" | strings.ReplaceAll "%" "\\%" | strings.ReplaceAll "  \n" " \\newline " | regexp.Replace "[*][*](.*?)[*][*]" "\\textbf{$1}" | regexp.Replace "[*](.*?)[*]" "\\textit{$1}" | regexp.Replace "[[](.*?)[]][(](.*?)[)]" "\\href{$2}{$1}" -}}
 {{ end }}
 
 {{ define "subsections" -}}
