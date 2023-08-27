@@ -50,7 +50,7 @@ export default async function Component(props: CardProps) {
                     ) : (
                         <Text as="h3">{props.title}</Text>
                     )}
-                    <Text as="h6">{props.date}</Text>
+                    {props.date && <Text as="h6">{props.date}</Text>}
                 </div>
                 <div className="flex flex-col md:flex-row justify-between md:items-center">
                     <Text as="h5" className="secondary">
