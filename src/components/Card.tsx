@@ -40,7 +40,11 @@ export default async function Component(props: CardProps) {
             <div className={`p-4 col-span-3 ${props.logo && "md:col-span-2"}`}>
                 <div className="flex flex-col md:flex-row justify-between md:items-center">
                     {props.link ? (
-                        <Link href={props.link}>
+                        <Link
+                            href={props.link}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <Text as="h3">{props.title}</Text>
                         </Link>
                     ) : (
@@ -66,10 +70,10 @@ export default async function Component(props: CardProps) {
                                 <MDXRemote source={item_.text} />
                                 {item_.link && (
                                     <Link
+                                        className="ml-2"
                                         href={item_.link}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="ml-2"
                                     >
                                         <FontAwesomeIcon
                                             icon={faExternalLink}
