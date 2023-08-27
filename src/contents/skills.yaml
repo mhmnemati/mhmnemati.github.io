@@ -37,22 +37,42 @@
       - Kubernetes
       - Helm
       - Nomad
-      - Consul
       - Vault
       - Slurm
-      - ArgoCD
       - K3s
       - RKE
       - EKS
+- title: Networking & Loadbalancer
+  skills:
+      - Kong
+      - Nginx
+      - Traefik
+      - CoreDNS
+      - Envoy
+      - Consul
+      - Linkerd
+      - Cilium
 - title: Infrastructure & Cloud
   skills:
       - Terraform
+      - Crossplane
       - Packer
       - GitOps
       - ESXi
       - OpenStack
       - Hetzner Cloud
       - Amazon Web Services
+- title: Monitoring & Alerting
+  skills:
+      - Prometheus
+      - Grafana
+      - Grafana Agnet
+      - OpenTelemetry
+      - fluentd/fluentbit
+      - Loki
+      - Mimir
+      - Tempo
+      - Cortex
 - title: CI/CD & Automation
   skills:
       - DroneCI
@@ -60,6 +80,7 @@
       - TravisCI
       - Github Actions
       - Azure Pipelines
+      - ArgoCD
 - title: LowCode & NoCode
   skills:
       - N8n
