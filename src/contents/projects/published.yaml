@@ -64,7 +64,9 @@
   location: ""
   date: ""
   items:
-      - text: Socket programming in C & Erlang, implementing hole punching for P2P direct connections
-      - text: Implementing Desktop Chat Application using Qt, C++, QML
-      - text: Implementing Android Chat Application using Java, C (JNI), AndroidStudio
-      - text: Using FFMPEG to implement audio & video streaming using native API's and raw sockets
+      - text: Implementation of a custom protocol over TCP, UDP sockets for messaging using Erlang
+      - text: Implementation of Hole Punching for P2P direct connection on Audio and Video calls using Erlang
+      - text: Implementation of Resumable Streaming protocol over TCP for uploading and downloading files using C
+      - text: Implementation of Audio & Video frame streaming using android native API's and raw sockets (FFMPEG, JNI)
+      - text: Implementation of Android Messenger Application using Java, C (JNI), AndroidStudio
+      - text: Implementation of Desktop Messenger Application using Qt, C++, QML
