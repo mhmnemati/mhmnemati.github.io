@@ -17,9 +17,52 @@
       - Android Studio
       - Electron.JS
       - Qt/QML (C++)
-- title: Workload Managers
+- title: Storage & Database
+  skills:
+      - Microsoft SQL Server
+      - PostgreSQL
+      - MySQL
+      - SQLite
+      - Redis
+      - RabbitMQ
+      - Minio
+      - CouchBase
+      - Aerospike
+      - Cassandra/SkyllaDB
+- title: Container Orchestration
   skills:
       - Docker
+      - DockerSwarm
+      - DockerCompose
       - Kubernetes
+      - Helm
       - Nomad
+      - Consul
+      - Vault
       - Slurm
+      - ArgoCD
+      - K3s
+      - RKE
+      - EKS
+- title: Infrastructure & Cloud
+  skills:
+      - Terraform
+      - Packer
+      - GitOps
+      - ESXi
+      - OpenStack
+      - Hetzner Cloud
+      - Amazon Web Services
+- title: CI/CD & Automation
+  skills:
+      - DroneCI
+      - GitlabCI
+      - TravisCI
+      - Github Actions
+      - Azure Pipelines
+- title: LowCode & NoCode
+  skills:
+      - N8n
+      - Hasura
+      - Strapi
+      - ReactAdmin
