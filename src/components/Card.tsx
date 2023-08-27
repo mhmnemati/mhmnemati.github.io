@@ -1,13 +1,11 @@
-"use client";
-
-import { Animator } from "@arwes/react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 import Image from "next/image";
 import Link from "next/link";
 
+import Animator from "./Animator";
 import Frame from "./Frame";
 import Text from "./Text";
 
@@ -21,7 +19,7 @@ export interface CardProps {
     items?: [{ text: string; link?: string }];
 }
 
-export default function Component(props: CardProps) {
+export default async function Component(props: CardProps) {
     return (
         <Frame
             className="my-4 grid grid-cols-3"
@@ -64,20 +62,21 @@ export default function Component(props: CardProps) {
                 <ul>
                     <Animator manager="stagger">
                         {props.items?.map((item_: any, item_idx: number) => (
-                            <Text key={item_idx} as="li">
-                                {item_.text}{" "}
+                            <li key={item_idx}>
+                                <MDXRemote source={item_.text} />
                                 {item_.link && (
                                     <Link
                                         href={item_.link}
                                         target="_blank"
                                         rel="noreferrer"
+                                        className="ml-2"
                                     >
                                         <FontAwesomeIcon
                                             icon={faExternalLink}
                                         />
                                     </Link>
                                 )}
-                            </Text>
+                            </li>
                         ))}
                     </Animator>
                 </ul>

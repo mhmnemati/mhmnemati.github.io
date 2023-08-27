@@ -1,15 +1,18 @@
-[
-    {
-        "link": "",
-        "title": "",
-        "subtitle": "",
-        "location": "",
-        "date": "",
-        "items": [
-            {
-                "text": "",
-                "link": ""
-            }
-        ]
-    }
-]
+- link: https://github.com/ckoliber/nlpexercises
+  title: Natural Language Processing
+  subtitle: Prof. Bagher Babaali
+  location: ""
+  date: Fall 2022
+  items:
+      - text: Training N-Gram Language Model on Hamshahri v2 dataset (Persian Newspaper) using NLTK
+        link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise1.ipynb
+      - text: Implementation of Hidden-Markov-Model from scratch in python (Baum Welch Algorithm, Viterbi Algorithm)
+        link: https://github.com/ckoliber/nlpexercises/blob/main/src/hmm/hmm.py
+      - text: Part-of-Speech Tagging using Hidden-Markov-Model
+        link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise3.ipynb
+      - text: Applying TF-IDF and LSA for Text Classification on Persica dataset
+        link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise4.ipynb
+      - text: Text Classification on Persica dataset using ParsBERT
+        link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise5.ipynb
+      - text: Part-of-Speech Tagging on Persian dataset using ParsBERT
+        link: https://github.com/ckoliber/nlpexercises/blob/main/src/exercise6.ipynb

@@ -1,5 +1,3 @@
-"use client";
-
 export interface HeroProps {
     children?: React.ReactNode;
     height?: string;

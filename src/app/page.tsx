@@ -123,19 +123,17 @@ function About() {
                         <Text as="h3">Interests</Text>
                         <ul className="mb-4">
                             {interests.map((item: any, index: number) => (
-                                <Text key={index} as="li">
-                                    {item}
-                                </Text>
+                                <li key={index}>{item}</li>
                             ))}
                         </ul>
 
                         <Text as="h3">Languages</Text>
                         <ul className="mb-4">
                             {languages.map((item: any, index: number) => (
-                                <Text key={index} as="li">
+                                <li key={index}>
                                     <b>{`${item.title}: `}</b>
                                     {item.description}
-                                </Text>
+                                </li>
                             ))}
                         </ul>
 
@@ -209,18 +207,18 @@ function Resume() {
                     <Card key={index} {...item} />
                 ))}
 
-                <Frame as="hr" className="my-8" />
+                {/* <Frame as="hr" className="my-8" />
 
                 <Text as="h2" className="warning mb-4">
                     Honors & Awards
                 </Text>
                 <ul>
                     {honors.map((item: any, index: number) => (
-                        <Text key={index} as="li">
+                        <li key={index}>
                             {item.title} {item.date}
-                        </Text>
+                        </li>
                     ))}
-                </ul>
+                </ul> */}
 
                 <Frame as="hr" className="my-8" />
 
@@ -229,20 +227,18 @@ function Resume() {
                 </Text>
                 <ul>
                     {skills.map((item: any, index: number) => (
-                        <Text
-                            key={index}
-                            as="li"
-                            contentClassName="w-full pr-8"
-                        >
-                            <div className="flex justify-between">
+                        <li key={index} className="w-full pr-8">
+                            <div className="flex flex-col md:flex-row md:justify-between">
                                 <b>{`${item.title}: `}</b>
-                                <i>{item.skills.join(", ")}</i>
+                                <i className="text-start md:text-end mb-2 md:mb-0">
+                                    {item.skills.join(", ")}
+                                </i>
                             </div>
-                        </Text>
+                        </li>
                     ))}
                 </ul>
 
-                <Frame as="hr" className="my-8" />
+                {/* <Frame as="hr" className="my-8" />
 
                 <Text as="h2" className="warning">
                     Relevant Courses
@@ -252,18 +248,14 @@ function Resume() {
                 </Text>
                 <ul className="grid grid-cols-1 md:grid-cols-2">
                     {courses.map((item: any, index: number) => (
-                        <Text
-                            key={index}
-                            as="li"
-                            contentClassName="w-full md:pr-8"
-                        >
+                        <li key={index} className="w-full md:pr-8">
                             <div className="flex justify-between">
                                 <b>{`${item.title}: `}</b>
                                 <i>{item.grade}</i>
                             </div>
-                        </Text>
+                        </li>
                     ))}
-                </ul>
+                </ul> */}
 
                 <Frame as="hr" className="my-8" />
 

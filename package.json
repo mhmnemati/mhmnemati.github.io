@@ -27,6 +27,7 @@
         "eslint-config-next": "^13.4.12",
         "gomplate": "^3.11.5",
         "next": "^13.4.12",
+        "next-mdx-remote": "^4.4.1",
         "postcss": "^8.4.27",
         "postcss-functions": "^4.0.2",
         "react": "18.2.0",

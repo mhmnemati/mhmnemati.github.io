@@ -68,6 +68,9 @@ export default function Component(props: { children: React.ReactNode }) {
                     body: {
                         lineHeight: 1.8,
                     },
+                    p: {
+                        display: "inline",
+                    },
 
                     ...Object.assign(
                         {},

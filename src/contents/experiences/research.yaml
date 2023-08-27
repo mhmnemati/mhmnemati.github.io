@@ -1,8 +1,8 @@
-- link: ""
-  title: ""
-  subtitle: ""
-  location: ""
-  date: ""
+- title: Graduate Research Assistant
+  subtitle: Department of Mathematics, Statistics and Computer Science
+  location: University of Tehran
+  date: Feb 2023 -- Present
   items:
-      - text: ""
-        link: ""
+      - text: |
+            Automatic speech recognition in the air traffic control domain using **Wav2Vec-2**, **HuBERT**, **Whisper**  
+            Under the supervision of **Prof. Bagher Babaali**
