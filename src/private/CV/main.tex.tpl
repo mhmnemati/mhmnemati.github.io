@@ -59,7 +59,7 @@
 
 \sectiontable{Licenses \& Certifications}{
     {{ range $i, $item := (ds "licenses") -}}
-    \entry{ {{- $item.title -}} }{ {{- $item.subtitle -}} \hfill \textit{ {{- $item.date -}} }}
+    \entry{ {{- $item.title | tmpl.Exec "markdown" -}} }{ {{- $item.subtitle -}} \hfill \textit{ {{- $item.date -}} }}
     {{ end -}}
 }
 
@@ -73,7 +73,7 @@
 
 \sectiontable{Technical Skills}{
     {{ range $i, $item := (ds "skills") -}}
-    \entry{ {{- $item.title -}} }{ {{- conv.Join $item.skills ", " | tmpl.Exec "markdown" -}} }
+    \entry{ {{- $item.title | tmpl.Exec "markdown" -}} }{ {{- conv.Join $item.skills ", " | tmpl.Exec "markdown" -}} }
     {{ end -}}
 }
 

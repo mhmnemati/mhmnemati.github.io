@@ -194,7 +194,7 @@
 \newcommand{\sectiontable}[2]{
     \begin{section}{#1}
      \begin{adjustwidth}{0.0in}{0.1in}
-         \begin{tabularx}{\linewidth}{@{} >{\bfseries}l @{\hspace{5ex}} X @{}}
+         \begin{tabularx}{\linewidth}{@{} >{\bfseries}l @{\hspace{2.0ex}} X @{\vspace{1.0ex}}}
              #2
          \end{tabularx}
      \end{adjustwidth}
