@@ -20,7 +20,7 @@ jobs:
                   node-version: "18"
             - run: npm ci
             - run: npm run build
-            # - run: cp .github/CNAME out
+            - run: cp .github/CNAME out
             - uses: xu-cheng/latex-action@v2
               with:
                   latexmk_use_xelatex: true
