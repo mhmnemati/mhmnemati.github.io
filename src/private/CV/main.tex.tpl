@@ -7,8 +7,8 @@
 {\email{ {{- (ds "about").email -}} }}
 {\linkedin{ {{- (ds "about").linkedin -}} }}
 {\github{ {{- (ds "about").github -}} }}
-{\phone{+98 937-758-8105}}
 {\website{ {{- (ds "about").website -}} }}
+{\phone{+98 937-758-8105}}
 {\nationality{Iran, Tehran}}
 
 {{ define "markdown" }}
