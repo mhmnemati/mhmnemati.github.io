@@ -19,8 +19,8 @@
       - Qt/QML (C++)
 - title: Storage & Database
   skills:
-      - Microsoft SQL Server
       - PostgreSQL
+      - MSSQL
       - MySQL
       - SQLite
       - MongoDB
@@ -39,10 +39,18 @@
       - Helm
       - Nomad
       - Vault
-      - Slurm
       - K3s
       - RKE
       - EKS
+- title: High Performance Computing
+  skills:
+      - Slurm
+      - HTCondor
+      - SunGridEngine
+      - Rocks Cluster
+      - Nvidia Enroot
+      - Nvidia Pyxis
+      - Singularity
 - title: Networking & Loadbalancer
   skills:
       - Kong
