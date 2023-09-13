@@ -17,6 +17,16 @@
       - Android Studio
       - Electron.JS
       - Qt/QML (C++)
+- title: Machine/Deep Learning
+  skills:
+      - NumPy
+      - OpenCV
+      - Pandas
+      - Seaborn
+      - Matplotlib
+      - PyTorch
+      - Tensorflow
+      - Scikit-Learn
 - title: Storage & Database
   skills:
       - PostgreSQL

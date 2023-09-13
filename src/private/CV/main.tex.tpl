@@ -63,8 +63,6 @@
     {{ end -}}
 }
 
-\newpage
-
 \begin{section}{Honors and Awards}
     \begin{subsectionbullet}
         {{ range $i, $item := (ds "honors") -}}
