@@ -26,6 +26,7 @@
       - Matplotlib
       - PyTorch
       - Tensorflow
+      - Huggingface
       - Scikit-Learn
 - title: Storage & Database
   skills:
