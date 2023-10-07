@@ -5,6 +5,7 @@
   items:
       - text: Maintaining and refactoring old bare-metal infrastructure
       - text: Designing and architecting new cloud-based infrastructure
+      - text: Performing zero downtime database migrations (logical replication)
       - text: Automating full and differential and incremental backups (pgbackrest)
       - text: Setting up Grafana monitoring stack (LGTM - Loki, Grafana, Tempo, Mimir, Agent)
       - text: Writing Grafana dashboards and alerts using promQL, logQL
@@ -72,7 +73,8 @@
   location: Tehran, Iran
   date: Dec 2013 -- Aug 2018
   items:
-      - text: Socket programming in C & Erlang, implementing hole punching for P2P direct connections
+      - text: Socket programming in C & Erlang
+      - text: Implementing Hole Punching for P2P direct connections
       - text: Implementing Desktop Chat Application using Qt, C++, QML
       - text: Implementing Android Chat Application using Java, C (JNI), AndroidStudio
       - text: Using FFMPEG to implement audio & video streaming using native API's and raw sockets
