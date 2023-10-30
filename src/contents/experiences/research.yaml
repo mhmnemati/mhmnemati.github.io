@@ -4,5 +4,5 @@
   date: Feb 2023 -- Present
   items:
       - text: |
-            Automatic speech recognition in the air traffic control domain using **Wav2Vec-2**, **HuBERT**, **Whisper**  
+            Deep learning based seizure detection from EEG and ECG signals using biosignal transformers and self-supervised learning methods
             Under the supervision of **Prof. Bagher Babaali**
