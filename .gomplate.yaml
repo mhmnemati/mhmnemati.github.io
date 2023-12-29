@@ -1,21 +1,21 @@
 inputFiles:
-    - src/private/CV/main.tex.tpl
+    - private/CV/main.tex.tpl
 outputFiles:
-    - src/private/CV/main.tex
+    - private/CV/main.tex
 
 datasources:
-    about: { url: src/contents/about.yaml }
-    interests: { url: src/contents/interests.yaml }
-    languages: { url: src/contents/languages.yaml }
-    educations: { url: src/contents/educations.yaml }
-    licenses: { url: src/contents/licenses.yaml }
-    courses: { url: src/contents/courses.yaml }
-    honors: { url: src/contents/honors.yaml }
-    skills: { url: src/contents/skills.yaml }
+    about: { url: contents/about.yaml }
+    interests: { url: contents/interests.yaml }
+    languages: { url: contents/languages.yaml }
+    educations: { url: contents/educations.yaml }
+    licenses: { url: contents/licenses.yaml }
+    courses: { url: contents/courses.yaml }
+    honors: { url: contents/honors.yaml }
+    skills: { url: contents/skills.yaml }
 
-    experiences_research: { url: src/contents/experiences/research.yaml }
-    experiences_teaching: { url: src/contents/experiences/teaching.yaml }
-    experiences_work: { url: src/contents/experiences/work.yaml }
+    experiences_research: { url: contents/experiences/research.yaml }
+    experiences_teaching: { url: contents/experiences/teaching.yaml }
+    experiences_work: { url: contents/experiences/work.yaml }
 
-    projects_notable: { url: src/contents/projects/notable.yaml }
-    projects_published: { url: src/contents/projects/published.yaml }
+    projects_notable: { url: contents/projects/notable.yaml }
+    projects_published: { url: contents/projects/published.yaml }
