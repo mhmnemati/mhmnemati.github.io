@@ -1,0 +1,39 @@
+version: "3.6"
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ../..:/workspaces:cached
+        command: sleep infinity
+
+    redis:
+        image: redis:7
+        restart: always
+        command: redis-server --appendonly yes
+        volumes:
+            - redis_data:/data/
+    rabbitmq:
+        image: rabbitmq:3-management
+        restart: always
+        environment:
+            RABBITMQ_DEFAULT_USER: guest
+            RABBITMQ_DEFAULT_PASS: guest
+        volumes:
+            - rabbitmq_data:/var/lib/rabbitmq/
+    postgresql:
+        build:
+            context: .
+            dockerfile: Dockerfile.postgresql
+        restart: always
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+        volumes:
+            - postgresql_data:/var/lib/postgresql/data/
+
+volumes:
+    redis_data:
+    rabbitmq_data:
+    postgresql_data:
