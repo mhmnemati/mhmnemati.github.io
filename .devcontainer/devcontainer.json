@@ -28,6 +28,9 @@
                 "unifiedjs.vscode-mdx"
             ],
             "settings": {
+                "git.autofetch": true,
+                "git.confirmSync": false,
+                "git.enableSmartCommit": true,
                 "extensions.autoUpdate": true,
                 "editor.tabSize": 4,
                 "editor.insertSpaces": true,
