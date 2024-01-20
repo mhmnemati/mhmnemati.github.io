@@ -5,7 +5,7 @@
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     // "image": "mcr.microsoft.com/devcontainers/base:alpine-3.19",
     "dockerComposeFile": "docker-compose.yml",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "workspaceFolder": "/workspaces",
     "service": "app",
 
     // Features to add to the dev container. More info: https://containers.dev/features.
