@@ -9,15 +9,14 @@
     "service": "app",
 
     // Features to add to the dev container. More info: https://containers.dev/features.
-    "features": {
-        "ghcr.io/devcontainers/features/node:1": {}
-    },
+    "features": {},
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "npm install",
+    "onCreateCommand": "rm -Rf ./node_modules && ln -s /opt/node_modules .",
+    "postCreateCommand": "npm run dev",
 
     // Configure tool-specific properties.
     "customizations": {
