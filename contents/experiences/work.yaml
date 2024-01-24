@@ -16,14 +16,14 @@
       - text: Setting up CI/CD using GitlabCI, Docker
 
 - title: University of Tehran
-  subtitle: HPC Engineer
+  subtitle: DevOps Engineer
   location: Tehran, Iran
   date: Jul 2022 -- Jun 2023 (Part-time)
   items:
       - text: Setting up HPC cluster using Slurm Workload Manager & Pyxis
+      - text: Setting up HPC containers (Nvidia Enroot, Nvidia Pyxis)
       - text: Setting up Slurm accounting and quota management
       - text: Provisioning entire cluster using Terraform (IaC)
-      - text: Working with HPC containers (Nvidia Enroot, Nvidia Pyxis)
 
 - title: Pishgam Vira
   subtitle: DevOps Engineer
