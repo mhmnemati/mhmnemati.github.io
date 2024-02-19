@@ -207,7 +207,7 @@ function Resume() {
                     <Card key={index} {...item} />
                 ))}
 
-                {/* <Frame as="hr" className="my-8" />
+                <Frame as="hr" className="my-8" />
 
                 <Text as="h2" className="warning mb-4">
                     Honors & Awards
@@ -218,7 +218,7 @@ function Resume() {
                             {item.title} {item.date}
                         </li>
                     ))}
-                </ul> */}
+                </ul>
 
                 <Frame as="hr" className="my-8" />
 
@@ -238,7 +238,7 @@ function Resume() {
                     ))}
                 </ul>
 
-                {/* <Frame as="hr" className="my-8" />
+                <Frame as="hr" className="my-8" />
 
                 <Text as="h2" className="warning">
                     Relevant Courses
@@ -255,7 +255,7 @@ function Resume() {
                             </div>
                         </li>
                     ))}
-                </ul> */}
+                </ul>
 
                 <Frame as="hr" className="my-8" />
 
