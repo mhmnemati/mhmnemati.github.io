@@ -14,25 +14,312 @@ import {
     faSkype,
 } from "@fortawesome/free-brands-svg-icons";
 
-import about from "@/contents/about.yaml";
-import interests from "@/contents/interests.yaml";
-import languages from "@/contents/languages.yaml";
+const interests = [
+    "High Performance Computing and Parallel Processing",
+    "Artificial Intelligence and Machine Learning",
+    "Deep Learning and Artificial Neural Networks",
+    "Natural Language Processing",
+    "Brain Signal Processing",
+];
+const languages = [
+    {
+        title: "Persian",
+        description: "Native",
+    },
+    {
+        title: "English",
+        description: "Professional working proficiency",
+    },
+];
 
-import educations from "@/contents/educations.yaml";
-import licenses from "@/contents/licenses.yaml";
-import courses from "@/contents/courses.yaml";
-import honors from "@/contents/honors.yaml";
-import skills from "@/contents/skills.yaml";
+const educations = [
+    {
+        logo: "/images/tehran_university.jpg",
+        title: "Master of Computer Science",
+        subtitle: "University of Tehran",
+        location: "Teharn, Iran",
+        date: "Sep 2021 -- Aug 2024 (Expected)",
+        items: [
+            {
+                text: "Thesis: Deep learning based seizure detection",
+            },
+            {
+                text: "Total GPA: 3.82/4",
+            },
+        ],
+    },
+    {
+        logo: "/images/kharazmi_university.jpg",
+        title: "Bachelor of Computer Science",
+        subtitle: "Kharazmi University",
+        location: "Tehran, Iran",
+        date: "Sep 2016 -- Jan 2021",
+        items: [
+            {
+                text: "Last two years GPA: 3.46/4",
+            },
+            {
+                text: "Total GPA: 3.12/4",
+            },
+        ],
+    },
+    {
+        logo: "/images/mandegar_alborz_highschool.jpg",
+        title: "Diploma of Mathematics",
+        subtitle: "Mandegar Alborz High School",
+        location: "Tehran, Iran",
+        date: "Sep 2012 -- Aug 2016",
+        items: [
+            {
+                text: "Total GPA: 4/4",
+            },
+        ],
+    },
+];
+const licenses = [
+    {
+        logo: "/assets/nbml.png",
+        title: "Brain Mapping Spring School",
+        subtitle: "National Brain Mapping Laboratory",
+        date: "Apr 2023",
+    },
+    {
+        logo: "/assets/cka.png",
+        title: "Certified Kubernetes Administrator (CKA)",
+        subtitle: "Udemy",
+        date: "Oct 2020",
+    },
+    {
+        logo: "/assets/ckad.png",
+        title: "Kubernetes Certified Application Developer (CKAD)",
+        subtitle: "Udemy",
+        date: "Aug 2020",
+    },
+    {
+        logo: "/assets/swarm.png",
+        title: "Docker - SWARM - Hands-on - DevOps",
+        subtitle: "Udemy",
+        date: "Jun 2020",
+    },
+    {
+        logo: "/assets/ccna.png",
+        title: "Cisco Certified Network Associate (CCNA)",
+        subtitle: "Tehran Institute of Technology",
+        date: "Nov 2016",
+    },
+];
+const courses = [
+    {
+        title: "Digital Image Processing *",
+        grade: "17/20",
+    },
+    {
+        title: "Natural Language Processing *",
+        grade: "19.12/20",
+    },
+    {
+        title: "Advanced Computation Theory *",
+        grade: "18.5/20",
+    },
+    {
+        title: "Advanced Theory of Algorithms *",
+        grade: "14.75/20",
+    },
+    {
+        title: "Machine Learning *",
+        grade: "18.45/20",
+    },
+    {
+        title: "Artificial Intelligence",
+        grade: "19.1/20",
+    },
+    {
+        title: "Computer Graphics",
+        grade: "20/20",
+    },
+    {
+        title: "Principles of Operating Systems",
+        grade: "20/20",
+    },
+    {
+        title: "Principles of Computer Systems",
+        grade: "20/20",
+    },
+    {
+        title: "Principles of Logic and Set Theory",
+        grade: "20/20",
+    },
+    {
+        title: "Compiler",
+        grade: "20/20",
+    },
+    {
+        title: "Database",
+        grade: "19/20",
+    },
+];
+const honors = [
+    {
+        title: "Ranked 18st in the Iranian university entrance exam for the Master's Degree in Computer Science",
+        date: "2021",
+    },
+    {
+        title: "Ranked top 1% among more than 190,000 students who participated in nationwide entrance examination of undergraduate studies in Iranian universities",
+        date: "2016",
+    },
+];
+const skills = [
+    {
+        title: "Programming Languages",
+        skills: [
+            "C/C++",
+            "C#",
+            "Java",
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "MATLAB",
+            "Erlang",
+        ],
+    },
+    {
+        title: "Client Development",
+        skills: [
+            "HTML/CSS",
+            "TailwindCSS",
+            "ReactJS",
+            "ReactNative",
+            "Android Studio",
+            "ElectronJS",
+            "Qt/QML (C++)",
+        ],
+    },
+    {
+        title: "Machine/Deep Learning",
+        skills: [
+            "NumPy",
+            "OpenCV",
+            "Pandas",
+            "Seaborn",
+            "Matplotlib",
+            "PyTorch",
+            "Tensorflow",
+            "Huggingface",
+            "Scikit-Learn",
+        ],
+    },
+    {
+        title: "Storage & Database",
+        skills: [
+            "PostgreSQL",
+            "MSSQL",
+            "MySQL",
+            "SQLite",
+            "MongoDB",
+            "CouchBase",
+            "Aerospike",
+            "Cassandra/ScyllaDB",
+            "RabbitMQ",
+            "Redis",
+            "Minio",
+        ],
+    },
+    {
+        title: "Container Orchestration",
+        skills: [
+            "Docker",
+            "DockerSwarm",
+            "DockerCompose",
+            "Kubernetes",
+            "Helm",
+            "Nomad",
+            "Vault",
+            "K3s",
+            "RKE",
+            "EKS",
+        ],
+    },
+    {
+        title: "High Performance Computing",
+        skills: [
+            "Slurm",
+            "HTCondor",
+            "SunGridEngine",
+            "Rocks Cluster",
+            "Nvidia Enroot",
+            "Nvidia Pyxis",
+            "Singularity",
+        ],
+    },
+    {
+        title: "Networking & Loadbalancer",
+        skills: [
+            "Kong",
+            "Nginx",
+            "Traefik",
+            "CoreDNS",
+            "Envoy",
+            "Consul",
+            "Linkerd",
+            "Cilium",
+        ],
+    },
+    {
+        title: "Infrastructure & Cloud",
+        skills: [
+            "Terraform",
+            "Crossplane",
+            "Packer",
+            "GitOps",
+            "ESXi",
+            "OpenStack",
+            "Hetzner Cloud",
+            "Amazon Web Services",
+        ],
+    },
+    {
+        title: "Monitoring & Alerting",
+        skills: [
+            "Prometheus",
+            "Grafana",
+            "Grafana Agnet",
+            "OpenTelemetry",
+            "fluentd/fluentbit",
+            "Loki",
+            "Mimir",
+            "Tempo",
+            "Cortex",
+        ],
+    },
+    {
+        title: "CI/CD & Automation",
+        skills: [
+            "DroneCI",
+            "GitlabCI",
+            "TravisCI",
+            "Github Actions",
+            "Azure Pipelines",
+            "ArgoCD",
+        ],
+    },
+    {
+        title: "LowCode & NoCode",
+        skills: ["N8n", "Hasura", "Strapi", "ReactAdmin"],
+    },
+];
 
 function Home() {
     return (
         <Hero id="home" image="/images/hero.jpg">
-            <Text as="h1">I&apos;m {about.name}</Text>
-            <Text as="b">{about.desc}</Text>
+            <Text as="h1">I&apos;m Mohammad Hosein Nemati</Text>
+            <Text as="b">
+                A computer science student and full stack developer who is
+                mainly interested in modeling nature rules with computers
+            </Text>
             <span>
                 <Link
                     className="text-inherit m-4"
-                    href={`mailto:${about.email}`}
+                    href={`mailto:ckoliber@gmail.com`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -40,7 +327,7 @@ function Home() {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={`https://www.linkedin.com/in/${about.linkedin}/`}
+                    href={`https://www.linkedin.com/in/ckoliber/`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -48,7 +335,7 @@ function Home() {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={`https://github.com/${about.github}`}
+                    href={`https://github.com/ckoliber`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -56,7 +343,7 @@ function Home() {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={`https://gitlab.com/${about.gitlab}`}
+                    href={`https://gitlab.com/ckoliber`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -64,7 +351,7 @@ function Home() {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={about.skype}
+                    href="https://join.skype.com/invite/fsPMhjWNv1rf"
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -95,13 +382,32 @@ function About() {
                     <div className="col-span-3">
                         <Text as="h2">About</Text>
                         <span className="mb-4">
-                            {about.summary
-                                .split("\n")
-                                .map((text: any, idx: number) => (
-                                    <Text key={idx} as="p">
-                                        {text}
-                                    </Text>
-                                ))}
+                            <Text as="p">
+                                I am a Full-Stack developer and computer science
+                                M.Sc. student, interested in cognitive science
+                                and brain signals processing, and a true lover
+                                of learning who has always sought more
+                                experience. I entered the field of programming
+                                in 2012, initially with the aim of implementing
+                                audio and video messaging software, I started to
+                                learn the concepts of networking and programming
+                                languages, and the result of this goal was the
+                                ChaM (Chapar Messenger) project and a world of
+                                new experiences that It helped me find my career
+                                path and focus on the backend field. After
+                                learning and doing a few Full-Stack projects, I
+                                gradually became familiar with serverless
+                                architecture and Low-Code and No-Code
+                                technologies, as well as the concepts of cloud
+                                computing.
+                            </Text>
+                            <Text as="p">
+                                Because in my view, programming is merely a tool
+                                to serve humanity, I try to spend less time
+                                programming with No-Code tools and instead spend
+                                more time learning basic concepts like math,
+                                logic, and AI.
+                            </Text>
                         </span>
                     </div>
                     <div className="col-span-3 md:col-span-1">
@@ -141,7 +447,7 @@ function About() {
                         <div className="flex flex-col md:flex-row justify-between md:items-center">
                             <div className="mb-4 md:mb-0">
                                 <Link
-                                    href={`https://www.linkedin.com/in/${about.linkedin}/`}
+                                    href={`https://www.linkedin.com/in/ckoliber/`}
                                     target="_blank"
                                     rel="noreferrer"
                                 >
@@ -149,11 +455,11 @@ function About() {
                                         className="mr-2"
                                         icon={faLinkedin}
                                     />
-                                    {about.name}
+                                    Mohammad Hosein Nemati
                                 </Link>
                                 <br />
                                 <Link
-                                    href={`mailto:${about.email}`}
+                                    href={`mailto:ckoliber@gmail.com`}
                                     target="_blank"
                                     rel="noreferrer"
                                 >
@@ -161,11 +467,11 @@ function About() {
                                         className="mr-2"
                                         icon={faEnvelope}
                                     />
-                                    {about.email}
+                                    ckoliber@gmail.com
                                 </Link>
                                 <br />
                                 <Link
-                                    href={about.skype}
+                                    href="https://join.skype.com/invite/fsPMhjWNv1rf"
                                     target="_blank"
                                     rel="noreferrer"
                                 >

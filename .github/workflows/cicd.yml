@@ -21,8 +21,6 @@ jobs:
             - run: npm ci
             - run: npm run build
             - run: cp .github/CNAME out
-            - run: curl -o /usr/local/bin/gomplate -sSL https://github.com/hairyhenderson/gomplate/releases/download/v3.11.6/gomplate_linux-amd64
-            - run: chmod 755 /usr/local/bin/gomplate && gomplate
             - uses: xu-cheng/latex-action@v2
               with:
                   latexmk_use_xelatex: true

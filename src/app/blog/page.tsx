@@ -6,10 +6,6 @@ import Text from "@/components/Text";
 import Hero from "@/components/Hero";
 import Card from "@/components/Card";
 
-import research from "@/contents/experiences/research.yaml";
-import teaching from "@/contents/experiences/teaching.yaml";
-import work from "@/contents/experiences/work.yaml";
-
 // export const getStaticProps: GetStaticProps<{}> = async (context) => {
 //     const res = await fetch("https://api.github.com/repos/vercel/next.js");
 //     const repo = await res.json();

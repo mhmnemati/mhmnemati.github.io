@@ -10,8 +10,6 @@ import {
     faReact,
 } from "@fortawesome/free-brands-svg-icons";
 
-import about from "@/contents/about.yaml";
-
 export default function Page(props: { children: React.ReactNode }) {
     return (
         <footer
@@ -27,7 +25,7 @@ export default function Page(props: { children: React.ReactNode }) {
             <span>
                 <Link
                     className="text-inherit m-4"
-                    href={`mailto:${about.email}`}
+                    href={`mailto:ckoliber@gmail.com`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -35,7 +33,7 @@ export default function Page(props: { children: React.ReactNode }) {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={`https://www.linkedin.com/in/${about.linkedin}/`}
+                    href={`https://www.linkedin.com/in/ckoliber/`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -43,7 +41,7 @@ export default function Page(props: { children: React.ReactNode }) {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={`https://github.com/${about.github}`}
+                    href={`https://github.com/ckoliber`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -51,7 +49,7 @@ export default function Page(props: { children: React.ReactNode }) {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={about.skype}
+                    href="https://join.skype.com/invite/fsPMhjWNv1rf"
                     target="_blank"
                     rel="noreferrer"
                 >
