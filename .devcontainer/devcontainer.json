@@ -2,11 +2,10 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/alpine
 {
     "name": "ckoliber.github.io",
+
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    // "image": "mcr.microsoft.com/devcontainers/base:alpine-3.19",
-    "dockerComposeFile": "docker-compose.yml",
-    "workspaceFolder": "/workspaces",
-    "service": "app",
+    "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:20",
+    "mounts": [],
 
     // Features to add to the dev container. More info: https://containers.dev/features.
     "features": {},
@@ -15,8 +14,9 @@
     "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "onCreateCommand": "rm -Rf ./node_modules && ln -s /opt/node_modules .",
-    "postCreateCommand": "npm run dev",
+    "postCreateCommand": {
+        "dependencies": "npm install"
+    },
 
     // Configure tool-specific properties.
     "customizations": {
@@ -25,19 +25,7 @@
                 "esnbradlc.vscode-tailwindcss",
                 "esbenp.prettier-vscode",
                 "unifiedjs.vscode-mdx"
-            ],
-            "settings": {
-                "git.autofetch": true,
-                "git.confirmSync": false,
-                "git.enableSmartCommit": true,
-                "extensions.autoUpdate": true,
-                "editor.tabSize": 4,
-                "editor.insertSpaces": true,
-                "editor.formatOnSave": true,
-                "editor.fontLigatures": true,
-                "editor.detectIndentation": false,
-                "editor.defaultFormatter": "esbenp.prettier-vscode"
-            }
+            ]
         }
     },
 
