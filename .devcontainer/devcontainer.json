@@ -23,6 +23,7 @@
         "vscode": {
             "extensions": [
                 "esnbradlc.vscode-tailwindcss",
+                "James-Yu.latex-workshop",
                 "esbenp.prettier-vscode",
                 "unifiedjs.vscode-mdx"
             ]
