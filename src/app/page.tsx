@@ -14,24 +14,6 @@ import {
     faSkype,
 } from "@fortawesome/free-brands-svg-icons";
 
-const interests = [
-    "High Performance Computing and Parallel Processing",
-    "Artificial Intelligence and Machine Learning",
-    "Deep Learning and Artificial Neural Networks",
-    "Natural Language Processing",
-    "Brain Signal Processing",
-];
-const languages = [
-    {
-        title: "Persian",
-        description: "Native",
-    },
-    {
-        title: "English",
-        description: "Professional working proficiency",
-    },
-];
-
 const educations = [
     {
         logo: "/images/tehran_university.jpg",
@@ -156,16 +138,6 @@ const courses = [
     {
         title: "Database",
         grade: "19/20",
-    },
-];
-const honors = [
-    {
-        title: "Ranked 18st in the Iranian university entrance exam for the Master's Degree in Computer Science",
-        date: "2021",
-    },
-    {
-        title: "Ranked top 1% among more than 190,000 students who participated in nationwide entrance examination of undergraduate studies in Iranian universities",
-        date: "2016",
     },
 ];
 const skills = [
@@ -428,19 +400,28 @@ function About() {
                     <div className="col-span-3 md:col-span-2">
                         <Text as="h3">Interests</Text>
                         <ul className="mb-4">
-                            {interests.map((item: any, index: number) => (
-                                <li key={index}>{item}</li>
-                            ))}
+                            <li>
+                                High Performance Computing and Parallel
+                                Processing
+                            </li>
+                            <li>
+                                Artificial Intelligence and Machine Learning
+                            </li>
+                            <li>
+                                Deep Learning and Artificial Neural Networks
+                            </li>
+                            <li>Natural Language Processing</li>
+                            <li>Brain Signal Processing</li>
                         </ul>
 
                         <Text as="h3">Languages</Text>
                         <ul className="mb-4">
-                            {languages.map((item: any, index: number) => (
-                                <li key={index}>
-                                    <b>{`${item.title}: `}</b>
-                                    {item.description}
-                                </li>
-                            ))}
+                            <li>
+                                <b>Persian:</b> Native
+                            </li>
+                            <li>
+                                <b>English:</b> Professional working proficiency
+                            </li>
                         </ul>
 
                         <Text as="h3">Contact Me</Text>
@@ -519,11 +500,26 @@ function Resume() {
                     Honors & Awards
                 </Text>
                 <ul>
-                    {honors.map((item: any, index: number) => (
-                        <li key={index}>
-                            {item.title} {item.date}
-                        </li>
-                    ))}
+                    <li>
+                        <div className="flex flex-col md:flex-row md:justify-between">
+                            <p className="text-start md:text-end mb-2 md:mb-0">
+                                Ranked 18st in the Iranian university entrance
+                                exam for the Master's Degree in Computer Science
+                            </p>
+                            <b>2021</b>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="flex flex-col md:flex-row md:justify-between">
+                            <p className="text-start md:text-end mb-2 md:mb-0">
+                                Ranked top 1% among more than 190,000 students
+                                who participated in nationwide entrance
+                                examination of undergraduate studies in Iranian
+                                universities
+                            </p>
+                            <b>2016</b>
+                        </div>
+                    </li>
                 </ul>
 
                 <Frame as="hr" className="my-8" />
