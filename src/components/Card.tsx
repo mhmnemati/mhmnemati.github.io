@@ -16,7 +16,7 @@ export interface CardProps {
     title: string;
     subtitle: string;
     location?: string;
-    children?: (string | { text: string; link?: string })[];
+    children?: string[] | { text: string; link?: string }[];
 }
 
 export default async function Component(props: CardProps) {
