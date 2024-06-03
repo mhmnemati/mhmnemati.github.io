@@ -8,6 +8,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://ckoliber.com"),
     title: "KoLiBer",
     description: "KoLiBer personal website",
     icons: {
