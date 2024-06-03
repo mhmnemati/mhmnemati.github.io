@@ -6,38 +6,32 @@ import Card from "@/components/Card";
 
 const research = [
     {
+        date: "Feb 2023 -- Present",
         title: "Graduate Research Assistant",
         subtitle: "Department of Mathematics, Statistics and Computer Science",
         location: "University of Tehran",
-        date: "Feb 2023 -- Present",
-        items: [
-            {
-                text: "Deep learning based seizure detection from EEG and ECG signals using biosignal transformers and self-supervised learning methods  \nUnder the supervision of **Prof. Bagher Babaali**\n",
-            },
+        children: [
+            "Deep learning based seizure detection from EEG and ECG signals using biosignal transformers and self-supervised learning methods  \nUnder the supervision of **Prof. Bagher Babaali**\n",
         ],
     },
 ];
 const teaching = [
     {
+        date: "Oct 2023 -- Feb 2024",
         title: "Machine Learning",
         subtitle: "Prof. Bagher Babaali",
         location: "University of Tehran",
-        date: "Oct 2023 -- Feb 2024",
-        items: [
-            {
-                text: "Teaching subjects and troubleshooting",
-            },
-            {
-                text: "Organized homeworks for mentored students",
-            },
+        children: [
+            "Teaching subjects and troubleshooting",
+            "Organized homeworks for mentored students",
         ],
     },
     {
+        date: "Feb 2019 -- Jun 2019",
         title: "Advanced Programming",
         subtitle: "Prof. Arash Ahadi",
         location: "Kharazmi University",
-        date: "Feb 2019 -- Jun 2019",
-        items: [
+        children: [
             {
                 text: "Teaching memory management in C, Object-Oriented paradigm in C (OOC)",
                 link: "https://github.com/ckoliber/ooc_lecture",
@@ -52,11 +46,11 @@ const teaching = [
         ],
     },
     {
+        date: "Sep 2018 -- Jan 2019",
         title: "Basic Programming",
         subtitle: "Prof. Saeed Reza Kheradpisheh",
         location: "Kharazmi University",
-        date: "Sep 2018 -- Jan 2019",
-        items: [
+        children: [
             {
                 text: "Teaching basic data-structures and algorithms in Java",
             },
@@ -69,176 +63,98 @@ const teaching = [
 ];
 const work = [
     {
+        date: "May 2022 -- Present (Full-time)",
         title: "Shipup.net",
         subtitle: "DevOps Engineer",
         location: "Tehran, Iran",
-        date: "May 2022 -- Present (Full-time)",
-        items: [
-            {
-                text: "Maintaining and refactoring old bare-metal infrastructure",
-            },
-            {
-                text: "Designing and architecting new cloud-based infrastructure",
-            },
-            {
-                text: "Performing zero downtime database migrations (logical replication)",
-            },
-            {
-                text: "Automating full and differential and incremental backups (pgbackrest)",
-            },
-            {
-                text: "Setting up Grafana monitoring stack (LGTM - Loki, Grafana, Tempo, Mimir, Agent)",
-            },
-            {
-                text: "Writing Grafana dashboards and alerts using promQL, logQL",
-            },
-            {
-                text: "Provisioning entire new infrastructure using Terraform (IaC)",
-            },
-            {
-                text: "Managing multi-cloud resources for reducing the costs (Hetzner, AWS)",
-            },
-            {
-                text: "Using GitOps principle for CD (Continuous Deployment)",
-            },
-            {
-                text: "Writing Docker Swarm compose manifests",
-            },
-            {
-                text: "Setting up CI/CD using GitlabCI, Docker",
-            },
+        children: [
+            "Maintaining and refactoring old bare-metal infrastructure",
+            "Designing and architecting new cloud-based infrastructure",
+            "Performing zero downtime database migrations (logical replication)",
+            "Automating full and differential and incremental backups (pgbackrest)",
+            "Setting up Grafana monitoring stack (LGTM - Loki, Grafana, Tempo, Mimir, Agent)",
+            "Writing Grafana dashboards and alerts using promQL, logQL",
+            "Provisioning entire new infrastructure using Terraform (IaC)",
+            "Managing multi-cloud resources for reducing the costs (Hetzner, AWS)",
+            "Using GitOps principle for CD (Continuous Deployment)",
+            "Writing Docker Swarm compose manifests",
+            "Setting up CI/CD using GitlabCI, Docker",
         ],
     },
     {
+        date: "Jul 2022 -- Jun 2023 (Part-time)",
         title: "University of Tehran",
         subtitle: "DevOps Engineer",
         location: "Tehran, Iran",
-        date: "Jul 2022 -- Jun 2023 (Part-time)",
-        items: [
-            {
-                text: "Setting up HPC cluster using Slurm Workload Manager & Pyxis",
-            },
-            {
-                text: "Setting up HPC containers (Nvidia Enroot, Nvidia Pyxis)",
-            },
-            {
-                text: "Setting up Slurm accounting and quota management",
-            },
-            {
-                text: "Provisioning entire cluster using Terraform (IaC)",
-            },
+        children: [
+            "Setting up HPC cluster using Slurm Workload Manager & Pyxis",
+            "Setting up HPC containers (Nvidia Enroot, Nvidia Pyxis)",
+            "Setting up Slurm accounting and quota management",
+            "Provisioning entire cluster using Terraform (IaC)",
         ],
     },
     {
+        date: "Mar 2022 -- Jun 2022 (Part-time)",
         title: "Pishgam Vira",
         subtitle: "DevOps Engineer",
         location: "Tehran, Iran",
-        date: "Mar 2022 -- Jun 2022 (Part-time)",
-        items: [
-            {
-                text: "Implementing CI/CD for projects using GitHub Actions & Docker",
-            },
-            {
-                text: "Provisioning deployment servers using Docker Swarm",
-            },
-            {
-                text: "Automate release process using semantic-release",
-            },
+        children: [
+            "Implementing CI/CD for projects using GitHub Actions & Docker",
+            "Provisioning deployment servers using Docker Swarm",
+            "Automate release process using semantic-release",
         ],
     },
     {
+        date: "Nov 2019 -- Jun 2022 (Full-time)",
         title: "Mobtaker Darya",
         subtitle: "Full-stack Developer & DevOps Engineer",
         location: "Tehran, Iran",
-        date: "Nov 2019 -- Jun 2022 (Full-time)",
-        items: [
-            {
-                text: "Maintaining and developing CCS project (Container Control System)",
-            },
-            {
-                text: "Implementing CCS reports using Crystal Reports and SQL Server",
-            },
-            {
-                text: "Developing Shaahin project (Cargo trucks traffic control)",
-            },
-            {
-                text: "Implementing Shaahin web client using React.js",
-            },
-            {
-                text: "Implementing Shaahin backend using Loopback.io, NodeJs, TypeScript, PostgreSQL",
-            },
-            {
-                text: "Implementing CI/CD for projects using GitlabCI & Docker",
-            },
-            {
-                text: "Provisioning deployment servers using Kubernetes",
-            },
-            {
-                text: "Writing Kubernetes manifests and packaging the in Helm Charts",
-            },
-            {
-                text: "Managing and coding entire infrastructure using Terraform (IaC)",
-            },
+        children: [
+            "Maintaining and developing CCS project (Container Control System)",
+            "Implementing CCS reports using Crystal Reports and SQL Server",
+            "Developing Shaahin project (Cargo trucks traffic control)",
+            "Implementing Shaahin web client using React.js",
+            "Implementing Shaahin backend using Loopback.io, NodeJs, TypeScript, PostgreSQL",
+            "Implementing CI/CD for projects using GitlabCI & Docker",
+            "Provisioning deployment servers using Kubernetes",
+            "Writing Kubernetes manifests and packaging the in Helm Charts",
+            "Managing and coding entire infrastructure using Terraform (IaC)",
         ],
     },
     {
+        date: "Mar 2019 -- Oct 2019 (Part-time)",
         title: "TIS",
         subtitle: "Software Developer",
         location: "Tehran, Iran",
-        date: "Mar 2019 -- Oct 2019 (Part-time)",
-        items: [
-            {
-                text: "Maintaining and refactoring MFD project (Managed-Funds System)",
-            },
-            {
-                text: "Replacing Process360 with ProcessMaker as BPMS core",
-            },
-            {
-                text: "Implementing new UI using React.js and TypeScript",
-            },
-            {
-                text: "Implementing dynamic forms in client (Forms schema loaded from BPMS)",
-            },
+        children: [
+            "Maintaining and refactoring MFD project (Managed-Funds System)",
+            "Replacing Process360 with ProcessMaker as BPMS core",
+            "Implementing new UI using React.js and TypeScript",
+            "Implementing dynamic forms in client (Forms schema loaded from BPMS)",
         ],
     },
     {
+        date: "Jun 2019 -- Sep 2019 (Part-time)",
         title: "Farmeal",
         subtitle: "React Developer",
         location: "Tehran, Iran",
-        date: "Jun 2019 -- Sep 2019 (Part-time)",
-        items: [
-            {
-                text: "Implementing food-shopping UI using React.js and TypeScript",
-            },
-            {
-                text: "Interacting with backend GraphQL API's using Apollo Client",
-            },
-            {
-                text: "Implementing CI/CD for project using GitlabCI & Docker",
-            },
+        children: [
+            "Implementing food-shopping UI using React.js and TypeScript",
+            "Interacting with backend GraphQL API's using Apollo Client",
+            "Implementing CI/CD for project using GitlabCI & Docker",
         ],
     },
     {
+        date: "Dec 2013 -- Aug 2018",
         title: "Self Employed",
         subtitle: "Full-stack Developer",
         location: "Tehran, Iran",
-        date: "Dec 2013 -- Aug 2018",
-        items: [
-            {
-                text: "Socket programming in C & Erlang",
-            },
-            {
-                text: "Implementing Hole Punching for P2P direct connections",
-            },
-            {
-                text: "Implementing Desktop Chat Application using Qt, C++, QML",
-            },
-            {
-                text: "Implementing Android Chat Application using Java, C (JNI), AndroidStudio",
-            },
-            {
-                text: "Using FFMPEG to implement audio & video streaming using native API's and raw sockets",
-            },
+        children: [
+            "Socket programming in C & Erlang",
+            "Implementing Hole Punching for P2P direct connections",
+            "Implementing Desktop Chat Application using Qt, C++, QML",
+            "Implementing Android Chat Application using Java, C (JNI), AndroidStudio",
+            "Using FFMPEG to implement audio & video streaming using native API's and raw sockets",
         ],
     },
 ];

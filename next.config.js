@@ -10,7 +10,13 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    webpack: function (config) {
+    webpack: function (config, { dev }) {
+        if (dev) {
+            config.watchOptions = {
+                poll: true,
+            };
+        }
+
         return config;
     },
 };

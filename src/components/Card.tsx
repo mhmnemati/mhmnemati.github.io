@@ -12,11 +12,11 @@ import Text from "./Text";
 export interface CardProps {
     logo?: string;
     link?: string;
+    date: string;
     title: string;
     subtitle: string;
     location?: string;
-    date: string;
-    items?: { text: string; link?: string }[];
+    children?: (string | { text: string; link?: string })[];
 }
 
 export default async function Component(props: CardProps) {
@@ -62,26 +62,35 @@ export default async function Component(props: CardProps) {
                         </Text>
                     )}
                 </div>
-                {props.items && <Frame as="hr" className="my-2" />}
+                {props.children && <Frame as="hr" className="my-2" />}
                 <ul>
                     <Animator manager="stagger">
-                        {props.items?.map((item_: any, item_idx: number) => (
-                            <li key={item_idx}>
-                                <MDXRemote source={item_.text} />
-                                {item_.link && (
-                                    <Link
-                                        className="ml-2"
-                                        href={item_.link}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        <FontAwesomeIcon
-                                            icon={faExternalLink}
-                                        />
-                                    </Link>
-                                )}
-                            </li>
-                        ))}
+                        {props.children?.map(
+                            (child: any, child_idx: number) => (
+                                <li key={child_idx}>
+                                    <MDXRemote
+                                        source={
+                                            typeof child === "string"
+                                                ? child
+                                                : child.text
+                                        }
+                                    />
+                                    {typeof child === "object" &&
+                                        child.link && (
+                                            <Link
+                                                className="ml-2"
+                                                href={child.link}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                <FontAwesomeIcon
+                                                    icon={faExternalLink}
+                                                />
+                                            </Link>
+                                        )}
+                                </li>
+                            )
+                        )}
                     </Animator>
                 </ul>
             </div>

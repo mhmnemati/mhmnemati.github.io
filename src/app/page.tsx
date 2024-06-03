@@ -225,46 +225,34 @@ function Educations() {
             </Text>
             <Card
                 logo="/images/tehran_university.jpg"
+                date="Sep 2021 -- Aug 2024 (Expected)"
                 title="Master of Computer Science"
                 subtitle="University of Tehran"
                 location="Tehran, Iran"
-                date="Sep 2021 -- Aug 2024 (Expected)"
-                items={[
-                    {
-                        text: "Thesis: Deep learning based seizure detection",
-                    },
-                    {
-                        text: "Total GPA: 3.82/4",
-                    },
+            >
+                {[
+                    "Thesis: Deep learning based seizure detection",
+                    "Total GPA: 3.82/4",
                 ]}
-            />
+            </Card>
             <Card
                 logo="/images/kharazmi_university.jpg"
+                date="Sep 2016 -- Jan 2021"
                 title="Bachelor of Computer Science"
                 subtitle="Kharazmi University"
                 location="Tehran, Iran"
-                date="Sep 2016 -- Jan 2021"
-                items={[
-                    {
-                        text: "Last two years GPA: 3.46/4",
-                    },
-                    {
-                        text: "Total GPA: 3.12/4",
-                    },
-                ]}
-            />
+            >
+                {["Last two years GPA: 3.46/4", "Total GPA: 3.12/4"]}
+            </Card>
             <Card
                 logo="/images/mandegar_alborz_highschool.jpg"
+                date="Sep 2012 -- Aug 2016"
                 title="Diploma of Mathematics"
                 subtitle="Mandegar Alborz High School"
                 location="Tehran, Iran"
-                date="Sep 2012 -- Aug 2016"
-                items={[
-                    {
-                        text: "Total GPA: 4/4",
-                    },
-                ]}
-            />
+            >
+                {["Total GPA: 4/4"]}
+            </Card>
         </>
     );
 }
