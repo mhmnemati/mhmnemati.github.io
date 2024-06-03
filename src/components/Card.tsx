@@ -14,9 +14,9 @@ export interface CardProps {
     link?: string;
     title: string;
     subtitle: string;
-    location: string;
+    location?: string;
     date: string;
-    items?: [{ text: string; link?: string }];
+    items?: { text: string; link?: string }[];
 }
 
 export default async function Component(props: CardProps) {

@@ -14,272 +14,6 @@ import {
     faSkype,
 } from "@fortawesome/free-brands-svg-icons";
 
-const educations = [
-    {
-        logo: "/images/tehran_university.jpg",
-        title: "Master of Computer Science",
-        subtitle: "University of Tehran",
-        location: "Teharn, Iran",
-        date: "Sep 2021 -- Aug 2024 (Expected)",
-        items: [
-            {
-                text: "Thesis: Deep learning based seizure detection",
-            },
-            {
-                text: "Total GPA: 3.82/4",
-            },
-        ],
-    },
-    {
-        logo: "/images/kharazmi_university.jpg",
-        title: "Bachelor of Computer Science",
-        subtitle: "Kharazmi University",
-        location: "Tehran, Iran",
-        date: "Sep 2016 -- Jan 2021",
-        items: [
-            {
-                text: "Last two years GPA: 3.46/4",
-            },
-            {
-                text: "Total GPA: 3.12/4",
-            },
-        ],
-    },
-    {
-        logo: "/images/mandegar_alborz_highschool.jpg",
-        title: "Diploma of Mathematics",
-        subtitle: "Mandegar Alborz High School",
-        location: "Tehran, Iran",
-        date: "Sep 2012 -- Aug 2016",
-        items: [
-            {
-                text: "Total GPA: 4/4",
-            },
-        ],
-    },
-];
-const licenses = [
-    {
-        logo: "/assets/nbml.png",
-        title: "Brain Mapping Spring School",
-        subtitle: "National Brain Mapping Laboratory",
-        date: "Apr 2023",
-    },
-    {
-        logo: "/assets/cka.png",
-        title: "Certified Kubernetes Administrator (CKA)",
-        subtitle: "Udemy",
-        date: "Oct 2020",
-    },
-    {
-        logo: "/assets/ckad.png",
-        title: "Kubernetes Certified Application Developer (CKAD)",
-        subtitle: "Udemy",
-        date: "Aug 2020",
-    },
-    {
-        logo: "/assets/swarm.png",
-        title: "Docker - SWARM - Hands-on - DevOps",
-        subtitle: "Udemy",
-        date: "Jun 2020",
-    },
-    {
-        logo: "/assets/ccna.png",
-        title: "Cisco Certified Network Associate (CCNA)",
-        subtitle: "Tehran Institute of Technology",
-        date: "Nov 2016",
-    },
-];
-const courses = [
-    {
-        title: "Digital Image Processing *",
-        grade: "17/20",
-    },
-    {
-        title: "Natural Language Processing *",
-        grade: "19.12/20",
-    },
-    {
-        title: "Advanced Computation Theory *",
-        grade: "18.5/20",
-    },
-    {
-        title: "Advanced Theory of Algorithms *",
-        grade: "14.75/20",
-    },
-    {
-        title: "Machine Learning *",
-        grade: "18.45/20",
-    },
-    {
-        title: "Artificial Intelligence",
-        grade: "19.1/20",
-    },
-    {
-        title: "Computer Graphics",
-        grade: "20/20",
-    },
-    {
-        title: "Principles of Operating Systems",
-        grade: "20/20",
-    },
-    {
-        title: "Principles of Computer Systems",
-        grade: "20/20",
-    },
-    {
-        title: "Principles of Logic and Set Theory",
-        grade: "20/20",
-    },
-    {
-        title: "Compiler",
-        grade: "20/20",
-    },
-    {
-        title: "Database",
-        grade: "19/20",
-    },
-];
-const skills = [
-    {
-        title: "Programming Languages",
-        skills: [
-            "C/C++",
-            "C#",
-            "Java",
-            "JavaScript",
-            "TypeScript",
-            "Python",
-            "MATLAB",
-            "Erlang",
-        ],
-    },
-    {
-        title: "Client Development",
-        skills: [
-            "HTML/CSS",
-            "TailwindCSS",
-            "ReactJS",
-            "ReactNative",
-            "Android Studio",
-            "ElectronJS",
-            "Qt/QML (C++)",
-        ],
-    },
-    {
-        title: "Machine/Deep Learning",
-        skills: [
-            "NumPy",
-            "OpenCV",
-            "Pandas",
-            "Seaborn",
-            "Matplotlib",
-            "PyTorch",
-            "Tensorflow",
-            "Huggingface",
-            "Scikit-Learn",
-        ],
-    },
-    {
-        title: "Storage & Database",
-        skills: [
-            "PostgreSQL",
-            "MSSQL",
-            "MySQL",
-            "SQLite",
-            "MongoDB",
-            "CouchBase",
-            "Aerospike",
-            "Cassandra/ScyllaDB",
-            "RabbitMQ",
-            "Redis",
-            "Minio",
-        ],
-    },
-    {
-        title: "Container Orchestration",
-        skills: [
-            "Docker",
-            "DockerSwarm",
-            "DockerCompose",
-            "Kubernetes",
-            "Helm",
-            "Nomad",
-            "Vault",
-            "K3s",
-            "RKE",
-            "EKS",
-        ],
-    },
-    {
-        title: "High Performance Computing",
-        skills: [
-            "Slurm",
-            "HTCondor",
-            "SunGridEngine",
-            "Rocks Cluster",
-            "Nvidia Enroot",
-            "Nvidia Pyxis",
-            "Singularity",
-        ],
-    },
-    {
-        title: "Networking & Loadbalancer",
-        skills: [
-            "Kong",
-            "Nginx",
-            "Traefik",
-            "CoreDNS",
-            "Envoy",
-            "Consul",
-            "Linkerd",
-            "Cilium",
-        ],
-    },
-    {
-        title: "Infrastructure & Cloud",
-        skills: [
-            "Terraform",
-            "Crossplane",
-            "Packer",
-            "GitOps",
-            "ESXi",
-            "OpenStack",
-            "Hetzner Cloud",
-            "Amazon Web Services",
-        ],
-    },
-    {
-        title: "Monitoring & Alerting",
-        skills: [
-            "Prometheus",
-            "Grafana",
-            "Grafana Agnet",
-            "OpenTelemetry",
-            "fluentd/fluentbit",
-            "Loki",
-            "Mimir",
-            "Tempo",
-            "Cortex",
-        ],
-    },
-    {
-        title: "CI/CD & Automation",
-        skills: [
-            "DroneCI",
-            "GitlabCI",
-            "TravisCI",
-            "Github Actions",
-            "Azure Pipelines",
-            "ArgoCD",
-        ],
-    },
-    {
-        title: "LowCode & NoCode",
-        skills: ["N8n", "Hasura", "Strapi", "ReactAdmin"],
-    },
-];
-
 function Home() {
     return (
         <Hero id="home" image="/images/hero.jpg">
@@ -483,92 +217,324 @@ function About() {
     );
 }
 
-function Resume() {
+function Educations() {
     return (
-        <section id="about" className="flex flex-col items-center p-4 md:p-8">
-            <div className="container max-w-screen-xl">
-                <Text as="h2" className="warning mb-4">
-                    Educations
-                </Text>
-                {educations.map((item: any, index: number) => (
-                    <Card key={index} {...item} />
-                ))}
+        <>
+            <Text as="h2" className="warning mb-4">
+                Educations
+            </Text>
+            <Card
+                logo="/images/tehran_university.jpg"
+                title="Master of Computer Science"
+                subtitle="University of Tehran"
+                location="Tehran, Iran"
+                date="Sep 2021 -- Aug 2024 (Expected)"
+                items={[
+                    {
+                        text: "Thesis: Deep learning based seizure detection",
+                    },
+                    {
+                        text: "Total GPA: 3.82/4",
+                    },
+                ]}
+            />
+            <Card
+                logo="/images/kharazmi_university.jpg"
+                title="Bachelor of Computer Science"
+                subtitle="Kharazmi University"
+                location="Tehran, Iran"
+                date="Sep 2016 -- Jan 2021"
+                items={[
+                    {
+                        text: "Last two years GPA: 3.46/4",
+                    },
+                    {
+                        text: "Total GPA: 3.12/4",
+                    },
+                ]}
+            />
+            <Card
+                logo="/images/mandegar_alborz_highschool.jpg"
+                title="Diploma of Mathematics"
+                subtitle="Mandegar Alborz High School"
+                location="Tehran, Iran"
+                date="Sep 2012 -- Aug 2016"
+                items={[
+                    {
+                        text: "Total GPA: 4/4",
+                    },
+                ]}
+            />
+        </>
+    );
+}
 
-                <Frame as="hr" className="my-8" />
+function Honors() {
+    return (
+        <>
+            <Text as="h2" className="warning mb-4">
+                Honors & Awards
+            </Text>
+            <ul>
+                <li>
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <p className="text-start md:text-end mb-2 md:mb-0">
+                            Ranked 18st in the Iranian university entrance exam
+                            for the Master&apos;s Degree in Computer Science
+                        </p>
+                        <b>2021</b>
+                    </div>
+                </li>
+                <li>
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <p className="text-start md:text-end mb-2 md:mb-0">
+                            Ranked top 1% among more than 190,000 students who
+                            participated in nationwide entrance examination of
+                            undergraduate studies in Iranian universities
+                        </p>
+                        <b>2016</b>
+                    </div>
+                </li>
+            </ul>
+        </>
+    );
+}
 
-                <Text as="h2" className="warning mb-4">
-                    Honors & Awards
-                </Text>
-                <ul>
-                    <li>
-                        <div className="flex flex-col md:flex-row md:justify-between">
-                            <p className="text-start md:text-end mb-2 md:mb-0">
-                                Ranked 18st in the Iranian university entrance
-                                exam for the Master's Degree in Computer Science
-                            </p>
-                            <b>2021</b>
-                        </div>
-                    </li>
-                    <li>
-                        <div className="flex flex-col md:flex-row md:justify-between">
-                            <p className="text-start md:text-end mb-2 md:mb-0">
-                                Ranked top 1% among more than 190,000 students
-                                who participated in nationwide entrance
-                                examination of undergraduate studies in Iranian
-                                universities
-                            </p>
-                            <b>2016</b>
-                        </div>
-                    </li>
-                </ul>
+function Skills() {
+    return (
+        <>
+            <Text as="h2" className="warning mb-4">
+                Technical Skills
+            </Text>
+            <ul>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>Programming Languages</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            C/C++, C#, Java, JavaScript, TypeScript, Python,
+                            MATLAB, Erlang
+                        </i>
+                    </div>
+                </li>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>Client Development</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            HTML/CSS, TailwindCSS, ReactJS, ReactNative, Android
+                            Studio, ElectronJS, Qt/QML (C++)
+                        </i>
+                    </div>
+                </li>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>Machine/Deep Learning</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            NumPy, OpenCV, Pandas, Seaborn, Matplotlib, PyTorch,
+                            Tensorflow, Huggingface, Scikit-Learn
+                        </i>
+                    </div>
+                </li>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>Storage & Database</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            PostgreSQL, MSSQL, MySQL, SQLite, MongoDB,
+                            CouchBase, Aerospike, Cassandra/ScyllaDB, RabbitMQ,
+                            Redis, Minio
+                        </i>
+                    </div>
+                </li>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>Container Orchestration</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            Docker, DockerSwarm, DockerCompose, Kubernetes,
+                            Helm, Nomad, Vault, K3s, RKE, EKS
+                        </i>
+                    </div>
+                </li>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>High Performance Computing</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            Slurm, HTCondor, SunGridEngine, Rocks Cluster,
+                            Nvidia Enroot, Nvidia Pyxis, Singularity
+                        </i>
+                    </div>
+                </li>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>Networking & Loadbalancer</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            Kong, Nginx, Traefik, CoreDNS, Envoy, Consul,
+                            Linkerd, Cilium
+                        </i>
+                    </div>
+                </li>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>Infrastructure & Cloud</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            Terraform, Crossplane, Packer, GitOps, ESXi,
+                            OpenStack, Hetzner Cloud, Amazon Web Services
+                        </i>
+                    </div>
+                </li>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>Monitoring & Alerting</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            Prometheus, Grafana, Grafana Agnet, OpenTelemetry,
+                            fluentd/fluentbit, Loki, Mimir, Tempo, Cortex
+                        </i>
+                    </div>
+                </li>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>CI/CD & Automation</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            DroneCI, GitlabCI, TravisCI, Github Actions, Azure
+                            Pipelines, ArgoCD
+                        </i>
+                    </div>
+                </li>
+                <li className="w-full pr-8">
+                    <div className="flex flex-col md:flex-row md:justify-between">
+                        <b>LowCode & NoCode</b>
+                        <i className="text-start md:text-end mb-2 md:mb-0">
+                            N8n, Hasura, Strapi, ReactAdmin
+                        </i>
+                    </div>
+                </li>
+            </ul>
+        </>
+    );
+}
 
-                <Frame as="hr" className="my-8" />
+function Courses() {
+    return (
+        <>
+            <Text as="h2" className="warning">
+                Relevant Courses
+            </Text>
+            <Text as="blockquote" className="mb-4">
+                Graduate courses are indicated by *
+            </Text>
+            <ul className="grid grid-cols-1 md:grid-cols-2">
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Digital Image Processing *</b>
+                        <i>17/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Natural Language Processing *</b>
+                        <i>19.12/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Advanced Computation Theory *</b>
+                        <i>18.5/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Advanced Theory of Algorithms *</b>
+                        <i>14.75/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Machine Learning *</b>
+                        <i>18.45/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Artificial Intelligence</b>
+                        <i>19.1/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Computer Graphics</b>
+                        <i>20/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Principles of Operating Systems</b>
+                        <i>20/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Principles of Computer Systems</b>
+                        <i>20/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Principles of Logic and Set Theory</b>
+                        <i>20/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Compiler</b>
+                        <i>20/20</i>
+                    </div>
+                </li>
+                <li className="w-full md:pr-8">
+                    <div className="flex justify-between">
+                        <b>Database</b>
+                        <i>19/20</i>
+                    </div>
+                </li>
+            </ul>
+        </>
+    );
+}
 
-                <Text as="h2" className="warning mb-4">
-                    Technical Skills
-                </Text>
-                <ul>
-                    {skills.map((item: any, index: number) => (
-                        <li key={index} className="w-full pr-8">
-                            <div className="flex flex-col md:flex-row md:justify-between">
-                                <b>{`${item.title}: `}</b>
-                                <i className="text-start md:text-end mb-2 md:mb-0">
-                                    {item.skills.join(", ")}
-                                </i>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-
-                <Frame as="hr" className="my-8" />
-
-                <Text as="h2" className="warning">
-                    Relevant Courses
-                </Text>
-                <Text as="blockquote" className="mb-4">
-                    Graduate courses are indicated by *
-                </Text>
-                <ul className="grid grid-cols-1 md:grid-cols-2">
-                    {courses.map((item: any, index: number) => (
-                        <li key={index} className="w-full md:pr-8">
-                            <div className="flex justify-between">
-                                <b>{`${item.title}: `}</b>
-                                <i>{item.grade}</i>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-
-                <Frame as="hr" className="my-8" />
-
-                <Text as="h2" className="warning mb-4">
-                    Licenses & Certifications
-                </Text>
-                {licenses.map((item: any, index: number) => (
-                    <Card key={index} {...item} />
-                ))}
-            </div>
-        </section>
+function Licenses() {
+    return (
+        <>
+            <Text as="h2" className="warning mb-4">
+                Licenses & Certifications
+            </Text>
+            <Card
+                logo="/assets/nbml.png"
+                title="Brain Mapping Spring School"
+                subtitle="National Brain Mapping Laboratory"
+                date="Apr 2023"
+            />
+            <Card
+                logo="/assets/cka.png"
+                title="Certified Kubernetes Administrator (CKA)"
+                subtitle="Udemy"
+                date="Oct 2020"
+            />
+            <Card
+                logo="/assets/ckad.png"
+                title="Kubernetes Certified Application Developer (CKAD)"
+                subtitle="Udemy"
+                date="Aug 2020"
+            />
+            <Card
+                logo="/assets/swarm.png"
+                title="Docker - SWARM - Hands-on - DevOps"
+                subtitle="Udemy"
+                date="Jun 2020"
+            />
+            <Card
+                logo="/assets/ccna.png"
+                title="Cisco Certified Network Associate (CCNA)"
+                subtitle="Tehran Institute of Technology"
+                date="Nov 2016"
+            />
+        </>
     );
 }
 
@@ -580,7 +546,22 @@ export default function Page() {
             <Hero id="resume" image="/images/break_resume.jpg" height="40vh">
                 <Text as="h1">Resume</Text>
             </Hero>
-            <Resume />
+            <section
+                id="about"
+                className="flex flex-col items-center p-4 md:p-8"
+            >
+                <div className="container max-w-screen-xl">
+                    <Educations />
+                    <Frame as="hr" className="my-8" />
+                    <Honors />
+                    <Frame as="hr" className="my-8" />
+                    <Skills />
+                    <Frame as="hr" className="my-8" />
+                    <Courses />
+                    <Frame as="hr" className="my-8" />
+                    <Licenses />
+                </div>
+            </section>
         </>
     );
 }
