@@ -22,7 +22,7 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "esnbradlc.vscode-tailwindcss",
+                "bradlc.vscode-tailwindcss",
                 "James-Yu.latex-workshop",
                 "esbenp.prettier-vscode",
                 "unifiedjs.vscode-mdx"

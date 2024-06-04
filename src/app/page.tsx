@@ -87,32 +87,55 @@ function About() {
                 <div className="grid grid-cols-3 gap-8">
                     <div className="col-span-3">
                         <Text as="h2">About</Text>
-                        <span className="mb-4">
+                        <span className="mb-4 col-span-2">
                             <Text as="p">
-                                I am a Full-Stack developer and computer science
-                                M.Sc. student, interested in cognitive science
-                                and brain signals processing, and a true lover
-                                of learning who has always sought more
-                                experience. I entered the field of programming
-                                in 2012, initially with the aim of implementing
-                                audio and video messaging software, I started to
-                                learn the concepts of networking and programming
-                                languages, and the result of this goal was the
-                                ChaM (Chapar Messenger) project and a world of
-                                new experiences that It helped me find my career
-                                path and focus on the backend field. After
-                                learning and doing a few Full-Stack projects, I
-                                gradually became familiar with serverless
-                                architecture and Low-Code and No-Code
-                                technologies, as well as the concepts of cloud
-                                computing.
+                                My fascination with technology began in 2012
+                                when I set out to build audio and video
+                                messaging software. This ambitious goal led me
+                                to dive into networking and programming
+                                languages, culminating in my first major
+                                project, ChaM (Chapar Messenger). More than just
+                                a product, ChaM was my compass, guiding me
+                                through the vast tech landscape and anchoring my
+                                passion in backend development. As my skills
+                                grew, so did my projects. I navigated through
+                                full-stack development, serverless architecture,
+                                and the innovative realms of Low-Code and
+                                No-Code technologies. My exploration of cloud
+                                computing further expanded my digital toolkit.
                             </Text>
+                            <br />
                             <Text as="p">
-                                Because in my view, programming is merely a tool
-                                to serve humanity, I try to spend less time
-                                programming with No-Code tools and instead spend
-                                more time learning basic concepts like math,
-                                logic, and AI.
+                                Today, I stand at an exciting intersection:
+                                <ul>
+                                    <li>🎓 Computer Science M.Sc. student</li>
+                                    <li>💻 Seasoned Full-Stack Developer</li>
+                                    <li>
+                                        🧠 Enthusiast in Cognitive Science &
+                                        Brain Signal Processing
+                                    </li>
+                                </ul>
+                            </Text>
+                            <br />
+                            <Text as="p">
+                                But technology, to me, is more than lines of
+                                code—it&apos;s a means to understand and enhance
+                                humanity. This belief steers me toward No-Code
+                                tools, not to work less, but to shift my focus.
+                                By automating routine tasks, I free up time to
+                                delve into the foundational concepts that truly
+                                intrigue me: mathematics, logic, and artificial
+                                intelligence. My current passion? Deciphering
+                                the complex signals of the human brain. I
+                                believe that by modeling cognitive processes, we
+                                can create technology that&apos;s not just
+                                smart, but truly understands us. It&apos;s a
+                                challenge that marries my love for learning with
+                                my tech expertise, pushing me to constantly seek
+                                more knowledge and experience. Join me as I work
+                                to bridge the gap between silicon and synapses,
+                                crafting a future where technology doesn&apos;t
+                                just serve humanity—it comprehends it.
                             </Text>
                         </span>
                     </div>
