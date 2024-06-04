@@ -18,9 +18,6 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: "20"
-            - uses: actions/configure-pages@v5
-              with:
-                  static_site_generator: next
             - run: npm ci
             - run: npm run build
             - run: cp .github/CNAME out
