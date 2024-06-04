@@ -27,14 +27,18 @@ jobs:
                   working_directory: private/CV
                   root_file: main.tex
             - run: cp private/CV/main.pdf out/assets/CV.pdf
-            - uses: actions/upload-pages-artifact@v3
+            - uses: actions/upload-artifact@v3
               with:
+                  name: github-pages
                   path: out
 
     deploy:
         needs: build
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
+        permissions:
+            pages: write
+            id-token: write
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
