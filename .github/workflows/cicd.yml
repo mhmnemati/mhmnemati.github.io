@@ -32,15 +32,8 @@ jobs:
                   name: public
                   path: out
 
-    test:
-        needs: build
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
-            - run: echo Test
-
     deploy:
-        needs: test
+        needs: build
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
         steps:
