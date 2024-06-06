@@ -1,3 +1,4 @@
+import Animator from "@/components/Animator";
 import Frame from "@/components/Frame";
 import Text from "@/components/Text";
 import Hero from "@/components/Hero";
@@ -17,10 +18,10 @@ import {
 function Home() {
     return (
         <Hero id="home" image="/images/hero.jpg">
-            <Text as="h1">I&apos;m Mohammad Hosein Nemati</Text>
+            <Text as="h1">I am Mohammad Hosein Nemati</Text>
             <Text as="b">
-                A computer science student and full stack developer who is
-                mainly interested in modeling nature rules with computers
+                a DevOps wizard constructing automated cloud infrastructures and
+                MLOps pipelines to power intelligent systems
             </Text>
             <span>
                 <Link
@@ -89,53 +90,59 @@ function About() {
                         <Text as="h2">About</Text>
                         <span className="mb-4 col-span-2">
                             <Text as="p">
-                                My fascination with technology began in 2012
-                                when I set out to build audio and video
-                                messaging software. This ambitious goal led me
-                                to dive into networking and programming
-                                languages, culminating in my first major
-                                project, ChaM (Chapar Messenger). More than just
-                                a product, ChaM was my compass, guiding me
-                                through the vast tech landscape and anchoring my
-                                passion in backend development. As my skills
-                                grew, so did my projects. I navigated through
-                                full-stack development, serverless architecture,
-                                and the innovative realms of Low-Code and
-                                No-Code technologies. My exploration of cloud
-                                computing further expanded my digital toolkit.
+                                I am a passionate Full-Stack Developer and
+                                computer science M.Sc. graduate with a strong
+                                interest in artificial intelligence, cognitive
+                                science, and brain signal processing. My journey
+                                in programming began in 2012 with the
+                                development of an audio and video messaging
+                                software called ChaM (Chapar Messenger), which
+                                served as a guiding compass, leading me through
+                                the intricate branches of programming and
+                                networking.
                             </Text>
                             <br />
                             <Text as="p">
-                                Today, I stand at an exciting intersection:
-                                <ul>
-                                    <li>🎓 Computer Science M.Sc. student</li>
-                                    <li>💻 Seasoned Full-Stack Developer</li>
-                                    <li>
-                                        🧠 Enthusiast in Cognitive Science &
-                                        Brain Signal Processing
-                                    </li>
-                                </ul>
+                                Throughout my career, I have worked on diverse
+                                projects, honing my skills in various languages
+                                and technologies. I have contributed to notable
+                                projects such as the ManagedFunds system at TIS,
+                                the CCS (Container Control System) at Mobtaker
+                                Darya, and the Shahin system, leveraging
+                                cutting-edge technologies like React Native and
+                                Hasura.
                             </Text>
                             <br />
                             <Text as="p">
-                                But technology, to me, is more than lines of
-                                code—it&apos;s a means to understand and enhance
-                                humanity. This belief steers me toward No-Code
-                                tools, not to work less, but to shift my focus.
-                                By automating routine tasks, I free up time to
-                                delve into the foundational concepts that truly
-                                intrigue me: mathematics, logic, and artificial
-                                intelligence. My current passion? Deciphering
-                                the complex signals of the human brain. I
-                                believe that by modeling cognitive processes, we
-                                can create technology that&apos;s not just
-                                smart, but truly understands us. It&apos;s a
-                                challenge that marries my love for learning with
-                                my tech expertise, pushing me to constantly seek
-                                more knowledge and experience. Join me as I work
-                                to bridge the gap between silicon and synapses,
-                                crafting a future where technology doesn&apos;t
-                                just serve humanity—it comprehends it.
+                                Alongside development, I have cultivated a deep
+                                passion for DevOps and AI. I have implemented
+                                CI/CD pipelines, Dockerized applications, and
+                                employed Infrastructure as Code practices to
+                                streamline development processes. My
+                                master&apos;s thesis focused on deep
+                                learning-based seizure detection using graph
+                                neural networks, showcasing my ability to apply
+                                advanced AI techniques to real-world problems.
+                            </Text>
+                            <br />
+                            <Text as="p">
+                                As a lifelong learner, I believe in the power of
+                                No-Code and Low-Code technologies to accelerate
+                                development and enable me to focus on
+                                higher-level concepts. I am excited to
+                                contribute my skills and knowledge to innovative
+                                projects that push the boundaries of what is
+                                possible, constantly seeking new challenges and
+                                opportunities to grow.
+                            </Text>
+                            <br />
+                            <Text as="p">
+                                With a strong foundation in Full-Stack
+                                development, a passion for AI and DevOps, and an
+                                unwavering commitment to learning, I am eager to
+                                collaborate with like-minded individuals who
+                                share my vision of harnessing technology for the
+                                betterment of society.
                             </Text>
                         </span>
                     </div>
@@ -253,10 +260,11 @@ function Educations() {
                 subtitle="University of Tehran"
                 location="Tehran, Iran"
             >
-                {[
-                    "Thesis: Deep learning based seizure detection",
-                    "Total GPA: 3.82/4",
-                ]}
+                <Text as="p">
+                    Thesis: <b>Deep learning based seizure detection</b>
+                    <br />
+                    Total GPA: <b>3.82/4</b>
+                </Text>
             </Card>
             <Card
                 logo="/images/kharazmi_university.jpg"
@@ -265,7 +273,11 @@ function Educations() {
                 subtitle="Kharazmi University"
                 location="Tehran, Iran"
             >
-                {["Last two years GPA: 3.46/4", "Total GPA: 3.12/4"]}
+                <Text as="p">
+                    Last two years GPA: <b>3.46/4</b>
+                    <br />
+                    Total GPA: <b>3.12/4</b>
+                </Text>
             </Card>
             <Card
                 logo="/images/mandegar_alborz_highschool.jpg"
@@ -274,7 +286,9 @@ function Educations() {
                 subtitle="Mandegar Alborz High School"
                 location="Tehran, Iran"
             >
-                {["Total GPA: 4/4"]}
+                <Text as="p">
+                    Total GPA: <b>4/4</b>
+                </Text>
             </Card>
         </>
     );
@@ -511,7 +525,7 @@ function Courses() {
 
 function Licenses() {
     return (
-        <>
+        <Animator manager="sequence">
             <Text as="h2" className="warning mb-4">
                 Licenses & Certifications
             </Text>
@@ -545,7 +559,7 @@ function Licenses() {
                 subtitle="Tehran Institute of Technology"
                 date="Nov 2016"
             />
-        </>
+        </Animator>
     );
 }
 

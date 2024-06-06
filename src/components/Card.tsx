@@ -1,7 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
-import { MDXRemote } from "next-mdx-remote/rsc";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,7 +12,7 @@ export interface CardProps {
     title: string;
     subtitle: string;
     location?: string;
-    children?: string[] | { text: string; link?: string }[];
+    children?: React.ReactNode;
 }
 
 export default async function Component(props: CardProps) {
@@ -62,37 +58,12 @@ export default async function Component(props: CardProps) {
                         </Text>
                     )}
                 </div>
-                {props.children && <Frame as="hr" className="my-2" />}
-                <ul>
+                {props.children && (
                     <Animator manager="stagger">
-                        {props.children?.map(
-                            (child: any, child_idx: number) => (
-                                <li key={child_idx}>
-                                    <MDXRemote
-                                        source={
-                                            typeof child === "string"
-                                                ? child
-                                                : child.text
-                                        }
-                                    />
-                                    {typeof child === "object" &&
-                                        child.link && (
-                                            <Link
-                                                className="ml-2"
-                                                href={child.link}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                            >
-                                                <FontAwesomeIcon
-                                                    icon={faExternalLink}
-                                                />
-                                            </Link>
-                                        )}
-                                </li>
-                            )
-                        )}
+                        <Frame as="hr" className="my-2" />
+                        {props.children}
                     </Animator>
-                </ul>
+                )}
             </div>
         </Frame>
     );
