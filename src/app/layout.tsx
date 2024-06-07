@@ -158,8 +158,15 @@ function Footer() {
             </span>
             <br />
             <Text manager="decipher" easing="outSine">
-                © Copyright 2021 KoLiBer • <FontAwesomeIcon icon={faReact} /> by
-                KoLiBer
+                © Copyright 2024 KoLiBer •{" "}
+                <Link
+                    href="https://github.com/ckoliber/ckoliber.github.io"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <FontAwesomeIcon icon={faReact} />
+                </Link>{" "}
+                by KoLiBer
             </Text>
         </footer>
     );
