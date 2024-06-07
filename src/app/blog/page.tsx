@@ -5,7 +5,6 @@ import Frame from "@/components/Frame";
 import Text from "@/components/Text";
 import Hero from "@/components/Hero";
 import Card from "@/components/Card";
-
 import Link from "next/link";
 
 import { generateStaticParams } from "./[id]/page";
