@@ -10,7 +10,7 @@ export interface CardProps {
     link?: string;
     date: string;
     title: string;
-    subtitle: string;
+    subtitle?: string;
     location?: string;
     children?: React.ReactNode;
 }
@@ -48,16 +48,18 @@ export default async function Component(props: CardProps) {
                     )}
                     {props.date && <Text as="h6">{props.date}</Text>}
                 </div>
-                <div className="flex flex-col md:flex-row justify-between md:items-center">
-                    <Text as="h5" className="secondary">
-                        {props.subtitle}
-                    </Text>
-                    {props.location && (
-                        <Text as="h6" className="secondary">
-                            {props.location}
+                {props.subtitle && (
+                    <div className="flex flex-col md:flex-row justify-between md:items-center">
+                        <Text as="h5" className="secondary">
+                            {props.subtitle}
                         </Text>
-                    )}
-                </div>
+                        {props.location && (
+                            <Text as="h6" className="secondary">
+                                {props.location}
+                            </Text>
+                        )}
+                    </div>
+                )}
                 {props.children && (
                     <Animator manager="stagger">
                         <Frame as="hr" className="my-2" />

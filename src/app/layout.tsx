@@ -59,7 +59,6 @@ const links = [
     ["Resume", "/#resume"],
     ["Experiences", "/experiences"],
     ["Projects", "/projects"],
-    ["Library", "/library"],
     ["Blog", "/blog"],
 ];
 

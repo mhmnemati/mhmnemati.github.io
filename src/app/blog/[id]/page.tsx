@@ -1,40 +1,64 @@
-import type { GetStaticProps } from "next";
+import { compileMDX } from "next-mdx-remote/rsc";
 
 import Animator from "@/components/Animator";
 import Frame from "@/components/Frame";
 import Text from "@/components/Text";
 import Hero from "@/components/Hero";
-import Card from "@/components/Card";
+import Image from "next/image";
+import Link from "next/link";
+
+import fs from "fs";
 
 export async function generateStaticParams() {
-    return [{ id: "post1" }, { id: "post2" }, { id: "post3" }];
+    const posts = fs.readdirSync("./src/posts").sort().reverse();
+
+    let result = [];
+    for (const post of posts) {
+        const { frontmatter } = await compileMDX({
+            source: fs.readFileSync(`./src/posts/${post}`),
+            options: {
+                parseFrontmatter: true,
+            },
+        });
+        result.push({
+            id: post.replace(".mdx", ""),
+            frontmatter: frontmatter,
+        });
+    }
+
+    return result;
 }
 
-// export const getStaticProps: GetStaticProps<{}> = async (context) => {
-//     const res = await fetch("https://api.github.com/repos/vercel/next.js");
-//     const repo = await res.json();
-//     return { props: { repo } };
-// };
+export default async function Page(props: any) {
+    const { content, frontmatter } = await compileMDX({
+        source: fs.readFileSync(`./src/posts/${props.params.id}.mdx`),
+        options: {
+            parseFrontmatter: true,
+        },
+        components: {
+            ...Object.assign(
+                {},
+                ...["h1", "h2", "h3", "h4", "h5", "h6", "p"].map((hx) => ({
+                    [hx]: (props: any) => <Text {...props} as={hx} />,
+                }))
+            ),
+            button: (props: any) => <Frame {...props} as="button" />,
+            figure: (props: any) => <Frame {...props} as="button" />,
+            img: (props: any) => <Image alt="" {...props} />,
+            a: (props: any) => <Link {...props} />,
+        },
+    });
 
-export default function Page(props: any) {
-    console.log(props);
     return (
         <>
-            <Hero image="/images/break_projects.jpg" height="70vh">
-                <Text as="h1">Blog</Text>
+            <Hero image={frontmatter.logo as string} height="70vh">
+                <Text as="h1">{frontmatter.title as string}</Text>
             </Hero>
-            {/* <section className="flex flex-col items-center p-4 md:p-8">
+            <section className="flex flex-col items-center p-4 md:p-8">
                 <div className="container max-w-screen-xl">
-                    <Text as="h2" className="warning">
-                        Research Experiences
-                    </Text>
-                    <Animator manager="sequence">
-                        {research.map((item: any, idx: number) => (
-                            <Card key={idx} {...item} />
-                        ))}
-                    </Animator>
+                    <Animator manager="sequence">{content}</Animator>
                 </div>
-            </section> */}
+            </section>
         </>
     );
 }

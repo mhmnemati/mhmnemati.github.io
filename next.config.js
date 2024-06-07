@@ -3,10 +3,6 @@ const nextConfig = {
     output: "export",
     trailingSlash: true,
     reactStrictMode: false,
-    pageExtensions: ["tsx", "mdx"],
-    experimental: {
-        mdxRs: true,
-    },
     images: {
         unoptimized: true,
     },
@@ -15,5 +11,4 @@ const nextConfig = {
     },
 };
 
-const withMDX = require("@next/mdx")();
-module.exports = withMDX(nextConfig);
+module.exports = nextConfig;
