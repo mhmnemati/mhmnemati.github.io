@@ -6,24 +6,23 @@ import Text from "@/components/Text";
 import Hero from "@/components/Hero";
 import Card from "@/components/Card";
 
-import Link from "next/link";
+export async function generateStaticParams() {
+    return [{ id: "post1" }, { id: "post2" }, { id: "post3" }];
+}
 
-import { generateStaticParams } from "./[id]/page";
+// export const getStaticProps: GetStaticProps<{}> = async (context) => {
+//     const res = await fetch("https://api.github.com/repos/vercel/next.js");
+//     const repo = await res.json();
+//     return { props: { repo } };
+// };
 
-export default async function Page(props: any) {
-    const posts = await generateStaticParams();
-
+export default function Page(props: any) {
+    console.log(props);
     return (
         <>
             <Hero image="/images/break_projects.jpg" height="70vh">
                 <Text as="h1">Blog</Text>
             </Hero>
-            {posts.map((post, idx) => (
-                <Link key={idx} href={`/blog/${post.id}`}>
-                    {post.id}
-                </Link>
-            ))}
-
             {/* <section className="flex flex-col items-center p-4 md:p-8">
                 <div className="container max-w-screen-xl">
                     <Text as="h2" className="warning">

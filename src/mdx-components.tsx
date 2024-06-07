@@ -16,6 +16,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         ),
         button: (props: any) => <Frame {...props} as="button" />,
         figure: (props: any) => <Frame {...props} as="button" />,
+        img: (props: any) => <Image alt="" {...props} />,
         a: (props: any) => <Link {...props} />,
     };
 }
