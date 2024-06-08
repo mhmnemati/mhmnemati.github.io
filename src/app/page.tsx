@@ -96,10 +96,17 @@ function About() {
                                 science, and brain signal processing. My journey
                                 in programming began in 2012 with the
                                 development of an audio and video messaging
-                                software called ChaM (Chapar Messenger), which
-                                served as a guiding compass, leading me through
-                                the intricate branches of programming and
-                                networking.
+                                software called{" "}
+                                <a
+                                    href="https://github.com/ckoliber/cham"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    ChaM
+                                </a>{" "}
+                                (Chapar Messenger), which served as a guiding
+                                compass, leading me through the intricate
+                                branches of programming and networking.
                             </Text>
                             <br />
                             <Text as="p">
