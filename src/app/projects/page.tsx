@@ -10,7 +10,7 @@ import Link from "next/link";
 
 function Notable() {
     return (
-        <div className="container max-w-screen-xl">
+        <>
             <Text as="h2" className="warning">
                 Notable Projects
             </Text>
@@ -487,13 +487,13 @@ function Notable() {
                     </ul>
                 </Card>
             </Animator>
-        </div>
+        </>
     );
 }
 
 function Published() {
     return (
-        <div className="container max-w-screen-xl">
+        <>
             <Text as="h2" className="warning">
                 Published Projects
             </Text>
@@ -944,7 +944,7 @@ function Published() {
                     </ul>
                 </Card>
             </Animator>
-        </div>
+        </>
     );
 }
 
@@ -954,12 +954,22 @@ export default function Page() {
             <Hero image="/images/break_projects.jpg" height="70vh">
                 <Text as="h1">Projects</Text>
             </Hero>
-            <section className="flex flex-col items-center p-4 md:p-8">
-                <Notable />
+            <section
+                id="notable"
+                className="flex flex-col items-center p-4 md:p-8"
+            >
+                <div className="container max-w-screen-xl">
+                    <Notable />
+                </div>
             </section>
             <Frame as="hr" />
-            <section className="flex flex-col items-center p-4 md:p-8">
-                <Published />
+            <section
+                id="published"
+                className="flex flex-col items-center p-4 md:p-8"
+            >
+                <div className="container max-w-screen-xl">
+                    <Published />
+                </div>
             </section>
         </>
     );

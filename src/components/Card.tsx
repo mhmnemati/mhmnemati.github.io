@@ -15,25 +15,33 @@ export interface CardProps {
     children?: React.ReactNode;
 }
 
-export default async function Component(props: CardProps) {
+export default function Component(props: CardProps) {
     return (
-        <Frame
-            className="my-4 grid grid-cols-3"
-            illuminator={500}
-            type="hftagon"
-            size="small"
-        >
+        <div className="my-4 gap-4 flex flex-row">
             {props.logo && (
-                <div className="col-span-3 md:col-span-1">
+                <Frame
+                    className="h-full p-2 basis-full md:basis-1/3"
+                    illuminator={500}
+                    type="corners"
+                    size="medium"
+                >
                     <Image
                         alt="Personal"
                         src={props.logo}
                         width={1000}
                         height={1000}
                     />
-                </div>
+                </Frame>
             )}
-            <div className={`p-4 col-span-3 ${props.logo && "md:col-span-2"}`}>
+
+            <Frame
+                className={`px-8 py-4 basis-full ${
+                    props.logo && "md:basis-2/3"
+                }`}
+                illuminator={500}
+                type="kranox"
+                size="small"
+            >
                 <div className="flex flex-col md:flex-row justify-between md:items-center">
                     {props.link ? (
                         <Link
@@ -66,7 +74,7 @@ export default async function Component(props: CardProps) {
                         {props.children}
                     </Animator>
                 )}
-            </div>
-        </Frame>
+            </Frame>
+        </div>
     );
 }

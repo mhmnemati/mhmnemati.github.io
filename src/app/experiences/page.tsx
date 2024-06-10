@@ -10,7 +10,7 @@ import Link from "next/link";
 
 function Research() {
     return (
-        <div className="container max-w-screen-xl">
+        <>
             <Text as="h2" className="warning">
                 Research Experiences
             </Text>
@@ -30,13 +30,13 @@ function Research() {
                     </Text>
                 </Card>
             </Animator>
-        </div>
+        </>
     );
 }
 
 function Teaching() {
     return (
-        <div className="container max-w-screen-xl">
+        <>
             <Text as="h2" className="warning">
                 Teaching Experiences
             </Text>
@@ -114,13 +114,13 @@ function Teaching() {
                     </ul>
                 </Card>
             </Animator>
-        </div>
+        </>
     );
 }
 
 function Work() {
     return (
-        <div className="container max-w-screen-xl">
+        <>
             <Text as="h2" className="warning">
                 Work Experiences
             </Text>
@@ -324,7 +324,7 @@ function Work() {
                     </ul>
                 </Card>
             </Animator>
-        </div>
+        </>
     );
 }
 
@@ -334,16 +334,31 @@ export default function Page() {
             <Hero image="/images/break_projects.jpg" height="70vh">
                 <Text as="h1">Experiences</Text>
             </Hero>
-            <section className="flex flex-col items-center p-4 md:p-8">
-                <Research />
+            <section
+                id="research"
+                className="flex flex-col items-center p-4 md:p-8"
+            >
+                <div className="container max-w-screen-xl">
+                    <Research />
+                </div>
             </section>
             <Frame as="hr" />
-            <section className="flex flex-col items-center p-4 md:p-8">
-                <Teaching />
+            <section
+                id="teaching"
+                className="flex flex-col items-center p-4 md:p-8"
+            >
+                <div className="container max-w-screen-xl">
+                    <Teaching />
+                </div>
             </section>
             <Frame as="hr" />
-            <section className="flex flex-col items-center p-4 md:p-8">
-                <Work />
+            <section
+                id="work"
+                className="flex flex-col items-center p-4 md:p-8"
+            >
+                <div className="container max-w-screen-xl">
+                    <Work />
+                </div>
             </section>
         </>
     );

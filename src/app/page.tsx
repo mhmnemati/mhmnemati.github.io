@@ -90,13 +90,13 @@ function About() {
                         <Text as="h2">About</Text>
                         <span className="mb-4 col-span-2">
                             <Text as="p">
-                                I am a passionate Full-Stack Developer and
-                                computer science M.Sc. graduate with a strong
-                                interest in artificial intelligence, cognitive
-                                science, and brain signal processing. My journey
-                                in programming began in 2012 with the
-                                development of an audio and video messaging
-                                software called{" "}
+                                I am a passionate software engineer specializing
+                                in programming, AI, DevOps, and MLOps,
+                                constantly seeking ways to leverage these
+                                disciplines to solve complex problems and create
+                                innovative solutions. My journey in programming
+                                began in 2013 with the development of an audio
+                                and video messaging software called{" "}
                                 <a
                                     href="https://github.com/ckoliber/cham"
                                     target="_blank"
@@ -110,26 +110,35 @@ function About() {
                             </Text>
                             <br />
                             <Text as="p">
-                                Throughout my career, I have worked on diverse
-                                projects, honing my skills in various languages
-                                and technologies. I have contributed to notable
-                                projects such as the ManagedFunds system at TIS,
-                                the CCS (Container Control System) at Mobtaker
-                                Darya, and the Shahin system, leveraging
-                                cutting-edge technologies like React Native and
-                                Hasura.
+                                Throughout my career, I have worked on various
+                                enterprise projects, sharpening my skills in
+                                various languages and technologies. I have
+                                contributed to notable projects such as the
+                                ManagedFunds system at TIS, the CCS (Container
+                                Control System) at Mobtaker Darya, and the
+                                Shahin system, leveraging cutting-edge
+                                technologies like React Native and Hasura.
                             </Text>
                             <br />
                             <Text as="p">
                                 Alongside development, I have cultivated a deep
-                                passion for DevOps and AI. I have implemented
-                                CI/CD pipelines, Dockerized applications, and
-                                employed Infrastructure as Code practices to
-                                streamline development processes. My
-                                master&apos;s thesis focused on deep
-                                learning-based seizure detection using graph
-                                neural networks, showcasing my ability to apply
-                                advanced AI techniques to real-world problems.
+                                passion for DevOps and AI. As a Senior DevOps
+                                Engineer at Visiwise and Smartech, I
+                                revolutionized the companies&apos;
+                                infrastructure and development practices. I
+                                implemented CI/CD pipelines, Dockerized
+                                applications, and embraced GitOps principles,
+                                streamlining the development process and
+                                enhancing the reliability and scalability of the
+                                infrastructure. At Smartech, I managed a
+                                large-scale infrastructure, implementing CI
+                                pipelines across numerous repositories,
+                                Dockerizing services, and establishing a GitOps
+                                workflow using ArgoCD. I also initiated the
+                                transition to Infrastructure as Code (IaC)
+                                practices using Ansible and Terraform, laying
+                                the foundation for more efficient and manageable
+                                infrastructures.
                             </Text>
                             <br />
                             <Text as="p">
@@ -175,14 +184,9 @@ function About() {
                                 High Performance Computing and Parallel
                                 Processing
                             </li>
-                            <li>
-                                Artificial Intelligence and Machine Learning
-                            </li>
-                            <li>
-                                Deep Learning and Artificial Neural Networks
-                            </li>
-                            <li>Natural Language Processing</li>
-                            <li>Brain Signal Processing</li>
+                            <li>DevOps and MLOps and Infrastructure as Code</li>
+                            <li>Machine Learning and Deep Learning</li>
+                            <li>Human Computer Interraction</li>
                         </ul>
 
                         <Text as="h3">Languages</Text>
@@ -263,20 +267,89 @@ function Educations() {
             <Card
                 logo="/images/tehran_university.jpg"
                 date="Sep 2021 -- Aug 2024 (Expected)"
-                title="Master of Computer Science"
+                title="M.Sc in Computer Science"
                 subtitle="University of Tehran"
                 location="Tehran, Iran"
             >
-                <Text as="p">
-                    Thesis: <b>Deep learning based seizure detection</b>
-                    <br />
-                    Total GPA: <b>3.82/4</b>
-                </Text>
+                <ul className="grid grid-cols-1 md:grid-cols-2">
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Digital Image Processing *</b>
+                            <i>17/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Natural Language Processing *</b>
+                            <i>19.12/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Advanced Computation Theory *</b>
+                            <i>18.5/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Advanced Theory of Algorithms *</b>
+                            <i>14.75/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Machine Learning *</b>
+                            <i>18.45/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Artificial Intelligence</b>
+                            <i>19.1/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Computer Graphics</b>
+                            <i>20/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Principles of Operating Systems</b>
+                            <i>20/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Principles of Computer Systems</b>
+                            <i>20/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Principles of Logic and Set Theory</b>
+                            <i>20/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Compiler</b>
+                            <i>20/20</i>
+                        </div>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <div className="flex justify-between">
+                            <b>Database</b>
+                            <i>19/20</i>
+                        </div>
+                    </li>
+                </ul>
             </Card>
             <Card
                 logo="/images/kharazmi_university.jpg"
                 date="Sep 2016 -- Jan 2021"
-                title="Bachelor of Computer Science"
+                title="B.Sc in Computer Science"
                 subtitle="Kharazmi University"
                 location="Tehran, Iran"
             >
@@ -289,7 +362,7 @@ function Educations() {
             <Card
                 logo="/images/mandegar_alborz_highschool.jpg"
                 date="Sep 2012 -- Aug 2016"
-                title="Diploma of Mathematics"
+                title="Diploma of Mathematics and Physics"
                 subtitle="Mandegar Alborz High School"
                 location="Tehran, Iran"
             >

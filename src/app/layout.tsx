@@ -113,7 +113,7 @@ function Header() {
 function Footer() {
     return (
         <footer
-            className="flex flex-col justify-center text-center align-middle"
+            className="flex flex-col justify-center text-center align-middle z-5"
             style={{
                 width: "100%",
                 height: "40vh",
@@ -182,7 +182,7 @@ export default function Layout(props: {
             <body dir="ltr">
                 <Theme>
                     <Header />
-                    {props.children}
+                    <main className="z-5">{props.children}</main>
                     <Footer />
                     <div id="modal" />
                 </Theme>
