@@ -962,7 +962,7 @@ export default function Page() {
                     <Course />
                 </div>
             </section>
-            <Frame as="hr" />
+            <Frame as="hr" className="my-8" />
             <section
                 id="published"
                 className="flex flex-col items-center p-4 md:p-8"

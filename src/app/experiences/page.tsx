@@ -396,7 +396,7 @@ export default function Page() {
                     <Research />
                 </div>
             </section>
-            <Frame as="hr" />
+            <Frame as="hr" className="my-8" />
             <section
                 id="teaching"
                 className="flex flex-col items-center p-4 md:p-8"
@@ -405,7 +405,7 @@ export default function Page() {
                     <Teaching />
                 </div>
             </section>
-            <Frame as="hr" />
+            <Frame as="hr" className="my-8" />
             <section
                 id="work"
                 className="flex flex-col items-center p-4 md:p-8"

@@ -271,7 +271,7 @@ function Educations() {
                 subtitle="University of Tehran"
                 location="Tehran, Iran"
             >
-                <ul className="grid grid-cols-1 pb-2">
+                <ul className="grid grid-cols-1">
                     <li className="w-full md:pr-8">
                         GPA: <b>17.74 / 20</b>
                     </li>
@@ -279,7 +279,7 @@ function Educations() {
                         Thesis: <b>Deep learning-based seizure detection</b>
                     </li>
                 </ul>
-                <Frame as="hr" />
+                <Frame as="hr" className="my-2" />
                 <Text as="h4" className="secondary">
                     Covered Courses
                 </Text>
@@ -323,7 +323,7 @@ function Educations() {
                 subtitle="Kharazmi University"
                 location="Tehran, Iran"
             >
-                <ul className="grid grid-cols-1 pb-2">
+                <ul className="grid grid-cols-1">
                     <li className="w-full md:pr-8">
                         Last two years GPA: <b>16.98 / 20</b>
                     </li>
@@ -331,7 +331,7 @@ function Educations() {
                         Total GPA: <b>16.12 / 20</b>
                     </li>
                 </ul>
-                <Frame as="hr" />
+                <Frame as="hr" className="my-2" />
                 <Text as="h4" className="secondary">
                     Selected Courses
                 </Text>
