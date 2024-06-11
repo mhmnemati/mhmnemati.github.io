@@ -17,7 +17,7 @@ export interface CardProps {
 
 export default function Component(props: CardProps) {
     return (
-        <div className="my-4 gap-4 flex flex-row">
+        <div className="my-4 gap-4 flex flex-col md:flex-row">
             {props.logo && (
                 <Frame
                     className="h-full p-2 basis-full md:basis-1/3"
