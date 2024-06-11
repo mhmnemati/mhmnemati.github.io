@@ -271,37 +271,71 @@ function Educations() {
                 subtitle="University of Tehran"
                 location="Tehran, Iran"
             >
-                <ul className="grid grid-cols-1 md:grid-cols-2">
+                <ul className="grid grid-cols-1 pb-2">
+                    <li className="w-full md:pr-8">
+                        GPA: <b>17.74 / 20</b>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        Thesis: <b>Deep learning-based seizure detection</b>
+                    </li>
+                </ul>
+                <Frame as="hr" />
+                <Text as="h4" className="secondary">
+                    Covered Courses
+                </Text>
+                <ul className="grid grid-cols-1">
                     <li className="w-full md:pr-8">
                         <div className="flex justify-between">
-                            <b>Digital Image Processing *</b>
+                            <b>Digital Image Processing</b>
                             <i>17/20</i>
                         </div>
                     </li>
                     <li className="w-full md:pr-8">
                         <div className="flex justify-between">
-                            <b>Natural Language Processing *</b>
+                            <b>Natural Language Processing</b>
                             <i>19.12/20</i>
                         </div>
                     </li>
                     <li className="w-full md:pr-8">
                         <div className="flex justify-between">
-                            <b>Advanced Computation Theory *</b>
+                            <b>Advanced Computation Theory</b>
                             <i>18.5/20</i>
                         </div>
                     </li>
                     <li className="w-full md:pr-8">
                         <div className="flex justify-between">
-                            <b>Advanced Theory of Algorithms *</b>
+                            <b>Advanced Theory of Algorithms</b>
                             <i>14.75/20</i>
                         </div>
                     </li>
                     <li className="w-full md:pr-8">
                         <div className="flex justify-between">
-                            <b>Machine Learning *</b>
+                            <b>Machine Learning</b>
                             <i>18.45/20</i>
                         </div>
                     </li>
+                </ul>
+            </Card>
+            <Card
+                logo="/images/kharazmi_university.jpg"
+                date="Sep 2016 -- Jan 2021"
+                title="B.Sc in Computer Science"
+                subtitle="Kharazmi University"
+                location="Tehran, Iran"
+            >
+                <ul className="grid grid-cols-1 pb-2">
+                    <li className="w-full md:pr-8">
+                        Last two years GPA: <b>16.98 / 20</b>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        Total GPA: <b>16.12 / 20</b>
+                    </li>
+                </ul>
+                <Frame as="hr" />
+                <Text as="h4" className="secondary">
+                    Selected Courses
+                </Text>
+                <ul className="grid grid-cols-1">
                     <li className="w-full md:pr-8">
                         <div className="flex justify-between">
                             <b>Artificial Intelligence</b>
@@ -347,28 +381,20 @@ function Educations() {
                 </ul>
             </Card>
             <Card
-                logo="/images/kharazmi_university.jpg"
-                date="Sep 2016 -- Jan 2021"
-                title="B.Sc in Computer Science"
-                subtitle="Kharazmi University"
-                location="Tehran, Iran"
-            >
-                <Text as="p">
-                    Last two years GPA: <b>3.46/4</b>
-                    <br />
-                    Total GPA: <b>3.12/4</b>
-                </Text>
-            </Card>
-            <Card
                 logo="/images/mandegar_alborz_highschool.jpg"
                 date="Sep 2012 -- Aug 2016"
                 title="Diploma of Mathematics and Physics"
                 subtitle="Mandegar Alborz High School"
                 location="Tehran, Iran"
             >
-                <Text as="p">
-                    Total GPA: <b>4/4</b>
-                </Text>
+                <ul className="grid grid-cols-1">
+                    <li className="w-full md:pr-8">
+                        High school GPA: <b>18.59 / 20</b>
+                    </li>
+                    <li className="w-full md:pr-8">
+                        Pre-university GPA: <b>18.03 / 20</b>
+                    </li>
+                </ul>
             </Card>
         </>
     );
@@ -444,8 +470,7 @@ function Skills() {
                         <b>Storage & Database</b>
                         <i className="text-start md:text-end mb-2 md:mb-0">
                             PostgreSQL, MSSQL, MySQL, SQLite, MongoDB,
-                            CouchBase, Aerospike, Cassandra/ScyllaDB, RabbitMQ,
-                            Redis, Minio
+                            Cassandra/ScyllaDB, RabbitMQ, Kafka, Redis, Minio
                         </i>
                     </div>
                 </li>
@@ -453,8 +478,8 @@ function Skills() {
                     <div className="flex flex-col md:flex-row md:justify-between">
                         <b>Container Orchestration</b>
                         <i className="text-start md:text-end mb-2 md:mb-0">
-                            Docker, DockerSwarm, DockerCompose, Kubernetes,
-                            Helm, Nomad, Vault, K3s, RKE, EKS
+                            Docker, DockerSwarm, DockerCompose, Kubernetes (K3s,
+                            RKE2, EKS), Helm, Nomad
                         </i>
                     </div>
                 </li>
@@ -462,17 +487,8 @@ function Skills() {
                     <div className="flex flex-col md:flex-row md:justify-between">
                         <b>High Performance Computing</b>
                         <i className="text-start md:text-end mb-2 md:mb-0">
-                            Slurm, HTCondor, SunGridEngine, Rocks Cluster,
-                            Nvidia Enroot, Nvidia Pyxis, Singularity
-                        </i>
-                    </div>
-                </li>
-                <li className="w-full pr-8">
-                    <div className="flex flex-col md:flex-row md:justify-between">
-                        <b>Networking & Loadbalancer</b>
-                        <i className="text-start md:text-end mb-2 md:mb-0">
-                            Kong, Nginx, Traefik, CoreDNS, Envoy, Consul,
-                            Linkerd, Cilium
+                            Slurm, SunGridEngine, Rocks Cluster, Nvidia Enroot,
+                            Nvidia Pyxis, Singularity
                         </i>
                     </div>
                 </li>
@@ -480,8 +496,8 @@ function Skills() {
                     <div className="flex flex-col md:flex-row md:justify-between">
                         <b>Infrastructure & Cloud</b>
                         <i className="text-start md:text-end mb-2 md:mb-0">
-                            Terraform, Crossplane, Packer, GitOps, ESXi,
-                            OpenStack, Hetzner Cloud, Amazon Web Services
+                            Terraform, Ansible, Packer, ESXi, OpenStack, Hetzner
+                            Cloud, Amazon Web Services
                         </i>
                     </div>
                 </li>
@@ -489,8 +505,8 @@ function Skills() {
                     <div className="flex flex-col md:flex-row md:justify-between">
                         <b>Monitoring & Alerting</b>
                         <i className="text-start md:text-end mb-2 md:mb-0">
-                            Prometheus, Grafana, Grafana Agnet, OpenTelemetry,
-                            fluentd/fluentbit, Loki, Mimir, Tempo, Cortex
+                            Grafana, GrafanaAgent, Promtail, Prometheus,
+                            OpenTelemetry, Loki, Mimir, Tempo
                         </i>
                     </div>
                 </li>
@@ -499,7 +515,7 @@ function Skills() {
                         <b>CI/CD & Automation</b>
                         <i className="text-start md:text-end mb-2 md:mb-0">
                             DroneCI, GitlabCI, TravisCI, Github Actions, Azure
-                            Pipelines, ArgoCD
+                            Pipelines, ArgoCD, GitOps
                         </i>
                     </div>
                 </li>
@@ -509,93 +525,6 @@ function Skills() {
                         <i className="text-start md:text-end mb-2 md:mb-0">
                             N8n, Hasura, Strapi, ReactAdmin
                         </i>
-                    </div>
-                </li>
-            </ul>
-        </>
-    );
-}
-
-function Courses() {
-    return (
-        <>
-            <Text as="h2" className="warning">
-                Relevant Courses
-            </Text>
-            <Text as="blockquote" className="mb-4">
-                Graduate courses are indicated by *
-            </Text>
-            <ul className="grid grid-cols-1 md:grid-cols-2">
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Digital Image Processing *</b>
-                        <i>17/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Natural Language Processing *</b>
-                        <i>19.12/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Advanced Computation Theory *</b>
-                        <i>18.5/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Advanced Theory of Algorithms *</b>
-                        <i>14.75/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Machine Learning *</b>
-                        <i>18.45/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Artificial Intelligence</b>
-                        <i>19.1/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Computer Graphics</b>
-                        <i>20/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Principles of Operating Systems</b>
-                        <i>20/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Principles of Computer Systems</b>
-                        <i>20/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Principles of Logic and Set Theory</b>
-                        <i>20/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Compiler</b>
-                        <i>20/20</i>
-                    </div>
-                </li>
-                <li className="w-full md:pr-8">
-                    <div className="flex justify-between">
-                        <b>Database</b>
-                        <i>19/20</i>
                     </div>
                 </li>
             </ul>
@@ -614,31 +543,218 @@ function Licenses() {
                 title="Brain Mapping Spring School"
                 subtitle="National Brain Mapping Laboratory"
                 date="Apr 2023"
-            />
+            >
+                <Text as="h4" className="secondary">
+                    Covered Topics
+                </Text>
+                <ul className="grid grid-cols-1">
+                    <li className="w-full md:pr-8">
+                        Foundamentals of neuroscience, cognitive science and
+                        brain mapping
+                    </li>
+                    <li className="w-full md:pr-8">
+                        Introduction to anatomy and physiology of the brain
+                    </li>
+                    <li className="w-full md:pr-8">
+                        Foundamentals of EEG, MRI, fNIRS, iTMS/TES, and
+                        neurofeedback
+                    </li>
+                    <li className="w-full md:pr-8">
+                        Introduction to virtual reality and eye tracking
+                        technology
+                    </li>
+                    <li className="w-full md:pr-8">
+                        Introduction to cognitive assessment and rehabilitation
+                        tools
+                    </li>
+                    <li className="w-full md:pr-8">
+                        Machine intelligence (application of artificial
+                        intelligence in visual neuroscience)
+                    </li>
+                </ul>
+            </Card>
             <Card
                 logo="/assets/cka.png"
                 title="Certified Kubernetes Administrator (CKA)"
                 subtitle="Udemy"
                 date="Oct 2020"
-            />
+            >
+                <Text as="h4" className="secondary">
+                    Covered Topics
+                </Text>
+                <ul>
+                    <li className="w-full md:pr-8">
+                        <b>Core Concepts:</b> Cluster architecture, API
+                        primitives, services, and networking
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Scheduling:</b> Labels, selectors, resource limits,
+                        manual and automatic scheduling, taints, tolerations,
+                        and node affinity
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Logging & Monitoring:</b> Monitoring cluster
+                        components and managing application logs
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Application Lifecycle Management:</b> Rolling
+                        updates, rollbacks, deployments, jobs, CronJobs,
+                        ConfigMaps, Secrets, and multi-container pods
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Cluster Maintenance:</b> Cluster upgrades, operating
+                        system upgrades, backup, and restore
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Security:</b> Authentication, authorization, TLS
+                        certificates, network policies, security contexts, and
+                        secure images
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Storage:</b> Persistent Volumes, Persistent Volume
+                        Claims, storage classes, and applications with
+                        persistent storage
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Networking:</b> Network primitives, pod networking,
+                        CNI, service networking, and Ingress
+                    </li>
+                    <li className="w-full md:pr-8">
+                        Installation, Configuration & Validation,
+                        Troubleshooting
+                    </li>
+                </ul>
+            </Card>
             <Card
                 logo="/assets/ckad.png"
                 title="Kubernetes Certified Application Developer (CKAD)"
                 subtitle="Udemy"
                 date="Aug 2020"
-            />
+            >
+                <Text as="h4" className="secondary">
+                    Covered Topics
+                </Text>
+                <ul>
+                    <li className="w-full md:pr-8">
+                        <b>Core Concepts:</b> Cluster architecture, API
+                        primitives, Pods, YAML, ReplicaSets, Deployments,
+                        Namespaces, and imperative commands
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Configuration:</b> Configuring containers,
+                        Multi-container pods, ConfigMaps, Secrets, resource
+                        requirements, security contexts, and service accounts
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Observability:</b> Readiness and liveness probes,
+                        container logging, and monitoring applications
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Pod Design:</b> Labels, selectors, annotations,
+                        rolling updates, rollbacks, Jobs, and CronJobs
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Services & Networking:</b> Services, NetworkPolicies,
+                        and Ingress
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>State Persistence:</b> Volumes, Persistent Volumes,
+                        Persistent Volume Claims, and storage classes
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Security:</b> Authentication, authorization, RBAC,
+                        cluster roles, role bindings, admission controllers, and
+                        custom resource definitions
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Additional topics</b>: Helm fundamentals, Kubernetes
+                        challenges, certification tips, lightning labs, and mock
+                        exams
+                    </li>
+                </ul>
+            </Card>
             <Card
                 logo="/assets/swarm.png"
                 title="Docker - SWARM - Hands-on - DevOps"
                 subtitle="Udemy"
                 date="Jun 2020"
-            />
+            >
+                <Text as="h4" className="secondary">
+                    Covered Topics
+                </Text>
+                <ul>
+                    <li className="w-full md:pr-8">
+                        <b>Docker Compose:</b> In-depth concepts, Hands-on
+                        exercises
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Docker Swarm:</b> Architecture and concepts, Setting
+                        up a Swarm cluster, Managing services, discovery, and
+                        load balancing
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Docker Stacks:</b> Deploying multi-service
+                        applications, Placement constraints
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>CI/CD with Docker:</b> Integration and workflow,
+                        Docker Registry setup and usage
+                    </li>
+                    <li className="w-full md:pr-8">
+                        Advanced networking with overlay networks
+                    </li>
+                </ul>
+            </Card>
             <Card
                 logo="/assets/ccna.png"
                 title="Cisco Certified Network Associate (CCNA)"
                 subtitle="Tehran Institute of Technology"
                 date="Nov 2016"
-            />
+            >
+                <Text as="h4" className="secondary">
+                    Covered Topics
+                </Text>
+                <ul>
+                    <li className="w-full md:pr-8">
+                        <b>Network Fundamentals:</b> OSI and TCP/IP models, IP
+                        addressing and subnetting, Network components (routers,
+                        switches, etc.)
+                    </li>
+
+                    <li className="w-full md:pr-8">
+                        <b>LAN Switching Technologies:</b> Ethernet and
+                        switching concepts, VLANs and Inter-VLAN routing,
+                        Spanning Tree Protocol (STP)
+                    </li>
+
+                    <li className="w-full md:pr-8">
+                        <b>Routing Technologies:</b> IP routing concepts, Static
+                        and dynamic routing, Routing protocols (RIPv2, EIGRP,
+                        OSPF)
+                    </li>
+
+                    <li className="w-full md:pr-8">
+                        <b>WAN Technologies:</b> WAN concepts and technologies,
+                        Point-to-Point Protocol (PPP), Frame Relay
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Infrastructure Services:</b> Dynamic Host
+                        Configuration Protocol (DHCP), Network Address
+                        Translation (NAT), Network Time Protocol (NTP)
+                    </li>
+
+                    <li className="w-full md:pr-8">
+                        <b>Infrastructure Maintenance:</b> Device management and
+                        maintenance, IOS backup and restore, Network
+                        troubleshooting
+                    </li>
+                    <li className="w-full md:pr-8">
+                        <b>Infrastructure Security:</b> Access control lists
+                        (ACLs), Device security features, Remote access (Telnet,
+                        SSH)
+                    </li>
+                </ul>
+            </Card>
         </Animator>
     );
 }
@@ -661,8 +777,6 @@ export default function Page() {
                     <Honors />
                     <Frame as="hr" className="my-8" />
                     <Skills />
-                    <Frame as="hr" className="my-8" />
-                    <Courses />
                     <Frame as="hr" className="my-8" />
                     <Licenses />
                 </div>
