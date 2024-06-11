@@ -11,7 +11,7 @@ import Link from "next/link";
 function Research() {
     return (
         <>
-            <Text as="h2" className="warning">
+            <Text id="research" as="h2" className="warning">
                 Research Experiences
             </Text>
             <Animator manager="sequence">
@@ -35,7 +35,7 @@ function Research() {
 function Teaching() {
     return (
         <>
-            <Text as="h2" className="warning">
+            <Text id="teaching" as="h2" className="warning">
                 Teaching Experiences
             </Text>
             <Animator manager="sequence">
@@ -119,7 +119,7 @@ function Teaching() {
 function Work() {
     return (
         <>
-            <Text as="h2" className="warning">
+            <Text id="work" as="h2" className="warning">
                 Work Experiences
             </Text>
             <Animator manager="sequence">
@@ -388,29 +388,12 @@ export default function Page() {
             <Hero image="/images/break_projects.jpg" height="70vh">
                 <Text as="h1">Experiences</Text>
             </Hero>
-            <section
-                id="research"
-                className="flex flex-col items-center p-4 md:p-8"
-            >
+            <section className="flex flex-col items-center p-4 md:p-8">
                 <div className="container max-w-screen-xl">
                     <Research />
-                </div>
-            </section>
-            <Frame as="hr" className="my-8" />
-            <section
-                id="teaching"
-                className="flex flex-col items-center p-4 md:p-8"
-            >
-                <div className="container max-w-screen-xl">
+                    <Frame as="hr" className="my-8" />
                     <Teaching />
-                </div>
-            </section>
-            <Frame as="hr" className="my-8" />
-            <section
-                id="work"
-                className="flex flex-col items-center p-4 md:p-8"
-            >
-                <div className="container max-w-screen-xl">
+                    <Frame as="hr" className="my-8" />
                     <Work />
                 </div>
             </section>

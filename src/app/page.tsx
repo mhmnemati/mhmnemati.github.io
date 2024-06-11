@@ -767,10 +767,7 @@ export default function Page() {
             <Hero id="resume" image="/images/break_resume.jpg" height="40vh">
                 <Text as="h1">Resume</Text>
             </Hero>
-            <section
-                id="about"
-                className="flex flex-col items-center p-4 md:p-8"
-            >
+            <section className="flex flex-col items-center p-4 md:p-8">
                 <div className="container max-w-screen-xl">
                     <Educations />
                     <Frame as="hr" className="my-8" />

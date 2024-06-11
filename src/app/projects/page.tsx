@@ -11,7 +11,7 @@ import Link from "next/link";
 function Course() {
     return (
         <>
-            <Text as="h2" className="warning">
+            <Text id="course" as="h2" className="warning">
                 Course Projects
             </Text>
             <Animator manager="sequence">
@@ -494,7 +494,7 @@ function Course() {
 function Published() {
     return (
         <>
-            <Text as="h2" className="warning">
+            <Text id="published" as="h2" className="warning">
                 Published Projects
             </Text>
             <Animator manager="sequence">
@@ -954,20 +954,10 @@ export default function Page() {
             <Hero image="/images/break_projects.jpg" height="70vh">
                 <Text as="h1">Projects</Text>
             </Hero>
-            <section
-                id="course"
-                className="flex flex-col items-center p-4 md:p-8"
-            >
+            <section className="flex flex-col items-center p-4 md:p-8">
                 <div className="container max-w-screen-xl">
                     <Course />
-                </div>
-            </section>
-            <Frame as="hr" className="my-8" />
-            <section
-                id="published"
-                className="flex flex-col items-center p-4 md:p-8"
-            >
-                <div className="container max-w-screen-xl">
+                    <Frame as="hr" className="my-8" />
                     <Published />
                 </div>
             </section>
