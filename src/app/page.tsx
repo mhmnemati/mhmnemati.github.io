@@ -18,7 +18,7 @@ import {
 function Home() {
     return (
         <Hero id="home" image="/images/hero.jpg">
-            <Text as="h1">I am Mohammad Hosein Nemati</Text>
+            <Text as="h1">I am Mohammad Hossein Nemati</Text>
             <Text as="b">
                 a DevOps wizard constructing automated cloud infrastructures and
                 MLOps pipelines to power intelligent systems
@@ -214,7 +214,7 @@ function About() {
                                         className="mr-2"
                                         icon={faLinkedin}
                                     />
-                                    Mohammad Hosein Nemati
+                                    Mohammad Hossein Nemati
                                 </Link>
                                 <br />
                                 <Link

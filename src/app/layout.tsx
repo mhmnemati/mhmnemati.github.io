@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         "blog",
         "personal",
         "portfolio",
-        "Mohammad Hosein Nemati",
+        "Mohammad Hossein Nemati",
         "computer science",
         "biology",
         "cloud",
