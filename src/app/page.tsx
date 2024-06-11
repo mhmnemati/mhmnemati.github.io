@@ -195,10 +195,10 @@ function About() {
                                 <b>Persian:</b> Native
                             </li>
                             <li>
-                                <b>English:</b> Intermediate
+                                <b>English:</b> Full professional proficiency
                             </li>
                             <li>
-                                <b>Deutsch:</b> Elementary
+                                <b>Deutsch:</b> Limited working proficiency
                             </li>
                         </ul>
 

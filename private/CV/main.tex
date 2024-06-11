@@ -12,26 +12,26 @@
 {\nationality{Iran, Tehran}}
 
 \begin{section}{Education}
- \begin{subsectionnobullet}{Master of Computer Science}{University of Tehran}{Sep 2021 -- Aug 2024 (Expected)}{Teharn, Iran}
-     \item Thesis: Deep learning based seizure detection
-     \item Total GPA: 3.82/4
+ \begin{subsectionnobullet}{M.Sc in Computer Science}{University of Tehran}{Sep 2021 -- Aug 2024 (Expected)}{Teharn, Iran}
+     \item GPA: 17.74 / 20
+     \item Thesis: Deep learning-based seizure detection
  \end{subsectionnobullet}
- \begin{subsectionnobullet}{Bachelor of Computer Science}{Kharazmi University}{Sep 2016 -- Jan 2021}{Tehran, Iran}
-     \item Last two years GPA: 3.46/4
-     \item Total GPA: 3.12/4
+ \begin{subsectionnobullet}{B.Sc in Computer Science}{Kharazmi University}{Sep 2016 -- Jan 2021}{Tehran, Iran}
+     \item Last two years GPA: 16.98 / 20
+     \item Total GPA: 16.12 / 20
  \end{subsectionnobullet}
  \begin{subsectionnobullet}{Diploma of Mathematics}{Mandegar Alborz High School}{Sep 2012 -- Aug 2016}{Tehran, Iran}
-     \item Total GPA: 4/4
+     \item High school GPA: 18.59 / 20
+     \item Pre-university GPA: 18.03 / 20
  \end{subsectionnobullet}
 \end{section}
 
 \begin{section}{Areas of Interest}
  \begin{subsectionbullet}
      \item High Performance Computing and Parallel Processing
-     \item Artificial Intelligence and Machine Learning
-     \item Deep Learning and Artificial Neural Networks
-     \item Natural Language Processing
-     \item Brain Signal Processing
+     \item DevOps and MLOps and Infrastructure as Code
+     \item Machine Learning and Deep Learning
+     \item Human Computer Interraction
  \end{subsectionbullet}
 \end{section}
 
@@ -39,63 +39,63 @@
     \entry{Programming Languages}{C/C++, C\#, Java, JavaScript, TypeScript, Python, MATLAB, Erlang}
     \entry{Client Development}{HTML/CSS, TailwindCSS, ReactJS, ReactNative, Android Studio, ElectronJS, Qt/QML (C++)}
     \entry{Machine/Deep Learning}{NumPy, OpenCV, Pandas, Seaborn, Matplotlib, PyTorch, Tensorflow, Huggingface, Scikit-Learn}
-    \entry{Storage \& Database}{PostgreSQL, MSSQL, MySQL, SQLite, MongoDB, CouchBase, Aerospike, Cassandra/ScyllaDB, RabbitMQ, Redis, Minio}
-    \entry{Container Orchestration}{Docker, DockerSwarm, DockerCompose, Kubernetes, Helm, Nomad, Vault, K3s, RKE, EKS}
-    \entry{High Performance Computing}{Slurm, HTCondor, SunGridEngine, Rocks Cluster, Nvidia Enroot, Nvidia Pyxis, Singularity}
-    \entry{Networking \& Loadbalancer}{Kong, Nginx, Traefik, CoreDNS, Envoy, Consul, Linkerd, Cilium}
-    \entry{Infrastructure \& Cloud}{Terraform, Crossplane, Packer, GitOps, ESXi, OpenStack, Hetzner Cloud, Amazon Web Services}
-    \entry{Monitoring \& Alerting}{Prometheus, Grafana, Grafana Agent, OpenTelemetry, fluentd/fluentbit, Loki, Mimir, Tempo, Cortex}
-    \entry{CI/CD \& Automation}{DroneCI, GitlabCI, TravisCI, Github Actions, Azure Pipelines, ArgoCD}
+    \entry{Storage \& Database}{PostgreSQL, MSSQL, MySQL, SQLite, MongoDB, Cassandra/ScyllaDB, RabbitMQ, Kafka, Redis, Minio}
+    \entry{Container Orchestration}{Docker, DockerSwarm, DockerCompose, Kubernetes (K3s, RKE2, EKS), Helm, Nomad}
+    \entry{High Performance Computing}{Slurm, SunGridEngine, Rocks Cluster, Nvidia Enroot, Nvidia Pyxis, Singularity}
+    \entry{Infrastructure \& Cloud}{Terraform, Ansible, Packer, ESXi, OpenStack, Hetzner Cloud, Amazon Web Services}
+    \entry{Monitoring \& Alerting}{Grafana, GrafanaAgent, Promtail, Prometheus, OpenTelemetry, Loki, Mimir, Tempo}
+    \entry{CI/CD \& Automation}{DroneCI, GitlabCI, TravisCI, Github Actions, Azure Pipelines, ArgoCD, GitOps}
     \entry{LowCode \& NoCode}{N8n, Hasura, Strapi, ReactAdmin}
 }
 
+\newpage
+
 \begin{section}{Work Experience}
- \begin{subsection}{Shipup.net}{DevOps Engineer}{May 2022 -- Present (Full-time)}{Tehran, Iran}
+ \begin{subsection}{Smartech}{Senior DevOps Engineer}{Feb 2024 -- June 2024 (Full-time)}{Tehran, Iran}
+     \item Maintaining and monitoring large scale infrastructure, about 500 virtuals-machines and bare-metals, near 50TB of warm data
+     \item Maintaining and monitoring various services (PostgreSQL, Elasticsearch, ClickHouse, ScyllaDB, Kafka, Redis, Minio)
+     \item Standardize and refactor various types of projects and implement CI/CD pipelines (Django, SpringBoot, NPM, Android, ASP.Net, ...)
+     \item Write kubernetes manifests for various projects (Deployment, ConfigMap, Secret, HPA, Ingress, ...)
+     \item Setting up ArgoCD for GitOps based deployment process to kubernetes clusters
+     \item Writing Ansible roles and playbooks for deploying and updating various services
+ \end{subsection}
+
+ \begin{subsection}{Visiwise.co}{Senior DevOps Engineer}{May 2022 -- Present (Part-time)}{Tehran, Iran}
      \item Maintaining and refactoring old bare-metal infrastructure
      \item Designing and architecting new cloud-based infrastructure
-     \item Performing zero downtime database migrations (logical replication)
+     \item Performing zero downtime database migrations (physical/logical replication)
      \item Automating full and differential and incremental backups (pgbackrest)
-     \item Setting up Grafana monitoring stack (LGTM - Loki, Grafana, Tempo, Mimir, Agent)
-     \item Writing Grafana dashboards and alerts using promQL, logQL
+     \item Setting up Grafana monitoring stack (LGTM - Loki, Grafana, Tempo, Mimir, Alloy)
+     \item Setting up N8n, Strapi, Wordpress, Posthog, Sentry self-hosted services
+     \item Writing Grafana dashboards and alerts using logQL, promQL, traceQL
      \item Provisioning entire new infrastructure using Terraform (IaC)
      \item Managing multi-cloud resources for reducing the costs (Hetzner, AWS)
-     \item Using GitOps principle for CD (Continuous Deployment)
+     \item Implementing GitOps principle for CD (Continuous Deployment)
+     \item Adapt source codes to the 12factor standard (incorporate with developers)
+     \item Setting up MR review-apps (temporary environments)
      \item Writing Docker Swarm compose manifests
      \item Setting up CI/CD using GitlabCI, Docker
  \end{subsection}
+
  \begin{subsection}{University of Tehran}{DevOps Engineer}{Jul 2022 -- Jun 2023 (Part-time)}{Tehran, Iran}
      \item Setting up HPC cluster using Slurm Workload Manager \& Pyxis
      \item Setting up HPC containers (Nvidia Enroot, Nvidia Pyxis)
      \item Setting up Slurm accounting and quota management
+     \item Monitoring and Management of jobs and queues
      \item Provisioning entire cluster using Terraform (IaC)
  \end{subsection}
+
  \begin{subsection}{Pishgam Vira}{DevOps Engineer}{Mar 2022 -- Jun 2022 (Part-time)}{Tehran, Iran}
      \item Implementing CI/CD for projects using GitHub Actions \& Docker
      \item Provisioning deployment servers using Docker Swarm
      \item Automate release process using semantic-release
  \end{subsection}
- \begin{subsection}{Mobtaker Darya}{Full-stack Developer \& DevOps Engineer}{Nov 2019 -- Jun 2022 (Full-time)}{Tehran, Iran}
-     \item Maintaining and developing CCS project (Container Control System)
-     \item Implementing CCS reports using Crystal Reports and SQL Server
-     \item Developing Shaahin project (Cargo trucks traffic control)
-     \item Implementing Shaahin web client using ReactJS
-     \item Implementing Shaahin backend using Loopback.io, NodeJS, TypeScript, PostgreSQL
-     \item Implementing CI/CD for projects using GitlabCI \& Docker
-     \item Provisioning deployment servers using Kubernetes
-     \item Writing Kubernetes manifests and packaging the in Helm Charts
-     \item Managing and coding entire infrastructure using Terraform (IaC)
- \end{subsection}
- \begin{subsection}{TIS}{Software Developer}{Mar 2019 -- Oct 2019 (Part-time)}{Tehran, Iran}
-     \item Maintaining and refactoring MFD project (Managed-Funds System)
-     \item Replacing Process360 with ProcessMaker as BPMS core
-     \item Implementing new UI using ReactJS and TypeScript
-     \item Implementing dynamic forms in client (Forms schema loaded from BPMS)
- \end{subsection}
 \end{section}
 
 \sectiontable{Languages}{
     \entry{Persian}{Native}
-    \entry{English}{Professional working proficiency}
+    \entry{English}{Full professional proficiency}
+    \entry{Deutsch}{Limited working proficiency}
 }
 
 \end{document}
