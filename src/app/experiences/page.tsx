@@ -21,13 +21,11 @@ function Research() {
                     subtitle="Department of Mathematics, Statistics and Computer Science"
                     location="University of Tehran"
                 >
-                    <Text as="p">
-                        Deep learning based seizure detection from EEG and ECG
-                        signals using biosignal transformers and self-supervised
-                        learning methods
-                        <br />
-                        Under the supervision of <b>Prof. Bagher Babaali</b>
-                    </Text>
+                    <b>Deep learning-based Seizure detection:</b> Utilizing
+                    Graph Neural Networks (GNN) and Bio-signal transformers on
+                    multi-channel EEG data to seizure detection
+                    <br />
+                    Under the supervision of <b>Prof. Bagher Babaali</b>
                 </Card>
             </Animator>
         </>
@@ -126,9 +124,45 @@ function Work() {
             </Text>
             <Animator manager="sequence">
                 <Card
-                    date="May 2022 -- Present (Full-time)"
-                    title="Shipup.net"
-                    subtitle="DevOps Engineer"
+                    date="Feb 2024 -- June 2024 (Full-time)"
+                    title="Smartech"
+                    subtitle="Senior DevOps Engineer"
+                    location="Tehran, Iran"
+                >
+                    <ul>
+                        <li>
+                            Maintaining and monitoring large scale
+                            infrastructure, about 500 virtuals-machines and
+                            bare-metals, near 50TB of warm data
+                        </li>
+                        <li>
+                            Maintaining and monitoring various services
+                            (PostgreSQL, Elasticsearch, ClickHouse, ScyllaDB,
+                            Kafka, Redis, Minio)
+                        </li>
+                        <li>
+                            Standardize and refactor various types of projects
+                            and implement CI/CD pipelines (Django, SpringBoot,
+                            NPM, Android, ASP.Net, ...)
+                        </li>
+                        <li>
+                            Write kubernetes manifests for various projects
+                            (Deployment, ConfigMap, Secret, HPA, Ingress, ...)
+                        </li>
+                        <li>
+                            Setting up ArgoCD for GitOps based deployment
+                            process to kubernetes clusters
+                        </li>
+                        <li>
+                            Writing Ansible roles and playbooks for deploying
+                            and updating various services
+                        </li>
+                    </ul>
+                </Card>
+                <Card
+                    date="May 2022 -- Present (Part-time)"
+                    title="Visiwise.co"
+                    subtitle="Senior DevOps Engineer"
                     location="Tehran, Iran"
                 >
                     <ul>
@@ -142,7 +176,7 @@ function Work() {
                         </li>
                         <li>
                             Performing zero downtime database migrations
-                            (logical replication)
+                            (physical/logical replication)
                         </li>
                         <li>
                             Automating full and differential and incremental
@@ -150,11 +184,15 @@ function Work() {
                         </li>
                         <li>
                             Setting up Grafana monitoring stack (LGTM - Loki,
-                            Grafana, Tempo, Mimir, Agent)
+                            Grafana, Tempo, Mimir, Alloy)
                         </li>
                         <li>
-                            Writing Grafana dashboards and alerts using promQL,
-                            logQL
+                            Setting up N8n, Strapi, Wordpress, Posthog, Sentry
+                            self-hosted services
+                        </li>
+                        <li>
+                            Writing Grafana dashboards and alerts using logQL,
+                            promQL, traceQL
                         </li>
                         <li>
                             Provisioning entire new infrastructure using
@@ -165,8 +203,15 @@ function Work() {
                             costs (Hetzner, AWS)
                         </li>
                         <li>
-                            Using GitOps principle for CD (Continuous
+                            Implementing GitOps principle for CD (Continuous
                             Deployment)
+                        </li>
+                        <li>
+                            Adapt source codes to the 12factor standard
+                            (incorporate with developers)
+                        </li>
+                        <li>
+                            Setting up MR review-apps (temporary environments)
                         </li>
                         <li>Writing Docker Swarm compose manifests</li>
                         <li>Setting up CI/CD using GitlabCI, Docker</li>
@@ -190,6 +235,7 @@ function Work() {
                         <li>
                             Setting up Slurm accounting and quota management
                         </li>
+                        <li>Monitoring and Management of jobs and queues</li>
                         <li>
                             Provisioning entire cluster using Terraform (IaC)
                         </li>
@@ -231,10 +277,10 @@ function Work() {
                             Developing Shaahin project (Cargo trucks traffic
                             control)
                         </li>
-                        <li>Implementing Shaahin web client using React.js</li>
+                        <li>Implementing Shaahin web client using ReactJS</li>
                         <li>
-                            Implementing Shaahin backend using Loopback.io,
-                            NodeJs, TypeScript, PostgreSQL
+                            Implementing Shaahin backend using Hasura,
+                            PostgreSQL
                         </li>
                         <li>
                             Implementing CI/CD for projects using GitlabCI &
@@ -256,7 +302,7 @@ function Work() {
                 <Card
                     date="Mar 2019 -- Oct 2019 (Part-time)"
                     title="TIS"
-                    subtitle="Software Developer"
+                    subtitle="Full-stack Developer"
                     location="Tehran, Iran"
                 >
                     <ul>
@@ -265,10 +311,14 @@ function Work() {
                             (Managed-Funds System)
                         </li>
                         <li>
+                            Implementing backend API&apos;s using Loopback.io,
+                            NodeJs, TypeScript, PostgreSQL
+                        </li>
+                        <li>
                             Replacing Process360 with ProcessMaker as BPMS core
                         </li>
                         <li>
-                            Implementing new UI using React.js and TypeScript
+                            Implementing new UI using ReactJS and TypeScript
                         </li>
                         <li>
                             Implementing dynamic forms in client (Forms schema
@@ -279,13 +329,13 @@ function Work() {
                 <Card
                     date="Jun 2019 -- Sep 2019 (Part-time)"
                     title="Farmeal"
-                    subtitle="React Developer"
+                    subtitle="Frontend Developer"
                     location="Tehran, Iran"
                 >
                     <ul>
                         <li>
-                            Implementing food-shopping UI using React.js and
-                            TypeScript
+                            Implementing food-shopping UI using ReactJS and
+                            MaterialUI and TypeScript
                         </li>
                         <li>
                             Interacting with backend GraphQL API&apos;s using
@@ -310,12 +360,16 @@ function Work() {
                             connections
                         </li>
                         <li>
-                            Implementing Desktop Chat Application using Qt, C++,
-                            QML
+                            Utilizing Cassandra/ScyllaDB as Chat Application
+                            core database
+                        </li>
+                        <li>
+                            Implementing Desktop Chat Application using Qt/QML
+                            (C++)
                         </li>
                         <li>
                             Implementing Android Chat Application using Java, C
-                            (JNI), AndroidStudio
+                            (JNI), Android Studio
                         </li>
                         <li>
                             Using FFMPEG to implement audio & video streaming

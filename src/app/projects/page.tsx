@@ -8,11 +8,11 @@ import Hero from "@/components/Hero";
 import Card from "@/components/Card";
 import Link from "next/link";
 
-function Notable() {
+function Course() {
     return (
         <>
             <Text as="h2" className="warning">
-                Notable Projects
+                Course Projects
             </Text>
             <Animator manager="sequence">
                 <Card
@@ -935,7 +935,7 @@ function Published() {
                         </li>
                         <li>
                             Implementation of Android Messenger Application
-                            using Java, C (JNI), AndroidStudio
+                            using Java, C (JNI), Android Studio
                         </li>
                         <li>
                             Implementation of Desktop Messenger Application
@@ -955,11 +955,11 @@ export default function Page() {
                 <Text as="h1">Projects</Text>
             </Hero>
             <section
-                id="notable"
+                id="course"
                 className="flex flex-col items-center p-4 md:p-8"
             >
                 <div className="container max-w-screen-xl">
-                    <Notable />
+                    <Course />
                 </div>
             </section>
             <Frame as="hr" />
