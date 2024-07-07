@@ -198,7 +198,7 @@ function About() {
                                 <b>English:</b> Full professional proficiency
                             </li>
                             <li>
-                                <b>Deutsch:</b> Limited working proficiency
+                                <b>Deutsch:</b> Elementary proficiency
                             </li>
                         </ul>
 
