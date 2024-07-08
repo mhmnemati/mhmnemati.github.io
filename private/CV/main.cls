@@ -110,19 +110,24 @@
 \newcommand{\resumeheader}[6]{
     % \phantomsection
     % \addcontentsline{toc}{chapter}{\@name}
-    \begin{tabular}[c]{l}
-        \fontsize{35}{45}\selectfont{\color{navyblue}{\textbf{\@name}}}
-        \ifx\empty\@title\empty\else
-        \\ \textit{\small\@title}
-        \fi
-    \end{tabular}
-    \vspace{0.8em}
-    \newline
-    \begin{tabular}[c]{l@{\hspace{1em}}l}
-        \entry{\small#4}{\small#1}
-        \entry{\small#5}{\small#2}
-        \entry{\small#6}{\small#3}
-    \end{tabular}
+    \begin{minipage}{.2\textwidth}
+        \includegraphics[height=36mm]{personal.jpg}
+    \end{minipage}
+    \begin{minipage}{.8\textwidth}
+        \begin{tabular}[c]{l}
+            \fontsize{25}{45}\selectfont{\color{navyblue}{\textbf{\@name}}}
+            \ifx\empty\@title\empty\else
+            \\ \textit{\small\@title}
+            \fi
+        \end{tabular}
+        \vspace{0.8em}
+        \newline
+        \begin{tabular}[c]{l@{\hspace{1em}}l}
+            \entry{\small#1}{\small#2}
+            \entry{\small#3}{\small#4}
+            \entry{\small#5}{\small#6}
+        \end{tabular}
+    \end{minipage}
 }
 
 % Renew section command for resume section
@@ -137,7 +142,7 @@
             \setlength{\leftmargin}{1.5em}
         }
         \item[]
-            }{
+              }{
     \end{list}
 }
 
