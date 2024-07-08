@@ -26,7 +26,13 @@ jobs:
                   latexmk_use_xelatex: true
                   working_directory: private/CV
                   root_file: main.tex
+            - uses: xu-cheng/latex-action@v2
+              with:
+                  latexmk_use_xelatex: true
+                  working_directory: private/CL
+                  root_file: main.tex
             - run: cp private/CV/main.pdf out/assets/CV.pdf
+            - run: cp private/CL/main.pdf out/assets/CL.pdf
             - uses: actions/upload-pages-artifact@v3
               with:
                   path: out
