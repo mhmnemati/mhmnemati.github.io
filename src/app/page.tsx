@@ -66,7 +66,7 @@ function Home() {
                 </Link>
             </span>
             <span>
-                <Link href="/assets/CV.pdf" target="_blank">
+                <Link href="/assets/CV_en.pdf" target="_blank">
                     <Frame
                         as="button"
                         size="small"
@@ -242,7 +242,7 @@ function About() {
                                 </Link>
                             </div>
                             <div>
-                                <Link href="/assets/CV.pdf" target="_blank">
+                                <Link href="/assets/CV_en.pdf" target="_blank">
                                     <Frame
                                         as="button"
                                         size="small"

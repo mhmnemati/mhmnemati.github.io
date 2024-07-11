@@ -24,15 +24,27 @@ jobs:
             - uses: xu-cheng/latex-action@v2
               with:
                   latexmk_use_xelatex: true
-                  working_directory: private/CV
+                  working_directory: private/CV_en
                   root_file: main.tex
             - uses: xu-cheng/latex-action@v2
               with:
                   latexmk_use_xelatex: true
-                  working_directory: private/CL
+                  working_directory: private/CV_de
                   root_file: main.tex
-            - run: cp private/CV/main.pdf out/assets/CV.pdf
-            - run: cp private/CL/main.pdf out/assets/CL.pdf
+            - uses: xu-cheng/latex-action@v2
+              with:
+                  latexmk_use_xelatex: true
+                  working_directory: private/CL_en
+                  root_file: main.tex
+            - uses: xu-cheng/latex-action@v2
+              with:
+                  latexmk_use_xelatex: true
+                  working_directory: private/CL_de
+                  root_file: main.tex
+            - run: cp private/CV_en/main.pdf out/assets/CV_en.pdf
+            - run: cp private/CV_de/main.pdf out/assets/CV_de.pdf
+            - run: cp private/CL_en/main.pdf out/assets/CL_en.pdf
+            - run: cp private/CL_de/main.pdf out/assets/CL_de.pdf
             - uses: actions/upload-pages-artifact@v3
               with:
                   path: out
