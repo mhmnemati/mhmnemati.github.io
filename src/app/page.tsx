@@ -279,7 +279,11 @@ function Educations() {
                         GPA: <b>17.74 / 20</b>
                     </li>
                     <li className="w-full md:pr-8">
-                        Thesis: <b>Deep learning-based seizure detection</b>
+                        Thesis:{" "}
+                        <b>
+                            Seizure detection from multi-channel EEG using Graph
+                            Neural Networks
+                        </b>
                     </li>
                 </ul>
                 <Frame as="hr" className="my-2" />
