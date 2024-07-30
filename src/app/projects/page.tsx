@@ -8,6 +8,463 @@ import Hero from "@/components/Hero";
 import Card from "@/components/Card";
 import Link from "next/link";
 
+function Published() {
+    return (
+        <>
+            <Text id="published" as="h2" className="warning">
+                Published Projects
+            </Text>
+            <Animator manager="sequence">
+                <Card
+                    date=""
+                    link="https://github.com/cktf"
+                    title="Terraform Community Modules"
+                    subtitle="Open Source"
+                    location=""
+                >
+                    <ul>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-module-rke"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-module-rke</b>
+                            </a>
+                            : Terraform module for Provisioning HA Kubernetes
+                            clusters using K3s and RKE2 on hosts using SSH,
+                            WinRM
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-module-rke"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-aws-wireguard"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-aws-wireguard</b>
+                            </a>
+                            : Terraform module for Provisioning Wireguard VPN
+                            instance and manage users on AWS cloud
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-aws-wireguard"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-hcloud-rke"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-hcloud-rke</b>
+                            </a>
+                            : Terraform module for Provisioning HA Kubernetes
+                            clusters using K3s and RKE2 on Hetzner cloud
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-hcloud-rke"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-hcloud-network"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-hcloud-network</b>
+                            </a>
+                            : Terraform module for Creating and Managing
+                            Network, Subnet on Hetzner cloud
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-hcloud-network"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-hcloud-wireguard"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-hcloud-wireguard</b>
+                            </a>
+                            : Terraform module for Provisioning Wireguard VPN
+                            instance and manage Users on Hetzner cloud
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-hcloud-wireguard"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-openstack-rke"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-openstack-rke</b>
+                            </a>
+                            : Terraform module for Provisioning HA Kubernetes
+                            clusters using K3s and RKE2 on OpenStack cloud
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-openstack-rke"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-openstack-network"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-openstack-network</b>
+                            </a>
+                            : Terraform module for Creating and Managing
+                            Network, Subnet, Routes on OpenStack cloud
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-openstack-network"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-kubernetes-x509"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-kubernetes-x509</b>
+                            </a>
+                            : Terraform module for Creating and Managing X.509
+                            Certificate and RoleBinding on Kubernetes
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-kubernetes-x509"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-kubernetes-environment"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-kubernetes-environment</b>
+                            </a>
+                            : Terraform module for Creating and Managing
+                            isolated environments on Kubernetes
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-kubernetes-environment"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-gitlab-application"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-gitlab-application</b>
+                            </a>
+                            : Terraform module for Creating and Managing Groups,
+                            Projects and default organization policies on Gitlab
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-gitlab-application"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/cktf/terraform-gitlab-environment"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>terraform-gitlab-environment</b>
+                            </a>
+                            : Terraform module for Creating and Managing
+                            Environments for Projects on Gitlab
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/cktf/terraform-gitlab-environment"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/ckoliber/windows-cloud-image"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>windows-cloud-image</b>
+                            </a>
+                            : Packer configs to create Windows Cloud Image uisng
+                            VirtualBox and QEMU
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/ckoliber/windows-cloud-image"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                    </ul>
+                </Card>
+                <Card
+                    date=""
+                    link="https://github.com/loopback4"
+                    title="Loopback4 Community Components"
+                    subtitle="Open Source"
+                    location=""
+                >
+                    <ul>
+                        <li>
+                            <a
+                                href="https://github.com/loopback4/loopback-component-crud"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>loopback-component-crud</b>
+                            </a>
+                            : Generating CRUD endpoints from Model supports
+                            AuthZ, Nested-Create, Nested-Update
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/loopback4/loopback-component-crud"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/loopback4/loopback-component-filter"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>loopback-component-filter</b>
+                            </a>
+                            : Filtering Model records based on user permissions
+                            in ORM Repository level
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/loopback4/loopback-component-filter"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/loopback4/loopback-component-history"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>loopback-component-history</b>
+                            </a>
+                            : Adding Soft-Delete and Soft-Update functionality
+                            in ORM Repository level
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/loopback4/loopback-component-history"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/loopback4/loopback-component-cascade"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>loopback-component-cascade</b>
+                            </a>
+                            : Adding Cascade functionality to models in ORM
+                            Repository level
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/loopback4/loopback-component-cascade"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/loopback4/loopback-component-authorization"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>loopback-component-authorization</b>
+                            </a>
+                            : Supporting HRBAC (Hierarchical Role Based Access
+                            Control) authorization
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/loopback4/loopback-component-authorization"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                    </ul>
+                </Card>
+                <Card
+                    date=""
+                    title="ReactAdmin Data Providers"
+                    subtitle="Open Source"
+                    location=""
+                >
+                    <ul>
+                        <li>
+                            <a
+                                href="https://github.com/loopback4/ra-data-lb4"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>ra-data-lb4</b>
+                            </a>
+                            : Loopback4 auto-generated CRUD endpoints
+                            data-provider library
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/loopback4/ra-data-lb4"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/ckoliber/ra-data-mixer"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>ra-data-mixer</b>
+                            </a>
+                            : Mixing multiple data-providers into one
+                            data-provider library
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/ckoliber/ra-data-mixer"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/ckoliber/ra-data-processmaker3"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <b>ra-data-processmaker3</b>
+                            </a>
+                            : ProcessMaker3 BPMS CRUD endpoints data-provider
+                            library
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/ckoliber/ra-data-processmaker3"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                    </ul>
+                </Card>
+                <Card
+                    date=""
+                    link="https://github.com/ckoliber/cham"
+                    title="Chapar Messenger (ChaM)"
+                    subtitle="Open Source"
+                    location=""
+                >
+                    <ul>
+                        <li>
+                            Implementation of a custom protocol over TCP, UDP
+                            sockets for messaging using Erlang
+                        </li>
+                        <li>
+                            Implementation of Hole Punching for P2P direct
+                            connection on Audio and Video calls using Erlang
+                        </li>
+                        <li>
+                            Implementation of Resumable Streaming protocol over
+                            TCP for uploading and downloading files using C
+                        </li>
+                        <li>
+                            Implementation of Audio & Video frame streaming
+                            using android native API&apos;s and raw sockets
+                            (FFMPEG, JNI)
+                        </li>
+                        <li>
+                            Implementation of Android Messenger Application
+                            using Java, C (JNI), Android Studio
+                        </li>
+                        <li>
+                            Implementation of Desktop Messenger Application
+                            using Qt, C++, QML
+                        </li>
+                    </ul>
+                </Card>
+            </Animator>
+        </>
+    );
+}
+
 function Course() {
     return (
         <>
@@ -491,463 +948,6 @@ function Course() {
     );
 }
 
-function Published() {
-    return (
-        <>
-            <Text id="published" as="h2" className="warning">
-                Published Projects
-            </Text>
-            <Animator manager="sequence">
-                <Card
-                    date=""
-                    link="https://github.com/cktf"
-                    title="Terraform Community Modules"
-                    subtitle="Open Source"
-                    location=""
-                >
-                    <ul>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-module-rke"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-module-rke</b>
-                            </a>
-                            : Terraform module for Provisioning HA Kubernetes
-                            clusters using K3s and RKE2 on hosts using SSH,
-                            WinRM
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-module-rke"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-aws-wireguard"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-aws-wireguard</b>
-                            </a>
-                            : Terraform module for Provisioning Wireguard VPN
-                            instance and manage users on AWS cloud
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-aws-wireguard"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-hcloud-rke"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-hcloud-rke</b>
-                            </a>
-                            : Terraform module for Provisioning HA Kubernetes
-                            clusters using K3s and RKE2 on Hetzner cloud
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-hcloud-rke"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-hcloud-network"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-hcloud-network</b>
-                            </a>
-                            : Terraform module for Creating and Managing
-                            Network, Subnet on Hetzner cloud
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-hcloud-network"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-hcloud-wireguard"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-hcloud-wireguard</b>
-                            </a>
-                            : Terraform module for Provisioning Wireguard VPN
-                            instance and manage Users on Hetzner cloud
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-hcloud-wireguard"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-openstack-rke"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-openstack-rke</b>
-                            </a>
-                            : Terraform module for Provisioning HA Kubernetes
-                            clusters using K3s and RKE2 on OpenStack cloud
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-openstack-rke"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-openstack-network"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-openstack-network</b>
-                            </a>
-                            : Terraform module for Creating and Managing
-                            Network, Subnet, Routes on OpenStack cloud
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-openstack-network"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-kubernetes-x509"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-kubernetes-x509</b>
-                            </a>
-                            : Terraform module for Creating and Managing X.509
-                            Certificate and RoleBinding on Kubernetes
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-kubernetes-x509"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-kubernetes-environment"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-kubernetes-environment</b>
-                            </a>
-                            : Terraform module for Creating and Managing
-                            isolated environments on Kubernetes
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-kubernetes-environment"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-gitlab-application"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-gitlab-application</b>
-                            </a>
-                            : Terraform module for Creating and Managing Groups,
-                            Projects and default organization policies on Gitlab
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-gitlab-application"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/cktf/terraform-gitlab-environment"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>terraform-gitlab-environment</b>
-                            </a>
-                            : Terraform module for Creating and Managing
-                            Environments for Projects on Gitlab
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/cktf/terraform-gitlab-environment"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/ckoliber/windows-cloud-image"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>windows-cloud-image</b>
-                            </a>
-                            : Packer configs to create Windows Cloud Image uisng
-                            VirtualBox and QEMU
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/ckoliber/windows-cloud-image"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                    </ul>
-                </Card>
-                <Card
-                    date=""
-                    link="https://github.com/loopback4"
-                    title="Loopback4 Community Components"
-                    subtitle="Open Source"
-                    location=""
-                >
-                    <ul>
-                        <li>
-                            <a
-                                href="https://github.com/loopback4/loopback-component-crud"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>loopback-component-crud</b>
-                            </a>
-                            : Generating CRUD endpoints from Model supports
-                            AuthZ, Nested-Create, Nested-Update
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/loopback4/loopback-component-crud"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/loopback4/loopback-component-filter"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>loopback-component-filter</b>
-                            </a>
-                            : Filtering Model records based on user permissions
-                            in ORM Repository level
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/loopback4/loopback-component-filter"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/loopback4/loopback-component-history"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>loopback-component-history</b>
-                            </a>
-                            : Adding Soft-Delete and Soft-Update functionality
-                            in ORM Repository level
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/loopback4/loopback-component-history"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/loopback4/loopback-component-cascade"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>loopback-component-cascade</b>
-                            </a>
-                            : Adding Cascade functionality to models in ORM
-                            Repository level
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/loopback4/loopback-component-cascade"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/loopback4/loopback-component-authorization"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>loopback-component-authorization</b>
-                            </a>
-                            : Supporting HRBAC (Hierarchical Role Based Access
-                            Control) authorization
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/loopback4/loopback-component-authorization"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                    </ul>
-                </Card>
-                <Card
-                    date=""
-                    title="ReactAdmin Data Providers"
-                    subtitle="Open Source"
-                    location=""
-                >
-                    <ul>
-                        <li>
-                            <a
-                                href="https://github.com/loopback4/ra-data-lb4"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>ra-data-lb4</b>
-                            </a>
-                            : Loopback4 auto-generated CRUD endpoints
-                            data-provider library
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/loopback4/ra-data-lb4"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/ckoliber/ra-data-mixer"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>ra-data-mixer</b>
-                            </a>
-                            : Mixing multiple data-providers into one
-                            data-provider library
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/ckoliber/ra-data-mixer"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/ckoliber/ra-data-processmaker3"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <b>ra-data-processmaker3</b>
-                            </a>
-                            : ProcessMaker3 BPMS CRUD endpoints data-provider
-                            library
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/ckoliber/ra-data-processmaker3"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                    </ul>
-                </Card>
-                <Card
-                    date=""
-                    link="https://github.com/ckoliber/cham"
-                    title="Chapar Messenger (ChaM)"
-                    subtitle="Open Source"
-                    location=""
-                >
-                    <ul>
-                        <li>
-                            Implementation of a custom protocol over TCP, UDP
-                            sockets for messaging using Erlang
-                        </li>
-                        <li>
-                            Implementation of Hole Punching for P2P direct
-                            connection on Audio and Video calls using Erlang
-                        </li>
-                        <li>
-                            Implementation of Resumable Streaming protocol over
-                            TCP for uploading and downloading files using C
-                        </li>
-                        <li>
-                            Implementation of Audio & Video frame streaming
-                            using android native API&apos;s and raw sockets
-                            (FFMPEG, JNI)
-                        </li>
-                        <li>
-                            Implementation of Android Messenger Application
-                            using Java, C (JNI), Android Studio
-                        </li>
-                        <li>
-                            Implementation of Desktop Messenger Application
-                            using Qt, C++, QML
-                        </li>
-                    </ul>
-                </Card>
-            </Animator>
-        </>
-    );
-}
-
 export default function Page() {
     return (
         <>
@@ -956,9 +956,9 @@ export default function Page() {
             </Hero>
             <section className="flex flex-col items-center p-4 md:p-8">
                 <div className="container max-w-screen-xl">
-                    <Course />
-                    <Frame as="hr" className="my-8" />
                     <Published />
+                    <Frame as="hr" className="my-8" />
+                    <Course />
                 </div>
             </section>
         </>

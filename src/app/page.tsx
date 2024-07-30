@@ -269,7 +269,7 @@ function Educations() {
             </Text>
             <Card
                 logo="/images/tehran_university.jpg"
-                date="Sep 2021 -- Aug 2024 (Expected)"
+                date="Sep 2021 -- Aug 2024"
                 title="M.Sc in Computer Science"
                 subtitle="University of Tehran"
                 location="Tehran, Iran"

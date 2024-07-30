@@ -8,114 +8,6 @@ import Hero from "@/components/Hero";
 import Card from "@/components/Card";
 import Link from "next/link";
 
-function Research() {
-    return (
-        <>
-            <Text id="research" as="h2" className="warning">
-                Research Experiences
-            </Text>
-            <Animator manager="sequence">
-                <Card
-                    date="Feb 2023 -- Present"
-                    title="Graduate Research Assistant"
-                    subtitle="Department of Mathematics, Statistics and Computer Science"
-                    location="University of Tehran"
-                >
-                    <b>Deep learning-based Seizure detection:</b> Utilizing
-                    Graph Neural Networks (GNN) and Bio-signal transformers on
-                    multi-channel EEG data to seizure detection
-                    <br />
-                    Under the supervision of <b>Prof. Bagher Babaali</b>
-                </Card>
-            </Animator>
-        </>
-    );
-}
-
-function Teaching() {
-    return (
-        <>
-            <Text id="teaching" as="h2" className="warning">
-                Teaching Experiences
-            </Text>
-            <Animator manager="sequence">
-                <Card
-                    date="Oct 2023 -- Feb 2024"
-                    title="Machine Learning"
-                    subtitle="Prof. Bagher Babaali"
-                    location="University of Tehran"
-                >
-                    <ul>
-                        <li>Teaching subjects and troubleshooting</li>
-                        <li>Organized homeworks for mentored students</li>
-                    </ul>
-                </Card>
-                <Card
-                    date="Feb 2019 -- Jun 2019"
-                    title="Advanced Programming"
-                    subtitle="Prof. Arash Ahadi"
-                    location="Kharazmi University"
-                >
-                    <ul>
-                        <li>
-                            Teaching memory management in C, Object-Oriented
-                            paradigm in C (OOC)
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/ckoliber/ooc_lecture"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            Teaching basics of computer graphics and OpenGL
-                            programs in C
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/ckoliber/opengl"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                        <li>
-                            Graded and provided homework feedback for mentored
-                            students
-                        </li>
-                    </ul>
-                </Card>
-                <Card
-                    date="Sep 2018 -- Jan 2019"
-                    title="Basic Programming"
-                    subtitle="Prof. Saeed Reza Kheradpisheh"
-                    location="Kharazmi University"
-                >
-                    <ul>
-                        <li>
-                            Teaching basic data-structures and algorithms in
-                            Java
-                        </li>
-                        <li>
-                            Organized homeworks for mentored students
-                            <Link
-                                className="ml-2"
-                                href="https://github.com/ckoliber/Phy97Sources"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faExternalLink} />
-                            </Link>
-                        </li>
-                    </ul>
-                </Card>
-            </Animator>
-        </>
-    );
-}
-
 function Work() {
     return (
         <>
@@ -123,42 +15,6 @@ function Work() {
                 Work Experiences
             </Text>
             <Animator manager="sequence">
-                <Card
-                    date="Feb 2024 -- June 2024 (Full-time)"
-                    title="Smartech"
-                    subtitle="Senior DevOps Engineer"
-                    location="Tehran, Iran"
-                >
-                    <ul>
-                        <li>
-                            Maintaining and monitoring large scale
-                            infrastructure, about 500 virtuals-machines and
-                            bare-metals, near 50TB of warm data
-                        </li>
-                        <li>
-                            Maintaining and monitoring various services
-                            (PostgreSQL, Elasticsearch, ClickHouse, ScyllaDB,
-                            Kafka, Redis, Minio)
-                        </li>
-                        <li>
-                            Standardize and refactor various types of projects
-                            and implement CI/CD pipelines (Django, SpringBoot,
-                            NPM, Android, ASP.Net, ...)
-                        </li>
-                        <li>
-                            Write kubernetes manifests for various projects
-                            (Deployment, ConfigMap, Secret, HPA, Ingress, ...)
-                        </li>
-                        <li>
-                            Setting up ArgoCD for GitOps based deployment
-                            process to kubernetes clusters
-                        </li>
-                        <li>
-                            Writing Ansible roles and playbooks for deploying
-                            and updating various services
-                        </li>
-                    </ul>
-                </Card>
                 <Card
                     date="May 2022 -- Present (Part-time)"
                     title="Visiwise.co"
@@ -215,6 +71,42 @@ function Work() {
                         </li>
                         <li>Writing Docker Swarm compose manifests</li>
                         <li>Setting up CI/CD using GitlabCI, Docker</li>
+                    </ul>
+                </Card>
+                <Card
+                    date="Feb 2024 -- June 2024 (Full-time)"
+                    title="Smartech"
+                    subtitle="Senior DevOps Engineer"
+                    location="Tehran, Iran"
+                >
+                    <ul>
+                        <li>
+                            Maintaining and monitoring large scale
+                            infrastructure, about 500 virtuals-machines and
+                            bare-metals, near 50TB of warm data
+                        </li>
+                        <li>
+                            Maintaining and monitoring various services
+                            (PostgreSQL, Elasticsearch, ClickHouse, ScyllaDB,
+                            Kafka, Redis, Minio)
+                        </li>
+                        <li>
+                            Standardize and refactor various types of projects
+                            and implement CI/CD pipelines (Django, SpringBoot,
+                            NPM, Android, ASP.Net, ...)
+                        </li>
+                        <li>
+                            Write kubernetes manifests for various projects
+                            (Deployment, ConfigMap, Secret, HPA, Ingress, ...)
+                        </li>
+                        <li>
+                            Setting up ArgoCD for GitOps based deployment
+                            process to kubernetes clusters
+                        </li>
+                        <li>
+                            Writing Ansible roles and playbooks for deploying
+                            and updating various services
+                        </li>
                     </ul>
                 </Card>
                 <Card
@@ -382,6 +274,114 @@ function Work() {
     );
 }
 
+function Research() {
+    return (
+        <>
+            <Text id="research" as="h2" className="warning">
+                Research Experiences
+            </Text>
+            <Animator manager="sequence">
+                <Card
+                    date="Feb 2023 -- Present"
+                    title="Graduate Research Assistant"
+                    subtitle="Department of Mathematics, Statistics and Computer Science"
+                    location="University of Tehran"
+                >
+                    <b>Deep learning-based Seizure detection:</b> Utilizing
+                    Graph Neural Networks (GNN) and Bio-signal transformers on
+                    multi-channel EEG data to seizure detection
+                    <br />
+                    Under the supervision of <b>Prof. Bagher Babaali</b>
+                </Card>
+            </Animator>
+        </>
+    );
+}
+
+function Teaching() {
+    return (
+        <>
+            <Text id="teaching" as="h2" className="warning">
+                Teaching Experiences
+            </Text>
+            <Animator manager="sequence">
+                <Card
+                    date="Oct 2023 -- Feb 2024"
+                    title="Machine Learning"
+                    subtitle="Prof. Bagher Babaali"
+                    location="University of Tehran"
+                >
+                    <ul>
+                        <li>Teaching subjects and troubleshooting</li>
+                        <li>Organized homeworks for mentored students</li>
+                    </ul>
+                </Card>
+                <Card
+                    date="Feb 2019 -- Jun 2019"
+                    title="Advanced Programming"
+                    subtitle="Prof. Arash Ahadi"
+                    location="Kharazmi University"
+                >
+                    <ul>
+                        <li>
+                            Teaching memory management in C, Object-Oriented
+                            paradigm in C (OOC)
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/ckoliber/ooc_lecture"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            Teaching basics of computer graphics and OpenGL
+                            programs in C
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/ckoliber/opengl"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                        <li>
+                            Graded and provided homework feedback for mentored
+                            students
+                        </li>
+                    </ul>
+                </Card>
+                <Card
+                    date="Sep 2018 -- Jan 2019"
+                    title="Basic Programming"
+                    subtitle="Prof. Saeed Reza Kheradpisheh"
+                    location="Kharazmi University"
+                >
+                    <ul>
+                        <li>
+                            Teaching basic data-structures and algorithms in
+                            Java
+                        </li>
+                        <li>
+                            Organized homeworks for mentored students
+                            <Link
+                                className="ml-2"
+                                href="https://github.com/ckoliber/Phy97Sources"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faExternalLink} />
+                            </Link>
+                        </li>
+                    </ul>
+                </Card>
+            </Animator>
+        </>
+    );
+}
+
 export default function Page() {
     return (
         <>
@@ -390,11 +390,11 @@ export default function Page() {
             </Hero>
             <section className="flex flex-col items-center p-4 md:p-8">
                 <div className="container max-w-screen-xl">
+                    <Work />
+                    <Frame as="hr" className="my-8" />
                     <Research />
                     <Frame as="hr" className="my-8" />
                     <Teaching />
-                    <Frame as="hr" className="my-8" />
-                    <Work />
                 </div>
             </section>
         </>
