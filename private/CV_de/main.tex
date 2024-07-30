@@ -1,6 +1,6 @@
 \documentclass[]{main}
 \fullname{Mohammad Hossein Nemati}
-\jobtitle{DevOps-Ingenieur}
+\jobtitle{DevOps Ingenieur}
 
 \begin{document}
 \resumeheader
@@ -11,90 +11,71 @@
 {\linkedin{ckoliber}}
 {\github{ckoliber}}
 
-\begin{section}{Ausbildung}
- \begin{subsectionnobullet}{M.Sc. Informatik}{Universität Teheran}{Sep 2021 -- Aug 2024 (Voraussichtlich)}{Teheran, Iran}
-     \item Notendurchschnitt: 17,74 / 20
-     \item Abschlussarbeit: Anfallserkennung basierend auf Deep Learning
- \end{subsectionnobullet}
- \begin{subsectionnobullet}{B.Sc. Informatik}{Kharazmi-Universität}{Sep 2016 -- Jan 2021}{Teheran, Iran}
-     \item Notendurchschnitt der letzten zwei Jahre: 16,98 / 20
-     \item Gesamtnotendurchschnitt: 16,12 / 20
- \end{subsectionnobullet}
- \begin{subsectionnobullet}{Abitur in Mathematik und Physik}{Mandegar Alborz Gymnasium}{Sep 2012 -- Aug 2016}{Teheran, Iran}
-     \item Notendurchschnitt Gymnasium: 18,59 / 20
-     \item Notendurchschnitt Voruniversität: 18,03 / 20
- \end{subsectionnobullet}
+Erfahrener DevOps Ingenieur mit einem Master-Abschluss in Informatik von der Universität Teheran. Spezialisiert auf Hochleistungsrechnen, Infrastruktur als Code und CI/CD-Automatisierung. Bei Visiwise.co entwarf ich eine Cloud-Infrastruktur, die die Skalierbarkeit verbesserte und die Kosten um 20\% senkte. Bei Smartech verwaltete ich die Infrastruktur für 500 VMs und 50TB Daten und implementierte CI/CD-Pipelines, die die Build-Zeiten um 30\% reduzierten.
+
+\begin{section}{Berufserfahrung}
+ \begin{subsection}{Visiwise.co}{Senior DevOps Ingenieur}{Mai 2022 -- Gegenwart}{Teheran, Iran}
+     \item Architekturierte Cloud-basierte Infrastruktur und optimierte bestehende Bare-Metal-Systeme
+     \item Führte Datenbank-Migrationen ohne Ausfallzeiten durch und automatisierte Backups mit pgbackrest
+     \item Implementierte Grafana-Monitoring-Stack mit benutzerdefinierten Dashboards und Alerts
+     \item Orchestrierte Multi-Cloud-Ressourcen mit Terraform zur Kostenoptimierung und GitOps
+     \item Startete selbst gehostete Dienste (N8n, Strapi, WordPress, Posthog, Sentry)
+     \item Passte Quellcode an 12-Faktor-Standards an und entwickelte MR-Review-Apps
+     \item Etablierte CI/CD-Pipelines mit GitlabCI und Docker Swarm
+ \end{subsection}
+
+ \begin{subsection}{Smartech}{Senior DevOps Ingenieur}{Feb 2024 -- Juni 2024}{Teheran, Iran}
+     \item Verwaltete groß angelegte Infrastruktur mit über 500 VMs und Bare-Metal-Servern (50TB Daten)
+     \item Wartete diverse Dienste (PostgreSQL, Elasticsearch, ClickHouse, ScyllaDB, Kafka, Redis, Minio)
+     \item Standardisierte Projekte und entwarf CI/CD-Pipelines für verschiedene Technologien
+     \item Erstellte Kubernetes-Manifeste und setzte ArgoCD für GitOps-basierte Prozesse ein
+     \item Entwickelte Ansible-Rollen und -Playbooks für effiziente Service-Bereitstellung
+ \end{subsection}
+
+ \begin{subsection}{Universität Teheran}{DevOps Ingenieur}{Jul 2022 -- Jun 2023}{Teheran, Iran}
+     \item Entwarf HPC-Cluster mit Slurm, Nvidia Enroot und Nvidia Pyxis
+     \item Etablierte Slurm-Abrechnung, Quotenverwaltung und Überwachungssysteme
+     \item Orchestrierte Cluster-Infrastruktur mit Terraform (IaC)
+ \end{subsection}
+
+ \begin{subsection}{Pishgam Vira}{DevOps Ingenieur}{März 2022 -- Juni 2022}{Teheran, Iran}
+     \item Integrierte CI/CD-Pipelines mit GitHub Actions und Docker
+     \item Einrichtung von Docker Swarm Bereitstellungsservern und automatisierte Releases mit semantic-release
+ \end{subsection}
+
+ \begin{subsection}{Mobtaker Darya}{Full-Stack Entwickler \& DevOps Ingenieur}{Nov 2019 -- Jun 2022}{Teheran, Iran}
+     \item Leitete die Entwicklung des CCS-Projekts, einschließlich Crystal Reports und SQL Server-Integration
+     \item Entwickelte das Shaahin-Projekt mit ReactJS-Frontend und Hasura/PostgreSQL-Backend
+     \item Entwickelte CI/CD-Pipelines und richtete Kubernetes-Bereitstellungsserver ein
+     \item Erstellte Kubernetes-Manifeste, Helm-Charts und verwaltete Infrastruktur mit Terraform
+ \end{subsection}
 \end{section}
 
-\begin{section}{Interessengebiete}
- \begin{subsectionbullet}
-     \item Hochleistungsrechnen und Parallele Verarbeitung
-     \item DevOps, MLOps und Infrastructure as Code
-     \item Maschinelles Lernen und Deep Learning
-     \item Mensch-Computer-Interaktion
- \end{subsectionbullet}
+\newpage
+
+\begin{section}{Bildung}
+ \begin{subsectionnobullet}{M.Sc in Informatik}{Universität Teheran}{Sep 2021 -- Aug 2024}{Teheran, Iran}
+     \item Thesis: Erkennung von Anfällen aus Mehrkanal-EEG mit Graph Neural Networks.
+ \end{subsectionnobullet}
+ \begin{subsectionnobullet}{B.Sc in Informatik}{Kharazmi Universität}{Sep 2016 -- Jan 2021}{Teheran, Iran}
+     \item Abschluss mit starker akademischer Leistung.
+ \end{subsectionnobullet}
 \end{section}
 
 \sectiontable{Technische Fähigkeiten}{
     \entry{Programmiersprachen}{C/C++, C\#, Java, JavaScript, TypeScript, Python, MATLAB, Erlang}
-    \entry{Client-Entwicklung}{HTML/CSS, TailwindCSS, ReactJS, ReactNative, Android Studio, ElectronJS, Qt/QML (C++)}
-    \entry{Maschinelles/Deep Learning}{NumPy, OpenCV, Pandas, Seaborn, Matplotlib, PyTorch, Tensorflow, Huggingface, Scikit-Learn}
-    \entry{Speicher \& Datenbanken}{PostgreSQL, MSSQL, MySQL, SQLite, MongoDB, Cassandra/ScyllaDB, RabbitMQ, Kafka, Redis, Minio}
-    \entry{Container-Orchestrierung}{Docker, DockerSwarm, DockerCompose, Kubernetes (K3s, RKE2, EKS), Helm, Nomad}
-    \entry{Hochleistungsrechnen}{Slurm, SunGridEngine, Rocks Cluster, Nvidia Enroot, Nvidia Pyxis, Singularity}
-    \entry{Infrastruktur \& Cloud}{Terraform, Ansible, Packer, ESXi, OpenStack, Hetzner Cloud, Amazon Web Services}
-    \entry{Überwachung \& Alarmierung}{Grafana, GrafanaAgent, Promtail, Prometheus, OpenTelemetry, Loki, Mimir, Tempo}
-    \entry{CI/CD \& Automatisierung}{DroneCI, GitlabCI, TravisCI, Github Actions, Azure Pipelines, ArgoCD, GitOps}
+    \entry{Speicher \& Datenbanken}{PostgreSQL, MSSQL, MySQL, ScyllaDB, SQLite, RabbitMQ, Redis, Minio}
+    \entry{Container-Orchestrierung}{Docker, DockerSwarm, Kubernetes (K3s, RKE2, EKS), Helm, Nomad}
+    \entry{Hochleistungsrechnen}{Slurm, SunGridEngine, Rocks Cluster, NvidiaEnroot, NvidiaPyxis, Singularity}
+    \entry{Infrastruktur \& Cloud}{Terraform, Ansible, Packer, ESXi, Hetzner Cloud, Amazon Web Services}
+    \entry{Überwachung \& Alarmierung}{Grafana, Promtail, Prometheus, OpenTelemetry, Loki, Mimir, Tempo}
+    \entry{CI/CD \& Automatisierung}{DroneCI, GitlabCI, Github Actions, Azure Pipelines, ArgoCD, GitOps}
     \entry{LowCode \& NoCode}{N8n, Hasura, Strapi, ReactAdmin}
 }
 
-\newpage
-
-\begin{section}{Berufserfahrung}
- \begin{subsection}{Smartech}{Senior DevOps-Ingenieur}{Feb 2024 -- Jun 2024 (Vollzeit)}{Teheran, Iran}
-     \item Wartung und Überwachung einer großen Infrastruktur mit etwa 500 virtuellen Maschinen und Bare-Metal-Servern, nahezu 50TB Warmdata
-     \item Wartung und Überwachung verschiedener Dienste (PostgreSQL, Elasticsearch, ClickHouse, ScyllaDB, Kafka, Redis, Minio)
-     \item Standardisierung und Refaktorisierung verschiedener Projekttypen und Implementierung von CI/CD-Pipelines (Django, SpringBoot, NPM, Android, ASP.Net, ...)
-     \item Erstellung von Kubernetes-Manifesten für verschiedene Projekte (Deployment, ConfigMap, Secret, HPA, Ingress, ...)
-     \item Einrichtung von ArgoCD für GitOps-basierte Bereitstellungsprozesse in Kubernetes-Clustern
-     \item Erstellung von Ansible-Rollen und -Playbooks zur Bereitstellung und Aktualisierung verschiedener Dienste
- \end{subsection}
-
- \begin{subsection}{Visiwise.co}{Senior DevOps-Ingenieur}{Mai 2022 -- Gegenwart (Teilzeit)}{Teheran, Iran}
-     \item Wartung und Refaktorisierung alter Bare-Metal-Infrastruktur
-     \item Entwurf und Architektur neuer Cloud-basierter Infrastruktur
-     \item Durchführung von Datenbankmigration ohne Ausfallzeiten (physische/logische Replikation)
-     \item Automatisierung von vollständigen, differentiellen und inkrementellen Backups (pgbackrest)
-     \item Einrichtung des Grafana-Monitoring-Stacks (LGTM - Loki, Grafana, Tempo, Mimir, Alloy)
-     \item Einrichtung von selbst gehosteten Diensten: N8n, Strapi, Wordpress, Posthog, Sentry
-     \item Erstellung von Grafana-Dashboards und -Alarmen mit logQL, promQL, traceQL
-     \item Bereitstellung der gesamten neuen Infrastruktur mit Terraform (IaC)
-     \item Verwaltung von Multi-Cloud-Ressourcen zur Kostenreduzierung (Hetzner, AWS)
-     \item Implementierung des GitOps-Prinzips für CD (Continuous Deployment)
-     \item Anpassung von Quellcodes an den 12-Faktor-Standard (in Zusammenarbeit mit Entwicklern)
-     \item Einrichtung von MR-Review-Apps (temporäre Umgebungen)
-     \item Erstellung von Docker Swarm Compose-Manifesten
-     \item Einrichtung von CI/CD mit GitlabCI, Docker
- \end{subsection}
-
- \begin{subsection}{Universität Teheran}{DevOps-Ingenieur}{Jul 2022 -- Jun 2023 (Teilzeit)}{Teheran, Iran}
-     \item Einrichtung eines HPC-Clusters mit Slurm Workload Manager \& Pyxis
-     \item Einrichtung von HPC-Containern (Nvidia Enroot, Nvidia Pyxis)
-     \item Einrichtung von Slurm-Accounting und Quotenverwaltung
-     \item Überwachung und Verwaltung von Jobs und Warteschlangen
-     \item Bereitstellung des gesamten Clusters mit Terraform (IaC)
- \end{subsection}
-
- \begin{subsection}{Pishgam Vira}{DevOps-Ingenieur}{Mär 2022 -- Jun 2022 (Teilzeit)}{Teheran, Iran}
-     \item Implementierung von CI/CD für Projekte mit GitHub Actions \& Docker
-     \item Bereitstellung von Deployment-Servern mit Docker Swarm
-     \item Automatisierung des Release-Prozesses mit semantic-release
- \end{subsection}
-\end{section}
-
 \sectiontable{Sprachen}{
     \entry{Persisch}{Muttersprache}
-    \entry{Englisch}{Fließend in Wort und Schrift}
+    \entry{Englisch}{Berufliche Verhandlungssicherheit}
     \entry{Deutsch}{Grundkenntnisse}
 }
 
