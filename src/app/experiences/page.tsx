@@ -328,7 +328,7 @@ function Teaching() {
                             paradigm in C (OOC)
                             <Link
                                 className="ml-2"
-                                href="https://github.com/ckoliber/ooc_lecture"
+                                href="https://github.com/mhmnemati/ooc_lecture"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -340,7 +340,7 @@ function Teaching() {
                             programs in C
                             <Link
                                 className="ml-2"
-                                href="https://github.com/ckoliber/opengl"
+                                href="https://github.com/mhmnemati/opengl"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -368,7 +368,7 @@ function Teaching() {
                             Organized homeworks for mentored students
                             <Link
                                 className="ml-2"
-                                href="https://github.com/ckoliber/Phy97Sources"
+                                href="https://github.com/mhmnemati/Phy97Sources"
                                 target="_blank"
                                 rel="noreferrer"
                             >

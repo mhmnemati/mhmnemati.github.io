@@ -1,6 +1,6 @@
-# KoLiBer
+# MHMNemati
 
-KoLiBer is a Next.JS application which is the source code of my personal website.
+MHMNemati is a Next.JS application which is the source code of my personal website.
 
 ## Installation
 

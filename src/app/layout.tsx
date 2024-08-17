@@ -22,16 +22,16 @@ import Text from "@/components/Text";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://ckoliber.com"),
-    title: "KoLiBer",
-    description: "KoLiBer personal website",
+    metadataBase: new URL("https://mhmnemati.com"),
+    title: "Mohammad Hossein Nemati",
+    description: "Personal website",
     icons: {
         icon: "/images/favicon.ico",
     },
     keywords: [
-        "KoLiBer",
-        "koliber",
-        "ckoliber",
+        "mhmnemati",
+        "MHMNemati",
+        "Nemati",
         "blog",
         "personal",
         "portfolio",
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     ],
     openGraph: {
         type: "website",
-        title: "KoLiBer",
-        description: "KoLiBer personal website",
+        title: "Mohammad Hossein Nemati",
+        description: "Personal website",
     },
     twitter: {
         card: "summary",
-        title: "KoLiBer",
-        creator: "@ckoliber",
-        description: "KoLiBer personal website",
+        title: "Mohammad Hossein Nemati",
+        creator: "@mhmnemati",
+        description: "Personal website",
     },
 };
 
@@ -125,7 +125,7 @@ function Footer() {
             <span>
                 <Link
                     className="text-inherit m-4"
-                    href={`mailto:ckoliber@gmail.com`}
+                    href={`mailto:mhmnemati@gmail.com`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -133,7 +133,7 @@ function Footer() {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={`https://www.linkedin.com/in/ckoliber/`}
+                    href={`https://www.linkedin.com/in/mhmnemati/`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -141,7 +141,7 @@ function Footer() {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={`https://github.com/ckoliber`}
+                    href={`https://github.com/mhmnemati`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -158,15 +158,15 @@ function Footer() {
             </span>
             <br />
             <Text manager="decipher" easing="outSine">
-                © Copyright 2024 KoLiBer •{" "}
+                © Copyright 2024 MHMNemati •{" "}
                 <Link
-                    href="https://github.com/ckoliber/ckoliber.github.io"
+                    href="https://github.com/mhmnemati/mhmnemati.github.io"
                     target="_blank"
                     rel="noreferrer"
                 >
                     <FontAwesomeIcon icon={faReact} />
                 </Link>{" "}
-                by KoLiBer
+                by MHMNemati
             </Text>
         </footer>
     );

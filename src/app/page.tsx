@@ -26,7 +26,7 @@ function Home() {
             <span>
                 <Link
                     className="text-inherit m-4"
-                    href={`mailto:ckoliber@gmail.com`}
+                    href={`mailto:mhmnemati@gmail.com`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -34,7 +34,7 @@ function Home() {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={`https://www.linkedin.com/in/ckoliber/`}
+                    href={`https://www.linkedin.com/in/mhmnemati/`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -42,7 +42,7 @@ function Home() {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={`https://github.com/ckoliber`}
+                    href={`https://github.com/mhmnemati`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -50,7 +50,7 @@ function Home() {
                 </Link>
                 <Link
                     className="text-inherit m-4"
-                    href={`https://gitlab.com/ckoliber`}
+                    href={`https://gitlab.com/mhmnemati`}
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -98,7 +98,7 @@ function About() {
                                 began in 2013 with the development of an audio
                                 and video messaging software called{" "}
                                 <a
-                                    href="https://github.com/ckoliber/cham"
+                                    href="https://github.com/mhmnemati/cham"
                                     target="_blank"
                                     rel="noreferrer"
                                 >
@@ -206,7 +206,7 @@ function About() {
                         <div className="flex flex-col md:flex-row justify-between md:items-center">
                             <div className="mb-4 md:mb-0">
                                 <Link
-                                    href={`https://www.linkedin.com/in/ckoliber/`}
+                                    href={`https://www.linkedin.com/in/mhmnemati/`}
                                     target="_blank"
                                     rel="noreferrer"
                                 >
@@ -218,7 +218,7 @@ function About() {
                                 </Link>
                                 <br />
                                 <Link
-                                    href={`mailto:ckoliber@gmail.com`}
+                                    href={`mailto:mhmnemati@gmail.com`}
                                     target="_blank"
                                     rel="noreferrer"
                                 >
@@ -226,7 +226,7 @@ function About() {
                                         className="mr-2"
                                         icon={faEnvelope}
                                     />
-                                    ckoliber@gmail.com
+                                    mhmnemati@gmail.com
                                 </Link>
                                 <br />
                                 <Link
