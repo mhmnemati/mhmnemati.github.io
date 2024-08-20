@@ -20,8 +20,8 @@ function Home() {
         <Hero id="home" image="/images/hero.jpg">
             <Text as="h1">I am Mohammad Hossein Nemati</Text>
             <Text as="b">
-                a DevOps wizard constructing automated cloud infrastructures and
-                MLOps pipelines to power intelligent systems
+                A DevOps expert, Architecting Scalable Solutions and Automating
+                Success
             </Text>
             <span>
                 <Link
@@ -91,12 +91,9 @@ function About() {
                         <span className="mb-4 col-span-2">
                             <Text as="p">
                                 I am a passionate software engineer specializing
-                                in programming, AI, DevOps, and MLOps,
-                                constantly seeking ways to leverage these
-                                disciplines to solve complex problems and create
-                                innovative solutions. My journey in programming
-                                began in 2013 with the development of an audio
-                                and video messaging software called{" "}
+                                in DevOps, AI, and Full-Stack development. My
+                                journey in tech began in 2013 with the creation
+                                of{" "}
                                 <a
                                     href="https://github.com/mhmnemati/cham"
                                     target="_blank"
@@ -104,61 +101,47 @@ function About() {
                                 >
                                     ChaM
                                 </a>{" "}
-                                (Chapar Messenger), which served as a guiding
-                                compass, leading me through the intricate
-                                branches of programming and networking.
+                                (Chapar Messenger), an experience that sparked
+                                my deep interest in programming and networking.
                             </Text>
-                            <br />
                             <Text as="p">
-                                Throughout my career, I have worked on various
-                                enterprise projects, sharpening my skills in
-                                various languages and technologies. I have
-                                contributed to notable projects such as the
-                                ManagedFunds system at TIS, the CCS (Container
-                                Control System) at Mobtaker Darya, and the
-                                Shahin system, leveraging cutting-edge
-                                technologies like React Native and Hasura.
+                                Over the years, I&apos;ve contributed to major
+                                enterprise projects, including the ManagedFunds
+                                system at TIS, CCS at Mobtaker Darya, and the
+                                Shahin system. Leveraging cutting-edge
+                                technologies like React Native and Hasura,
+                                I&apos;ve delivered innovative solutions across
+                                various industries.
                             </Text>
-                            <br />
                             <Text as="p">
-                                Alongside development, I have cultivated a deep
-                                passion for DevOps and AI. As a Senior DevOps
-                                Engineer at Visiwise and Smartech, I
-                                revolutionized the companies&apos;
-                                infrastructure and development practices. I
-                                implemented CI/CD pipelines, Dockerized
-                                applications, and embraced GitOps principles,
-                                streamlining the development process and
-                                enhancing the reliability and scalability of the
-                                infrastructure. At Smartech, I managed a
-                                large-scale infrastructure, implementing CI
-                                pipelines across numerous repositories,
-                                Dockerizing services, and establishing a GitOps
-                                workflow using ArgoCD. I also initiated the
-                                transition to Infrastructure as Code (IaC)
-                                practices using Ansible and Terraform, laying
-                                the foundation for more efficient and manageable
-                                infrastructures.
+                                As my career evolved, I shifted from development
+                                to DevOps, driven by the challenge of scaling
+                                systems and optimizing performance in
+                                production. To build expertise, I took on DevOps
+                                projects with Mobtaker Darya, Pishgam Vira, and
+                                the University of Tehran, gaining hands-on
+                                experience in infrastructure management and
+                                CI/CD pipelines.
                             </Text>
-                            <br />
                             <Text as="p">
-                                As a lifelong learner, I believe in the power of
-                                No-Code and Low-Code technologies to accelerate
-                                development and enable me to focus on
-                                higher-level concepts. I am excited to
-                                contribute my skills and knowledge to innovative
-                                projects that push the boundaries of what is
-                                possible, constantly seeking new challenges and
-                                opportunities to grow.
+                                As a Senior DevOps Engineer at Visiwise and
+                                Smartech, I revolutionized infrastructure by
+                                implementing CI/CD pipelines, Dockerizing
+                                applications, and embracing GitOps principles.
+                                My work laid the foundation for scalable,
+                                reliable, and efficient systems through
+                                Infrastructure as Code (IaC) practices using
+                                Ansible and Terraform.
                             </Text>
-                            <br />
                             <Text as="p">
-                                With a strong foundation in Full-Stack
-                                development, a passion for AI and DevOps, and an
-                                unwavering commitment to learning, I am eager to
-                                collaborate with like-minded individuals who
-                                share my vision of harnessing technology for the
-                                betterment of society.
+                                With a B.S. and M.S. in Computer Science, I have
+                                a strong foundation in AI, which drives my
+                                interest in MLOps. I&apos;m focused on
+                                automating model training, testing, and
+                                inference infrastructure. I&apos;m eager to
+                                apply my skills to innovative projects and
+                                collaborate with others who share my vision for
+                                leveraging technology to create positive impact.
                             </Text>
                         </span>
                     </div>
