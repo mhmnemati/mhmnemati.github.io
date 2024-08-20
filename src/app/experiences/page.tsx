@@ -248,11 +248,19 @@ function Research() {
                     subtitle="Department of Mathematics, Statistics and Computer Science"
                     location="University of Tehran"
                 >
-                    <b>Deep learning-based Seizure detection:</b> Utilizing
-                    Graph Neural Networks (GNN) and Bio-signal transformers on
-                    multi-channel EEG data to seizure detection
-                    <br />
-                    Under the supervision of <b>Prof. Bagher Babaali</b>
+                    <b>Advisor:</b> Prof. Bagher Babaali
+                    <ul>
+                        <li>
+                            Researching deep learning-based seizure detection
+                            with GNNs and bio-signal transformers
+                        </li>
+                        <li>
+                            Implemented the model using PyTorch, PyTorch
+                            Geometric, and PyTorch Lightning
+                        </li>
+                        <li>Used Captum for model interpretability</li>
+                        <li>Monitored metrics with TensorBoard</li>
+                    </ul>
                 </Card>
             </Animator>
         </>
@@ -273,8 +281,14 @@ function Teaching() {
                     location="University of Tehran"
                 >
                     <ul>
-                        <li>Teaching subjects and troubleshooting</li>
-                        <li>Organized homeworks for mentored students</li>
+                        <li>
+                            Assisted in teaching machine learning topics and
+                            troubleshooting student issues
+                        </li>
+                        <li>
+                            Organized and managed homework assignments for
+                            mentored students
+                        </li>
                     </ul>
                 </Card>
                 <Card
@@ -285,8 +299,8 @@ function Teaching() {
                 >
                     <ul>
                         <li>
-                            Teaching memory management in C, Object-Oriented
-                            paradigm in C (OOC)
+                            Taught memory management in C and Object-Oriented
+                            programming in C (OOC){" "}
                             <Link
                                 className="ml-2"
                                 href="https://github.com/mhmnemati/ooc_lecture"
@@ -297,8 +311,8 @@ function Teaching() {
                             </Link>
                         </li>
                         <li>
-                            Teaching basics of computer graphics and OpenGL
-                            programs in C
+                            Instructed students on the basics of computer
+                            graphics and OpenGL programming in C{" "}
                             <Link
                                 className="ml-2"
                                 href="https://github.com/mhmnemati/opengl"
@@ -309,8 +323,7 @@ function Teaching() {
                             </Link>
                         </li>
                         <li>
-                            Graded and provided homework feedback for mentored
-                            students
+                            Graded assignments and provided feedback to students
                         </li>
                     </ul>
                 </Card>
@@ -322,11 +335,11 @@ function Teaching() {
                 >
                     <ul>
                         <li>
-                            Teaching basic data-structures and algorithms in
-                            Java
+                            Taught basic data structures and algorithms in Java
                         </li>
                         <li>
-                            Organized homeworks for mentored students
+                            Organized and managed homework assignments for
+                            students
                             <Link
                                 className="ml-2"
                                 href="https://github.com/mhmnemati/Phy97Sources"
