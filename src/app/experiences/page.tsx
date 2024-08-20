@@ -16,7 +16,7 @@ function Work() {
             </Text>
             <Animator manager="sequence">
                 <Card
-                    date="May 2022 -- Present (Part-time)"
+                    date="May 2022 -- Present"
                     title="Visiwise.co"
                     subtitle="Senior DevOps Engineer"
                     location="Tehran, Iran"
@@ -61,7 +61,7 @@ function Work() {
                     </ul>
                 </Card>
                 <Card
-                    date="Feb 2024 -- June 2024 (Full-time)"
+                    date="Feb 2024 -- June 2024"
                     title="Smartech"
                     subtitle="Senior DevOps Engineer"
                     location="Tehran, Iran"
@@ -92,7 +92,7 @@ function Work() {
                     </ul>
                 </Card>
                 <Card
-                    date="Jul 2022 -- Jun 2023 (Part-time)"
+                    date="Jul 2022 -- Jun 2023"
                     title="University of Tehran"
                     subtitle="DevOps Engineer"
                     location="Tehran, Iran"
@@ -119,7 +119,7 @@ function Work() {
                     </ul>
                 </Card>
                 <Card
-                    date="Mar 2022 -- Jun 2022 (Part-time)"
+                    date="Mar 2022 -- Jun 2022"
                     title="Pishgam Vira"
                     subtitle="DevOps Engineer"
                     location="Tehran, Iran"
@@ -141,7 +141,7 @@ function Work() {
                     </ul>
                 </Card>
                 <Card
-                    date="Nov 2019 -- Jun 2022 (Full-time)"
+                    date="Nov 2019 -- Jun 2022"
                     title="Mobtaker Darya"
                     subtitle="Full-stack Developer & DevOps Engineer"
                     location="Tehran, Iran"
@@ -169,7 +169,7 @@ function Work() {
                     </ul>
                 </Card>
                 <Card
-                    date="Mar 2019 -- Oct 2019 (Self-employed)"
+                    date="Mar 2019 -- Oct 2019"
                     title="Tolou Yekta Samaneh"
                     subtitle="Full-stack Developer"
                     location="Tehran, Iran"
