@@ -12,7 +12,7 @@
 \RequirePackage[parfill]{parskip}
 
 % Set margin width
-\RequirePackage[hmargin=1.0cm,vmargin=0.5cm]{geometry}
+\RequirePackage[hmargin=0.9cm,vmargin=0.5cm]{geometry}
 
 % Use cool fonts
 \RequirePackage{fontspec}
@@ -142,7 +142,7 @@
             \setlength{\leftmargin}{1.5em}
         }
         \item[]
-              }{
+            }{
     \end{list}
 }
 

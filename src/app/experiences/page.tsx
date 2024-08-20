@@ -55,7 +55,7 @@ function Work() {
                             operational costs by 20%
                         </li>
                         <li>
-                            Implemented dynamic environments, boosting developer
+                            Implemented review apps, boosting developer
                             productivity by 35%
                         </li>
                     </ul>
