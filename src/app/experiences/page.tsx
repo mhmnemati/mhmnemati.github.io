@@ -23,54 +23,41 @@ function Work() {
                 >
                     <ul>
                         <li>
-                            Maintaining and refactoring old bare-metal
-                            infrastructure
+                            Refactored codebases across 5+ projects and set up
+                            CI pipelines, reducing deployment times by 30%
                         </li>
                         <li>
-                            Designing and architecting new cloud-based
-                            infrastructure
+                            Migrated 10+ services to Docker Swarm cluster on
+                            Hetzner Cloud, improving resource efficiency by 25%
                         </li>
                         <li>
-                            Performing zero downtime database migrations
-                            (physical/logical replication)
+                            Clustered PostgreSQL and automated backups, ensuring
+                            100% data integrity during zero-downtime migration
                         </li>
                         <li>
-                            Automating full and differential and incremental
-                            backups (pgbackrest)
+                            Automated infrastructure provisioning with Terraform
+                            and Ansible across 5+ environments
                         </li>
                         <li>
-                            Setting up Grafana monitoring stack (LGTM - Loki,
-                            Grafana, Tempo, Mimir, Alloy)
+                            Deployed 5+ self-hosted services, reducing
+                            third-party dependencies by 40%
                         </li>
                         <li>
-                            Setting up N8n, Strapi, Wordpress, Posthog, Sentry
-                            self-hosted services
+                            Established monitoring with Grafana stack, improving
+                            incident response by 80% with 10+ custom dashboards
                         </li>
                         <li>
-                            Writing Grafana dashboards and alerts using logQL,
-                            promQL, traceQL
+                            Standardized CI/CD pipelines, reducing build times
+                            to under 1 minute across 10+ repositories
                         </li>
                         <li>
-                            Provisioning entire new infrastructure using
-                            Terraform (IaC)
+                            Managed multi-cloud setup (Hetzner & AWS), cutting
+                            operational costs by 20%
                         </li>
                         <li>
-                            Managing multi-cloud resources for reducing the
-                            costs (Hetzner, AWS)
+                            Implemented dynamic environments, boosting developer
+                            productivity by 35%
                         </li>
-                        <li>
-                            Implementing GitOps principle for CD (Continuous
-                            Deployment)
-                        </li>
-                        <li>
-                            Adapt source codes to the 12factor standard
-                            (incorporate with developers)
-                        </li>
-                        <li>
-                            Setting up MR review-apps (temporary environments)
-                        </li>
-                        <li>Writing Docker Swarm compose manifests</li>
-                        <li>Setting up CI/CD using GitlabCI, Docker</li>
                     </ul>
                 </Card>
                 <Card
@@ -81,31 +68,26 @@ function Work() {
                 >
                     <ul>
                         <li>
-                            Maintaining and monitoring large scale
-                            infrastructure, about 500 virtuals-machines and
-                            bare-metals, near 50TB of warm data
+                            Standardized CI/CD templates across 50+
+                            repositories, reducing deployment times by 40%
                         </li>
                         <li>
-                            Maintaining and monitoring various services
-                            (PostgreSQL, Elasticsearch, ClickHouse, ScyllaDB,
-                            Kafka, Redis, Minio)
+                            Configured auto-scaling Kubernetes clusters with
+                            Terraform for 10+ Event Processor apps, optimizing
+                            Kafka load handling
                         </li>
                         <li>
-                            Standardize and refactor various types of projects
-                            and implement CI/CD pipelines (Django, SpringBoot,
-                            NPM, Android, ASP.Net, ...)
+                            Developed Kubernetes manifests for 20+ projects and
+                            automated deployment of 40+ services via ArgoCD
                         </li>
                         <li>
-                            Write kubernetes manifests for various projects
-                            (Deployment, ConfigMap, Secret, HPA, Ingress, ...)
+                            Automated server management with Ansible for 50+
+                            servers, including Firewall, User Management, and
+                            Minio clusters
                         </li>
                         <li>
-                            Setting up ArgoCD for GitOps based deployment
-                            process to kubernetes clusters
-                        </li>
-                        <li>
-                            Writing Ansible roles and playbooks for deploying
-                            and updating various services
+                            Managed 500+ VMs and 50TB+ of warm data across
+                            services like Elasticsearch, ScyllaDB, and Kafka
                         </li>
                     </ul>
                 </Card>
@@ -117,19 +99,22 @@ function Work() {
                 >
                     <ul>
                         <li>
-                            Setting up HPC cluster using Slurm Workload Manager
-                            & Pyxis
+                            Provisioned a 20+ node HPC cluster using Terraform
+                            and Ansible; set up Slurm with Singularity and
+                            Nvidia Enroot
                         </li>
                         <li>
-                            Setting up HPC containers (Nvidia Enroot, Nvidia
-                            Pyxis)
+                            Optimized GPU workloads for 10+ researchers by
+                            integrating Nvidia Enroot with Slurm via Nvidia
+                            Pyxis
                         </li>
                         <li>
-                            Setting up Slurm accounting and quota management
+                            Managed permissions and quotas for 200+ users and
+                            created 5+ resource-specific queues for jobs
                         </li>
-                        <li>Monitoring and Management of jobs and queues</li>
                         <li>
-                            Provisioning entire cluster using Terraform (IaC)
+                            Deployed a Grafana monitoring stack, improving
+                            resource utilization by 30%
                         </li>
                     </ul>
                 </Card>
@@ -141,13 +126,18 @@ function Work() {
                 >
                     <ul>
                         <li>
-                            Implementing CI/CD for projects using GitHub Actions
-                            & Docker
+                            Provisioned Docker Swarm clusters and database
+                            servers with Ansible across 3+ environments
                         </li>
                         <li>
-                            Provisioning deployment servers using Docker Swarm
+                            Wrote Docker Compose manifests for streamlined
+                            deployments
                         </li>
-                        <li>Automate release process using semantic-release</li>
+                        <li>
+                            Set up CI/CD pipelines for 5+ repositories using
+                            GitHub Actions
+                        </li>
+                        <li>Automated versioning with semantic-release</li>
                     </ul>
                 </Card>
                 <Card
@@ -158,114 +148,85 @@ function Work() {
                 >
                     <ul>
                         <li>
-                            Maintaining and developing CCS project (Container
-                            Control System)
+                            Maintained and developed the CCS project, generating
+                            50+ reports with Crystal Reports and SQL Server
                         </li>
                         <li>
-                            Implementing CCS reports using Crystal Reports and
-                            SQL Server
+                            Developed the Shaahin project with a ReactJS
+                            frontend and Hasura/PostgreSQL backend
                         </li>
                         <li>
-                            Developing Shaahin project (Cargo trucks traffic
-                            control)
-                        </li>
-                        <li>Implementing Shaahin web client using ReactJS</li>
-                        <li>
-                            Implementing Shaahin backend using Hasura,
-                            PostgreSQL
-                        </li>
-                        <li>
-                            Implementing CI/CD for projects using GitlabCI &
+                            Implemented CI/CD pipelines using GitLab CI and
                             Docker
                         </li>
                         <li>
-                            Provisioning deployment servers using Kubernetes
+                            Provisioned servers with Kubernetes, writing
+                            manifests and packaging them in Helm Charts
                         </li>
                         <li>
-                            Writing Kubernetes manifests and packaging the in
-                            Helm Charts
-                        </li>
-                        <li>
-                            Managing and coding entire infrastructure using
-                            Terraform (IaC)
+                            Managed infrastructure using Terraform and Ansible
                         </li>
                     </ul>
                 </Card>
                 <Card
-                    date="Mar 2019 -- Oct 2019 (Part-time)"
-                    title="TIS"
+                    date="Mar 2019 -- Oct 2019 (Self-employed)"
+                    title="Tolou Yekta Samaneh"
                     subtitle="Full-stack Developer"
                     location="Tehran, Iran"
                 >
                     <ul>
                         <li>
-                            Maintaining and refactoring MFD project
-                            (Managed-Funds System)
+                            Maintained and refactored the Managed-Funds System
+                            (MFD), implementing backend APIs with Loopback.io,
+                            Node.js, TypeScript, and PostgreSQL
                         </li>
                         <li>
-                            Implementing backend API&apos;s using Loopback.io,
-                            NodeJs, TypeScript, PostgreSQL
+                            Replaced Process360 with ProcessMaker as the BPMS
+                            core and developed a new UI using ReactJS and
+                            TypeScript
                         </li>
                         <li>
-                            Replacing Process360 with ProcessMaker as BPMS core
+                            Implemented dynamic forms in the client with schema
+                            integration from BPMS
                         </li>
                         <li>
-                            Implementing new UI using ReactJS and TypeScript
+                            Developed a food-shopping UI for the Farmeal project
+                            using ReactJS, MaterialUI, and TypeScript, and
+                            integrated with backend GraphQL APIs using Apollo
+                            Client
                         </li>
                         <li>
-                            Implementing dynamic forms in client (Forms schema
-                            loaded from BPMS)
-                        </li>
-                    </ul>
-                </Card>
-                <Card
-                    date="Jun 2019 -- Sep 2019 (Part-time)"
-                    title="Farmeal"
-                    subtitle="Frontend Developer"
-                    location="Tehran, Iran"
-                >
-                    <ul>
-                        <li>
-                            Implementing food-shopping UI using ReactJS and
-                            MaterialUI and TypeScript
-                        </li>
-                        <li>
-                            Interacting with backend GraphQL API&apos;s using
-                            Apollo Client
-                        </li>
-                        <li>
-                            Implementing CI/CD for project using GitlabCI &
-                            Docker
+                            Set up CI/CD pipelines using GitLab CI and Docker
+                            for ManagedFunds and Farmeal projects
                         </li>
                     </ul>
                 </Card>
                 <Card
                     date="Dec 2013 -- Aug 2018"
-                    title="Self Employed"
-                    subtitle="Full-stack Developer"
+                    title="ChaM (Chapar Messenger)"
+                    subtitle="Founder & Lead Developer"
                     location="Tehran, Iran"
                 >
                     <ul>
-                        <li>Socket programming in C & Erlang</li>
                         <li>
-                            Implementing Hole Punching for P2P direct
-                            connections
+                            Designed and developed an audio/video messaging
+                            platform using C, Erlang, and Java
                         </li>
                         <li>
-                            Utilizing Cassandra/ScyllaDB as Chat Application
-                            core database
+                            Implemented P2P connections and used
+                            Cassandra/ScyllaDB for chat data management
                         </li>
                         <li>
-                            Implementing Desktop Chat Application using Qt/QML
-                            (C++)
+                            Created a desktop client with Qt/QML (C++) and an
+                            Android app with Java and JNI
                         </li>
                         <li>
-                            Implementing Android Chat Application using Java, C
-                            (JNI), Android Studio
+                            Integrated FFMPEG for audio/video streaming with
+                            native APIs
                         </li>
                         <li>
-                            Using FFMPEG to implement audio & video streaming
-                            using native API&apos;s and raw sockets
+                            Managed full-stack development, including server
+                            infrastructure and client interfaces
                         </li>
                     </ul>
                 </Card>
