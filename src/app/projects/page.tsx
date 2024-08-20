@@ -434,29 +434,28 @@ function Published() {
                 >
                     <ul>
                         <li>
-                            Implementation of a custom protocol over TCP, UDP
-                            sockets for messaging using Erlang
+                            Developed a custom messaging protocol over TCP/UDP
+                            using Erlang
                         </li>
                         <li>
-                            Implementation of Hole Punching for P2P direct
-                            connection on Audio and Video calls using Erlang
+                            Implemented Hole Punching for P2P connections in
+                            audio/video calls with Erlang
                         </li>
                         <li>
-                            Implementation of Resumable Streaming protocol over
-                            TCP for uploading and downloading files using C
+                            Created a resumable streaming protocol for file
+                            transfers using C
                         </li>
                         <li>
-                            Implementation of Audio & Video frame streaming
-                            using android native API&apos;s and raw sockets
-                            (FFMPEG, JNI)
+                            Streamed audio/video frames using Android native
+                            APIs, FFMPEG, and raw sockets
                         </li>
                         <li>
-                            Implementation of Android Messenger Application
-                            using Java, C (JNI), Android Studio
+                            Built an Android messenger app with Java, C (JNI),
+                            and Android Studio
                         </li>
                         <li>
-                            Implementation of Desktop Messenger Application
-                            using Qt, C++, QML
+                            Developed a desktop messenger app using Qt, C++, and
+                            QML
                         </li>
                     </ul>
                 </Card>
