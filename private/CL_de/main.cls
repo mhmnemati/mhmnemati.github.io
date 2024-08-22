@@ -110,8 +110,6 @@
         \vspace{0.8em}
         \newline
         \begin{tabular}[c]{l@{\hspace{1em}}l}
-            \small\phone    & \small\location
-            \tabularnewline
             \small\email    & \small\website
             \tabularnewline
             \small\linkedin & \small\github
