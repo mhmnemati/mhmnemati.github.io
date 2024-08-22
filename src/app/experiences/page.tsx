@@ -187,8 +187,8 @@ function Work() {
                             TypeScript
                         </li>
                         <li>
-                            Implemented dynamic forms in the client with schema
-                            integration from BPMS
+                            Implemented form generators in the client with
+                            schema integration from BPMS
                         </li>
                         <li>
                             Developed a food-shopping UI for the Farmeal project
