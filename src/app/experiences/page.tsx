@@ -23,8 +23,8 @@ function Work() {
                 >
                     <ul>
                         <li>
-                            Refactored codebases across 5+ projects and set up
-                            CI pipelines, reducing deployment times by 30%
+                            Refactored codebases across 10+ projects and set up
+                            CI pipelines, reducing deployment times by 70%
                         </li>
                         <li>
                             Migrated 10+ services to Docker Swarm cluster on
@@ -56,7 +56,7 @@ function Work() {
                         </li>
                         <li>
                             Implemented review apps, boosting developer
-                            productivity by 35%
+                            productivity by 40%
                         </li>
                     </ul>
                 </Card>
@@ -87,7 +87,8 @@ function Work() {
                         </li>
                         <li>
                             Managed 500+ VMs and 50TB+ of warm data across
-                            services like Elasticsearch, ScyllaDB, and Kafka
+                            services like Elasticsearch, ClickHouse, ScyllaDB,
+                            and Kafka
                         </li>
                     </ul>
                 </Card>
