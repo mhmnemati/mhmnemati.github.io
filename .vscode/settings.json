@@ -2,7 +2,6 @@
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    "extensions.autoUpdate": true,
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.formatOnSave": true,
@@ -15,6 +14,13 @@
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
     },
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": ["latexmk"]
+        }
+    ],
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk",
