@@ -41,10 +41,10 @@ jobs:
                   latexmk_use_xelatex: true
                   working_directory: private/CL_de
                   root_file: main.tex
-            - run: cp private/CV_en/main.pdf out/assets/CV_en.pdf
-            - run: cp private/CV_de/main.pdf out/assets/CV_de.pdf
-            - run: cp private/CL_en/main.pdf out/assets/CL_en.pdf
-            - run: cp private/CL_de/main.pdf out/assets/CL_de.pdf
+            - run: cp private/CV_en/main.pdf out/assets/Mohammad_Hossein_Nemati_CV_en.pdf
+            - run: cp private/CV_de/main.pdf out/assets/Mohammad_Hossein_Nemati_CV_de.pdf
+            - run: cp private/CL_en/main.pdf out/assets/Mohammad_Hossein_Nemati_CL_en.pdf
+            - run: cp private/CL_de/main.pdf out/assets/Mohammad_Hossein_Nemati_CL_de.pdf
             - uses: actions/upload-pages-artifact@v3
               with:
                   path: out
