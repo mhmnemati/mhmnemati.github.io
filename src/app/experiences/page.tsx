@@ -244,7 +244,7 @@ function Research() {
             </Text>
             <Animator manager="sequence">
                 <Card
-                    date="Feb 2023 -- Present"
+                    date="Feb 2023 -- Aug 2024"
                     title="Graduate Research Assistant"
                     subtitle="Department of Mathematics, Statistics and Computer Science"
                     location="University of Tehran"
